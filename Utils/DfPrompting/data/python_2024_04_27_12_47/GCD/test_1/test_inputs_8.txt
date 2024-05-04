@@ -1,0 +1,10 @@
+Test input:2
+3
+Test input:4
+6
+Test input:5
+10
+Test input:2
+7
+Test input:7
+21

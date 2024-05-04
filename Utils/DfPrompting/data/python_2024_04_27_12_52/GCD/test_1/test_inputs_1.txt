@@ -1,0 +1,24 @@
+Test input:
+12
+3
+Test input:
+3
+12
+Test input:
+3
+24
+Test input:
+51
+7
+Test input:
+1024
+7
+Test input:
+12345
+124
+Test input:
+12131
+125312
+Test input:
+12341213
+1234

@@ -1,0 +1,8 @@
+Test input:-23
+5
+Test input:0
+0
+Test input:48
+36
+Test input:-56
+-8

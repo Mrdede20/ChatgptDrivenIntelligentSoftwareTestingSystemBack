@@ -1,0 +1,145 @@
+[
+    {
+        "filename": "GCD.py",
+        "iteration": 1,
+        "input": [
+            "6",
+            "8"
+        ],
+        "expectedOutput": [
+            "Enter the first number: Enter the second number: The gcd of 6 and 8 is: 2",
+            ""
+        ],
+        "testcaseType": "FT-Ia",
+        "buggy_output": "6\n",
+        "correct_output": "2\n"
+    },
+    {
+        "filename": "GCD.py",
+        "iteration": 2,
+        "input": [
+            "0",
+            "0"
+        ],
+        "expectedOutput": [
+            ""
+        ],
+        "testcaseType": "FT-ia",
+        "buggy_output": "0\n",
+        "correct_output": "0\n"
+    },
+    {
+        "filename": "GCD.py",
+        "iteration": 3,
+        "input": [
+            "6",
+            "21"
+        ],
+        "expectedOutput": [
+            ""
+        ],
+        "testcaseType": "FT-Ia",
+        "buggy_output": "6\n",
+        "correct_output": "3\n"
+    },
+    {
+        "filename": "GCD.py",
+        "iteration": 4,
+        "input": [
+            "21",
+            "3"
+        ],
+        "expectedOutput": [
+            ""
+        ],
+        "testcaseType": "FT-Ia",
+        "buggy_output": "21\n",
+        "correct_output": "3\n"
+    },
+    {
+        "filename": "GCD.py",
+        "iteration": 5,
+        "input": [
+            "3",
+            "5"
+        ],
+        "expectedOutput": [
+            ""
+        ],
+        "testcaseType": "FT-Ia",
+        "buggy_output": "3\n",
+        "correct_output": "1\n"
+    },
+    {
+        "filename": "GCD.py",
+        "iteration": 6,
+        "input": [
+            "12345",
+            "54321"
+        ],
+        "expectedOutput": [
+            ""
+        ],
+        "testcaseType": "FT-Ia",
+        "buggy_output": "12345\n",
+        "correct_output": "3\n"
+    },
+    {
+        "filename": "GCD.py",
+        "iteration": 7,
+        "input": [
+            "100",
+            "10"
+        ],
+        "expectedOutput": [
+            "Enter the first number: Enter the second number: The greatest common divisor of 100 and 10 is 10",
+            ""
+        ],
+        "testcaseType": "FT-Ia",
+        "buggy_output": "100\n",
+        "correct_output": "10\n"
+    },
+    {
+        "filename": "GCD.py",
+        "iteration": 8,
+        "input": [
+            "1",
+            "2"
+        ],
+        "expectedOutput": [
+            ""
+        ],
+        "testcaseType": "FT-ia",
+        "buggy_output": "1\n",
+        "correct_output": "1\n"
+    },
+    {
+        "filename": "GCD.py",
+        "iteration": 9,
+        "input": [
+            "10",
+            "10"
+        ],
+        "expectedOutput": [
+            ""
+        ],
+        "testcaseType": "FT-ia",
+        "buggy_output": "10\n",
+        "correct_output": "10\n"
+    },
+    {
+        "filename": "GCD.py",
+        "iteration": 10,
+        "input": [
+            "12",
+            "3"
+        ],
+        "expectedOutput": [
+            "Enter first number: Enter second number: The GCD of 12 and 3 is 3",
+            ""
+        ],
+        "testcaseType": "FT-Ia",
+        "buggy_output": "12\n",
+        "correct_output": "3\n"
+    }
+]

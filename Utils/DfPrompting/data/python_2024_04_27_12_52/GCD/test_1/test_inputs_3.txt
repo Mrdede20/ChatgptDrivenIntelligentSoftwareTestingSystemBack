@@ -1,0 +1,10 @@
+Test input:6
+3
+Test input:2
+3
+Test input:2
+4
+Test input:8
+9
+Test input:9
+8

@@ -1,0 +1,12 @@
+Test input:5
+0
+Test input:0
+5
+Test input:1111
+1112
+Test input:234567
+29876
+Test input:234567
+0
+Test input:0
+0

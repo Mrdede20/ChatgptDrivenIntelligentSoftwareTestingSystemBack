@@ -1,0 +1,162 @@
+[
+    {
+        "filename": "GCD.py",
+        "iteration": 1,
+        "replyStage1": "yes",
+        "replyStage2": "**Input:**\n\n```\n10\n0\n```\n\n**Expected output:**\n\n```\n10\n```\n\n**Actual output:**\n\n```\nTraceback (most recent call last):\n  File \"gcd.py\", line 10, in <module>\n    print(gcd1(a,b))\n  File \"gcd.py\", line 6, in gcd1\n    return gcd1 (a, a%b)\nRecursionError: maximum recursion depth exceeded in comparison\n```",
+        "input": [
+            "10",
+            "0"
+        ],
+        "expectedOutput": [
+            "10"
+        ],
+        "testcaseType": "CorrectPT",
+        "buggy_output": "10\n",
+        "correct_output": "10\n"
+    },
+    {
+        "filename": "GCD.py",
+        "iteration": 2,
+        "replyStage1": "yes",
+        "replyStage2": "**Input:**\n\n```\n10\n0\n```\n\n**Expected output:**\n\n```\n10\n```",
+        "input": [
+            "10",
+            "0"
+        ],
+        "expectedOutput": [
+            "10"
+        ],
+        "testcaseType": "CorrectPT",
+        "buggy_output": "10\n",
+        "correct_output": "10\n"
+    },
+    {
+        "filename": "GCD.py",
+        "iteration": 3,
+        "replyStage1": "yes",
+        "replyStage2": "Input:\n```\n12\n18\n```\n\nExpected output:\n```\n6\n```\n\nActual output:\n```\n12\n```",
+        "input": [
+            "12",
+            "18"
+        ],
+        "expectedOutput": [
+            "6"
+        ],
+        "testcaseType": "FT-IA",
+        "buggy_output": "12\n",
+        "correct_output": "6\n"
+    },
+    {
+        "filename": "GCD.py",
+        "iteration": 4,
+        "replyStage1": "yes",
+        "replyStage2": "Input:\n```\n10\n15\n```\n\nExpected output:\n```\n5\n```\n\nActual output:\n```\n10\n```",
+        "input": [
+            "10",
+            "15"
+        ],
+        "expectedOutput": [
+            "5"
+        ],
+        "testcaseType": "FT-IA",
+        "buggy_output": "10\n",
+        "correct_output": "5\n"
+    },
+    {
+        "filename": "GCD.py",
+        "iteration": 5,
+        "replyStage1": "yes",
+        "replyStage2": "**Input:**\n\n```\n10\n0\n```\n\n**Expected output:**\n\n```\n10\n```",
+        "input": [
+            "10",
+            "0"
+        ],
+        "expectedOutput": [
+            "10"
+        ],
+        "testcaseType": "CorrectPT",
+        "buggy_output": "10\n",
+        "correct_output": "10\n"
+    },
+    {
+        "filename": "GCD.py",
+        "iteration": 6,
+        "replyStage1": "yes",
+        "replyStage2": "**Input:**\n\n```\n10\n0\n```\n\n**Expected output:**\n\n```\n10\n```",
+        "input": [
+            "10",
+            "0"
+        ],
+        "expectedOutput": [
+            "10"
+        ],
+        "testcaseType": "CorrectPT",
+        "buggy_output": "10\n",
+        "correct_output": "10\n"
+    },
+    {
+        "filename": "GCD.py",
+        "iteration": 7,
+        "replyStage1": "yes",
+        "replyStage2": "**Input:**\n\n```\n10\n0\n```\n\n**Expected output:**\n\n```\n10\n```",
+        "input": [
+            "10",
+            "0"
+        ],
+        "expectedOutput": [
+            "10"
+        ],
+        "testcaseType": "CorrectPT",
+        "buggy_output": "10\n",
+        "correct_output": "10\n"
+    },
+    {
+        "filename": "GCD.py",
+        "iteration": 8,
+        "replyStage1": "yes",
+        "replyStage2": "Input:\n```\n10\n15\n```\n\nExpected output:\n```\n5\n```",
+        "input": [
+            "10",
+            "15"
+        ],
+        "expectedOutput": [
+            "5"
+        ],
+        "testcaseType": "FT-IA",
+        "buggy_output": "10\n",
+        "correct_output": "5\n"
+    },
+    {
+        "filename": "GCD.py",
+        "iteration": 9,
+        "replyStage1": "yes",
+        "replyStage2": "**Input:**\n\n```\n10\n15\n```\n\n**Expected Output:**\n\n```\n5\n```\n\n**Actual Output:**\n\n```\n10\n```",
+        "input": [
+            "10",
+            "15"
+        ],
+        "expectedOutput": [
+            "5"
+        ],
+        "testcaseType": "FT-IA",
+        "buggy_output": "10\n",
+        "correct_output": "5\n"
+    },
+    {
+        "filename": "GCD.py",
+        "iteration": 10,
+        "replyStage1": "yes",
+        "replyStage2": "**Input:**\n\n```\n10\n0\n```\n\n**Expected output:**\n\n```\n10\n```",
+        "input": [
+            "10",
+            "0"
+        ],
+        "expectedOutput": [
+            "10"
+        ],
+        "testcaseType": "CorrectPT",
+        "buggy_output": "10\n",
+        "correct_output": "10\n"
+    }
+]

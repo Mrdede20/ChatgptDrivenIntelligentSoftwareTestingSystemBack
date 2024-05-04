@@ -1,0 +1,6 @@
+[
+    {
+        "filename": "GCD.py",
+        "program": "def gcd1 (a, b) :\\n    if b == 0 :\\n        return a\\n    else :\\n        return gcd1 (a, a%b)\\n\\n\\na = int(input())\\nb = int(input())\\nprint(gcd1(a,b))"
+    }
+]

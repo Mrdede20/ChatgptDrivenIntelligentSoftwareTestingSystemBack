@@ -1,0 +1,12 @@
+Test input:2
+3
+Test input:6
+14
+Test input:20
+16
+Test input:16
+16
+Test input:96
+72
+Test input:195
+1024

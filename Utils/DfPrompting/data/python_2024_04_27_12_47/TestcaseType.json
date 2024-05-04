@@ -1,0 +1,153 @@
+[
+    {
+        "filename": "GCD.py",
+        "iteration": 1,
+        "input": [
+            "4",
+            "6"
+        ],
+        "expectedOutput": [
+            "2",
+            ""
+        ],
+        "testcaseType": "FT-IA",
+        "buggy_output": "4\n",
+        "correct_output": "2\n"
+    },
+    {
+        "filename": "GCD.py",
+        "iteration": 2,
+        "input": [
+            "2",
+            "3"
+        ],
+        "expectedOutput": [
+            "1",
+            ""
+        ],
+        "testcaseType": "FT-IA",
+        "buggy_output": "2\n",
+        "correct_output": "1\n"
+    },
+    {
+        "filename": "GCD.py",
+        "iteration": 3,
+        "input": [
+            "5",
+            "3"
+        ],
+        "expectedOutput": [
+            "1",
+            ""
+        ],
+        "testcaseType": "FT-IA",
+        "buggy_output": "5\n",
+        "correct_output": "1\n"
+    },
+    {
+        "filename": "GCD.py",
+        "iteration": 4,
+        "input": [
+            "2",
+            "3"
+        ],
+        "expectedOutput": [
+            "1",
+            ""
+        ],
+        "testcaseType": "FT-IA",
+        "buggy_output": "2\n",
+        "correct_output": "1\n"
+    },
+    {
+        "filename": "GCD.py",
+        "iteration": 5,
+        "input": [
+            "10",
+            "5"
+        ],
+        "expectedOutput": [
+            "5",
+            ""
+        ],
+        "testcaseType": "FT-IA",
+        "buggy_output": "10\n",
+        "correct_output": "5\n"
+    },
+    {
+        "filename": "GCD.py",
+        "iteration": 6,
+        "input": [
+            "2",
+            "3"
+        ],
+        "expectedOutput": [
+            "1",
+            ""
+        ],
+        "testcaseType": "FT-IA",
+        "buggy_output": "2\n",
+        "correct_output": "1\n"
+    },
+    {
+        "filename": "GCD.py",
+        "iteration": 7,
+        "input": [
+            "5",
+            "1"
+        ],
+        "expectedOutput": [
+            "1",
+            ""
+        ],
+        "testcaseType": "FT-IA",
+        "buggy_output": "5\n",
+        "correct_output": "1\n"
+    },
+    {
+        "filename": "GCD.py",
+        "iteration": 8,
+        "input": [
+            "2",
+            "3"
+        ],
+        "expectedOutput": [
+            "1",
+            ""
+        ],
+        "testcaseType": "FT-IA",
+        "buggy_output": "2\n",
+        "correct_output": "1\n"
+    },
+    {
+        "filename": "GCD.py",
+        "iteration": 9,
+        "input": [
+            "2",
+            "1",
+            "2"
+        ],
+        "expectedOutput": [
+            "1",
+            ""
+        ],
+        "testcaseType": "IT",
+        "buggy_output": [],
+        "correct_output": []
+    },
+    {
+        "filename": "GCD.py",
+        "iteration": 10,
+        "input": [
+            "89",
+            "12"
+        ],
+        "expectedOutput": [
+            "1",
+            ""
+        ],
+        "testcaseType": "FT-IA",
+        "buggy_output": "89\n",
+        "correct_output": "1\n"
+    }
+]

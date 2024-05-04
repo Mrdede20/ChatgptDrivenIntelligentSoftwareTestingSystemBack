@@ -1,0 +1,10 @@
+Test input:89
+12
+Test input:1432
+2
+Test input:121
+42
+Test input:42155
+45301
+Test input:437
+112

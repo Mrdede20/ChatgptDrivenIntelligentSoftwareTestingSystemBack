@@ -1,0 +1,15 @@
+Test input:
+2
+3
+Test input:
+12
+10
+Test input:
+0
+5
+Test input:
+20
+50
+Test input:
+1
+0

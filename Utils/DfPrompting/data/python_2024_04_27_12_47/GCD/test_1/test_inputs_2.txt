@@ -1,0 +1,19 @@
+Test input:
+1
+1
+
+Test input:
+5
+1
+
+Test input:
+9
+3
+
+Test input:
+2
+9
+
+Test input:
+999999999
+456789123
