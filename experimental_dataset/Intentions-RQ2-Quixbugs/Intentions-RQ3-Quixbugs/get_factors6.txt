@@ -1,0 +1,5 @@
+The intention of this code is to implement a function called `get_factors(n)` that computes the prime factorization of a positive integer `n`. 
+
+The function works by trying to divide `n` by every integer from 2 up to the square root of `n`. If an integer `i` divides `n`, then `i` is added to a list of factors, and the function is recursively called on `n // i`. This process continues until `n` is reduced to 1, at which point the function returns a list of the prime factors of the original `n`, sorted in ascending order.
+
+For example, `get_factors(100)` would return `[2, 2, 5, 5]`, since 100 is equal to 2^2 * 5^2.

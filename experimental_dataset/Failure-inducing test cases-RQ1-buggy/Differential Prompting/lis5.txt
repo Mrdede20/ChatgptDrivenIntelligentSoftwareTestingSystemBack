@@ -1,0 +1,8 @@
+Yes, there is an input which makes the two programs have different output. 
+
+Test Case:
+arr = [1, 2, 3, 5, 4]
+
+The first implementation will return 4, which is the length of the longest increasing subsequence in the array.
+
+The second implementation will return 3, which is the length of the longest increasing subsequence in the array.

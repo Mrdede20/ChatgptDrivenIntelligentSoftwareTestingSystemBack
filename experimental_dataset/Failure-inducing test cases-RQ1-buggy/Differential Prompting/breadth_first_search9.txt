@@ -1,0 +1,24 @@
+Yes, there is an input that can make the programs have different output. The difference arises from how the equality operator "==" and the identity operator "is" behave in Python. 
+
+In the first program, the "is" operator is used to check if the current node is the goal node. This checks if the two objects are the same object in memory. However, in the second program, the "==" operator is used, which checks if the two objects have the same value.
+
+So, if the startnode and goalnode objects have the same value, but are not the same object in memory, the first program will return False, while the other programs will return True.
+
+Here is an example input that can cause different output:
+
+```
+class Node:
+    def __init__(self, val, successors=[]):
+        self.val = val
+        self.successors = successors
+
+
+n1 = Node(1)
+n2 = Node(2)
+n3 = Node(3, [n1, n2])
+n4 = Node(4, [n3])
+print(breadth_first_search(n1, n2))  # False
+print(breadth_first_search(n1, n2))  # True (all others)
+``` 
+
+The input above creates some nodes and adds them as children of other nodes. The first function will return False since the function checks for the identity of the nodes, while the other functions will return True since they check for the value.

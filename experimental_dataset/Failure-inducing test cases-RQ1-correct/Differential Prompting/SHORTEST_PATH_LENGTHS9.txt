@@ -1,0 +1,28 @@
+There is a difference in the way the nodes are indexed in the two programs. In the first program, the nodes are indexed from 0 to numNodes-1 and in the second program, the nodes are indexed from 1 to numNodes. This means that if we use an input graph that has nodes indexed from 1 to numNodes-1, the two programs will produce different output. Here is an example input graph that will make the two programs produce different output:
+
+```
+numNodes = 3
+length_by_edge = {(1,2): 1, (2,1): 1, (2,3): 1, (3,2): 1}
+```
+
+In the first program, the output would be:
+
+```
+{
+  (0,0): 0, (0,1): 1, (0,2): 2,
+  (1,0): 1, (1,1): 0, (1,2): 1,
+  (2,0): 2, (2,1): 1, (2,2): 0
+}
+```
+
+In the second program, the output would be:
+
+```
+{
+  (1,1): 0, (1,2): 1, (1,3): 2,
+  (2,1): 1, (2,2): 0, (2,3): 1,
+  (3,1): 2, (3,2): 1, (3,3): 0
+}
+```
+
+As you can see, the two programs produce different output for the same input graph.

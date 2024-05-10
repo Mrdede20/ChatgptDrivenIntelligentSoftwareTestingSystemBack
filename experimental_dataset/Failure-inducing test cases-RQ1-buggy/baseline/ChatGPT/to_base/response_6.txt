@@ -1,0 +1,17 @@
+Test Case:
+
+num = 15
+b = 0
+
+Expected Result: 
+The program should throw an error indicating a divide by zero.
+
+Actual Result:
+The program throws an error message:
+
+Traceback (most recent call last):
+  File "<ipython-input-N>", line 1, in <module>
+    def to_base(num, b):\    result = ''\    alphabet = string.digits + string.ascii_uppercase\    while num > 0:\        i = num % b\        num = num // b\        result = result + alphabet[i]\    return result
+ZeroDivisionError: integer division or modulo by zero
+
+This test case shows that the program does not handle the case where the base parameter is zero, resulting in the division-by-zero error. This failure can cause the program to crash or produce incorrect results in other scenarios. Therefore, this bug needs to be fixed by adding a proper exception handling for this case.

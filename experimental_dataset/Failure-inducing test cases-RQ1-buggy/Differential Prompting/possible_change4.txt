@@ -1,0 +1,11 @@
+Yes, there are several inputs that can make these programs have different outputs. For example, consider the following input:
+
+possible_change([1, 2, 5], 5)
+
+The first six implementations will return 4, while the last implementation will return 4. 
+
+However, if the input coins list was empty, like this:
+
+possible_change([], 5)
+
+The first six implementations will return 0, while the last implementation will return an error because of the indexing operation `coins[0]` on an empty list.

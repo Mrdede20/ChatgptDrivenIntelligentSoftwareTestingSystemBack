@@ -1,0 +1,5 @@
+This code contains a function `minimum_spanning_tree` that takes a dictionary `weight_by_edge`, representing an undirected graph, and returns a set of edges that connects all the vertices of the input graph and has the least possible total weight. The function implements Kruskal's algorithm for finding the minimum spanning tree.
+
+The basic idea of Kruskal's algorithm is to sort the edges of the graph in increasing order of weights, and then adding them to the minimum spanning tree one by one, as long as they do not create a cycle. To keep track of which nodes are connected, the algorithm uses a disjoint-set data structure called `group_by_node`.
+
+The input to the function is a dictionary where the keys are pairs of nodes and the values are edge weights. The algorithm first sorts these edges by weight and then loops through them, checking if adding an edge will create a cycle using the disjoint-set data structure. If adding the edge does not create a cycle, it is added to the minimum spanning tree, and the disjointed sets of the affected nodes are merged. Finally, the function returns the set of edges that were added to the minimum spanning tree.

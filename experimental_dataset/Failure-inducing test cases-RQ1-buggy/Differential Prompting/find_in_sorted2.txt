@@ -1,0 +1,9 @@
+Yes, there is an input that can make these two functions return different output. The input is an array containing multiple instances of the target element. For example, consider the following test case:
+
+```
+arr = [1, 2, 2, 3, 4, 5]
+x = 2
+```
+
+For the first function `find_in_sorted`, it will always return the index of the first occurrence of the target element. So, it will return 1.
+For the second function `binsearch`, it will return the index of any occurrence of the target element. In this case, it might return 1, or 2, depending on the implementation of the recursive calls.

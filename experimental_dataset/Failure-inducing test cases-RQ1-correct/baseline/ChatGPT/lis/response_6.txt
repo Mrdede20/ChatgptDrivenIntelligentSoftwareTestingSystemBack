@@ -1,0 +1,32 @@
+response@ChatGPT:
+
+
+Yes, there are several test cases that could potentially trigger bugs in the program:
+
+1. An input list with all elements equal: This would test if the program can handle lists with no distinct values.
+2. An input list sorted in reverse order: This would test if the program can handle decreasing sequences.
+3. An input list with negative elements: This would test if the program can handle negative numbers.
+4. An input list with duplicate elements: This would test if the program can handle repeated values.
+5. An input list with only one element: This would test if the program can handle edge cases. 
+
+Example test case:
+
+Input: [3, -2, 8, 5, -10, 6, 4, 8, -2]
+
+Expected Output: 5
+
+Explanation: The longest increasing subsequence in the input list is [3, 5, 6, 8, 8]
+
+request@user:
+Give us such test case. Use assert.
+
+response@ChatGPT:
+Here is a test case:
+
+def test_lis():
+\    arr = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5, 8, 9, 7, 9]
+\
+\    assert lis(arr) == 7
+
+This test case tests whether the `lis` function returns the correct Longest Increasing Subsequence (LIS) of `arr`. The expected result is 7, since the LIS of the input array is [1, 4, 5, 6, 8, 9, 9]. The `assert` function tests whether the function's return value matches the expected result. If the return value is not 7, the test will fail.
+

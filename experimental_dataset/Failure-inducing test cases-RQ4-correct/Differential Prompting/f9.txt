@@ -1,0 +1,44 @@
+Yes, there is an input that makes the two programs have different output. A possible input that will yield different outcomes is:
+
+Input:
+2
+5 7 3
+1 5 2 4 3
+4 10 3
+4 8 6 2
+
+Expected Output:
+2
+3
+
+Explanation:
+For the first test case:
+- In the first program, the output is 2 because the binary search algorithm reaches the value of mid=2, and summing the 2 largest elements of the list [5, 4, 3] satisfies the condition of having at least 7 coins.
+- In the second program, the output is 1 because the binary search algorithm reaches the value of mid=4, and summing the 4 largest elements of the list [8, 6, 4, 2] satisfies the condition of having at least 10 coins.
+
+For the second test case:
+- In the first program, the output is "Impossible" because the largest element of the list is not enough to cover the amount of coins needed.
+- In the second program, the output is 3 because the binary search algorithm reaches the value of mid=3, and summing the 3 largest elements of the list [8, 6, 4] satisfies the condition of having at least 10 coins.
+
+Java test code:
+
+```
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class TestCoinSum {
+
+    @Test
+    public void testCoinSum() {
+        // Test case 1
+        int[] a1 = {1, 5, 2, 4, 3};
+        assertEquals(2, CoinSum.calculateCoins(5, 7, 3, a1));
+        assertEquals(1, MaxIntegerK.maxIntegerK(1, new int[][]{{5, 7, 3, 1, 5, 2, 4, 3}}));
+
+        // Test case 2
+        int[] a2 = {4, 8, 6, 2};
+        assertEquals("Impossible", CoinSum.calculateCoins(4, 10, 3, a2));
+        assertEquals(3, MaxIntegerK.maxIntegerK(1, new int[][]{{4, 10, 3, 4, 8, 6, 2}}));
+    }
+}
+```

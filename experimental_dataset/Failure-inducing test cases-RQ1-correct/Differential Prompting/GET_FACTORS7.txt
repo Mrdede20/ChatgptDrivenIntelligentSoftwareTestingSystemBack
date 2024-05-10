@@ -1,0 +1,1 @@
+No, the two programs will always give the same output for any input. The GET_FACTORS class uses recursion while the FactorFinder class uses iteration, but their logic for finding factors is equivalent.

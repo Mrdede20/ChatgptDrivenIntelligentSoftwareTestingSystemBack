@@ -1,0 +1,17 @@
+Test case:
+
+coins = [1, 5, 10, 25]
+total = 30
+
+Expected output: 13
+
+However, this test case will trigger a bug in the program and result in a test failure. The bug is that the program does not handle the case where the list of coins is empty. When the list of coins is empty and the total is not zero, the function will enter an infinite recursion loop.
+
+To trigger the bug, we can modify the test case by setting coins to an empty list:
+
+coins = []
+total = 30
+
+Expected output: 0
+
+However, the program will enter an infinite recursion loop and the test will fail.

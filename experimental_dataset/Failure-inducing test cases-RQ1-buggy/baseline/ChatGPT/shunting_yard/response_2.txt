@@ -1,0 +1,10 @@
+Test case:
+
+Input: ['*', 2, 3, '+', 4]
+
+Expected output: [2, 3, '*', 4, '+']
+
+Actual output: [2, 3, '+', 4, '*']
+
+
+Explanation: The program uses the shunting yard algorithm to convert an infix arithmetic expression to postfix notation. The input expression contains an error as the multiplication operator is placed before the operands. The expected output (postfix notation) should be [2, 3, '*', 4, '+'] which represents the expression (2 * 3) + 4. However, the actual output gives [2, 3, '+', 4, '*'], which represents the expression 2 + (3 * 4). Thus the program fails to correctly convert the input expression to postfix notation, resulting in the test failure.

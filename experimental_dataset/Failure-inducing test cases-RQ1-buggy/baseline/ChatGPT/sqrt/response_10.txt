@@ -1,0 +1,6 @@
+Test case:
+Input: x = 0, epsilon = 0.01
+Expected Output: 0
+
+Explanation:
+The function should return the square root of the input x with an accuracy of epsilon. However, when x is 0, the approx variable is initialized to 0 which will cause a ZeroDivisionError exception in the while loop. Therefore, the function will fail to execute as expected and the test case will fail.

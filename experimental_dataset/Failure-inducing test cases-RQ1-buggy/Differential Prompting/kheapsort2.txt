@@ -1,0 +1,1 @@
+No, both programs will generate the same output given the same input. The only difference between the two versions is the import statement of the heapq module, but this does not affect the behavior of the program since both versions are using the same functions from the heapq module. Hence, using the same input will result in the same output for both versions of the code.

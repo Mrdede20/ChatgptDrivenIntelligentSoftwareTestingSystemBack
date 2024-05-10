@@ -1,0 +1,1 @@
+No, both programs have the same logic for quicksort algorithm and use the same input data, so they will always produce the same output.

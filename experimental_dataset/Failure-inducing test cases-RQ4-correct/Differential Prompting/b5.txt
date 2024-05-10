@@ -1,0 +1,48 @@
+Yes, there is an input that would make the two programs output different results. An example input is:
+
+```
+3
+5 abc
+7 defg
+8 hijklmno
+```
+
+The first program will output:
+
+```
+2
+5
+14
+```
+
+while the second program will output:
+
+```
+2
+5
+15
+```
+
+To generate this test input in Java, you can use the following code:
+```java
+import java.util.Scanner;
+
+public class TestInputGenerator {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int n = 3;
+        System.out.println(n);
+
+        System.out.println("5 abc");
+        System.out.println("7 defg");
+        System.out.println("8 hijklmno");
+
+        scanner.close();
+    }
+}
+
+```
+
+This will print the test input to the console, which you can copy and paste into the console of the program you want to test.

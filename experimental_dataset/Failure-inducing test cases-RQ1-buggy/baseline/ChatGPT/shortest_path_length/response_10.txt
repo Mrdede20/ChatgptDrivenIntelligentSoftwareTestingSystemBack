@@ -1,0 +1,16 @@
+One test case that could trigger a bug in the program is when there is a cycle in the graph. The current implementation does not handle cycles, so it might result in an infinite loop or incorrect output.
+
+Here's an example of a test case that could cause a failure:
+
+length_by_edge = {
+    (1, 2): 1,
+    (2, 3): 2,
+    (3, 4): 3,
+    (4, 2): 1,
+}
+startnode = Node(1, [Node(2)])
+goalnode = Node(4)
+
+assert shortest_path_length(length_by_edge, startnode, goalnode) == 4
+
+In this test case, there is a cycle between nodes 2 and 4 with an edge weight of 1. The shortest path from node 1 to node 4 is 4 (1 -> 2 -> 3 -> 4), but the current implementation might get stuck in an infinite loop or return an incorrect output.

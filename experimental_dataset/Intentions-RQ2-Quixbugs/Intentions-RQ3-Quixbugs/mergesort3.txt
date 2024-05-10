@@ -1,0 +1,5 @@
+The intention of the code is to implement the Merge Sort algorithm for a given list of integers `arr`. The Merge Sort algorithm uses the technique of dividing a list into halves repeatedly until each sublist contains only one element, and then merging the sublists in a sorted order. This process is repeated until the entire list is sorted. 
+
+The `mergesort()` function implements this algorithm recursively by dividing the input list into left and right sublists, sorting them recursively and then merging them using the `merge()` function. The `merge()` function compares each element of the left and right sublists and adds the smallest element to the result list. Finally, the function returns the sorted list.
+
+The input of the function is a list of integers, and the output is the same list sorted in ascending order. The function achieves a time complexity of O(n log n) and is a widely used and efficient sorting algorithm.

@@ -1,0 +1,9 @@
+Yes, there is an input that makes the two programs have different outputs. Here's an example:
+
+If the input coins = {1,2,3} and total = 4, the two programs will have different outputs. 
+
+POSSIBLE_CHANGE program will return 4 possible ways to make change: {1,1,1,1}, {1,1,2}, {2,2}, and {1,3}. 
+
+CoinChange program will return 3 possible ways to make change: {1,1,1,1}, {1,1,2}, and {1,3}. 
+
+The order in which the recursive calls are made in the two programs is different, and this leads to a difference in the final result.

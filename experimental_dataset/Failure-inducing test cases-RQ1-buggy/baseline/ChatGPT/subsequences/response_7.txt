@@ -1,0 +1,50 @@
+Test Case: 
+
+Initial Inputs: 
+a = 1
+b = 4
+k = 0
+
+Expected Output: 
+[]
+
+Actual Output: 
+[]
+
+Test Result: Pass
+
+
+Test Case: 
+
+Initial Inputs: 
+a = 3
+b = 8
+k = 2
+
+Expected Output: 
+[[3, 4], [3, 5], [3, 6], [3, 7], [4, 5], [4, 6], [4, 7], [5, 6], [5, 7], [6, 7]]
+
+Actual Output: 
+[[3, 4], [3, 5], [3, 6], [3, 7], [4, 5], [4, 6], [4, 7], [5, 6], [5, 7], [6, 7]]
+
+Test Result: Pass
+
+
+Test Case:
+
+Initial Inputs:
+a = 0
+b = -1
+k = 3
+
+Expected Output: 
+[]
+
+Actual Output: RuntimeError: maximum recursion depth exceeded in comparison 
+
+Test Result: Fail
+
+Explanation: 
+Here, the range for the loop does not make sense because b+1-k is -3 which doesn't go into the loop. This leads to a recursive function which keeps on running until it exceeds the maximum recursion depth. Thus, this test case results in an error and the test fails. 
+
+Thanks!

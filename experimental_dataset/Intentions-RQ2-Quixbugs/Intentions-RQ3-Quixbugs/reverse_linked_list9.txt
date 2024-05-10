@@ -1,0 +1,5 @@
+The intention of the code is to reverse a linked list. The input to the function is the head of a singly-linked list, and the output is the head of the reversed linked list. 
+
+The implementation uses a while loop that iterates through the list, making each node point to its predecessor instead of its successor. In this process, the variable prevnode is used to keep track of the previous node so that we can correctly update the successor pointer. The variable node is used to traverse through the linked list, and nextnode is used as a temporary variable to store the next node after node. 
+
+The function modifies the list nodes' successor pointers, and has a side effect in doing so.

@@ -1,0 +1,13 @@
+The intention of the given code is to implement the Floyd-Warshall algorithm to calculate the length of the shortest path connecting every ordered pair of nodes in a directed graph. 
+
+The function `shortest_path_lengths` takes two arguments: 
+- `n`: an integer representing the number of nodes in the graph
+- `length_by_edge`: a dictionary representing the length of each edge in the graph, keyed by an ordered pair of node ids
+
+The function uses a `defaultdict` to initialize the initial length of all paths between any two nodes as infinity. The diagonal elements (i.e., i,i) are initialized as 0. 
+
+The function then updates the `length_by_path` dictionary with provided edges. 
+
+It then uses a triple nested loop to evaluate the shortest path length between all pairs of nodes. It does this by comparing the current shortest path to a node to a new path which involves passing through another node. 
+
+Finally, the function returns a dictionary containing the shortest path length between all pairs of nodes keyed by an ordered pair of node ids.

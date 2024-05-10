@@ -1,0 +1,11 @@
+Test case:
+
+weight_by_edge = {('A', 'B'): 2, ('B', 'C'): 4, ('C', 'D'): 1, ('D', 'E'): 3, ('E', 'A'): 9}
+source = 'A'
+
+Expected output: 
+{'A': 0, 'B': 2, 'C': 6, 'D': 7, 'E': 10}
+
+Test description: 
+
+This test case tests if the program is able to calculate the shortest paths from the source node 'A' to all the other nodes in a graph with weighted edges. However, the test case has a bug in the weight_by_edge dictionary where there is a cycle (E -> A) which should not be present in a directed graph. This cycle can cause an infinite loop in the program, leading to incorrect output or an error. Therefore, the program should detect this cycle and report an error.

@@ -1,0 +1,16 @@
+Yes, there are inputs that can make the two programs have different output. Here is one test case:
+
+```
+n = 67 
+```
+
+- `bitcount(n)` will return 3, because `67` in binary is `0b1000011`, so there are 3 set bits.
+- `count_bits(n)` will return 2, because `67` in binary is `0b1000011`, so there are only 2 1's in the binary representation.
+
+You can test it yourself in Python by running:
+
+```
+n = 67
+print(bitcount(n))   # Output: 3
+print(count_bits(n)) # Output: 2
+```

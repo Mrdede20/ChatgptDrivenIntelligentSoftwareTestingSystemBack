@@ -1,0 +1,1 @@
+Yes, the main difference between the two programs is the data types they use for the input and output of the shunting_yard function. The first program expects an ArrayList of objects whereas the second program expects an ArrayList of strings. Depending on the input given, the two implementations may produce different output.

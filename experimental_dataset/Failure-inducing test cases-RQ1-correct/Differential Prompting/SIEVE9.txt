@@ -1,0 +1,2 @@
+Yes, the two programs can have different outputs for certain inputs. 
+For example, if `max` is set to `1` in the second program, it will return an empty list, while the first program will return a list with no elements. This is because the first program starts with the number `2`, while the second program starts with the number `1`.

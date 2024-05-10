@@ -1,0 +1,3 @@
+The intention of this code is to generate all possible subsets of a given list, including the empty set and the original set itself. The function recursively calls itself with decreasing subsets of the original list, until it reaches the base case of an empty list, at which point it returns the empty set. The resulting subsets are then concatenated using list comprehension and returned as a list of lists. 
+
+The code also includes a docstring with information about the input, output, and example usage of the function.

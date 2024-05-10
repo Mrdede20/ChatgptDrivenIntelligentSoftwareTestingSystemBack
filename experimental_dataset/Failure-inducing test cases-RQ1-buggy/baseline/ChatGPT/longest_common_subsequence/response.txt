@@ -1,0 +1,29 @@
+#PT
+assert longest_common_subsequence('abc', '') == ''
+
+#PT
+assert longest_common_subsequence('', 'abc') == ''
+
+#PT
+assert longest_common_subsequence('abc', 'abc') == 'abc'
+
+#PT
+assert longest_common_subsequence('abc', 'def') == ''
+
+#PT
+assert longest_common_subsequence('abcdefg', 'cdhijkl') == 'cd'
+
+#FT
+assert longest_common_subsequence('aaa', 'aa') == 'aa'
+
+#PT
+assert longest_common_subsequence('abcdefg', 'abcdefgxyz') == 'abcdefg'
+
+#PT
+assert longest_common_subsequence('abcdefg', 'abc') == 'abc'
+
+#PT
+assert longest_common_subsequence('abcde', 'edcba') == 'a'
+
+#PT
+assert longest_common_subsequence('abc', 'abcdef') == 'abc'

@@ -1,0 +1,21 @@
+Yes, there are inputs that can make the two programs have different outputs.
+
+Test Input Reasoning:
+
+Let's consider the case where n=3 and s=[1, 2, 3]. This is an interesting case because all elements of the list s are distinct.
+
+Test Input
+
+3
+1 2 3
+3
+Test Output
+
+1 0 -1 
+1 1 2 
+
+Test Output Reasoning:
+
+For the first program, the output is 1 0 -1 because the first element of the input list is the maximum value, so the absolute difference between the first element and the second highest value is 1, while the absolute difference between the first element and the third highest value is -1. For every other element, the absolute difference between it and the highest value is printed.
+
+For the second program, the output is 1 1 2 because the absolute difference between the highest value and the second highest value is 1, while the absolute difference between the highest value and every other value is printed for every other element. The second program doesn't print the absolute difference between the second-high value and the highest value, as the first program does.

@@ -1,0 +1,82 @@
+#FF
+text = "Hello world, how are you? It's a beautiful day outside and we should go for a walk."
+cols = 20
+expected_output = [
+    "Hello world, how are",
+    "you? It's a beautiful",
+    "day outside and we",
+    "should go for a walk."
+]
+assert wrap(text, cols) == expected_output
+
+#FF
+text = "The quick brown fox jumps over the lazy dog."
+cols = 10
+expected = [
+    "The quick",
+    "brown fox",
+    "jumps over",
+    "the lazy",
+    "dog."
+]
+assert wrap(text, cols) == expected
+
+#FF
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a pulvinar ante."
+cols = 20
+expected_result = ['Lorem ipsum dolor', 'sit amet,', 'consectetur', 'adipiscing elit.', 'Duis a pulvinar', 'ante.']
+assert wrap(text, cols) == expected_result
+
+#FF
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod vestibulum nisl, vitae aliquet velit suscipit ac. Pellentesque egestas ante quis ornare iaculis. Donec vel nibh at eros pretium aliquam. Aliquam feugiat augue nec lorem facilisis congue. Quisque vel mauris mollis, blandit lectus at, tempor mauris."
+cols = 20
+expected_output = ['Lorem ipsum dolor', 'sit amet,', 'consectetur', 'adipiscing elit.', 'Sed euismod', 'vestibulum nisl,', 'vitae aliquet velit', 'suscipit ac.', 'Pellentesque', 'egestas ante quis', 'ornare iaculis.', 'Donec vel nibh at', 'eros pretium aliquam.', 'Aliquam feugiat', 'augue nec lorem', 'facilisis congue.', 'Quisque vel mauris', 'mollis, blandit', 'lectus at,', 'tempor mauris.']
+assert wrap(text, cols) == expected_output
+
+#FF
+text = "This is a sample text to test the wrap function"
+cols = 10
+expected_output = ['This is a', 'sample', 'text to', 'test the', 'wrap', 'function']
+assert wrap(text, cols) == expected_output
+
+#FF
+text = "This is a sample text that needs to be wrapped."
+cols = 10
+expected_result = ["This is a", "sample", "text that", "needs to", "be wrapped."]
+assert wrap(text, cols) == expected_result, "Test Case Failed"
+
+#IT
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse imperdiet, tortor vel aliquet sodales, mi ante commodo nisi, vel varius sapien odio quis dui. Curabitur iaculis consectetur nisl, in tincidunt nibh vehicula ut. Integer auctor, sapien ut pellentesque commodo, orci nunc fringilla elit, id fringilla nulla velit nec nulla."
+cols = 10
+expected_output = ["Lorem ipsum", "dolor sit", "amet,", "consectetur", "adipiscing", "elit.", "Suspendisse", "imperdiet,", "tortor vel", "aliquet", "sodales,", "mi ante", "commodo nisi,", "vel varius", "sapien odio", "quis dui.", "Curabitur", "iaculis", "consectetur", "nisl,", "in", "tincidunt", "nibh", "vehicula", "ut.", "Integer", "auctor,", "sapien ut", "pellentesque", "commodo,", "orci nunc", "fringilla", "elit,", "id", "fringilla", "nulla velit", "nec nulla."]
+assert wrap(text, cols) == expected_output
+
+#FF
+text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod arcu sit amet augue luctus, at iaculis elit congue. Quisque non ipsum non libero auctor pretium. Donec blandit nulla odio, at sollicitudin nisl pulvinar vitae. Duis molestie ligula eu quam venenatis sollicitudin.'
+cols = 20
+result = wrap(text, cols)
+assert result == ['Lorem ipsum dolor', 'sit amet,', 'consectetur', 'adipiscing elit.', 'Sed euismod arcu', 'sit amet augue', 'luctus, at iaculis', 'elit congue.', 'Quisque non ipsum', 'non libero auctor', 'pretium. Donec blandit', 'nulla odio, at', 'sollicitudin nisl', 'pulvinar vitae. Duis', 'molestie ligula eu', 'quam venenatis', 'sollicitudin.'], f'Expected: {result}'
+
+#FF
+text = "lorem ipsum dolor sit amet, consectetur adipiscing elit"
+cols = 15
+expected_output = [
+    "lorem ipsum",
+    "dolor sit amet,",
+    "consectetur",
+    "adipiscing elit"
+]
+assert wrap(text, cols) == expected_output
+
+#FF
+text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.'
+cols = 20
+expected = [
+    'Lorem ipsum dolor',
+    'sit amet,',
+    'consectetur',
+    'adipiscing elit. Sed',
+    'non risus.'
+]
+result = wrap(text, cols)
+assert result == expected, f'Expected {expected}, but got {result}'

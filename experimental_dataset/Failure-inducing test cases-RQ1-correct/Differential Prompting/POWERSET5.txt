@@ -1,0 +1,22 @@
+There is a difference in the input type of the two programs. The first program takes an ArrayList of any Object, while the second program takes a List of Integers. As long as the input for both programs is of the same type and has the same values, the output of the two programs should be the same. Here's some code for testing that:
+
+```
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<Integer> arr = new ArrayList<Integer>(Arrays.asList(1, 2, 3));
+        List<Integer> list = Arrays.asList(1, 2, 3);
+
+        ArrayList<ArrayList> result1 = POWERSET.powerset(arr);
+        List<List<Integer>> result2 = PowerSet.powerset(list);
+
+        System.out.println(result1);
+        System.out.println(result2);
+    }
+}
+```
+
+This test case should produce the same output for both programs.

@@ -1,0 +1,21 @@
+response@ChatGPT:
+Test case:
+
+Input:
+2
+5
+10 5 7 8 6
+3
+1 2 0
+
+Expected Output:
+5 3 -3 -2 -4
+1 1 -2
+
+Actual Output:
+5 3 -3 -2 -4
+1 1 1
+
+Explanation:
+In the second test case, the output should be 1 1 -2. However, the program incorrectly outputs 1 1 1. This is because the program is not properly updating the second maximum value of the list. The bug occurs in the line "if s[i]>=s[mx[1]]:", where it should be "if s[mx[0]] > s[i] > s[mx[1]]:". The bug causes the program to incorrectly select the second maximum value, which leads to incorrect output.
+

@@ -1,0 +1,12 @@
+Test case:
+text = "hello world"
+cols = 4
+
+Expected output:
+["hell", "o", "worl", "d"]
+
+Actual output:
+["hell", "o wo", "rld"]
+
+Explanation:
+The function should split the text into lines of length 'cols' while keeping words complete. However, in this case, it splits the word 'world' at 'wo' because it does not find a space within 'cols' characters. This results in an incorrect output and a test failure.

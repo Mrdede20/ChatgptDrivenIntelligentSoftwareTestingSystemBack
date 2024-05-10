@@ -1,0 +1,12 @@
+Yes, there is an input that makes the two programs have different output. 
+
+Test case: 
+
+```
+tokens = ['-', 5, 3, 4]
+```
+
+For the first program, the output will be -1.0. 
+For the second program, the output will be 1.0. 
+
+The reason for this difference is that the order of the operands for the subtraction operator is different in the two programs. In the first program, the operands are popped from the stack in the order `a, b`, while in the second program, they are popped in the order `b, a`.

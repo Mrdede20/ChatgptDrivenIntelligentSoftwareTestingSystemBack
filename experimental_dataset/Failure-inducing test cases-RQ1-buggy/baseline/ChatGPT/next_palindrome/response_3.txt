@@ -1,0 +1,12 @@
+Test Case:
+
+digit_list = [9, 9, 9, 9, 9, 9]
+expected_output = [1, 0, 0, 0, 0, 1]
+
+Explanation:
+
+The program's purpose is to take a list of digits and return the next highest palindrome number. The test case's input is the list [9, 9, 9, 9, 9, 9], which represents the number 999999. The expected output is the list [1, 0, 0, 0, 0, 1], which represents the number 1000001, the next highest palindrome number.
+
+However, the program has a bug where it fails to correctly handle cases where all digits in the input list are 9. When it encounters a 9 in the middle of the list, it sets both the middle and corresponding digits to 0 and moves on to the next pair of digits. This results in the program incorrectly returning the list [1, 0, 0, 0, 0, 0], which represents the number 100000.
+
+Therefore, the program fails to produce the expected output for the input test case, and the test fails.

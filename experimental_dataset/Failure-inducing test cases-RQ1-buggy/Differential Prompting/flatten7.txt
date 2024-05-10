@@ -1,0 +1,1 @@
+No, the two programs above are exactly the same. They both define a function called `flatten` that recursively flattens a list of nested lists. The code is identical in both cases. Therefore, there is no input that can make them have different outputs.

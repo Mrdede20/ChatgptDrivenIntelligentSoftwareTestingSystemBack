@@ -1,0 +1,5 @@
+This code reads multiple test cases which represent a graph problem. Each test case contains an integer `n` representing the number of vertices in a tree, followed by two integers `a` and `b` representing two nodes in the tree, and `n-1` lines representing the edges of the tree. The code then checks whether there are at least two paths between nodes `a` and `b` in the tree.
+
+To solve the problem, the code first constructs a tree represented as `edges` using dictionary data structures. It then runs two breadth-first searches one starting from node `a` and the other starting from node `b` to find the distances between each node and the starting nodes. Finally, the code checks if there are at least two paths between `a` and `b` in the tree by comparing the nodes' distances from both starting points. 
+
+This algorithm uses the bitwise XOR to compute the distance between each node and the starting node.

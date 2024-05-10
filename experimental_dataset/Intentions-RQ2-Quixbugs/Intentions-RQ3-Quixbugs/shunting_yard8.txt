@@ -1,0 +1,16 @@
+The given code implements the Shunting-yard algorithm to convert the mathematical expression from infix notation to Reverse polish notation. 
+
+The algorithm uses two lists: 
+
+- The `opstack` stores operators encountered during parsing of mathematical expression.
+- The `rpntokens` stores the final output in Reverse Polish Notation form.
+
+The algorithm iterates through the given tokens from left to right:
+
+- If the token is an integer, then it is added to the `rpntokens` list.
+- Otherwise if it is an operator, then it is compared with the topmost operator in the `opstack`. If it has higher precedence, it is added to the `opstack`; otherwise, elements from `opstack` are popped and added to the `rpntokens` list until an operator with lower or equal precedence is found. The current operator is then added to the `opstack`.
+- After parsing all tokens, the remaining operators in `opstack` are popped and added to `rpntokens`.
+
+Finally, the `rpntokens` list is returned in Reverse Polish Notation. 
+
+The  `precedence` dictionary defines the precedence order of the four basic mathematical operators (+, -, *, /). Higher value means higher precedence.

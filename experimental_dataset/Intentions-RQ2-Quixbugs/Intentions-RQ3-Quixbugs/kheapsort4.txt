@@ -1,0 +1,9 @@
+This code contains an implementation of the K-Heapsort algorithm, which sorts an almost-sorted array with every element is no more than k units from its sorted position in O(n log k) time. The algorithm works by first creating a heap of size k using the initial k elements of the array. It then iterates over the remaining elements of the array and adds them to the heap one at a time, while removing the smallest element from the heap and yielding it each time. Finally, when all elements have been added to the heap, the remaining elements are removed from the heap one by one and yielded, resulting in a sorted order of the original array.
+
+The code defines a function `kheapsort` that takes two arguments:
+- `arr`: a list of integers to sort
+- `k`: an integer indicating how far each element of the list is from its final sorted position
+
+The code returns a generator that yields the sorted integers of `arr`.
+
+Some examples are also provided to show how to use the function.

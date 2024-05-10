@@ -1,0 +1,11 @@
+This code takes the following inputs:
+- t: integer value indicating the number of test cases
+- For each test case:
+   - n: integer value indicating the number of elements in the list s
+   - s: a list of n integers
+
+The code then finds the two maximum values in the list s and calculates the difference of the remaining elements with these maximum values one by one. Finally, it prints the resulting list.
+
+The logic in this code is to find the two maximum values of the list s and subtract them from each value in s where for each index i in s, if i equals the first max value, then we subtract the second max value from it. If it's not the first max value, then we subtract the first max value from it.
+
+This code is trying to solve a problem that requires finding the second largest element in an array and then subtracting it from every other element in the array. The solution is successful in doing so.

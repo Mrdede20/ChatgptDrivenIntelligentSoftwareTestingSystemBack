@@ -1,0 +1,1 @@
+No, both programs produce the same output for any input because they have the same implementation of the Euclidean algorithm to calculate the greatest common divisor (GCD) of two integers. They only differ in the formatting of the code and the inclusion of a main method in the second version.

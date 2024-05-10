@@ -1,0 +1,30 @@
+Test case to trigger bug and result in test failure:
+
+digit_list = [9, 9, 9, 9, 9, 9, 9, 9, 9, 9]
+expected_output = [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+
+In this test case, the digit_list contains 10 digits, all of them are 9. The expected output is a list that represents the next palindrome after the given digit_list.
+
+The bug in the next_palindrome function occurs when the input digit_list contains only 9s. In this case, the while loop never breaks because the condition high_mid < len(digit_list) and low_mid >= 0 is always true. As a result, the function enters an infinite loop and never returns.
+
+To fix the bug, the function should check whether digit_list contains only 9s before entering the while loop. If digit_list contains only 9s, the function should return a list that represents the next palindrome with one more digit.
+
+Fixed version of the next_palindrome function:
+
+def next_palindrome(digit_list):
+if set(digit_list) == {9}:
+return [1] + (len(digit_list)) * [0] + [1]
+high_mid = len(digit_list) // 2
+low_mid = (len(digit_list) - 1) // 2
+while high_mid < len(digit_list) and low_mid >= 0:
+if digit_list[high_mid] == 9:
+digit_list[high_mid] = 0
+digit_list[low_mid] = 0
+high_mid += 1
+low_mid -= 1
+else:
+digit_list[high_mid] += 1
+if low_mid != high_mid:
+digit_list[low_mid] += 1
+return digit_list
+return [1] + (len(digit_list)) * [0] + [1]

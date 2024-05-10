@@ -1,0 +1,132 @@
+#PT
+# Test case 1
+node1 = Node()
+assert detect_cycle(node1) == False
+
+#IT
+# Test case 2
+node2 = Node()
+node2 = Node(successor=node2)
+
+try:
+    detect_cycle(node2)
+except RuntimeError:
+    pass
+else:
+    raise AssertionError("Expected RuntimeError")
+
+#PT
+# Test case 3
+node3a = Node()
+node3b = Node(successor=node3a)
+node3a.successor = node3b
+assert detect_cycle(node3a) == True
+
+#FT
+# Test case 4
+num_nodes = 10000
+nodes4 = [Node(successor=Node()) for _ in range(num_nodes)]
+assert detect_cycle(nodes4[0]) == False
+
+#FC
+# Test case 5
+num_nodes = 10000
+nodes5 = [Node(successor=Node()) for _ in range(num_nodes)]
+nodes5[-1].successor = nodes5[num_nodes//2]
+assert detect_cycle(nodes5[0]) == True #error
+
+#FC
+# Test case 6
+node6b = Node()
+node6c = Node()
+node6d = Node()
+node6f = Node()
+node6g = Node()
+node6h = Node()
+node6a = Node(successor=node6b)
+node6b = Node(successor=node6c)
+node6c = Node(successor=node6d)
+node6d = Node(successor=node6a)
+
+node6e = Node(successor=node6f)
+node6f = Node(successor=node6g)
+node6g = Node(successor=node6h)
+node6h = Node(successor=node6e)
+
+assert detect_cycle(node6a) == True #error
+
+#FC
+# Test case 7
+node7b = Node()
+node7c = Node()
+node7d = Node()
+node7a = Node(successor=node7b)
+node7b = Node(successor=node7c)
+node7c = Node(successor=node7d)
+node7d = Node(successor=node7a)
+node7e = Node(successor=node7a)
+node7f = Node(successor=node7c)
+
+assert detect_cycle(node7a) == True #error
+
+#FC
+# Test case 8
+node8b = Node()
+node8c = Node()
+node8d = Node()
+node8f = Node()
+node8g = Node()
+node8e = Node()
+node8a = Node(successor=node8b)
+node8b = Node(successor=node8c)
+node8c = Node(successor=node8d)
+node8d = Node(successor=node8e)
+node8e = Node(successor=node8f)
+node8f = Node(successor=node8g)
+node8g = Node()
+
+assert detect_cycle(node8a) == False
+
+#FC
+# Test case 9
+node9b = Node()
+node9c = Node()
+node9d = Node()
+node9f = Node()
+node9g = Node()
+node9h = Node()
+node9i = Node()
+node9j = Node()
+node9a = Node(successor=node9b)
+node9b = Node(successor=node9c)
+node9c = Node(successor=node9d)
+node9d = Node(successor=node9a)
+node9e = Node(successor=node9f)
+node9f = Node(successor=node9g)
+node9g = Node(successor=node9h)
+node9h = Node(successor=node9i)
+node9i = Node(successors=[node9b, node9j])
+node9j = Node()
+
+assert detect_cycle(node9a) == True #error
+
+#PT
+# Test case 10
+node10b = Node()
+node10c = Node()
+node10d = Node()
+node10f = Node()
+node10g = Node()
+node10h = Node()
+node10i = Node()
+node10a = Node(successor=node10b)
+node10b = Node(successor=node10c)
+node10c = Node(successor=node10d)
+node10d = Node()
+node10e = Node(successor=node10f)
+node10f = Node(successor=node10g)
+node10g = Node(successor=node10h)
+node10h = Node(successor=node10i)
+node10i = Node()
+
+assert detect_cycle(node10d) == False

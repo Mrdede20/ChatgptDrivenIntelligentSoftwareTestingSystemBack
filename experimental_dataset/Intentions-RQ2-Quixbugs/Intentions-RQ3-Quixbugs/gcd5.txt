@@ -1,0 +1,5 @@
+The intention of the code is to define a function `gcd` that takes two non-negative integers `a` and `b` as input, and computes their greatest common divisor using recursion. 
+
+The function first checks if `b` is equal to 0, and if so, returns `a`. If `b` is not equal to 0, it recursively calls itself with the arguments `a % b` and `b`. This continues until `b` is equal to 0, at which point the function returns the value of `a`. 
+
+The docstring of the function provides information about its input, output and a precondition that specifies the input must be integers. It also gives an example of how to use the function.

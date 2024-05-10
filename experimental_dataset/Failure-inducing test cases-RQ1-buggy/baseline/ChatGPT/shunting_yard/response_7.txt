@@ -1,0 +1,11 @@
+Test Case:
+
+Input: ['1', '+', '2', '-', '3']
+
+Expected Output: [1, 2, '+', 3, '-']
+
+Explanation:
+
+This test case tries to evaluate an arithmetic expression with the provided program. The input contains three elements: 1, an operator '+', 2, an operator '-', and 3. The expected output should be a list of integers and operators in the postfix notation. 
+
+However, the program fails to handle the input format, which contains strings instead of integers. It raises a TypeError: '<=' not supported between instances of 'str' and 'int'. The program expects integer values as input but receives strings, which results in the failure of the shunting_yard function.

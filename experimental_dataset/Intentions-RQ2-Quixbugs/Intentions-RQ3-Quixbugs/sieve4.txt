@@ -1,0 +1,5 @@
+The intention of this code is to implement the Sieve of Eratosthenes algorithm and find all the prime numbers up to a given number "max". 
+
+The Sieve of Eratosthenes is an ancient algorithm for finding prime numbers, which works by iteratively marking as composite (i.e., not prime) the multiples of each prime, starting with the multiples of 2. This algorithm has a time complexity of O(n log log n) and is therefore very efficient for finding all primes up to a certain limit.
+
+The code creates an empty list `primes` and iterates through all the numbers from 2 to `max`. For each number, it checks whether any of the previously found primes divides into it evenly. If none of the primes divide into it evenly, it is added to the `primes` list. Finally, the list of primes is returned.

@@ -1,0 +1,11 @@
+No, there is no known input that can make the two programs return different output. Both programs implement the same algorithm to find the greatest common divisor (GCD) of two numbers using the Euclidean algorithm. 
+
+You can test this by running the programs with different values of `a` and `b` and comparing the output. For example, you can use the following test case:
+
+```
+a = 48
+b = 36
+print(gcd(a, b))  # expected output: 12
+```
+
+Both implementations should return the same output (12) for this test case.

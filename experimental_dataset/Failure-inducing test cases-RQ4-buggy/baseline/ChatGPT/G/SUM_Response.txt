@@ -1,0 +1,29 @@
+#FF
+response_1 #NO
+
+#PT
+response_2
+
+#PT
+response_3
+
+#FF
+response_4 #NO
+
+#FF
+response_5 #YES YES
+
+#FF
+response_6 #NO
+
+#FF
+response_7 #NO
+
+#FF
+response_8 #NO
+
+#FF
+response_9 #NO
+
+#FF
+response_10 #NO NO

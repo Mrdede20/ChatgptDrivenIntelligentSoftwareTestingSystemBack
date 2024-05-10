@@ -1,0 +1,34 @@
+response@ChatGPT:
+Test case:
+
+Input:
+5
+5
+1 2 3 2 1
+5
+1 2 3 2 3
+5
+1 2 3 3 2
+5
+2 3 2 1 1
+5
+2 3 2 3 1
+
+Expected output:
+NO
+YES
+YES
+NO
+YES
+
+Explanation:
+The function solves a problem where given a list of integers, you need to check if there is a single "valley" (sequence of integers where every adjacent pair is in strictly increasing order, followed by strictly decreasing order) that contains all the integers in the list. If such a valley exists, the function returns "YES"; otherwise, it returns "NO".
+
+In the first test case, the input list is "1 2 3 2 1", which has two valleys: "1 2 3 2" and "2 1". However, neither of these valleys contains all the integers in the list, so the expected output is "NO".
+
+In the second test case, the input list is "1 2 3 2 3", which has a single valley "1 2 3 2 3" that contains all the integers in the list, so the expected output is "YES".
+
+The third and fifth test cases are similar to the second, also having a single valley that contains all the integers in the list, resulting in "YES".
+
+In the forth test case, the input list is "2 3 2 1 1", which has two valleys: "2 3 2" and "1 1". Although the first valley contains all the integers in the list, it is not a single valley, so the expected output is "NO".
+

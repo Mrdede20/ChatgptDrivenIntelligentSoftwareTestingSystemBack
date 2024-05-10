@@ -1,0 +1,8 @@
+Generate test cases that trigger a bug and result in test failure for the program below.
+
+def bitcount(n):
+    count = 0
+    while n:
+        n ^= n - 1
+        count += 1
+    return count

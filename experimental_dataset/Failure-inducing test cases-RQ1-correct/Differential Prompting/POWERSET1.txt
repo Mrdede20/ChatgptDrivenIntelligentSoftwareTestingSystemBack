@@ -1,0 +1,1 @@
+Both the programs perform the same algorithm and should give the same output for any input. They are just implemented differently.

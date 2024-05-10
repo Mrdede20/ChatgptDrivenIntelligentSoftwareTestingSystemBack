@@ -1,0 +1,1 @@
+No, the two programs should produce the same output for all inputs. They both generate the Pascal triangle using nested ArrayLists, but the second program uses a slightly different approach to compute the values for each row. However, both programs should still generate the same triangle.

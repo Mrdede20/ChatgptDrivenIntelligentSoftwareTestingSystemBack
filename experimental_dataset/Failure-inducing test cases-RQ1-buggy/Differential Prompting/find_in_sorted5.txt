@@ -1,0 +1,13 @@
+Yes, there is an input that can make these two functions return different outputs.
+
+Here's a test case using Python:
+
+```python
+arr = [1, 2, 2, 3, 4, 5]
+x = 2
+print(find_in_sorted(arr, x))  # Output: 1
+```
+
+In the first function `find_in_sorted` which calls `binsearch` with the parameters `start` and `end` initialized to `0` and `len(arr)` respectively, it will return the index of the first occurrence of `x` in the array. Therefore, the output would be `1`.
+
+In the second function `find_in_sorted` which also calls `binsearch`, it is used `start`, `end` to specify the range of the search, and the function does not return the index of the first occurrence of `x`. Therefore, the output would be `2`.

@@ -1,0 +1,7 @@
+This code defines a recursive function `possible_change` that takes in a list of coin denominations called `coins` and an integer value called `total` and returns the number of distinct ways to make change for `total` using only coins of the given denominations.
+
+The function first checks if the `total` is zero and if so, returns 1, indicating that there is only one way to make change for a total of zero. If the `total` is negative, it returns 0, as it is not possible to make change for negative values.
+
+Then it takes the first element of the `coins` list and recursively calls `possible_change` with the same `coins` list but with the `total` reduced by the first element. It also recursively calls `possible_change` with the rest of the `coins` list and the original `total`. Finally, it returns the sum of these two recursive calls.
+
+By breaking the problem into sub-problems and using recursion, the function calculates the total number of different ways that the given coins can add up to the given `total`.

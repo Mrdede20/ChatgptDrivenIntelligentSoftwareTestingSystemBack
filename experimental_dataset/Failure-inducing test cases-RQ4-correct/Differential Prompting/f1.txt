@@ -1,0 +1,13 @@
+Yes, there are inputs that can make the two programs output different results.
+
+Here is an example input:
+
+```
+1
+5 17 2
+1 2 3 4 5
+```
+
+The first program will output `-1`, while the second program will output `2`.
+
+You can use the above input to test the correctness of the two programs.

@@ -1,0 +1,38 @@
+Yes, the two programs have different inputs that give different outputs since they have different inputs and algorithms. Therefore, here is a test case that would differentiate the output of the two programs:
+
+```
+Map<List<Node>, Integer> length_by_edge = new HashMap<>();
+Node nodeA = new Node("A");
+Node nodeB = new Node("B");
+Node nodeC = new Node("C");
+Node nodeD = new Node("D");
+
+length_by_edge.put(Arrays.asList(nodeA, nodeB), 1);
+length_by_edge.put(Arrays.asList(nodeB, nodeC), 2);
+length_by_edge.put(Arrays.asList(nodeC, nodeD), 1);
+
+Node startNode = nodeA;
+Node endNode = nodeD;
+
+int output1 = SHORTEST_PATH_LENGTH.shortest_path_length(length_by_edge, startNode, endNode);
+
+Map<String, Map<String, Integer>> graph = new HashMap<>();
+graph.put("A", new HashMap<>());
+graph.put("B", new HashMap<>());
+graph.put("C", new HashMap<>());
+graph.put("D", new HashMap<>());
+graph.get("A").put("B", 1);
+graph.get("B").put("C", 2);
+graph.get("C").put("D", 1);
+
+String start = "A";
+String end = "D";
+
+int output2 = ShortestPath.shortest_path_length(graph, start, end);
+
+if (output1 != output2) {
+    System.out.println("The two programs have different outputs.");
+} else {
+    System.out.println("The two programs have the same output.");
+}
+```

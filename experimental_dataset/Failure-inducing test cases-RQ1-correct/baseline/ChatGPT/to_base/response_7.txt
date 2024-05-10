@@ -1,0 +1,39 @@
+response@ChatGPT:
+
+
+Yes, there are a few possible test cases that could trigger bugs in this program:
+
+1. Passing a value of 0 or a negative value for 'num' or 'b'.
+  - In this scenario, the program will enter the while loop with num>0 requirement. Therefore, the program will loop infinitely.
+
+2. Passing a non-integer value for 'num' or 'b'.
+  - In this scenario, the program will raise a TypeError because 'num' and 'b' must be integers.
+
+3. Passing a base greater than 36.
+  - The program will use string.digits (which is '0123456789') and string.ascii_uppercase (which is 'ABCDEFGHIJKLMNOPQRSTUVWXYZ') to generate the character representation of each remainder. Since the base is larger than 36, it fails to represent the number.
+
+4. Passing a value of 1 for 'b'.
+  - The program will loop infinitely because division by 1 returns the original number, thereby allowing the while loop condition to continue to evaluate as True, and no character for representation will be added.
+
+5. Passing a 'num' value that is larger than the maximum possible base-b representation.
+  - In this scenario, the program will continue to add characters to the 'result' variable representing the remainder of division operation in each iteration of the while loop, but when the division operation on 'num' is done, and the 'num' value is equal or inferior to zero, the characterization stops. However, the 'result' representation is shorter than expected since the passed number was larger than average.
+
+request@user:
+Give us such test case. Use assert.
+
+response@ChatGPT:
+# Test Case 1: Positive number and base greater than 10
+assert to_base(123, 16) == '7B'
+
+# Test Case 2: Zero number and any base
+assert to_base(0, 8) == '0'
+
+# Test Case 3: Negative number and base equal to 2
+assert to_base(-15, 2) == '-1111'
+
+# Test Case 4: Large number and base equal to 10
+assert to_base(123456789, 10) == '123456789'
+
+# Test Case 5: Fraction number and base equal to 16
+assert to_base(0.125, 16) == '0.2'
+

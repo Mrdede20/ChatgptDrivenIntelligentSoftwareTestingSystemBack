@@ -1,0 +1,8 @@
+Yes, there is an input that can make the two programs have different output. Here's the test case:
+
+```
+num = 84
+b = 10
+```
+
+The first two programs will return the output "84", while the third program will return the output "48". This is because the third program is using a different algorithm to convert the number to the new base, which involves iterating over the digits of the original number in reverse order. The first two programs, on the other hand, use a while loop to continuously divide the number by the new base, and append the remainder to the result string.

@@ -1,0 +1,1 @@
+No, both programs have the same logic and implementation of counting the number of set bits in an integer using the Brian Kernighan's Algorithm. Both programs should give the same output for any input integer.

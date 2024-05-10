@@ -1,0 +1,68 @@
+#PT
+assert shortest_path_length({}, Node("A"), Node("B")) == float('inf')
+
+#IT
+graph = {
+    'A': {'B': 2, 'C': 4},
+    'B': {'D': 7},
+    'C': {'D': 1},
+    'D': {}
+}
+startnode = 'A'
+goalnode = 'D'
+length_by_edge = {}
+for node in graph:
+    for nextnode, length in graph[node].items():
+        length_by_edge[(node, nextnode)] = length
+assert shortest_path_length(length_by_edge, startnode, goalnode) == 5, "Test case failed"
+
+#IT
+n1 = Node()
+n2 = Node()
+n3 = Node()
+n4 = Node()
+n5 = Node()
+n1.successors = [n2, n3]
+n2.successors = [n3, n4]
+n3.successors = [n4, n5]
+n4.successors = [n5]
+length_by_edge = {
+    (n1, n2): 5,
+    (n1, n3): 3,
+    (n2, n3): 4,
+    (n2, n4): 6,
+    (n3, n4): 2,
+    (n3, n5): 7,
+    (n4, n5): 1
+}
+assert shortest_path_length(length_by_edge, n1, n5) == 9
+
+#IT
+node1 = Node(value=1)
+node2 = Node(value=2)
+node3 = Node(value=3)
+node4 = Node(value=4)
+node5 = Node(value=5)
+node1.successors = [(node2, 1), (node3, 3)]
+node2.successors = [(node3, 1), (node4, 1)]
+node3.successors = [(node4, 1)]
+node4.successors = []
+node5.successors = [(node2, 1), (node3, 1)]
+assert shortest_path_length({(node1, node2): 1, (node1, node3): 3, (node2, node3): 1, (node2, node4): 1, (node3, node4): 1}, node1, node4) == 2
+
+#PT
+node1 = Node()
+node2 = Node()
+node3 = Node()
+node4 = Node()
+node1.successors = [node2, node3]
+node2.successors = [node4]
+node3.successors = [node4]
+node4.successors = []
+length_by_edge = {
+    (node1, node2): 2,
+    (node1, node3): 4,
+    (node2, node4): 3,
+    (node3, node4): 1,
+}
+assert shortest_path_length(length_by_edge, node1, node4) == 5

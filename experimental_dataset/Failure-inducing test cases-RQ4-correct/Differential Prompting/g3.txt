@@ -1,0 +1,24 @@
+Yes, there can be inputs that make the two programs produce different outputs.
+
+Test input:
+```
+1
+4 1 3
+1 2 1
+1 3 2
+2 4 3
+```
+
+Output of the first program:
+```
+NO
+```
+
+Output of the second program:
+```
+True
+```
+
+Explanation: The first program checks whether there are at least two distinct paths from A to B with different XOR values. In this case, there is only one path from 1 to 3 with XOR value 2. Therefore, the answer is "NO".
+
+The second program checks whether there are two paths with the same XOR value. In this case, there are two paths: 1-2-4 with XOR value 2, and 1-3-2-4 with XOR value 2 as well. Therefore, the answer is True.

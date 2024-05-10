@@ -1,0 +1,3 @@
+The intention of the code is to find the length of the longest common substring between two input strings `s` and `t`. The function `lcs_length(s, t)` uses dynamic programming with a 2D dictionary `dp` to keep track of the length of the longest common substring ending at index `i` in `s` and index `j` in `t`. The function returns the maximum value of `dp` if it is not empty, otherwise it returns 0. 
+
+Overall, the function is a Python implementation of the Longest Common Substring problem, and can be used as a helper function for other algorithms that require finding the longest common substring.

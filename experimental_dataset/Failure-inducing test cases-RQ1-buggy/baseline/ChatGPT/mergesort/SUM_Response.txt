@@ -1,0 +1,54 @@
+#FT
+arr = [3, 2, 1]
+expected_output = [1, 2, 3]
+assert mergesort(arr) == expected_output
+
+#FT
+arr = [2, 1, 4, 3, 5]
+expected_output = [1, 2, 3, 4, 5]
+assert mergesort(arr) == expected_output
+
+#FT
+arr = [3, 2, 1]
+result = mergesort(arr)
+assert result == [1, 2, 3]
+
+#FT
+arr = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]
+result = mergesort(arr)
+assert result == [1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 9]
+
+#FT
+arr = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]
+sorted_arr = mergesort(arr)
+assert sorted_arr == [1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 9]
+
+#FT
+arr = [3, 2, 1]
+sorted_arr = mergesort(arr)
+assert sorted_arr == [1, 2, 3], f"Expected [1, 2, 3] but got {sorted_arr}"
+
+#FT
+arr = [4, 3, 2, 1]
+sorted_arr = mergesort(arr)
+assert sorted_arr == [1, 2, 3, 4], f"Expected [1, 2, 3] but got {sorted_arr}"
+
+#FT
+arr = [3, 2, 1]
+sorted_arr = mergesort(arr)
+assert sorted_arr == [1, 2, 3]
+
+#FT
+arr = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]
+expected_output = [1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 9]
+# shuffle the input array to create a random order
+import random
+random.shuffle(arr)
+# sort the shuffled array using mergesort
+output = mergesort(arr)
+# check if the output matches the expected output
+assert output == expected_output
+
+#FT
+arr = [3, 2, 1]
+assert mergesort(arr) == [1, 2, 3]

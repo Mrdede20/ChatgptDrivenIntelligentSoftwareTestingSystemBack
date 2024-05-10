@@ -1,0 +1,7 @@
+The intention of the code is to implement the Sieve of Eratosthenes algorithm in Python to generate a list of all prime numbers up to a given upper bound (inclusive). 
+
+The Sieve of Eratosthenes is an ancient algorithm for finding all prime numbers up to a given limit. It works by iteratively marking the multiples of each prime, starting with 2, as composite, until all multiples of all primes have been marked. 
+
+The code works by initializing an empty list called primes, then iterating over all numbers in the range from 2 up to (and including) the given maximum. If the current number n is not divisible by any of the previous primes in the list, then it is added to the primes list. Finally, the list of primes is returned. 
+
+In summary, this code is a straightforward implementation of the Sieve of Eratosthenes algorithm, and can be used to quickly generate a list of primes for a given upper bound.

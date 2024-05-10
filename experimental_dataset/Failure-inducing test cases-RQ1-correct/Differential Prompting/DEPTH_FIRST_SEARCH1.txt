@@ -1,0 +1,1 @@
+There is no input that would make the two programs behave differently. Both programs implement a depth-first search algorithm and will output the same result when given the same input.

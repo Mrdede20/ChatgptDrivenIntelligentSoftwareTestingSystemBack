@@ -1,0 +1,7 @@
+Yes, the two programs have different implementations and outputs, even for the same input.
+
+The first program implements an optimized version of Dijkstra's algorithm using a Fibonacci heap to store the unvisited nodes and their distances from the start node. It also uses a custom implementation of an insert_or_update function instead of the heappush and heappop functions to insert or update elements in the heap.
+
+On the other hand, the second program implements Dijkstra's algorithm using a regular heap to store the unvisited nodes and their distances from the start node. It uses the heappush and heappop functions to insert and extract the minimum element from the heap. 
+
+Therefore, the first program should perform better than the second one in terms of time complexity and might produce different outputs for the same input.

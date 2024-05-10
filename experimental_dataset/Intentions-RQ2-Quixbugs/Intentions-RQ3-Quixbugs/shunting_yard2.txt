@@ -1,0 +1,7 @@
+The code implements the Shunting-yard algorithm for transforming infix notation to Reverse Polish Notation (RPN). The function takes a list of tokens in infix notation as input, checks if each token is either an integer or a valid operator, and then reorders the tokens to output the equivalent expression in RPN. 
+
+The algorithm proceeds by iterating through the tokens in sequence, and adding the numbers to an output list. When an operator is encountered, the function pops operators from a stack until either the stack is empty or the precedence of the current operator is higher than the precedence of the operator at the top of the stack. The popped operators are then appended to the output list. 
+
+Finally, any remaining operators in the stack are popped and appended to the output list. The output list is the RPN equivalent of the input infix notation expression.
+
+The function returns the list of tokens in RPN format, which can be used to evaluate the expression using a stack-based algorithm.

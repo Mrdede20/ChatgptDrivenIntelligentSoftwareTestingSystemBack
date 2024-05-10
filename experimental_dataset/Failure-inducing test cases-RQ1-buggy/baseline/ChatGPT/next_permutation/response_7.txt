@@ -1,0 +1,10 @@
+Here's a test case that triggers a bug and results in test failure for the program:
+
+perm = [1, 2, 3, 5, 4]
+result = next_permutation(perm)
+assert result == [1, 2, 4, 3, 5]
+
+Explanation:
+The program's purpose is to generate the next permutation of the input list in lexicographical order. The bug in this program is that when a suitable pair of values perm[i] and perm[j] is found, the values in perm[i + 1:] are not sorted in ascending order before being reversed. This can lead to incorrect results if there are duplicate values in perm[i + 1:].
+
+In the test case above, the input list perm has a suitable pair of values at indices i = 2 and j = 3, where perm[i] = 3 and perm[j] = 5. However, the values in perm[i + 1:] = [5, 4] are not sorted in ascending order before being reversed. Therefore, the resulting list is [1, 2, 4, 3, 5], which is not the correct next permutation in lexicographical order. The correct next permutation would be [1, 2, 4, 5, 3].

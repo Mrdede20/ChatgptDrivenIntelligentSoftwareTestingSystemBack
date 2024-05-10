@@ -1,0 +1,1 @@
+No, both programs have the same logic and computation. They will always output the same result for any given input of `a` and `b`.

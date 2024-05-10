@@ -1,0 +1,14 @@
+No, the two programs produce the same output for all possible inputs. 
+
+Here is a test case to confirm this:
+
+```python
+a = 2
+b = 5
+k = 3
+
+output_1 = subsequences(a, b, k)
+output_2 = subsequences(a, b, k)
+
+assert output_1 == output_2
+```

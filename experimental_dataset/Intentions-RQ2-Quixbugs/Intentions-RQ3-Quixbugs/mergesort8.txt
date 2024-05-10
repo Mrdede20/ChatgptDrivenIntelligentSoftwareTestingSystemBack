@@ -1,0 +1,5 @@
+The given code implements the Merge Sort algorithm. Merge Sort is a divide and conquer algorithm that works by dividing the input array into two halves, recursively sorting the two halves, and then merging the sorted halves to produce the final sorted array. 
+
+The code first defines a helper function `merge(left, right)` that takes in two sorted arrays `left` and `right` and merges them into a single sorted array. It then defines the main function `mergesort(arr)` that takes in an unsorted array `arr` and recursively sorts it by calling `mergesort` on the left and right halves of `arr` and then merging the two resulting halves using the `merge` function. 
+
+Finally, the `mergesort` function returns the sorted array.

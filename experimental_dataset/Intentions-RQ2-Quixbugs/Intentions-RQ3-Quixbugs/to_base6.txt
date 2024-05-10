@@ -1,0 +1,5 @@
+The intention of the code is to define a function `to_base()` which takes two arguments `num` and `b`. The function converts the given positive integer `num` from base-10 to target base `b` and returns a string representation of the converted number in the target base using the digits and uppercase letters from `0` to `Z` as alphabet. 
+
+The function first initializes an empty string `result`, and an alphabet string containing `digits` and `ascii_uppercase`. It then runs a loop until `num` is greater than zero, in each iteration of the loop, it finds the remainder when `num` is divided by `b` and concatenates the corresponding character from `alphabet` to the `result`. Finally, it returns the resulting string. 
+
+For example, if `num` is `31` and `b` is `16`, the function should convert `num` to hexadecimal, which is `1F` in our output example.

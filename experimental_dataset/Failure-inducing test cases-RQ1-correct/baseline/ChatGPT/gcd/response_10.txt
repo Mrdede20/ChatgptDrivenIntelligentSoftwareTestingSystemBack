@@ -1,0 +1,19 @@
+response@ChatGPT:
+
+
+Yes, there is at least one test case that can trigger a bug in this program. Specifically, if either parameter "a" or "b" is a negative number, the program will enter an infinite loop and never return a result. 
+
+As an example, calling gcd(-12, 6) will trigger this bug.
+
+request@user:
+Give us such test case. Use assert.
+
+response@ChatGPT:
+
+
+Here is a test case for the gcd function:
+
+assert gcd(14, 28) == 14
+
+This checks that the gcd of 14 and 28 is equal to 14, which is correct.
+

@@ -1,0 +1,1 @@
+Yes, there can be different outputs as the two programs use different approaches to generate a list of prime numbers. The SIEVE program uses a list comprehension approach while the SieveOfEratosthenes1 program uses the Sieve of Eratosthenes algorithm approach. These two different approaches could produce different lists of prime numbers for some specific inputs.

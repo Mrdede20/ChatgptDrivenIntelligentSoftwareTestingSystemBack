@@ -1,0 +1,31 @@
+#PT
+assert get_factors(12) == [2, 2, 3]
+
+#PT
+assert get_factors(1) == []
+
+#PT
+assert get_factors(1) == []
+
+#PT
+assert get_factors(12) == [2, 2, 3]
+
+#PT
+assert(get_factors(1) == [])
+
+#PT
+n = 20
+expected_factors = [2, 2, 5]
+assert get_factors(n) == expected_factors
+
+#PT
+assert get_factors(1) == []
+
+#PT
+assert get_factors(1) == []
+
+#PT
+assert get_factors(15) == [3, 5]
+
+#PT
+assert get_factors(12) == [2, 2, 3]

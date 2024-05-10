@@ -1,0 +1,5 @@
+Yes, there is an input that makes the two programs return different output. 
+
+For example, if the input array is [1, 2, 9, 9], the first program returns "[1, 3, 0, 1]" while the second program returns "13031". 
+
+This is because the two programs use different algorithms to find the next palindrome number. The first program adds 1 to the middle digits and carries over if necessary, while the second program copies the left half to the right half and increments the middle digits if necessary. These algorithms produce different results for some inputs.

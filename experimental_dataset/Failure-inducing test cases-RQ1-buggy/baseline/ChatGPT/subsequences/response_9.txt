@@ -1,0 +1,7 @@
+Test case:
+
+subsequences(1, 5, 6)
+
+Expected result: The function should return an empty list as it is not possible to generate subsequences of length 6 from the given range.
+
+Actual result: The function goes into an infinite loop and does not return any value, resulting in a test failure.

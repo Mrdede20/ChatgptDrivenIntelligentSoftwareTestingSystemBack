@@ -1,0 +1,12 @@
+Sure, here's a test case that triggers a bug in the program:
+
+tokens = [2, 3, '+', 4, '*']
+assert rpn_eval(tokens) == 20
+
+The expected output for the test case is 20, but the actual output from the rpn_eval function will be 14. Here's why:
+
+-The first two tokens (2 and 3) are pushed onto the stack.
+-The third token (+) triggers the op function, which pops 3 and 2 off the stack and calculates their sum (5), which is then pushed onto the stack.
+-The fourth token (4) is pushed onto the stack.
+-The fifth token (*) triggers the op function again, which pops 4 and 5 off the stack and calculates their product (20), which is then pushed onto the stack.
+-The final result should be 20, but the rpn_eval function returns 14 instead. This is because the division operation in the op function is implemented using Python's / operator, which performs floating-point division, even when the operands are integers. When the + operation is performed, the integers 2 and 3 are added together and produce the integer 5. However, when the * operation is performed, the integer 4 is multiplied by the floating-point value 1.25 (which is the result of the previous division operation), producing the floating-point value 5.0. When the pop() method is called to retrieve the final result, it returns 5.0 instead of the expected integer 20.

@@ -1,0 +1,5 @@
+The code implements Kruskal's algorithm to find the minimum spanning tree of an input graph. A minimum spanning tree of a connected undirected graph is a set of edges that connects all the vertices of the graph with the least possible total weight.
+
+The input is a dictionary where the keys are pairs of nodes representing edges of the graph, and the values are the weights assigned to each edge. The function sorts the edges by increasing weight and forms sets of nodes that are connected by edges. It then adds the edges with the smallest weights that join different sets until all nodes are in the same set. Finally, it returns the set of edges that form the minimum spanning tree.
+
+The code has a time complexity of O(E log E), where E is the number of edges in the input graph, which is the same as the time complexity of sorting the edges.

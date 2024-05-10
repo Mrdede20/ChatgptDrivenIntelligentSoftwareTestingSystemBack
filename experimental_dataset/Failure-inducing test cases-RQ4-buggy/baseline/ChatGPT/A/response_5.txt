@@ -1,0 +1,26 @@
+response@ChatGPT:
+Test case:
+t=2
+Input:
+5 4 3
+2 8 1
+0 9 7
+4 1 10
+8 3 5
+Expected Output:
+4
+2
+7
+4
+8
+3
+Actual Output:
+4
+2
+7
+1
+8
+3
+Explanation:
+The program did not output the second largest number in the third input set due to a bug in the sorting algorithm. It sorted the numbers in ascending order instead of descending order, causing it to output the wrong value. This resulted in a test failure as the expected output did not match the actual output.
+

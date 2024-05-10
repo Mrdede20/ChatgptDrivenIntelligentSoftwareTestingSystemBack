@@ -1,0 +1,20 @@
+Yes, there are inputs that can produce different output. Here are the test cases:
+
+Input:
+4
+4
+4 3 2 1
+1
+1
+5
+1 2 3 2 1
+5
+1 3 4 5 4
+
+Expected Output:
+NO
+YES
+NO
+YES
+
+Note: Both programs have different approach and different solutions. The first program checks if there is an unobstructed valley that never exceeds the single mountain range at both sides, whereas the second program checks if there is only one peak in the mountain range and that it is not obstructed by any other peak on either side. The test cases were designed to cover different scenarios where one program can solve it, but not the other, and vice versa.

@@ -1,0 +1,3 @@
+This code reads in numbers representing heights of bars which represent valleys and mountains. The program analyzes the sequence of heights and returns whether it's possible for someone to jump to the top of a mountain or not. If it's possible, the program returns "YES," otherwise it returns "NO." 
+
+It does so by creating a list of "valleys," which are defined as regions of descending heights ending with an increasing height. It then checks the first and last valley for the first legitimate opportunity to jump to the top of a mountain. If it finds such an opportunity that is not the result of triviality, it returns "YES." Otherwise, it returns "NO."

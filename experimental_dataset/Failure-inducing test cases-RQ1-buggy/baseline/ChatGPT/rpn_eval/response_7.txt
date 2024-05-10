@@ -1,0 +1,17 @@
+Test case:
+
+tokens = [1, 2, '+', 3, '*']
+expected_output = 9
+
+Explanation:
+
+This test case uses the input tokens [1, 2, '+', 3, '*'] to test the rpn_eval function. The expected output is 9 because this expression translates to (1 + 2) * 3.
+
+However, there is a bug in the op function that causes division by zero error when the operator is '/'. Since the input tokens do not contain the '/' operator, the program will not fail for this particular input.
+
+To trigger the bug, we can modify the test case as follows:
+
+tokens = [1, 0, '/', 3, '*']
+expected_output = 0
+
+In this modified test case, we have added the '/' operator with a zero operand, which should result in a division by zero error. The expected output is 0 because any calculation involving 0 should result in 0.

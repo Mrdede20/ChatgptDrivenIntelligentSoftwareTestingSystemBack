@@ -1,0 +1,8 @@
+Yes, there is an input that makes the different output. This happens when the coins list contains negative values. The first five functions will return the same result for negative values, while the last function will return 0 for any combination that includes negative values.
+
+Here's an example input that will return different outputs:
+
+coins = [1, -2, 3]
+total = 4
+
+The first five functions will return 2 as output, while the last function will return 0.

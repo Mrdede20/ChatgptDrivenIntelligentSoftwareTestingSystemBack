@@ -1,0 +1,45 @@
+response@ChatGPT:
+
+
+Yes, the following test case can trigger a bug in the program:
+
+```
+is_valid_parenthesization(')()(')
+```
+
+This test case includes an invalid sequence of parentheses where a closing bracket appears before its corresponding opening bracket. The program should return `False` for this input, but it may incorrectly return `True` because it never checks for negative values of `depth` until after decrementing it.
+
+request@user:
+Give us such test case. Use assert.
+
+response@ChatGPT:
+# Test case 1 - Valid Parentheses
+assert is_valid_parenthesization("()") == True
+
+# Test case 2 - Invalid Parentheses
+assert is_valid_parenthesization(")(") == False
+
+# Test case 3 - Valid Parentheses
+assert is_valid_parenthesization("()()") == True
+
+# Test case 4 - Invalid Parentheses
+assert is_valid_parenthesization("((())()") == False
+
+# Test case 5 - Valid Parentheses
+assert is_valid_parenthesization("((()))") == True
+
+# Test case 6 - Invalid Parentheses
+assert is_valid_parenthesization("))()()") == False
+
+# Test case 7 - Valid Parentheses
+assert is_valid_parenthesization("(())(())") == True
+
+# Test case 8 - Invalid Parentheses
+assert is_valid_parenthesization("()()))((())") == False
+
+# Test case 9 - Valid Parentheses
+assert is_valid_parenthesization("()(()())") == True
+
+# Test case 10 - Invalid Parentheses
+assert is_valid_parenthesization("((())())((()())") == False
+

@@ -1,0 +1,3 @@
+No, there is no input that can make those programs give different output. All of them implement the Sieve of Eratosthenes algorithm which generates a list of prime numbers up to a given limit 'max'. The only difference between them is in their implementation (use of 'all'/'any', use of a separate list, etc.) but they all generate the same output for the same input. 
+
+The last implementation that uses a boolean list to check for primes is usually the most efficient, as it avoids redundantly checking composites.

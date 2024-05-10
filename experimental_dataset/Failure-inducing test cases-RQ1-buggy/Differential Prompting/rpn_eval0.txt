@@ -1,0 +1,8 @@
+Yes, there is an input that would make the two programs output different results. The difference is in the order in which operands are passed to the `op` function within the `rpn_eval` function.
+
+For example, consider the input list of tokens `[1, 2, '+', 3, '*']`. 
+- The first program with the original `op` function would first add 1 and 2 (getting 3), and then multiply the result with 3 (getting 9).
+- The first program with the modified `op` function would first add 2 and 1 (getting 3), and then multiply the result with 3 (getting 9).
+- The second program would first add 1 and 2 (getting 3), and then multiply the result with 3 (getting 9).
+
+Therefore, for this particular example input, all three programs will produce the same result. However, there may be other input lists of tokens that would produce different output between the two programs with the `op` function in different orders.

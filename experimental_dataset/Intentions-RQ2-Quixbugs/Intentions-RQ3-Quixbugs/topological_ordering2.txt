@@ -1,0 +1,5 @@
+The intention of the given code is to perform a topological sort on a directed acyclic graph (DAG). A topological sort is an ordering of the nodes in a DAG such that for each directed edge `u -> v`, node `u` comes before node `v` in the ordering. The given function takes a list of nodes as input and returns a list of nodes in topological order.
+
+The function first creates a new list called `ordered_nodes` that contains all the nodes that have no incoming edges (i.e., nodes with no dependencies). Then, it iterates over each node in the `ordered_nodes` list and adds any outgoing nodes that do not have any more incoming nodes (i.e., all of their dependencies have already been added to the `ordered_nodes` list). This process continues until all nodes have been added to the `ordered_nodes` list.
+
+The function checks that the input graph is acyclic, which means that there are no cycles in the graph (i.e., no directed path that starts and ends at the same node) to ensure that the algorithm for topological sort works correctly.

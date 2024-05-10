@@ -1,0 +1,145 @@
+#PT
+length_by_edge = {
+    (0, 1): 2, (0, 2): 6, (0, 3): 4,
+    (1, 2): 3,
+    (2, 3): 1,
+    (3, 4): 5, (4, 5): 2
+}
+expected_output = {
+    (0, 0): 0, (0, 1): 2, (0, 2): 5, (0, 3): 4, (0, 4): 9, (0, 5): 11,
+    (1, 0): float('inf'), (1, 1): 0, (1, 2): 3, (1, 3): 4, (1, 4): 9, (1, 5): 11,
+    (2, 0): float('inf'), (2, 1): float('inf'), (2, 2): 0, (2, 3): 1, (2, 4): 6, (2, 5): 8,
+    (3, 0): float('inf'), (3, 1): float('inf'), (3, 2): float('inf'), (3, 3): 0, (3, 4): 5, (3, 5): 7,
+    (4, 0): float('inf'), (4, 1): float('inf'), (4, 2): float('inf'), (4, 3): float('inf'), (4, 4): 0, (4, 5): 2,
+    (5, 0): float('inf'), (5, 1): float('inf'), (5, 2): float('inf'), (5, 3): float('inf'), (5, 4): float('inf'), (5, 5): 0
+}
+assert shortest_path_lengths(6, length_by_edge) == expected_output
+
+#PT
+n = 4
+length_by_edge = {(0, 1): 1, (1, 2): 2, (2, 3): 3, (0, 2): 5, (1, 3): 6}
+expected = defaultdict(lambda: float('inf'))
+expected.update({(0, 0): 0, (0, 1): 1, (0, 2): 3, (0, 3): 6,
+                    (1, 0): float('inf'), (1, 1): 0, (1, 2): 2, (1, 3): 5,
+                    (2, 0): float('inf'), (2, 1): float('inf'), (2, 2): 0, (2, 3): 3,
+                    (3, 0): float('inf'), (3, 1): float('inf'), (3, 2): float('inf'), (3, 3): 0})
+assert shortest_path_lengths(n, length_by_edge) == expected
+
+#PT
+n = 4
+length_by_edge = {
+    (0, 1): 1,
+    (1, 2): 2,
+    (2, 3): 3,
+    (0, 2): 5,
+    (1, 3): 6
+}
+expected_output = {
+    (0, 0): 0,
+    (0, 1): 1,
+    (0, 2): 3,
+    (0, 3): 6,
+    (1, 0): float('inf'),
+    (1, 1): 0,
+    (1, 2): 2,
+    (1, 3): 5,
+    (2, 0): float('inf'),
+    (2, 1): float('inf'),
+    (2, 2): 0,
+    (2, 3): 3,
+    (3, 0): float('inf'),
+    (3, 1): float('inf'),
+    (3, 2): float('inf'),
+    (3, 3): 0
+}
+assert shortest_path_lengths(n, length_by_edge) == expected_output
+
+#PT
+n = 4
+length_by_edge = {(0, 1): 1, (0, 2): 2, (1, 2): 1, (1, 3): 3, (2, 3): 2}
+expected_output = {
+    (0, 0): 0, (0, 1): 1, (0, 2): 2, (0, 3): 4,
+    (1, 0): float('inf'), (1, 1): 0, (1, 2): 1, (1, 3): 3,
+    (2, 0): float('inf'), (2, 1): float('inf'), (2, 2): 0, (2, 3): 2,
+    (3, 0): float('inf'), (3, 1): float('inf'), (3, 2): float('inf'), (3, 3): 0,
+}
+assert shortest_path_lengths(n, length_by_edge) == expected_output
+
+#FF
+n = 3
+length_by_edge = {
+    (0, 1): 2,
+    (1, 2): 3,
+    (2, 0): 1
+}
+expected_output = {
+    (0, 0): 0.0,
+    (0, 1): 2.0,
+    (0, 2): 3.0,
+    (1, 0): 3.0,
+    (1, 1): 0.0,
+    (1, 2): 3.0,
+    (2, 0): 1.0,
+    (2, 1): 4.0,
+    (2, 2): 0.0
+}
+assert shortest_path_lengths(n, length_by_edge) == expected_output
+
+#FF
+n = 4
+length_by_edge = {(0, 1): 1, (1, 2): 2, (2, 3): 3, (3, 0): 4}
+result = shortest_path_lengths(n, length_by_edge)
+assert result[(0, 3)] == 4
+
+#FF
+graph = {
+    (0, 1): 1,
+    (1, 2): 2,
+    (2, 3): 3,
+    (3, 0): 4,
+    (0, 2): 2
+}
+assert shortest_path_lengths(4, graph)[(0, 3)] == 6
+
+#FF
+edges = {
+    (0, 1): 5,
+    (1, 2): 3,
+    (0, 3): 6,
+    (3, 2): 2,
+    (2, 4): 6,
+    (3, 4): 4
+}
+n = 5
+expected_lengths = {
+    (0, 0): 0, (0, 1): 5, (0, 2): 8, (0, 3): 6, (0, 4): 10,
+    (1, 0): float('inf'), (1, 1): 0, (1, 2): 3, (1, 3): float('inf'), (1, 4): float('inf'),
+    (2, 0): float('inf'), (2, 1): float('inf'), (2, 2): 0, (2, 3): float('inf'), (2, 4): 6,
+    (3, 0): float('inf'), (3, 1): float('inf'), (3, 2): 2, (3, 3): 0, (3, 4): 4,
+    (4, 0): float('inf'), (4, 1): float('inf'), (4, 2): float('inf'), (4, 3): float('inf'), (4, 4): 0
+}
+assert shortest_path_lengths(n, edges) == expected_lengths
+
+#FF
+n = 4
+length_by_edge = {
+    (0, 1): 5,
+    (0, 2): 3,
+    (1, 2): 1,
+    (2, 3): 2,
+}
+shortest_paths = shortest_path_lengths(n, length_by_edge)
+assert shortest_paths[0, 3] == 6, 'Test Case 1 Failed'
+
+#PT
+n = 5
+edges = [(0, 1, 10), (0, 3, 5), (1, 2, 1), (1, 3, 2), (2, 4, 4), (3, 1, 3), (3, 2, 9), (3, 4, 2)]
+length_by_edge = {(i, j): length for i, j, length in edges}
+expected_lengths = {
+    (0, 0): 0, (0, 1): 8, (0, 2): 9, (0, 3): 5, (0, 4): 7,
+    (1, 0): float('inf'), (1, 1): 0, (1, 2): 1, (1, 3): 2, (1, 4): 4,
+    (2, 0): float('inf'), (2, 1): float('inf'), (2, 2): 0, (2, 3): float('inf'), (2, 4): 4,
+    (3, 0): float('inf'), (3, 1): 3, (3, 2): 4, (3, 3): 0, (3, 4): 2,
+    (4, 0): float('inf'), (4, 1): float('inf'), (4, 2): float('inf'), (4, 3): float('inf'), (4, 4): 0,
+}
+assert shortest_path_lengths(n, length_by_edge) == expected_lengths

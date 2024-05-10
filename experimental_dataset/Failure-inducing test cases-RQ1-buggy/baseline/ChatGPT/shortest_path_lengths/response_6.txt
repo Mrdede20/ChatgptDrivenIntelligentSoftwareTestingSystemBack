@@ -1,0 +1,21 @@
+One test case that could trigger a bug is when length_by_edge contains a negative weight cycle. In this case, the function shortest_path_lengths should raise an exception, as there is no well-defined shortest path between some pairs of vertices.
+
+Here's an example of such a test case:
+
+n = 4
+length_by_edge = {
+    (0, 1): 1,
+    (1, 2): 2,
+    (2, 3): 3,
+    (3, 1): -6
+}
+
+try:
+    shortest_path_lengths(n, length_by_edge)
+except ValueError:
+    # the function should raise a ValueError exception
+    pass
+else:
+    assert False, "test failed: expected ValueError exception"
+
+In this test case, the edge (3, 1) has a negative weight, which creates a negative weight cycle in the graph. The function should detect this and raise a ValueError exception. The test case checks whether the function indeed raises the exception.

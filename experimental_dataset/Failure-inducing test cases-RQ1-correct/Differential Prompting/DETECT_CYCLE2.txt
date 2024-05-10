@@ -1,0 +1,1 @@
+Yes, the input {1,2,3,4,5} where the last node points to the second node will have different output for the two programs. The first program will result in an infinite loop while the second program will detect the cycle and output true.

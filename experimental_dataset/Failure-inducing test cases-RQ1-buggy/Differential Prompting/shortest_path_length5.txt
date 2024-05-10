@@ -1,0 +1,25 @@
+Yes, there is an input that can make the two programs output different values. The first program uses a Fibonacci heap to maintain the unvisited nodes while the second program uses a regular heap. The performance of the two data structures is different and this can lead the two programs to return different values for large graphs. 
+
+Here is a test case that can produce different outputs:
+
+```
+# Create a random graph
+import random
+graph = {}
+for i in range(1000):
+    graph[i] = {}
+for i in range(10000):
+    a, b, c = random.randint(0,999), random.randint(0,999), random.randint(1,100)
+    graph[a][b] = c
+    
+# Test the two functions
+start, end = 0, 999
+length_by_edge = {}
+for node in graph:
+    for neighbor, cost in graph[node].items():
+        length_by_edge[(node, neighbor)] = cost
+
+assert shortest_path_length(length_by_edge, start, end) != dijkstras_shortest_path(graph, start, end)
+``` 
+
+Running this test case should return different values for the two programs.

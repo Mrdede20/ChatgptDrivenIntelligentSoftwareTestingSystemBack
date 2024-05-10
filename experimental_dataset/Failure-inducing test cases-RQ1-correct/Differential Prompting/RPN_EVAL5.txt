@@ -1,0 +1,4 @@
+The only difference between the two programs is the type of the ArrayList (raw type in the first program, generic type in the second program).
+However, there is a potential bug in the first program due to using raw type which might lead to ClassCastException at runtime. 
+Consider the case when the tokens ArrayList is constructed to contain both Doubles and Strings. The second program will throw a compilation error because the ArrayList is explicitly typed to hold only Strings. The first program will compile, but will throw a ClassCastException at runtime when trying to cast a String to a Double in the line `Double a = (Double) stack.pop()`. Therefore, the output of the two programs may differ if a runtime exception occurs in the first program. 
+To test this, you can construct an ArrayList with both Doubles and Strings and pass it to both programs to see if the output differs in the first program due to a potential ClassCastException.

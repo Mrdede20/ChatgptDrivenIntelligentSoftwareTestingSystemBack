@@ -1,0 +1,18 @@
+Test case:
+
+coins = [1, 5, 10, 25]
+total = 30
+expected_output = 8
+
+Explanation:
+The possible_change function is meant to calculate the number of possible combinations of coins that can add up to a given total. The above test case uses a common scenario where the function should return 8 as there are 8 possible combinations of coins that can add up to 30 (e.g., 1+1+1+1+1+5+10, 5+5+5+5, 10+10+10, 5+5+10+10, 1+1+1+1+1+1+25, 1+1+1+1+1+5+5+5, 1+1+1+1+1+1+1+1+25, and 5+5+5+5+10).
+
+However, there is a bug in the possible_change function that causes it to return an incorrect output for certain input values. Specifically, if the input coins list is not sorted in descending order, the function will fail to calculate the correct number of possible coin combinations.
+
+For example, if we modify the above test case to use a coins list that is not sorted in descending order, the function will return an incorrect output:
+
+coins = [5, 10, 25, 1]
+total = 30
+expected_output = 10
+
+In this case, the expected output is 8, but the actual output will be 10. This is because the function is not correctly handling the input list that is not sorted in descending order, and is instead double-counting some combinations.

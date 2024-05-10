@@ -1,0 +1,15 @@
+Test case: 
+
+Input: 
+
+nodes = [Node(value=1, outgoing_nodes=[2]), Node(value=2, outgoing_nodes=[3]), Node(value=3, outgoing_nodes=[1])] 
+
+Expected output: 
+
+[ ] 
+
+Explanation: 
+
+This test case includes a circular dependency in the graph formed by the nodes, where node 1 has an outgoing edge to node 2, node 2 has an outgoing edge to node 3, and node 3 has an outgoing edge back to node 1. This cycle means that no topological ordering can be formed, and the function should return an empty list. 
+
+However, the implementation of the function does not detect this cycle and continues to iterate over the graph, eventually resulting in an infinite loop and a test failure.

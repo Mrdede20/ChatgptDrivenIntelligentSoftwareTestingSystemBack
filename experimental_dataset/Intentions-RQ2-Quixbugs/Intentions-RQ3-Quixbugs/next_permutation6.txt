@@ -1,0 +1,9 @@
+The code is a Python implementation of the "Next Permutation" algorithm. It takes a list of unique integers as input and returns the lexicographically next permutation of the elements of the input list.
+
+The algorithm works as follows:
+1. Find the largest index i such that perm[i] < perm[i + 1]. If no such index exists, the permutation is already the last permutation and it returns None.
+2. Find the largest index j > i such that perm[j] < perm[i].
+3. Swap perm[i] with perm[j].
+4. Reverse the sequence from perm[i + 1:] to obtain the next lexicographically greater permutation.
+
+This code snippet iterates over the input list from the right to the left to find the indices i and j mentioned above. It then swaps and reverses the appropriate section of the list to produce the next permutation.

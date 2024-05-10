@@ -1,0 +1,8 @@
+Yes, there is an input that can make the two programs output different results. Here is a test case:
+
+```
+tokens = [2, 2, 2, '+', '*', 3, 3, '-', '/']
+print(rpn_eval(tokens))
+```
+
+The expected output is `2`, but the second program's output will be `0.5`. The reason for this difference is due to a small variation in the `op()` function of the second program. In the lambda function for division '/', the operands `a` and `b` are reversed when passed to the division operator, resulting in a different computation order.

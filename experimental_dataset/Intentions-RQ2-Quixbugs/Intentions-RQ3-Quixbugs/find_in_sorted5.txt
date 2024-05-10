@@ -1,0 +1,5 @@
+The `find_in_sorted` function is a recursive implementation of Binary Search Algorithm. It takes a sorted list `arr` and a key value `x` as a parameter. The function then defines a nested function `binsearch` that takes two arguments `start` and `end`. The purpose of this function is to recursively divide the search range in half until the length of the range being searched is 1. If the desired value `x` is less than the middle value of the current range `arr[mid]`, then we recurse on the left sublist else on the right sublist until we find the value `x`. If we don't find `x`, we return -1.
+
+So the `find_in_sorted` function returns the index of the element `x` in the sorted list `arr` if the element is present, otherwise -1. 
+
+For instance, `find_in_sorted([3, 4, 5, 5, 5, 5, 6], 5)` returns 3, because the value 5 is located at the index 3.

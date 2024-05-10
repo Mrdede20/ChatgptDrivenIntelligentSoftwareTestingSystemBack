@@ -1,0 +1,36 @@
+response@ChatGPT:
+Test case:
+
+Input:
+2
+99
+abcd
+120
+efgh
+
+Expected output:
+4
+8
+
+Actual output:
+4
+Traceback (most recent call last):
+  File "main.py", line 3, in <module>
+    for i in range(n):
+NameError: name 'n' is not defined
+
+Explanation:
+The program raises a NameError since the variable "n" is not defined. This means that the program is incorrectly written and fails to execute. The bug is caused by the typo where the backslash "\" separating the "n" variable name and its assignment is missing. 
+
+To fix this bug, the program should be written as follows:
+
+n = int(input())
+a = 0
+for i in range(n):
+    a = int(input())
+    s = input()
+    for i in range(len(s)):
+        if ord(s[i]) > a:
+            a = ord(s[i])
+    print(a - 96)
+

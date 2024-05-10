@@ -1,0 +1,31 @@
+#PT
+assert to_base(10, 2) == '1010'
+
+#PT
+assert to_base(10, 2) == '1010'
+
+#FF
+assert to_base(0, 7) == '0'
+
+#PT
+assert to_base(7, 2) == '111', 'Error: Test case 1'
+
+#PT
+assert(to_base(0,2) == '')
+
+#PT
+num = '11001'
+b = 2
+assert int(num, b) == 25
+
+#PT
+assert to_base(123, 16) == '7B'
+
+#PT
+assert to_base(10, 2) == '1010'
+
+#PT
+assert to_base(10, 2) == '1010'
+
+#PT
+assert to_base(10, 2) == '1010'

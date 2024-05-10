@@ -1,0 +1,88 @@
+#PT
+startnode = Node(value=1)
+goalnode = startnode
+assert breadth_first_search(startnode, goalnode) == True
+
+#FT
+startnode = Node(value=1, successors=[Node(value=2), Node(value=3)])
+goalnode = Node(value=4)
+assert breadth_first_search(startnode, goalnode) == False
+
+#PT
+node1 = Node(value=1)
+node2 = Node(value=2)
+node3 = Node(value=3)
+node1.successors = [node2]
+node2.successors = [node3]
+node3.successors = [node1]
+startnode = node1
+goalnode = node3
+assert breadth_first_search(startnode, goalnode) == True
+
+#PT
+node1 = Node(value=1)
+node2 = Node(value=2)
+node3 = Node(value=3)
+node1.successors = [node2]
+node2.successors = [node3, node2]
+startnode = node1
+goalnode = node3
+assert breadth_first_search(startnode, goalnode) == True
+
+#FC
+node1 = Node(value=1)
+node2 = Node(value=2)
+node3 = Node(value=1)
+node4 = Node(value=2)
+node1.successors = [node2, node3]
+node4.successors = [node3]
+startnode = node1
+goalnode = node4
+assert breadth_first_search(startnode, goalnode) == True #error
+
+#PT
+node1 = Node(value=1)
+node2 = Node(value=2)
+node3 = Node(value=3)
+node1.successors = [node2, node3]
+startnode = node1
+goalnode = node2
+def modify_successors(node):
+    node.successors.pop()
+assert breadth_first_search(startnode, goalnode) == True
+
+#PT
+node1 = Node(value=1)
+node2 = Node(value=2)
+node3 = Node(value=3)
+node1.successors = [node2]
+node2.successors = [node3, node1]
+startnode = node1
+goalnode = node3
+assert breadth_first_search(startnode, goalnode) == True
+
+#FT
+node1 = Node(value=1)
+node2 = Node(value=2, incoming_nodes=[node3])
+node3 = Node(value=3, successors=[node2])
+startnode = node1
+goalnode = node2
+assert breadth_first_search(startnode, goalnode) == False
+
+#FC
+node1 = Node(value=1)
+node2 = Node(value=2, incoming_nodes=[node1], outgoing_nodes=[node3])
+node3 = Node(value=3, incoming_nodes=[node2])
+startnode = node1
+goalnode = node3
+assert breadth_first_search(startnode, goalnode) == True #error
+
+#FC
+node1 = Node(value=1, successors=[node2], predecessors=[node3])
+node2 = Node(value=2, incoming_nodes=[node1], outgoing_nodes=[node4])
+node3 = Node(value=3, successors=[node1], incoming_nodes=[node4])
+node4 = Node(value=4, predecessors=[node2], outgoing_nodes=[node3])
+startnode = node1
+goalnode = node4
+assert breadth_first_search(startnode, goalnode) == True #error
+

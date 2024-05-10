@@ -1,0 +1,22 @@
+Yes, there are inputs that can make the two programs have different outputs.
+
+Test input:
+```
+2
+6
+0 1 0 1 0 1
+4
+1 1 0 0
+```
+
+Expected output for the first program:
+```
+6
+2
+```
+
+Expected output for the second program:
+```
+6
+3
+```

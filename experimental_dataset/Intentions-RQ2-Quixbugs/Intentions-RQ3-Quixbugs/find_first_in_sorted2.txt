@@ -1,0 +1,5 @@
+The intention of the following code is to find the lowest index `i` such that `arr[i] == x` in the sorted list `arr`. It uses a modified binary search algorithm known as "fancy binary search" to achieve this. The binary search algorithm is a logarithmic time complexity algorithm to search an element in a sorted list. 
+
+The function `find_first_in_sorted` takes two arguments, a sorted array `arr` and a value to find `x`. It returns the lowest index `i` such that `arr[i] == x`, or returns `-1` if x is not in `arr`.
+
+The fancy binary search algorithm performs a binary search on the given sorted array and returns the index of the first occurrence of the target element `x`. If we find the element `x` in the sorted array, we check if it the first occurrence of `x` using `(mid == 0 or x != arr[mid - 1])`. If it is, then we return the index `mid`. If it's not, then we adjust the search space accordingly by adjusting `high` or `low` depends on the relative position of `x` with mid.

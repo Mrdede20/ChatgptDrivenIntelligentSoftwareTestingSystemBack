@@ -1,0 +1,1 @@
+Yes, the two programs have different imports. The first program imports `java.util.*` while the second program specifically imports `java.util.ArrayList`. This could cause compatibility issues if the user is using a different type of list implementation or if there are naming conflicts with other packages.

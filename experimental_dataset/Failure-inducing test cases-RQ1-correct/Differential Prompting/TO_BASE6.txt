@@ -1,0 +1,1 @@
+No, both programs are performing the same function of converting a number to a given base using the same algorithm. The only difference in the implementation is the use of `StringBuilder` in the second program which provides better performance when concatenating strings repeatedly.

@@ -1,0 +1,5 @@
+The code is an implementation of the QuickSelect algorithm to find the kth-lowest element in a list (0-based indexing). The algorithm works by selecting a pivot element (in this case the first element of the list) and then partitioning the list around that pivot element such that all elements less than the pivot are on one side and all elements greater than the pivot are on the other. 
+
+If the index of the kth-lowest element is less than the number of elements less than the pivot, then the algorithm recursively searches the list of elements less than the pivot. If the index is greater than or equal to the number of elements less than or equal to the pivot, then the algorithm recursively searches the list of elements greater than the pivot. If the index is equal to the number of elements less than the pivot, then the algorithm returns the pivot element. 
+
+Thus the code efficiently finds the kth-lowest element of a list without sorting the entire list.

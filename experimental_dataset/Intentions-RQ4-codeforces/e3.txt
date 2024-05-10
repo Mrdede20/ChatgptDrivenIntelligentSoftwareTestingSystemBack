@@ -1,0 +1,7 @@
+This code defines a class `Solution` that contains a method `BinaryInversions`. The method takes two arguments - an integer `n` and a list `bits` of n integers. It returns the maximum number of inversions that can be performed on the given binary sequence, where an inversion is defined as the number of pairs (i, j) such that i < j and bits[i] > bits[j]. 
+
+To solve the problem, the code first creates two modified versions of the input list - `first` and `second`. The `first` list is obtained by flipping the first zero encountered in the original list, and the `second` list is obtained by flipping the last one encountered in the original list. 
+
+Next, the code calculates the inversion count for each of the three sequences - `orig`, `first`, and `second`. This is done by scanning the lists from right to left and counting the number of zeros encountered before the current position for each list. 
+
+Finally, the code returns the maximum of the three inversion counts.

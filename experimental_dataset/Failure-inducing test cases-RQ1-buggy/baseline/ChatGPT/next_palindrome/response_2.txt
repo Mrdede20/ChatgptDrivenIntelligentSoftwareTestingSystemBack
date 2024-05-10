@@ -1,0 +1,11 @@
+Test Case:
+
+Input: [9, 9, 9, 9]
+Expected Output: [1, 0, 0, 0, 1]
+
+Explanation:
+The input digit list is [9, 9, 9, 9] which is the highest possible value for a four-digit number. The expected output should be the next palindrome number after 9999, which is 10001.
+
+However, the current implementation of the function does not handle this edge case properly. It enters an infinite loop and does not return any output. Thus, the test case will fail.
+
+To trigger the bug, we can simply pass the input [9, 9, 9, 9] to the function and check that the output is not returned within a reasonable amount of time.

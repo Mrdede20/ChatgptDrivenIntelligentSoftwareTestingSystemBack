@@ -1,0 +1,17 @@
+response@ChatGPT:
+Test case:
+
+Input:
+1
+3
+3 2 1
+
+Expected output:
+2 1 0
+
+Actual output:
+3 2 1
+
+Explanation:
+The program is intended to find the maximum two elements in the given list and then calculate the differences between each element and the maximum element. However, in this test case, the program fails to find the correct maximum elements because it only compares the current element with the previously found maximum elements. Therefore, it incorrectly calculates the differences and results in a test failure.
+

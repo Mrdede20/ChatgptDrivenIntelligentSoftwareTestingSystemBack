@@ -1,0 +1,7 @@
+The intention of this code is to implement a function named `depth_first_search` that takes two inputs `startnode` and `goalnode`. The function searches whether the `goalnode` is reachable from the `startnode` in a directed graph using the depth-first search algorithm.
+
+The function first creates an empty set called `nodesvisited` to keep track of the visited nodes. Then, it defines an inner function called `search_from` which takes a `node` as input. This inner function recursively searches for the `goalnode` from the `node` using depth-first search. 
+
+If the `node` has already been visited before, then the function returns False because this means we have already explored this path before and we are in a cycle. If the `node` is the `goalnode` we are searching for, then the function returns True because we have found the goal. Otherwise, it recursively calls itself to search from the next unvisited node and returns the result.
+
+Finally, the function returns the result of calling the `search_from` function starting from `startnode`.

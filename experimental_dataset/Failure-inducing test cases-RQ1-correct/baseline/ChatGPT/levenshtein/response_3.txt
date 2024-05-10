@@ -1,0 +1,49 @@
+response@ChatGPT:
+
+
+Yes, there are several test cases which can trigger a bug in the program. 
+
+One possible bug is that the program does not handle Unicode characters correctly, as it only handles ASCII characters. This means that if any input string contains Unicode characters, the program may not work as expected.
+
+Additionally, there may be some edge cases where the program returns incorrect results. For example, if both source and target strings are the same, the function should return 0, but the current implementation will return len(source) or len(target), which may not be correct.
+
+Another possible test case is if the input strings have different lengths, but are identical except for the first and last characters. In this case, the program may incorrectly return a higher edit distance than expected. 
+
+For example, given the inputs "abcdefg" and "bbbcdefh", the expected edit distance is 2 (replace "a" with "b" and "g" with "h"), but the current implementation may return a higher value.
+
+request@user:
+Give us such test case. Use assert.
+
+response@ChatGPT:
+
+
+# Test case 1: Same input strings
+assert levenshtein('abc', 'abc') == 0
+
+# Test case 2: One of the input strings is empty
+assert levenshtein('', 'abc') == 3
+
+# Test case 3: One of the input strings is empty
+assert levenshtein('abc', '') == 3
+
+# Test case 4: Different input strings of same length
+assert levenshtein('abcd', 'abcf') == 1
+
+# Test case 5: Different input strings of different length
+assert levenshtein('abc', 'abcdef') == 3
+
+# Test case 6: Same input strings with different case
+assert levenshtein('ABC', 'abc') == 3
+
+# Test case 7: Same input strings with extra space
+assert levenshtein('abc  ', 'abc') == 2
+
+# Test case 8: Same input strings with special characters
+assert levenshtein('abc**', 'abc') == 2
+
+# Test case 9: Same input strings with numbers
+assert levenshtein('abc123', 'abc') == 3
+
+# Test case 10: Different but similar input strings
+assert levenshtein('kitten', 'sitting') == 3
+

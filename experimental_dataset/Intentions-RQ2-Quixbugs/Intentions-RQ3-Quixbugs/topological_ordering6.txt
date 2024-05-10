@@ -1,0 +1,3 @@
+The intention of the code is to implement the topological sort algorithm for a directed acyclic graph. The function takes a list of nodes as input and returns an ordered list of those nodes such that if node A has an edge directed to it from node B, then node B appears before node A in the ordered list. 
+
+The topological ordering is useful in scheduling tasks that have dependencies, where a task can only be executed when its dependent tasks have already been completed. The algorithm works by repeatedly selecting nodes that have no incoming edges, which can be executed first and then removing them and their edges from the graph. Then, it moves on to the next set of nodes with no incoming edges and repeats the process until all nodes have been ordered.

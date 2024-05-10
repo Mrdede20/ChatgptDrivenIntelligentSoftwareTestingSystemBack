@@ -1,0 +1,1 @@
+No, both programs generate the same output for the same input values as they both generate Pascal's Triangle.

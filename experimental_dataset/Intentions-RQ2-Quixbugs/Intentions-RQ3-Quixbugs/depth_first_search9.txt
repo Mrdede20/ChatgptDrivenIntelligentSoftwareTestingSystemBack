@@ -1,0 +1,9 @@
+The intention of the code is to perform a depth-first search in a directed graph in order to determine if a certain goal node is reachable from a starting node. The function takes in two parameters, startnode and goalnode, which represent the starting and goal nodes respectively. 
+
+The function creates a set called nodesvisited to keep track of the nodes that have already been visited during the search, in order to avoid moving in circles or running the same search multiple times. It then defines an inner function called search_from, which takes in a node as an argument, and performs the actual depth-first search. 
+
+Within search_from, the function checks if the current node has already been visited. If it has, this means that we have already explored this path, so we return False. If the current node is the goal node, we return True, indicating that the search was successful. 
+
+If neither of the above conditions are met, the function continues the search by recursively calling itself on each of the current node's successors (i.e. the nodes that the current node points to). The any() function is used to check if any of the successor nodes result in a successful search.
+
+Finally, the search_from function is called on the starting node, and the result is returned to the caller.

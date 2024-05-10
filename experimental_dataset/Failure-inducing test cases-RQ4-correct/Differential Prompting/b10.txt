@@ -1,0 +1,13 @@
+Yes, there is an input which makes the two programs have different output. If any input string `s` contains any character having ASCII code greater than `96 + n`, then the output of the first program will be incorrect, while the output of the second program will be correct. Here's a test input that satisfies this condition:
+
+```
+4
+98 abcd
+99 efg
+101 hijklmnopqrstuvwxyzABCD
+102 EFGHIJKLMNOPQRSTUVWXYZ0123456789!@$%^&*()-_=+[{]}\|;:',<.>/? 
+```
+
+The first program would print `29 5 27 32` while the second program would print `2 5 51 90`.
+
+Note that in the first program, the initial value of `a` should be `ord('a')-1` instead of `0`, in order to correctly handle strings containing only characters with ASCII codes greater than the initial value of `a`.

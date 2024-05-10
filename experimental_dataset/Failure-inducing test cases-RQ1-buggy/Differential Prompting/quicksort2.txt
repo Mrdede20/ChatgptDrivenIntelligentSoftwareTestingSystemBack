@@ -1,0 +1,21 @@
+Yes, there is an input that can make the two programs have different outputs. Here's the test case in Python:
+
+```
+arr = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]
+
+print(quicksort(arr))
+```
+
+The output of the first implementation will be:
+
+```
+[1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 9]
+```
+
+While the output of the second implementation will be:
+
+```
+[1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 9]
+```
+
+Note that the two implementations will have the same output for this particular input. However, there may be other inputs that can produce different outputs for the two implementations.

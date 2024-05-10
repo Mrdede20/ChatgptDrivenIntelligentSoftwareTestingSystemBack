@@ -1,0 +1,32 @@
+These two programs are solving the same problem, which is to find the shortest path from a source node to all other nodes in a weighted graph. However, the implementation of the algorithms are different. The first program is using a modified version of the Bellman-Ford algorithm, while the second program is using Dijkstra's algorithm.
+
+There can be cases where the two algorithms may produce different results because they have different approaches to determining the shortest path. In particular, the Bellman-Ford algorithm can handle negative weight edges in a graph, while Dijkstra's algorithm cannot. Therefore, if the input graph has negative weight edges, the two algorithms may produce different results.
+
+Here is an example of an input that can produce different output for the two programs:
+
+```
+Map<List<String>,Integer> weight_by_edge = new HashMap<>();
+weight_by_edge.put(Arrays.asList("A", "B"), 2);
+weight_by_edge.put(Arrays.asList("B", "C"), 1);
+weight_by_edge.put(Arrays.asList("C", "D"), -3);
+weight_by_edge.put(Arrays.asList("D", "A"), 1);
+Map<String,Integer> sp1 = SHORTEST_PATHS.shortest_paths("A", weight_by_edge);
+Map<Integer, Map<Integer, Integer>> weight_by_edge2 = new HashMap<>();
+Map<Integer, Integer> weight_by_edge2_A = new HashMap<>();
+weight_by_edge2_A.put(1, 2);
+Map<Integer, Integer> weight_by_edge2_B = new HashMap<>();
+weight_by_edge2_B.put(2, 1);
+Map<Integer, Integer> weight_by_edge2_C = new HashMap<>();
+weight_by_edge2_C.put(3, -3);
+Map<Integer, Integer> weight_by_edge2_D = new HashMap<>();
+weight_by_edge2_D.put(4, 1);
+weight_by_edge2.put(1, weight_by_edge2_A);
+weight_by_edge2.put(2, weight_by_edge2_B);
+weight_by_edge2.put(3, weight_by_edge2_C);
+weight_by_edge2.put(4, weight_by_edge2_D);
+Map<Integer, Integer> sp2 = new DijkstraAlgorithm().shortest_paths(1, weight_by_edge2);
+System.out.println(sp1); // Output will be {A=0, B=2, C=3, D=0}
+System.out.println(sp2); // Output will be {1=0, 2=2, 3=5, 4=1}
+```
+
+Note that the edge from C to D has negative weight, and the graph has been constructed in a way that node D can be reached from the source node A with a negative weight cycle.

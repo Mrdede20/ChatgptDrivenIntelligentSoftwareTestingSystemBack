@@ -1,0 +1,23 @@
+Yes, there is an input which makes the two programs give different output. 
+
+Here is a test case that shows the difference: 
+
+```java
+int[] arr = {1, 2, 2, 3};
+int x = 2;
+```
+
+The first program will return 1, which is the index of the first occurrence of 2 in the array. 
+
+The second program will return 1 as well, which is the index of the first occurrence of 2 in the array. 
+
+However, if we change the input slightly to: 
+
+```java
+int[] arr = {1, 2, 2, 3};
+int x = 4;
+```
+
+The first program will return -1, indicating that the number 4 is not found in the array.
+
+The second program will also return -1 in this case.

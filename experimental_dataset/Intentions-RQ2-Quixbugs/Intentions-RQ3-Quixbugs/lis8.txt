@@ -1,0 +1,7 @@
+The code implements a solution to the Longest Increasing Subsequence problem in Python. In other words, given a sequence of integers, the code finds the length of the longest monotonically increasing subsequence in the sequence. 
+
+The algorithm used in the code works by maintaining a dictionary called "ends" which stores the "end" of the longest increasing subsequence of length i seen so far. The variable "longest" tracks the length of the longest increasing subsequence seen so far. 
+
+The code iterates through the input sequence and for each element, it checks to see if it can be appended to an existing increasing subsequence seen so far. If yes, the length of the subsequence is updated, and its end is stored in the "ends" dictionary. 
+
+The code returns the length of the longest increasing subsequence seen in the input sequence.

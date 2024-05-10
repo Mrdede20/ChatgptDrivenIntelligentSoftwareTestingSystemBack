@@ -1,0 +1,25 @@
+response@ChatGPT:
+Test case:
+
+Input:
+3
+5 3 6
+8 2 9
+1 4 7
+
+Expected Output:
+5
+8
+4
+
+Actual Output:
+5
+8
+Traceback (most recent call last):
+  File "main.py", line 4, in <module>
+    t-=1
+TypeError: unsupported operand type(s) for -=: 'str' and 'int'
+
+Explanation:
+The input is given as 3, indicating there will be 3 test cases. In each test case, the program expects 3 numbers to be entered on a single line, which are then sorted and the middle number is printed out. In the expected output, we can see the second and third middle numbers of the first and second test case respectively, and the second smallest number of the third test case. However, the actual output prints out an extra "5" after printing out the correct middle numbers, and then results in a TypeError because the program is trying to subtract 1 from a string instead of an integer. This is because the "input()" function used to get the number of test cases returns a string, and the program does not convert it to an integer before using it in the while loop.
+

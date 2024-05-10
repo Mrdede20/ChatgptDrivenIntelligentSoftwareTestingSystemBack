@@ -1,0 +1,15 @@
+Test case:
+
+n = 0
+
+Expected output:
+
+[[1]]
+
+Actual output:
+
+IndexError: list index out of range
+
+Explanation:
+
+The for loop starts at r = 1, which means that if n = 0, the for loop will not execute, and the function will try to access an element in rows at index -1, which will result in an IndexError. To fix this bug, we can add a check for n = 0 at the beginning of the function and return [[1]] if n = 0.

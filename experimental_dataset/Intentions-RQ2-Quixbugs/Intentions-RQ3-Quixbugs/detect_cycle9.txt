@@ -1,0 +1,5 @@
+The intention of this code is to detect whether a given linked list has a cycle or not. The solution is based on the Tortoise and Hare algorithm, which uses two pointers - one slow pointer (tortoise) and one fast pointer (hare). 
+
+The function starts with these pointers at the same position, and then keeps advancing the tortoise by one node and the hare by two nodes. If the linked list has a cycle, then at some point the faster hare will catch up to the slower tortoise, thus indicating that the linked list has a cycle. 
+
+If the hare pointer reaches the end of the linked list (i.e., its "successor" attribute is None), then it means there is no cycle in the linked list, so the function returns False. When the hare and tortoise pointers meet, it means that there is a cycle in the linked list, and thus the function returns True.

@@ -1,0 +1,41 @@
+Yes, the two programs can have different outputs for some inputs, because they are solving the same problem (finding shortest paths in a graph), but they are using different algorithms to do so. The first program is using a modified version of the Bellman-Ford algorithm, while the second program is using Dijkstra's algorithm. These algorithms may produce different results for the same input graph with different edge weights.
+
+To illustrate this, consider the following example graph with three nodes and three edges:
+
+```
+     2
+(0)------>(1)
+ |      1
+ |      |
+ |      |
+ |      |3
+ v      v
+(2)<------(3)
+     1
+```
+
+If we run the `shortest_paths` method of `SHORTEST_PATHS` with the source node 0 and the following weight_by_edge map:
+
+```
+{(0, 1): 2, (1, 3): 3, (3, 2): 1, (2, 0): 1}
+```
+
+we get the result:
+
+```
+{0: 0, 1: 2, 2: 3, 3: 5}
+```
+
+On the other hand, if we run the `shortest_paths` method of `DijkstraAlgorithm` with source node 0 and the following weight_by_edge map:
+
+```
+{0: {1: 2}, 1: {3: 3}, 3: {2: 1}, 2: {0: 1}}
+```
+
+we get the result:
+
+```
+{0: 0, 1: 2, 2: 1, 3: 5}
+```
+
+As we can see, the two algorithms produce different results for this input graph. The reason for this is that the Bellman-Ford algorithm can handle negative edge weights, while Dijkstra's algorithm cannot. In this example, there are no negative edge weights, so both algorithms should work correctly, but with different results.

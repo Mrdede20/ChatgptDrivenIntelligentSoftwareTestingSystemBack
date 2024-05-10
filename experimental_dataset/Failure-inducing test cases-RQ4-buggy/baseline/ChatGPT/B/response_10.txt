@@ -1,0 +1,26 @@
+response@ChatGPT:
+Test case:
+Input:
+3
+99
+abc
+97
+bcd
+98
+abc
+
+Expected Output:
+3
+2
+2
+
+Actual Output:
+3
+2
+1
+
+Explanation:
+The program is supposed to print the highest alphabetical value in each given string and subtract 96 to match the correct alphabetical index. However, the program does not handle the case when the highest alphabetical value is 97 or 98 (lowercase 'a' or 'b'). Instead of subtracting 96 from the highest alphabetical value, the program directly subtracts 96 from the variable 'a'. This results in incorrect outputs for inputs that contain 'a' or 'b'. 
+
+In this test case, the second input contains 'bcd' which has the highest alphabetical value of 100. Therefore, the expected output for this input is 4 (100-96). However, the program incorrectly prints 2 as it subtracts 96 from the variable 'a' (which is 97 after input) instead of the highest alphabetical value of 100.
+

@@ -1,0 +1,13 @@
+Yes, there is an input that makes the two programs have different output. 
+
+Here's the test case you requested:
+
+```
+rpn_eval([5, 6, 7, "*", "+", 4, "-"])
+```
+
+For the first program, the output is `-23.0`. 
+
+For the second and third program, the output is `-27.0`. 
+
+The difference in output is due to the different ordering of `a` and `b` in the `op()` function of the second program. In the first program, `b` is popped from the stack before `a`, while in the second program, `a` is popped before `b`. This changes the way the operands are evaluated for the multiplication operation (`*`).

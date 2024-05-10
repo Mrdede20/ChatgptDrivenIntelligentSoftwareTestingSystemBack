@@ -1,0 +1,5 @@
+Yes, there is an input which makes the two programs above have different output. If the input `coins` array is not already sorted in ascending order, then the two programs will give different results. For instance, take the following input: 
+
+```int[] coins = {5, 2, 1};```
+
+When this input is given to `POSSIBLE_CHANGE` and `CoinChange` programs, the `POSSIBLE_CHANGE` program will run infinitely due to an unsorted array causing `possible_change(coins, total-first)` to call itself on the same array, and so on in a loop. However, the `CoinChange` program returns `2` as the output for this input.

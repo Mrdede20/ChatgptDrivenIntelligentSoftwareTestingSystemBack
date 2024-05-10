@@ -1,0 +1,1 @@
+There is no input that can make the two programs have different output, as they implement the same algorithm for generating all k-length subsequences of integers from a to b. The only difference is in how they handle the base cases of k = 0 and k = 1.

@@ -1,0 +1,21 @@
+Yes, there is an input which makes the two programs have different output. 
+
+Test case: 
+
+```
+text = "The quick brown fox jumps over the lazy dog"
+cols = 11
+```
+
+The first implementation will produce the following output:
+
+```
+['The quick', 'brown fox', 'jumps over', 'the lazy', 'dog']
+```
+while the second implementation will produce the following output:
+
+```
+['The quick', 'brown fox', 'jumps over', 'the lazy dog']
+```
+
+As you can see, the first implementation splits the last word "dog" into a separate line, while the second implementation includes it in the previous line.

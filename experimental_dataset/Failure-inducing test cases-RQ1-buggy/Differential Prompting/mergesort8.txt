@@ -1,0 +1,11 @@
+Yes, the two programs can have different outputs for the input with a duplicate number. For example: 
+
+arr = [3, 5, 2, 5, 4]
+
+With the original code, the output will be:
+[2, 3, 4, 5, 5]
+
+With the modified code, the output will be:
+[2, 3, 4, 5, 5]
+
+Both codes will work for the input above.

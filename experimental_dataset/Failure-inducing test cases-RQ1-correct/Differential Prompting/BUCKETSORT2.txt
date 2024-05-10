@@ -1,0 +1,3 @@
+Yes, there is an input that can make these two programs have different outputs. It can happen when the input array contains negative integers. The first implementation assumes that the input contains only positive integers, while the second implementation can handle negative integers because it uses a bucket array to store the count of elements.
+
+For example, consider the input array [-5, 2, 1]. The first implementation will throw an IndexOutOfBoundsException because it tries to set an element in the counts array at index -5. The second implementation can handle this input and produce the correct output [-5, 1, 2].

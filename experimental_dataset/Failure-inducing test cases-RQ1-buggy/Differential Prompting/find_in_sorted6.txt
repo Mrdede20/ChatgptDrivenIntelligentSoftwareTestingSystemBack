@@ -1,0 +1,10 @@
+Yes, for example, if the array is `[1, 2, 3, 4, 5, 6]` and the search key is `2.5`, the first program will return `-1` while the second program will return `2`. Here's how you can test it in python:
+
+```
+arr = [1, 2, 3, 4, 5, 6]
+x = 2.5
+print(find_in_sorted(arr, x))   # first program
+print(binsearch(arr, x, 0, len(arr)))   # second program
+``` 
+
+The first program outputs `-1` while the second program outputs `2`.

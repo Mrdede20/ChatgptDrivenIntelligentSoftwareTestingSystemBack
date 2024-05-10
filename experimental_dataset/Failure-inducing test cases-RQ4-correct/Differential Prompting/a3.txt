@@ -1,0 +1,24 @@
+Yes, there is an input which makes the two programs output different results. Here's a possible test input:
+
+```
+2
+4 9 7
+6 3 5
+1 2 3
+```
+
+Output of the first program:
+
+```
+7
+5
+2
+```
+
+Output of the second program:
+
+```
+7
+5
+1
+```

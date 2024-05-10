@@ -1,0 +1,5 @@
+The intention of the code is to perform a topological sort on a directed acyclic graph represented by a list of nodes, such that each node is placed before all the nodes it has edges to. The function takes the input nodes, creates an empty ordered_nodes list and adds the nodes that have no incoming edges to it.
+
+The function then iterates over the ordered_nodes, adding any outgoing nodes of the current node, that have all of their incoming node's edges already added to the ordered_nodes list. When all possible edges have been added to the ordered_nodes list, the function returns the ordered list. 
+
+The function basically sorts the nodes in a DAG (Directed Acyclic Graph) based on their dependencies or precedence. This is often useful when working with dependencies between tasks or operations, and is a well-known algorithm in computer science.

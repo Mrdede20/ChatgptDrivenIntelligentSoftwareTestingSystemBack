@@ -1,0 +1,11 @@
+Yes, there is an input that makes the two programs produce different output. 
+
+Try running both programs with this input: 
+
+```
+int[] digit_list = {9, 9, 9, 1};
+```
+
+The `next_palindrome` method in the `NEXT_PALINDROME` class will return `[1, 0, 0, 1, 0, 0, 0, 1]`, while the `next_palindrome` method in the `Palindrome` class will return `1001`. 
+
+The difference arises because the two programs have different approaches to the problem of finding the next palindrome. The `NEXT_PALINDROME` method moves from the center of the number outward, whereas the `Palindrome` method compares digits from the left and the right and works inward. As a result, they handle certain input cases differently, such as the one given above.

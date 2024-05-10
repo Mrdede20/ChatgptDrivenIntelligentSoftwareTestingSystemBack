@@ -1,0 +1,11 @@
+Yes, there are inputs that can make the two programs have different output. This is because the two programs use different data structures and algorithms to solve the same problem of finding the shortest path in a graph, and there can be edge cases where one data structure or algorithm is more efficient or accurate than the other.
+
+Here is an example input that can produce different output for the two programs:
+
+```
+length_by_edge = {("A", "B"): 1, ("B", "C"): 2, ("C", "D"): 3, ("D", "E"): 4, ("E", "F"): 5, ("F", "G"): 6, ("A", "G"): 20, ("B", "G"): 10, ("C", "G"): 5, ("D", "G"): 3, ("E", "G"): 2, ("F", "G"): 1}
+startnode = "A"
+goalnode = "G"
+```
+
+For this input, the `shortest_path_length` function will return 18 (the length of the path A->B->C->D->E->F->G), while the `dijkstras_shortest_path` function will return 5 (the length of the path A->C->G). Note that `dijkstras_shortest_path` uses a simple dictionary to represent the graph, while `shortest_path_length` requires a more complex data structure of a FibHeap to efficiently process the graph.

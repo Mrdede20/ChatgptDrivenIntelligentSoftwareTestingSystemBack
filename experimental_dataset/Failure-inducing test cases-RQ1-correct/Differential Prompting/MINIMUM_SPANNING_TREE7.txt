@@ -1,0 +1,20 @@
+Yes, there is at least one input that makes the two programs output different results. 
+
+The first program is using a map that groups the nodes by their connected components (groupByNode), while the second program is using a map that groups the nodes by their subsets (subsets).
+
+If you pass the input below to both programs, you will get different results:
+
+List<WeightedEdge> edges = new ArrayList<>();
+edges.add(new WeightedEdge(0, 1, 2));
+edges.add(new WeightedEdge(0, 2, 3));
+edges.add(new WeightedEdge(1, 2, 1));
+edges.add(new WeightedEdge(1, 3, 1));
+edges.add(new WeightedEdge(2, 3, 2));
+
+The output of the first program will be:
+
+[(0, 1, 2), (1, 2, 1), (1, 3, 1)]
+
+While the output of the second program will be:
+
+[(1, 2, 1), (1, 3, 1), (0, 1, 2)]

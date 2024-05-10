@@ -1,0 +1,5 @@
+The intention of this code is to calculate the length of the longest increasing subsequence in the given array of integers (arr), where the integers in arr are guaranteed to be unique. 
+
+The code uses a dynamic programming approach known as the "Patience Sorting Algorithm" to solve the problem in O(n log n) time, where n is the length of the input array.
+
+The algorithm maintains a dictionary "ends" that stores the last element of each subsequence of increasing length seen so far. It then iterates through the input array, at each step checking if the current value can be added to the end of an existing subsequence or if a new subsequence must be started. If a new subsequence is started, the length of the longest one increases by 1. Finally, the length of the longest increasing subsequence seen so far is returned.

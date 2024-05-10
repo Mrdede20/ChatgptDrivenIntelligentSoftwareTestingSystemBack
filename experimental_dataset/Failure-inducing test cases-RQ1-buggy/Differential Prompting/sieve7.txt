@@ -1,0 +1,5 @@
+Yes, there is an input which makes the first four implementations different from the last one. This input is max=1 because the first four implementations will return an empty list, while the last implementation will return an empty list as well, but the is_prime list will be set to [True, False]. 
+
+In the first four implementations, `for n in range(2, max + 1)` will not loop at all since the range starts at 2 and `max + 1` is equal to 2, so the body of the for loop will not be executed. Therefore, the returned list will be empty. 
+
+In the last implementation, `for n in range(2, max + 1)` will still loop exactly once, so the is_prime list will be set to [True, False], and an empty list will be returned as well.

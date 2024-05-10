@@ -1,0 +1,30 @@
+Yes, there is an input that can make the programs above have different output. This is because of the difference in the condition check for the `while` loop. 
+
+In the first two programs, the `while` loop continues as long as `queue` is non-empty, which means it will stop as soon as `queue` becomes empty. 
+
+In the third program, the `while` loop continues as long as the length of `queue` is greater than `0`, which means it will stop only when `queue` becomes empty. 
+
+In the fourth program, the `while` loop continues as long as the length of `queue` is not equal to `0`, which also means it will stop only when `queue` becomes empty. 
+
+Here is a test case that can produce different outputs:
+
+```
+class Node:
+    def __init__(self, val, successors):
+        self.val = val
+        self.successors = successors
+  
+# Create the graph
+node3 = Node(3, [])
+node2 = Node(2, [node3])
+node1 = Node(1, [node2])
+
+# Run the function with node1 and node3 as start and end points
+print(breadth_first_search(node1, node3))
+```
+
+The above test case would produce the following outputs:
+
+- The first two programs would return `True`.
+- The third program would enter an infinite loop because `len(queue)` will always be greater than `0` even after all nodes have been processed.
+- The fourth program would also enter an infinite loop because `len(queue)` will never be equal to `0` after the first iteration.

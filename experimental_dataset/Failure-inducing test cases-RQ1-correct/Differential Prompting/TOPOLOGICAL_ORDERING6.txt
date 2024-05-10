@@ -1,0 +1,7 @@
+Yes, the two programs have different output for certain inputs as they both implement a different algorithm for topological sorting.
+
+The first program performs a depth-first search through the graph, starting with nodes that have no incoming edges (predecessors). As each node is visited, it is added to the topological ordering list if it has no unvisited predecessors. This process continues until all nodes have been visited and added to the ordering list.
+
+The second program starts with nodes that have no incoming edges and adds them to a stack. Then, while the stack is not empty, it pops the last node from the stack, adds its successors to the list of nodes to be processed, and decrements the in-degree value of each of the successors. The process continues until the stack is empty and all nodes have been processed.
+
+While both algorithms will give the same output for directed acyclic graphs (DAGs), for graphs that contain cycles, the two algorithms will give different outputs. The first program will detect a cycle and exit with an error. The second program, however, will not detect cycles and will continue to process nodes indefinitely.

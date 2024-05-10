@@ -1,0 +1,21 @@
+response@ChatGPT:
+Test Case:
+
+Input:
+2
+1 2 3
+4 5 6
+7 8 9
+
+Expected Output:
+2
+5
+
+Actual Output:
+2
+5
+3
+
+Explanation:
+The program is supposed to print the second smallest number of each group of three integers entered. However, when there are only two sets of three integers entered, the program prints a third number (3) which is not expected. This indicates a bug in the code as it is not correctly handling the termination condition of the while loop. Therefore, the test case fails.
+

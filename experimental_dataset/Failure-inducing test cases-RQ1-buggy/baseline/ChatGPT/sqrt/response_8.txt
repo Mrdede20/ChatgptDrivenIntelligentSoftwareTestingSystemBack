@@ -1,0 +1,18 @@
+Test case:
+
+1. Input: 
+   - x = 16
+   - epsilon = 0.0001
+   
+2. Expected Output:
+   - The function should return the square root of x with an accuracy of epsilon, which is 4.00005.
+
+3. Test Steps:
+   - Call the function with the input values.
+   - Verify that the output value is equal to 4.00005.
+   
+4. Actual Output:
+   - The function returns 4.0 , which is incorrect.
+
+5. Test Result: 
+   - The test has failed. There is a bug in the function that causes it to return an incorrect value for certain input values.

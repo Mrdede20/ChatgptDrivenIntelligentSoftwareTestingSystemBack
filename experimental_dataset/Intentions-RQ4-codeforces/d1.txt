@@ -1,0 +1,3 @@
+This is a program that reads a list of integers from the user input that represents a mountain range from left to right. Then, the program checks if there is a single highest peak in the range. In other words, the program checks if there is only one peak and that all the mountains on both sides of the peak's altitude has a lesser altitude.
+
+The program iteratively creates sublist pairs to find the peak.

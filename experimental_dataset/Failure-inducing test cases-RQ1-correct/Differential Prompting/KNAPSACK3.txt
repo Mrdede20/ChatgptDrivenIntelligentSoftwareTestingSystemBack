@@ -1,0 +1,12 @@
+Yes, there is an input that can make the two programs output different results. The reason is that the two programs are implementing the same algorithm (0/1 KnapSack problem) but with different initialization.
+
+The first program initializes the memo array with zeros at the beginning of each for loop iteration (for each i and j), while the second program initializes the memo array with zeros before the for loop (i=1 and j=1 excluded). This subtle difference in initialization can lead to different result values for some input sets.
+
+Here's an example input set that will produce different results:
+
+```
+int capacity = 6;
+int[][] items = {{2, 5}, {2, 3}, {2, 3}, {3, 7}};
+```
+
+For this input, the first program will return 9 while the second program will return 8.

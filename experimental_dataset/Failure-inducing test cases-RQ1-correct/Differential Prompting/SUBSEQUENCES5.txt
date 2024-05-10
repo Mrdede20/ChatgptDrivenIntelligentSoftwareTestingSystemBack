@@ -1,0 +1,1 @@
+Both programs should produce the same output given the same input. They only differ in syntax, but the logic of the `subsequences` method is the same.

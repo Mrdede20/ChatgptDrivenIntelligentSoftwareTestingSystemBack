@@ -1,0 +1,7 @@
+The intention of this code is to solve a problem that requires finding the maximum and second maximum element in an array and then printing the absolute difference between each element in the array and these two maximums.
+
+The code starts by taking an integer input 't' which represents the number of test cases. The subsequent code runs 't' times. For each iteration, the code first takes an integer input 'n' - the size of the array. It then takes an array 's' of 'n' elements as input.
+
+The code then initializes the array 'mx' with two elements -1 and -1, representing the indices of the maximum and second maximum elements respectively. It then loops over the array 's' and finds the indices of the two maximum elements using a nested if-else condition.
+
+Finally, the code loops over the array 's' again and prints the absolute difference between the current element and the maximum and second maximum elements in the array based on the index. The output for each test case is printed on a new line. 

@@ -1,0 +1,3 @@
+The code defines a function `wrap` which takes two arguments: `text` and `cols`. It breaks the input `text` into a list of lines of length `cols` or less. It achieves this by loop through the text and finding the last space character before the limit of 'cols'. That's where we split the text to start the new line. It appends these lines to a list and eventually returns the list of wrapped lines.
+
+This function can be used to format long paragraphs of text, such as in documents, so that they can be displayed within a defined width such as a web page or a terminal.

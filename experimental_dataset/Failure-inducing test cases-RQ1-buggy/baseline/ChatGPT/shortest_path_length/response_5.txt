@@ -1,0 +1,21 @@
+Test case:
+
+length_by_edge = {
+(1, 2): 2,
+(2, 3): 3,
+(3, 4): 4,
+(4, 5): 5,
+(1, 5): 10
+}
+start_node = Node(1, [Node(2)])
+goal_node = Node(5, [], [Node(1), Node(4)])
+result = shortest_path_length(length_by_edge, start_node, goal_node)
+assert result == 7
+
+Explanation:
+
+In the Node class, there is a duplicate method named successor. This can cause a problem when the method is called, leading to unexpected behavior or errors.
+
+In the test case, we create a graph with 5 nodes and 5 edges, and we set the start node to be Node(1) and the goal node to be Node(5). We define the lengths of the edges in the length_by_edge dictionary. We expect the shortest path between the start and goal nodes to be 1 -> 2 -> 3 -> 4 -> 5, which has a total length of 7.
+
+However, when the program executes the successor method in the Node class, it will return the value of the successor attribute, which is set to None by default. This will cause an error in the program, leading to a test failure.

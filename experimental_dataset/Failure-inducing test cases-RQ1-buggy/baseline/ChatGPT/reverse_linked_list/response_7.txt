@@ -1,0 +1,21 @@
+Test case:
+
+# create a linked list with three nodes
+node1 = Node(value=1)
+node2 = Node(value=2)
+node3 = Node(value=3)
+node1.successor = node2
+node2.successor = node3
+
+# reverse the linked list
+result = reverse_linked_list(node1)
+
+# assert the values of the nodes in the reversed list
+assert result.value == 3
+assert result.successor.value == 2
+assert result.successor.successor.value == 1
+
+Bug:
+The bug in the program is that the successors attribute of the nodes is not being updated correctly during the reversal of the linked list. This can be seen in the Node class constructor, where successors is initialized to an empty list, but then later overridden by the successor attribute in the __init__ method. This inconsistency can lead to unexpected behavior when working with the linked list.
+
+When the test case above is run, it will fail on the second assertion (assert result.successor.value == 2) because the successors attribute of the nodes has not been updated correctly. Specifically, the successors attribute of node3 still points to node2 instead of None, causing the reversed list to be constructed incorrectly.

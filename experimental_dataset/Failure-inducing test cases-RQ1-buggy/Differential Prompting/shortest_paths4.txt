@@ -1,0 +1,21 @@
+Yes, there might be an input which makes the two programs produce different output.
+
+The difference is in how the `weight_by_edge` dictionary is iterated in the second for loop. In the first program, the `weight_by_edge` dictionary is iterated using the `.items()` method, which returns a list of key-value pairs. In the second program, the `weight_by_edge` dictionary is simply iterated, which returns only the keys of the dictionary.
+
+If the order of the keys returned by iterating the dictionary is different from the order of the key-value pairs returned by the `.items()` method, then the two programs will produce different output.
+
+Here's an example test case that produces different output for the two programs:
+
+```
+source = 'A'
+weight_by_edge = {
+    ('A', 'B'): 1,
+    ('B', 'C'): 2,
+    ('C', 'A'): -6
+}
+
+print(shortest_paths(source, weight_by_edge)) # program 1
+print(shortest_paths(source, weight_by_edge)) # program 2
+```
+
+The expected output for program 1 is `{'A': 0, 'B': 1, 'C': -5}`, while the expected output for program 2 is `{'A': 0, 'C': -5, 'B': -3}`.

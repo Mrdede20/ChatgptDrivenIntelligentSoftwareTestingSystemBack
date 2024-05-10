@@ -1,0 +1,32 @@
+The buggy code output incorrect results on all t = 1 test case.
+ 
+2
+5 2 8
+10 20 30
+
+2
+1 2 3
+4 5 6
+
+2
+5 2 3
+4 9 1
+
+2
+5 5 5
+10 5 20
+
+
+1
+50 60 40
+
+2
+3 2 1
+1 2 3
+
+2
+3 2 1
+1 2 3
+
+1
+5 10 7

@@ -1,0 +1,31 @@
+Test case:
+
+length_by_edge = {(1, 2): 5, (2, 3): 10, (3, 4): 5, (2, 4): 15}
+startnode = Node(value=1)
+goalnode = Node(value=4)
+
+# Set up nodes and edges
+node1 = startnode
+node2 = Node(value=2)
+node3 = Node(value=3)
+node4 = goalnode
+
+node1.successors = [node2]
+node2.successors = [node3, node4]
+node3.successors = [node4]
+
+# Call the function
+result = shortest_path_length(length_by_edge, startnode, goalnode)
+
+# Check the result
+assert result == 20, f"Expected 20 but got {result}"
+
+Explanation:
+
+In the test case above, we are trying to find the shortest path from startnode (with value 1) to goalnode (with value 4). The edges and their weights are defined in the length_by_edge dictionary.
+
+The graph consists of four nodes, and the edges connect nodes 1 and 2 (with weight 5), nodes 2 and 3 (with weight 10), nodes 3 and 4 (with weight 5), and nodes 2 and 4 (with weight 15).
+
+The bug in the program is in the insert_or_update function. When updating a node's distance, the function does not preserve the heap invariant (i.e., that each node in the heap is less than or equal to its children). This can cause the program to fail to find the correct shortest path.
+
+In this test case, the shortest path from node 1 to node 4 is through nodes 1, 2, 3, and 4, with a total weight of 20 (5 + 10 + 5). However, because of the bug in the program, the function returns a distance of 15 (the weight of the edge between nodes 2 and 4), which is incorrect.

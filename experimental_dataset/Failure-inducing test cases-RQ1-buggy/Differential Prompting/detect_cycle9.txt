@@ -1,0 +1,25 @@
+Yes, there is an input that can make the two programs have different outputs. Consider a linked list that has multiple nodes, but the last node has a "successor" attribute that is set to None. In this case, the first implementation will terminate and return False, while the second implementation will cause an `AttributeError` exception when trying to access the `successor` attribute of `None`. Here's an example test case:
+
+```
+class Node:
+    def __init__(self, successor=None):
+        self.successor = successor
+
+# create a linked list with a cycle
+a = Node()
+b = Node()
+c = Node()
+d = Node(None)
+a.successor = b
+b.successor = c
+c.successor = b
+
+# test the two implementations with the linked list
+print(detect_cycle(a))  # output: True (both implementations return True)
+
+# change the last node's successor to None
+c.successor = None
+
+# test the two implementations with the updated linked list
+print(detect_cycle(a))  # output: False (first implementation returns False, second implementation raises an AttributeError)
+```

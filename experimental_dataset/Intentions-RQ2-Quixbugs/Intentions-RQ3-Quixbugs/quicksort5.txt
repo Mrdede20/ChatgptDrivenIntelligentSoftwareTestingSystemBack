@@ -1,0 +1,7 @@
+The given Python code is an implementation of the QuickSort algorithm which is a popular sorting algorithm. The function 'quicksort' takes an unsorted list (arr) of integers as input and returns the list in sorted order. 
+
+The function works by selecting a 'pivot' element from the list, then dividing the remaining elements into two lists (lesser and greater) based on whether they are less than or greater than the pivot element. This process is repeated recursively until the lists are empty or contain only one element.
+
+Finally, the function concatenates the sorted 'lesser' list, pivot element and sorted 'greater' list to form the final sorted list. 
+
+Overall, the QuickSort algorithm has an average-case time complexity of O(n log n) making it an efficient sorting algorithm for large datasets.

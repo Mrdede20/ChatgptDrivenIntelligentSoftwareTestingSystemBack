@@ -1,0 +1,5 @@
+Yes, there are some inputs that can make the two programs output different results. One example is the input list `[1, 2, 3, 4, 5]`. 
+
+The first program will return `[1, 2, 3, 5, 4]` as the next lexicographically greater permutation. 
+
+The second program will return `[1, 2, 3, 5, 4]` as well. However, if we modify the input to `[1, 2, 3, 5, 4]`, then the second program will return `[1, 2, 4, 3, 5]` as the next lexicographically greater permutation.

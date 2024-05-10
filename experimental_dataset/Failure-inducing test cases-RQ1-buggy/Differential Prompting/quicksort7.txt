@@ -1,0 +1,9 @@
+Yes, there are inputs that can produce different outputs for the two implementations of the `quicksort` function. Here is an input that produces a different output:
+
+```
+arr = [2, 2, 1, 1]
+```
+
+If you run this input through the original implementation, you get `[1, 1, 2, 2]`. However, if you run it through the modified implementation, you get `[1, 2, 2, 1]`. 
+
+The reason for this difference is due to how the two implementations handle elements that are equal to the pivot. In the original implementation, elements equal to the pivot are sorted into the greater list. In the modified implementation, elements equal to the pivot are sorted into the lesser list.

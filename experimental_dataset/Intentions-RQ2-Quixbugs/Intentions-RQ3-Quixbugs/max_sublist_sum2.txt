@@ -1,0 +1,1 @@
+The intention of this code is to find the maximum sum of a subarray (contiguous subset of an array) from a given list of integers. The function `max_sublist_sum()` takes a list of integers as input and it returns the maximum sum of the contiguous subarray. The code uses Kadane's algorithm that has a time complexity of O(n) where n is the length of the input array.

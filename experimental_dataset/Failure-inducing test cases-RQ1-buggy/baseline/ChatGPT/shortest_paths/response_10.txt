@@ -1,0 +1,17 @@
+Test Case:
+weight_by_edge = {(1,2): 5, (1,3): 3, (2,4): 10, (3,4): 1, (4,5): 2}
+source = 1
+
+Expected Output:
+{1: 0, 2: 5, 3: 3, 4: 4, 5: 6}
+
+Test Case Description:
+In this test case, we are checking if the shortest_paths function returns the expected output for a given graph with edge weights. The graph has 5 nodes (1, 2, 3, 4, 5) and 5 edges with different weights. The source node is 1. The expected output is a dictionary that contains the minimum weight from the source node to every other node. 
+
+However, there is a bug in the shortest_paths function that will result in a test failure - when calculating the minimum distance between nodes, the function is not checking if the path is valid or not. It is possible to have a negative edge weight in the graph, which will cause the algorithm to return incorrect results. 
+
+Therefore, the test case highlights this bug by including a negative edge weight in the graph. 
+
+Test Result:
+When running the shortest_paths function with the above test case, the program would execute without errors. However, the output will not match the expected output because of the bug in the function. The minimum weight from node 1 to node 4 should be 3 (through node 3), but the function will return 4 instead. This bug can be identified as a test failure.
+

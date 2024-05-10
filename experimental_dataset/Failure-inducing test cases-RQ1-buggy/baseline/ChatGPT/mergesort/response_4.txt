@@ -1,0 +1,15 @@
+Test case to trigger a bug and result in test failure:
+
+arr = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]
+
+The expected output of the mergesort function for this input is:
+
+[1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 9]
+
+However, due to the bug in the implementation of the merge function, the actual output will be:
+
+[1, 1, 2, 3, 4, 5, 5, 6, 9, 5, 3]
+
+This happens because the merge function appends the remaining elements from the left or right list when one of the lists has been fully traversed. In this case, when the last element of the right list (5) is compared with the last element of the left list (3), the condition if left[i] <= right[j]: is True and the merge function appends the remaining elements of the left list (3). Therefore, the last two elements of the actual output are [5, 3], instead of [6, 9] in the expected output.
+
+This test case will trigger the bug and result in a test failure.

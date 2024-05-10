@@ -1,0 +1,11 @@
+Yes, there are inputs that can result in different output for the above two programs. One such input is n=15.
+
+The output of the first program for n=15 is [3, 5], which are the prime factors of 15.
+
+But the output of the second program for n=15 is [3, 5, 1], which includes 1 as a factor. This occurs because the second program starts the divisor from 2 inclusive, and returns an empty list for n=1. Therefore, when n=15, it includes 1 as a factor in the final list.
+
+To test this, you can use the following code:
+
+```
+assert get_factors(15) == [3, 5]
+```

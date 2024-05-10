@@ -1,0 +1,23 @@
+response@ChatGPT:
+One potential test case that could trigger a bug is the input:
+
+5
+5
+1 2 3 4 5
+5
+5 4 3 2 1
+5
+1 5 3 2 4
+5
+1 2 3 5 4
+5
+1 3 2 5 4
+
+This test case checks various edge cases, such as strictly increasing or decreasing numbers, valleys at the beginning or the end of the list, and valleys with multiple contenders.
+
+request@user:
+Give us such test case. 
+
+response@ChatGPT:
+Please specify what type of program or system you are referring to. Providing more context will help me provide a relevant test case.
+

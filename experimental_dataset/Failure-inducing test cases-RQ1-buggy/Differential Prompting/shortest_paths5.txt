@@ -1,0 +1,20 @@
+Yes, there is an input that can make the two programs have different output.
+
+Here is a test case that will cause the programs to have different outputs:
+
+```
+source = 'A'
+weight_by_edge = {
+    ('A', 'B'): 1,
+    ('B', 'C'): 1,
+    ('C', 'A'): -3
+}
+```
+
+The first program will return the following dictionary:
+
+```
+{'A': 0, 'B': 1, 'C': -2}
+```
+
+while the second program will result in an infinite loop, since the negative cycle causes the minimum distance to never be reached

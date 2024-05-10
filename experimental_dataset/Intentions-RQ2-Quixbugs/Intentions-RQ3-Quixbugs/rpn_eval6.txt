@@ -1,0 +1,5 @@
+The intention of the code is to implement a reverse polish notation (RPN) calculator that takes a list of values and operators encoded as floats and strings and returns the result as a float. 
+
+The function `rpn_eval(tokens)` takes a list of tokens as an argument and iterates over each token. If the token is a float, it is appended to a stack. If the token is an operator (`+`, `-`, `*`, `/`), two values are popped off the stack and the operator is applied to them. The result is then appended back to the stack. Finally, the function returns the last value left on the stack as the result. 
+
+The `op()` function is a helper function used inside `rpn_eval()` to select the corresponding lambda function based on the operator symbol. It returns a lambda function that operates on two values and returns the result.

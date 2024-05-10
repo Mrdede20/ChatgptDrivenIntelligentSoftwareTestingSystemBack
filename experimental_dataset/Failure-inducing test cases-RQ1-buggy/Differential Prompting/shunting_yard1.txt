@@ -1,0 +1,9 @@
+Yes, there is an input which makes the two programs have different output. Here is a test case:
+
+```
+tokens = [2, '*', 3, '+', 4, '*', 5]
+```
+
+The first implementation of shunting_yard will output `[2, 3, '*', 4, 5, '*', '+']`, while the second implementation of shunting_yard will output `[2, '*', 3, '+', 4, '*', 5]`.
+
+The reason for this difference is that the first implementation pops operators off the stack and adds them to the final output before adding the current operator to the stack. The second implementation adds the current operator to the stack before popping operators off, which can change the order of operators in the output.

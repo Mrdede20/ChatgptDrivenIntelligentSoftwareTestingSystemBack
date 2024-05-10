@@ -1,0 +1,1 @@
+No, both the programs perform the same operation of Tower of Hanoi and have the same input parameters, so they will always produce the same output for any given input.

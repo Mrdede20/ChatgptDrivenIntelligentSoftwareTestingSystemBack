@@ -1,0 +1,5 @@
+No, both programs are functionally equivalent and will return the same output for any input values of `a` and `b`. Both functions calculate the greatest common divisor (GCD) of two integers `a` and `b` using the Euclidean algorithm, which is well-defined and deterministic for any input integers. You can use the following test case to verify that both programs produce the same output:
+
+`print(gcd(12, 18))`
+
+The expected output is `6`.

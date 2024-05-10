@@ -1,0 +1,60 @@
+#PT
+# Test Case
+perm = [3, 2, 1]
+expected_output = None # The function is expected to return None if it cannot find the next permutation
+# Execute the function
+output = next_permutation(perm)
+# Check if the output matches the expected output
+assert output == expected_output, f"Expected {expected_output}, but got {output}"
+
+#FT
+# Test Case
+perm = [1, 2, 3, 4]
+expected_output = [1, 2, 4, 3]
+assert next_permutation(perm) == expected_output
+
+#PT
+perm = [3, 2, 1]
+assert next_permutation(perm) == None
+
+#FT
+# Test Case
+perm = [1, 3, 2, 4]
+expected_output = [1, 3, 4, 2]
+# Calling function
+output = next_permutation(perm)
+# Comparing output with expected output
+assert output == expected_output, f"Error: expected {expected_output}, but got {output}"
+
+#FC
+perm = [1, 3, 2, 4, 5]
+expected_output = [1, 3, 4, 2, 5]
+assert next_permutation(perm) == expected_output #error [1, 3, 2, 5, 4]
+
+#FT
+perm = [1, 2, 3, 4]
+expected_output = [1, 2, 4, 3]
+assert next_permutation(perm) == expected_output
+
+#FT
+perm = [1, 2, 3, 5, 4]
+result = next_permutation(perm)
+assert result == [1, 2, 4, 3, 5]
+
+#FT
+# Test case to trigger bug in next_permutation function
+perm = [1, 2, 2]
+next_perm = next_permutation(perm)
+assert next_perm == [2, 1, 2]
+
+#PT
+# Test case
+perm = [3, 2, 1]
+expected_output = None  # The function should return None for a sorted descending list
+# Test
+assert next_permutation(perm) == expected_output
+
+#PT
+perm = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+next_perm = next_permutation(perm)
+assert next_perm == None #error [1, 2, 3, 4, 5, 6, 7, 9, 8]

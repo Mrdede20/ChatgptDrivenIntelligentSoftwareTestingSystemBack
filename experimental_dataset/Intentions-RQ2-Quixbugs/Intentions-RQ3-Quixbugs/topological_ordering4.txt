@@ -1,0 +1,5 @@
+The intention of this code is to perform a topological sort on a directed acyclic graph. In other words, the function will take a list of nodes in the graph and return a list of those nodes in an order such that every node appears before all the nodes it has edges to.
+
+The function begins by creating a list called `ordered_nodes`, which contains all the nodes that have no incoming edges. Then it iterates over each of these nodes, checking for each of their outgoing edges and if the edge ends at a node that is not already in `ordered_nodes`, it adds that node to the end of the `ordered_nodes` list.
+
+The function continues this process until all the nodes have been added to `ordered_nodes` in the correct order. Finally, the function returns the completed list.

@@ -1,0 +1,5 @@
+This code defines a function `solve` that takes a list of distinct integers as input, and returns True if there exists two non-empty subarrays of the list such that the minimum and maximum elements of each subarray are equal. Otherwise, it returns False. 
+
+The main program reads the number of test cases from input, calls the `solve` function for each test case, and prints "YES" or "NO" depending on the result.
+
+To find the answer, the function `solve` splits the input list into a list of valleys, where a valley is defined as a runs of the same numbers in the input list. For each valley, it checks whether the two endpoints of the valley satisfy the conditions for a winning pair, and returns True if there is exactly one such pair. If there are more than one such pairs or no such pairs, it returns False.

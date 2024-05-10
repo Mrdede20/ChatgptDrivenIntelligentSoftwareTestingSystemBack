@@ -1,0 +1,9 @@
+The intention of the code is to implement the Shunting-Yard algorithm to convert an infix expression to Reverse Polish Notation (RPN). The function takes a list of tokens in infix notation and returns the equivalent RPN notation. The algorithm uses a stack to keep track of operators and their precedence. The main steps of the algorithm are:
+
+1. For each token in the input list, if it is a number, append it to the output list. If it is an operator, pop operators from the stack and append to the output list until the stack is empty or the top of the stack has lower precedence than the current operator. Then push the current operator onto the stack.
+
+2. After processing all the tokens, pop all the remaining operators from the stack and append to the output list.
+
+3. Finally, return the output list in RPN notation.
+
+The function includes a precondition that all the tokens must be either numbers or one of the four basic arithmetic operators (+, -, *, /).

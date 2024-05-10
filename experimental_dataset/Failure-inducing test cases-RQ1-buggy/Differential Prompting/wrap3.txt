@@ -1,0 +1,39 @@
+Yes, there are inputs that can make the two programs output differently. Here's a test case that demonstrates the difference:
+
+```
+text = "hello world\nthis is a test"
+cols = 8
+```
+
+For the first implementation, the output will be:
+
+```
+['hello', 'world\nthis', 'is a', 'test']
+```
+
+For the second implementation, the output will be:
+
+```
+['hello', 'world\nthis', 'is a', 'test']
+```
+
+So both programs have the same output for this input. However, if we change the input slightly to:
+
+```
+text = "hello world\nthis is a test"
+cols = 7
+```
+
+The first implementation will produce:
+
+```
+['hello', 'world\n', 'this is', 'a test']
+```
+
+While the second implementation will produce:
+
+```
+['hello', 'world', '\nthis', 'is a', 'test']
+```
+
+So for this input, the two programs have different output.

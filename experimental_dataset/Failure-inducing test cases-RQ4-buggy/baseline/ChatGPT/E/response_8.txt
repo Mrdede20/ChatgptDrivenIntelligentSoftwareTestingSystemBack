@@ -1,0 +1,14 @@
+response@ChatGPT:
+Test Case:
+n=5
+bits=[0, 1, 1, 0, 1]
+
+Expected Output: 6
+
+Explanation: 
+- The original list has 4 inversions (0-1, 0-1, 0-1, 1-0)
+- The first list (after changing the first 0 to 1) has 6 inversions (0-1, 0-1, 0-1, 1-0, 1-0, 1-0)
+- The second list (after changing the last 1 to 0) has 7 inversions (0-1, 0-1, 0-1, 1-0, 1-0, 1-0, 1-0)
+
+However, running the test case in the program above results in test failure as it returns the output of the original list (4) instead of the expected output (6).
+

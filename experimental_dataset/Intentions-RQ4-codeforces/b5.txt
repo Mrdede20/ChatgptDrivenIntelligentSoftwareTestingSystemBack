@@ -1,0 +1,3 @@
+The intention of the code is to take an integer 'n' as input, then take 'n' number of inputs where each input is a string and an integer. For each string input, the code finds the ASCII value of the highest character in the string and subtracts 96 from that value, then prints the result. 
+
+The code uses a loop to iterate through each string input and uses another loop to iterate through each character in the string to find the highest ASCII value. Finally, it subtracts 96 from the highest ASCII value because the lowercase English alphabets start from ASCII value 97 and ends at ASCII value 122.

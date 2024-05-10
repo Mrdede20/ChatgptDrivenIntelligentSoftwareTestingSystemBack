@@ -1,0 +1,12 @@
+Yes, there might be an input that produces different outputs for the two codes. Here is a test input that causes the two codes to output different results:
+
+Input:
+```
+1
+4 1 2
+1 2 1
+2 3 2
+2 4 2
+```
+
+The first code will output "YES" while the second code will output "NO".

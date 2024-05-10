@@ -1,0 +1,9 @@
+The intention of the code is to find the length of the longest increasing subsequence in a given sequence of integers. 
+
+The function "lis" takes an array as input and initializes a dictionary "ends" to store the ending element of the longest subsequence of each length. It also initializes "longest" variable to 0.
+
+Then, it iterates over the elements of the given array, and for each element, it finds all the prefixes of lengths between 1 and longest+1 whose last element is smaller than the current element using list comprehension. The length of the longest such prefix is stored in the variable "length".
+
+Finally, if the length is equal to the longest variable or the current element is smaller than the end of the next subsequence, it updates the value of the ends dictionary for the next longer subsequence and updates the value of the longest variable.
+
+The function returns the value of the longest variable. 

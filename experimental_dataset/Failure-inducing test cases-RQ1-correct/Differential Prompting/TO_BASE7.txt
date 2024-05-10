@@ -1,0 +1,1 @@
+No, the two programs have the same logic and operation. They both take a number in base 10 and convert it to a specified base (represented as an integer) using the same set of characters.

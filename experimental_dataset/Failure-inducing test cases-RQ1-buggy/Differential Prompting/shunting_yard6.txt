@@ -1,0 +1,1 @@
+There is no input that would cause the two programs to have different output. Both programs implement the same logic and use the same data structures to achieve the goal of converting an infix expression to postfix notation.

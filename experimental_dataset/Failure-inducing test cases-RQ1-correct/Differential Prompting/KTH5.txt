@@ -1,0 +1,40 @@
+There seems to be an error in the second program. The code references an undefined `public` method outside a class definition. Here is the corrected version:
+
+```
+package correct_java_programs;
+import java.util.*;
+
+public class KTH{
+  public static Integer kth(ArrayList<Integer> arr, int k){
+    int left = 0;
+    int right = arr.size()-1;
+    while (true){
+        int pivotIndex = partition(arr, left, right);
+        if (k - 1 == pivotIndex){
+            return arr.get(pivotIndex);
+        }
+        else if (k - 1 < pivotIndex){
+            right = pivotIndex-1;
+        }
+        else{
+            left = pivotIndex+1;
+        }
+    }
+  }
+
+  private static int partition(ArrayList<Integer> arr, int left, int right){
+    int pivotIndex = left;
+    int pivotValue = arr.get(right);
+    for (int i = left; i < right; i++){
+        if (arr.get(i) < pivotValue){
+            Collections.swap(arr, i, pivotIndex);
+            pivotIndex++;
+        }
+    }
+    Collections.swap(arr, pivotIndex, right);
+    return pivotIndex;
+  }
+}
+```
+
+Both programs should return the same output given the same input.

@@ -1,0 +1,7 @@
+The code is implementing the Floyd-Warshall algorithm which calculates the shortest path length between every ordered pair of nodes in a directed graph. The algorithm takes as input the number of nodes in the graph and a dictionary containing edge lengths keyed by an ordered pair of node ids. 
+
+The output of the algorithm is a dictionary containing shortest path length keyed by an ordered pair of node ids. 
+
+The code initializes the length of the shortest path between each node and itself as zero and sets the length of paths between nodes as given in the input dictionary. Then it iterates over all possible intermediate nodes and updates the shortest path length through an intermediate node if such a path is shorter than the current shortest path. 
+
+The code uses a defaultdict to initialize the length of all paths to infinity. Additionally, it assumes that there are no negative-length cycles in the input graph.

@@ -1,0 +1,19 @@
+Yes, there is an input that can make the two programs have different outputs. 
+
+For example, if x = 10 and epsilon = 0.1, the first program will return 3.196, while the second program will return 3.162.
+
+Here is the code to illustrate this: 
+
+```
+# Test case
+x = 10
+epsilon = 0.1
+
+# First program
+result1 = sqrt(x, epsilon)
+print("Result 1:", result1)
+
+# Second program
+result2 = sqrt(x, epsilon)
+print("Result 2:", result2)
+```

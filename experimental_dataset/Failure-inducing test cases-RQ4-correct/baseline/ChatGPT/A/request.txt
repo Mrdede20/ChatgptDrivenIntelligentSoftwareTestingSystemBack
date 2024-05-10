@@ -1,0 +1,7 @@
+Is there a test case which can triggers a bug in the program below?
+
+x = int(input())
+while x>0:
+    a=sorted(list(map(int, input().split())))
+    print(a[1])
+    x-=1

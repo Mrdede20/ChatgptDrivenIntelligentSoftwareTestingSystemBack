@@ -1,0 +1,7 @@
+Yes, there is an input that makes the two programs have different output. 
+
+Here is the test case:
+```
+sqrt(5, 0.001)
+```
+The first implementation will return `2.23606797749979`, while the second implementation will return `2.2360679779158014`.

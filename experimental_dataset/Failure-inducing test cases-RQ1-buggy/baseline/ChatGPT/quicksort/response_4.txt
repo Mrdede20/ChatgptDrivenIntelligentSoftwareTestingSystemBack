@@ -1,0 +1,15 @@
+Test case:
+
+arr = [1, 5, 2, 7, 3, 6, 4]
+
+Expected Output:
+
+[1, 2, 3, 4, 5, 6, 7]
+
+Actual Output:
+
+[1, 2, 3, 4, 6, 5, 7]
+
+Explanation:
+
+The function should sort the input array in ascending order using the quicksort algorithm. However, the actual output shows that the elements 5 and 6 are not in the correct order. This bug occurs because the quicksort implementation only considers the first occurrence of the pivot element, which can lead to incorrect array partitions. In this case, the pivot element is 1, and all elements greater than 1 are grouped together in the 'greater' sublist. When the pivot element is placed back between the lesser and greater sublists, the element 5 ends up before 6, resulting in the incorrect ordering.

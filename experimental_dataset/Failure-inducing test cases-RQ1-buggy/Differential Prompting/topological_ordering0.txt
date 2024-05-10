@@ -1,0 +1,5 @@
+Yes, there could be an input that makes the two programs have different outputs. The first program is an iterative implementation of topological sorting, while the second program is a recursive implementation of the same algorithm.
+
+The difference between the two implementations is that the first program uses a list to keep track of nodes that have been processed, and adds nodes to the list as they are processed, while the second program uses a set to keep track of nodes that have been marked, and adds nodes to the resulting list in a reverse order.
+
+This means that if there are nodes with multiple incoming nodes, the order in which they are processed may be different in the two implementations, leading to different results. Therefore, the two implementations may give different outputs for the same input in some cases.

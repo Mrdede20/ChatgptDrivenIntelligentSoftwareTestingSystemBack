@@ -1,0 +1,1 @@
+The two programs have different imports. The first program imports `java.util.*` while the second program imports `.*.util.ArrayList`. This causes the second program to not compile and run properly.

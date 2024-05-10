@@ -1,0 +1,16 @@
+Yes, there are inputs that can make the two programs have different output. Here is one test case:
+
+```
+n = 8192
+```
+
+- `bitcount(n)` will return 1, because `8192` is a power of 2 and has only one set bit in its binary representation.
+- `count_bits(n)` will return 2, because `8192` in binary is `0b10000000000000`, so there are 2 1's in the binary representation.
+
+You can test it yourself in Python by running:
+
+```
+n = 8192
+print(bitcount(n))   # Output: 1
+print(count_bits(n)) # Output: 2
+```

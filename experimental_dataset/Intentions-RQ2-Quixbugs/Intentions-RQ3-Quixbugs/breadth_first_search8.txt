@@ -1,0 +1,9 @@
+The intention of the given code is to perform a breadth-first search algorithm to determine if a goalnode is reachable from the startnode in a directed graph. 
+
+The code uses a queue (implemented using the deque object from the collections module) to keep track of the search order. It starts with the startnode and adds it to the queue. It also keeps track of nodes that have already been seen using a set object called nodesseen. 
+
+Then it enters a while loop that continues until a solution is found or all nodes have been searched. The loop takes the first node from the queue using popleft() and checks if it is the goalnode. If so, it returns True. If not, it adds any new, unexplored node to the queue and the set of nodesseen.
+
+If the loop completes without finding a solution, it returns False indicating that the goalnode is not reachable from the startnode.
+
+The docstring at the end of the code specifies the input and output of the function.

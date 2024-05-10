@@ -1,0 +1,5 @@
+Yes, there exists input(s) which may cause the two programs to have different output. Here is an example:
+
+Input: [1, 3, 2]
+First program output: [2, 1, 3]
+Second program output: [2, 3, 1]

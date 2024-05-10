@@ -1,0 +1,16 @@
+Test Case:
+
+num = 10
+b = 0
+
+Expected Output:
+
+Error: Division By Zero
+
+Actual Output:
+
+Error: Division By Zero
+
+Result:
+
+The program does not handle the scenario where the value of b is passed as 0, which results in a division by zero error. This bug causes the program to fail and terminate prematurely. Therefore, the test case has triggered the bug and resulted in test failure.

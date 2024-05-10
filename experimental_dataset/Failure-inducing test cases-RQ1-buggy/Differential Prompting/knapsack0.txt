@@ -1,0 +1,1 @@
+No, both programs implement the same algorithm, the only difference is that the first implementation uses a defaultdict while the second implementation uses a list of lists. The input arguments should not affect the output.

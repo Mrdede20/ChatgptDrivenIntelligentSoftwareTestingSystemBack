@@ -1,0 +1,5 @@
+The intention of this code is to define a function called `bitcount` that takes a non-negative integer `n` as input and returns the number of 1-bits in the binary encoding of `n`. 
+
+The implementation uses an efficient algorithm that iteratively flips the rightmost set bit of `n` while counting the number of iterations until `n` becomes 0. 
+
+The code also includes several test cases to check the correctness of the implementation.

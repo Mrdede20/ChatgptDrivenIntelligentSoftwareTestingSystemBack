@@ -1,0 +1,3 @@
+No, both programs implement the same algorithm to solve the Tower of Hanoi problem. They may differ in implementation details, but given the same input parameters, they will produce the same output. 
+
+That said, there seems to be an issue in the first program where a `PriorityQueue` is used to determine which tower should be used as the helper tower. The `PriorityQueue.add` operation does not guarantee the order of the elements inserted, so there is a chance that the "right" helper tower is not selected, although this would not be apparent unless the input parameters are large enough. It would be better to use a simple if-else statement to determine which tower to use as the helper.

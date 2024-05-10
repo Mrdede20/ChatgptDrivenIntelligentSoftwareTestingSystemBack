@@ -1,0 +1,14 @@
+Test case:
+
+Input:
+sieve(1)
+
+Expected Output:
+An empty list
+
+Actual Output:
+An empty list
+
+Bug:
+The program does not handle the case where the input value is less than 2. While there are no prime numbers less than 2, the function should return a message informing users of this instead of returning an empty list.
+

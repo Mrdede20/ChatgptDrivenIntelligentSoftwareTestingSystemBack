@@ -1,0 +1,1 @@
+No, both programs implement the same Shunting Yard algorithm with the same precedence values for operators, so they should produce identical output for any input.

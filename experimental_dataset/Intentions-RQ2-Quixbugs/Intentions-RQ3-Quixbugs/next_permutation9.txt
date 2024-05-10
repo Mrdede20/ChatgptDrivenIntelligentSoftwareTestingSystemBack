@@ -1,0 +1,7 @@
+The intention of the given code is to provide a solution for the "Next Permutation" problem. 
+
+Given a list `perm` of unique integers, the code should return the lexicographically next permutation of the elements of `perm`. If the elements of `perm` are arranged in decreasing order, the code should return `None`.
+
+The algorithm used in the code finds the next permutation of the elements by searching for the rightmost pair of adjacent elements that are in increasing order. It then swaps the smaller one of these two elements with the smallest element to the right of that position that is greater than it. It then reverses the elements after the position of swapping. Thus, it finds the lexicographically next permutation of `perm`.
+
+If there is no such pair of adjacent elements in increasing order, it implies that `perm` is already the last permutation, and hence `None` is returned.

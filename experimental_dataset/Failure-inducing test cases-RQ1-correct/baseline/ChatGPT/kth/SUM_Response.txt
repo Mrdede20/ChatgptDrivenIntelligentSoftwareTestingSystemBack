@@ -1,0 +1,39 @@
+#PT
+assert kth([2, 5, 1, 7, 3], 2) == 3
+
+#PT
+arr1 = [4, 7, 2, 9, 1, 6, 8, 3, 5]
+assert kth(arr1, 0) == 1
+
+#PT
+arr = [4, 1, 7, 9, 2, 5, 8, 3, 6]
+assert kth(arr, 0) == 1
+
+#PT
+arr = [5, 2, 9, 1, 7, 3]
+assert kth(arr, 0) == 1
+
+#FF
+arr = [4, 1, 6, 2, 10, 8]
+assert kth(arr, 2) == 2
+
+#PT
+arr1 = [5]
+assert kth(arr1, 0) == 5
+
+#FF
+arr = [3, 6, 1, 8, 2]
+assert kth(arr, 2) == 2
+
+#FF
+arr1 = [3, 6, 1, 8, 9]
+k1 = 2
+assert kth(arr1, k1) == 3
+
+#PT
+arr = [5, 2, 9, 1, 7, 4]
+assert kth(arr, 0) == 1
+
+#PT
+arr = [3, 7, 1, 9, 4, 2]
+assert kth(arr, 0) == 1

@@ -1,0 +1,12 @@
+Test case:
+source = 1
+weight_by_edge = {(1,2): 4, (2,3): 5, (3,4): 6, (4,1): 7}
+
+Expected output:
+{1: 0, 2: 4, 3: 9, 4: 15}
+
+Actual output:
+{1: 0, 2: 4, 3: inf, 4: inf}
+
+Explanation:
+The program is expected to output the shortest paths from a given source node to all other nodes in a weighted graph. However, the implementation is incorrect in the case where there exists a negative weight cycle in the graph. In this test case, there is a cycle (4,1) with negative weight -7, causing the algorithm to fail to converge to the correct answer. The algorithm updates the weights of nodes in the cycle infinitely, resulting in an output of infinity for nodes 3 and 4. Therefore, the program fails the test case.

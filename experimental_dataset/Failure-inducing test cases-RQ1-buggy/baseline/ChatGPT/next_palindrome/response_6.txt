@@ -1,0 +1,15 @@
+Test Case:
+
+digit_list = [9, 9, 9, 9, 9, 9]
+
+Expected Output:
+
+[1, 0, 0, 0, 0, 0, 1]
+
+Explanation:
+
+The input digit_list contains all 9s. The expected output is the next palindrome after this input. The next palindrome after [9, 9, 9, 9, 9, 9] is [1, 0, 0, 0, 0, 0, 1].
+
+Bug:
+
+The code does not handle the case when all digits in the input list are 9s correctly. The while loop in the code keeps running even after the digits are changed to 0s. This results in an infinite loop and the test case fails to terminate.

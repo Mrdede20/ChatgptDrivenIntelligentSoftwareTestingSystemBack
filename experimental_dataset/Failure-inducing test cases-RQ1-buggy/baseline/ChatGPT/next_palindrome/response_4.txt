@@ -1,0 +1,36 @@
+Test case:
+
+digit_list = [9, 9, 1, 0, 0]
+expected_output = [9, 9, 1, 1, 9]
+
+result = next_palindrome(digit_list)
+assert result == expected_output, f"Error: {result} != {expected_output}"
+
+Explanation:
+The program aims to find the next palindrome given a list of digits. In the provided test case, the input is [9, 9, 1, 0, 0], which is not a palindrome. The expected output is [9, 9, 1, 1, 9], which is the next palindrome for the given input.
+
+The bug in the program is that it does not handle cases where the input has leading zeros. For example, in the provided test case, the input has leading zeros. The program will treat the leading zeros as separate digits and return an incorrect result.
+
+To fix the bug, we can modify the program to remove the leading zeros before finding the next palindrome. Here's the modified program:
+
+def next_palindrome(digit_list):
+    # remove leading zeros
+    while digit_list and digit_list[0] == 0:
+        digit_list.pop(0)
+    
+    high_mid = len(digit_list) // 2
+    low_mid = (len(digit_list) - 1) // 2
+    while high_mid < len(digit_list) and low_mid >= 0:
+        if digit_list[high_mid] == 9:
+            digit_list[high_mid] = 0
+            digit_list[low_mid] = 0
+            high_mid += 1
+            low_mid -= 1
+        else:
+            digit_list[high_mid] += 1
+            if low_mid != high_mid:
+                digit_list[low_mid] += 1
+            return digit_list
+    return [1] + (len(digit_list)) * [0] + [1]
+
+After making the modification, the test case should pass successfully.

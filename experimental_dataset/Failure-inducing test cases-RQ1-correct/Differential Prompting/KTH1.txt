@@ -1,0 +1,13 @@
+The two programs are different implementations of finding the kth smallest element in an ArrayList. The first program is using recursion and the second one is using a while loop. 
+
+There may be cases where the first program will return a different output than the second one. This is because they have different ways of partitioning the ArrayList based on the pivot element. The first program is always choosing the first element as the pivot, while the second program is selecting the last element as the pivot.
+
+For example, consider the ArrayList: {5, 2, 8, 3, 6, 7, 1, 4}
+
+If we want to find the 4th smallest element, k=4.
+
+The first program will pick 5 as the pivot and partition the ArrayList into below = {2, 3, 1, 4} and above = {8, 6, 7}. Since k is less than the size of below, the first program makes a recursive call on below to find the 4th smallest element.
+
+The second program will pick 4 as the pivot and partition the ArrayList into {2, 3, 1, 4, 6, 7, 5, 8}. The pivotIndex for 4 is 3, which is less than k, so the second program updates left to pivotIndex+1 = 4 and partitions the subarray {6, 7, 5, 8}. The pivotIndex for 5 is 6 (in the original ArrayList), so it returns arr.get(pivotIndex) = 7.
+
+So in this case, the two programs return different outputs.

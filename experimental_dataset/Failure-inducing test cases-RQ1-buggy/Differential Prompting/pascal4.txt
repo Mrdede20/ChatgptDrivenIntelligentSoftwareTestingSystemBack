@@ -1,0 +1,8 @@
+Yes, there is an input that makes the two programs have different output. Here's a test case:
+
+```
+n = 3
+print(pascal(n))
+```
+
+The first `pascal` function will return `[[1], [1, 1], [1, 2, 1]]`, while the second `pascal` function will return `[[1], [1, 1], [1, 2, 1, 1]]`. The second implementation adds an extra `1` to the end of the third row, but the first implementation does not.

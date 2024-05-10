@@ -1,0 +1,1 @@
+No, both programs are the same and will always produce the same output for any given input. This means that regardless of the test case used, the two programs will return the same output.

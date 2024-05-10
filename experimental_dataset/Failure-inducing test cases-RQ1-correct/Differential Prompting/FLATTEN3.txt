@@ -1,0 +1,1 @@
+Yes, the two programs have different imports. The first program imports java.util.* which includes ArrayList. The second program imports .util.ArrayList which implies that the code is looking for a package named ".util" that contains the ArrayList class. This will result in a compilation error.

@@ -1,0 +1,1 @@
+No, there is no input that can make the two programs have different output, as they both call the same method `lastIndexOf` on the same input "abc" with the same parameters, "c" and 30.

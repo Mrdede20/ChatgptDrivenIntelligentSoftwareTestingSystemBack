@@ -1,0 +1,5 @@
+The purpose of this code is to find the kth-lowest element in a given list of integers efficiently using the QuickSelect algorithm. The code first selects a pivot element (in this case, the first element of the list) and splits the list into two sublists, one containing all elements less than the pivot and the other containing all elements greater than the pivot. 
+
+The code then compares the number of elements in the sublists to the value of k. If k is less than the number of elements in the "below" sublist, the function recursively calls itself with the "below" list and k as arguments. If k is greater than or equal to the number of elements in the "above" sublist, the function recursively calls itself with the "above" list and k as arguments. Otherwise, the pivot element is returned as the kth-lowest element. 
+
+Overall, this algorithm has an average time complexity of O(n) and a worst-case time complexity of O(n^2), but it performs well on average and is a good choice for finding the kth element in an unsorted list quickly.

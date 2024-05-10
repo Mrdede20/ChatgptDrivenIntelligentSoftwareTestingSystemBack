@@ -1,0 +1,5 @@
+This code implements the Bellman-Ford algorithm to find the minimum weight paths in a directed graph that may contain negative edges as inputs. 
+
+The function starts by initializing a dictionary that will track the minimum path weights to each node from the given source node (initialized as 0). The function then iterates over the edges `len(weight_by_node) - 1` times (Bellman-Ford algorithm property) to update the stored weights. The algorithm does this by checking whether the weight of the path that goes through a given node `u` to another node `v` is smaller than the currently stored weight for `v`. If so, the stored weight for `v` is updated with this smaller value.
+
+Finally, at the end of the algorithm, the function returns a dictionary mapping each node to its minimum weight path from the source node.

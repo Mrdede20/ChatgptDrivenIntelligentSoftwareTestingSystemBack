@@ -1,0 +1,42 @@
+response@ChatGPT:
+
+
+Yes, if the input to the function is not a list or if the argument passed to the function is a nested list with an empty list, it may cause an error. For example,
+
+Test case 1:
+arr = "not a list"
+flatten(arr)
+
+Test case 2:
+arr = [1, 2, [3, [], 4], 5]
+list(flatten(arr)) # expected output: [1, 2, 3, 4, 5] but may raise a StopIteration error
+
+request@user:
+Give us such test case. Use assert.
+
+response@ChatGPT:
+# Test case 1
+arr_1 = [[1, 2, [3, 4]], 5, [6]]
+result_1 = [1, 2, 3, 4, 5, 6]
+assert list(flatten(arr_1)) == result_1
+
+# Test case 2
+arr_2 = [[1, 2, 3], 4, 5, [6, [7, 8], 9, [10, 11]], 12]
+result_2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+assert list(flatten(arr_2)) == result_2
+
+# Test case 3
+arr_3 = [[[1, 2], 3], [4, 5], [[6], 7, [8, [9, 10]]]]
+result_3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+assert list(flatten(arr_3)) == result_3
+
+# Test case 4
+arr_4 = []
+result_4 = []
+assert list(flatten(arr_4)) == result_4
+
+# Test case 5
+arr_5 = ['a', ['b', 'c'], ['d', ['e', 'f']]]
+result_5 = ['a', 'b', 'c', 'd', 'e', 'f']
+assert list(flatten(arr_5)) == result_5
+

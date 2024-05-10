@@ -1,0 +1,20 @@
+Test Case:
+1) Create three nodes: 
+    node1 = Node("A")
+    node2 = Node("B", node1)
+    node3 = Node("C", node2)
+
+2) Add node2 and node3 to node1's successors list and node1 to node2's predecessors list:
+    node1.successors = [node2, node3]
+    node2.predecessors = [node1]
+
+3) Call topological_ordering() function with a list of [node1, node2, node3]: 
+    result = topological_ordering([node1, node2, node3])
+
+Expected Result:
+    The function should return a list with node1, node2 and node3 in topological order, i.e. [node1, node2, node3]. 
+
+Actual Result:
+    The function goes into an infinite loop due to a logical error in the line:
+            if set(ordered_nodes).issuperset(nextnode.outgoing_nodes) and nextnode not in ordered_nodes:
+    Since node3 is in node2's successor list, the above if condition always evaluates to True and node3 keeps getting added to ordered_nodes infinitely. This leads to an infinite loop and the test fails.

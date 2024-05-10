@@ -1,0 +1,32 @@
+Yes, there is an input which can make the two programs output different results.
+
+Here is an example input:
+
+```
+6
+5 6 7 6 5 4
+7 6 5 4 3 4 5 6 7
+3 4 5 4
+1 2 3 4 3 2 1
+7 6 5 4 3 2 1
+```
+
+The first program will output:
+```
+NO
+NO
+NO
+NO
+NO
+NO
+```
+
+The second program will output:
+```
+NO
+NO
+NO
+YES
+NO
+NO
+```

@@ -1,0 +1,11 @@
+This code seems to be solving a problem related to the selection of "mid" numbers from a given list "A" of size "n". The problem can be defined with the following input:
+
+- The first line of input contains an integer "t", the number of test cases.
+
+- For each test case, there are three space-separated integers "n","c", and "d", which represent the size of list A, the cost constraint "c", and the number of elements to be selected "d".
+
+- The next line of input contains "n" space-separated integers that represent the elements of the given list.
+
+The output of the code for each test case is a single integer, the maximum number of groups of "mid" consecutive numbers from A that can be selected such that the total cost is less than "c". 
+
+If it is impossible to select "mid" numbers that satisfy the cost constraint, the code prints "Impossible". If no such number of groups is possible, it prints "Infinity".

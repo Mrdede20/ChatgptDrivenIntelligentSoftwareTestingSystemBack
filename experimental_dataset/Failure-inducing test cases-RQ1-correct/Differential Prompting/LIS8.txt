@@ -1,0 +1,7 @@
+Yes, there can be an input which makes the two programs output different results. Here is one such test case:
+
+```
+int[] arr = {5, 0, 9, 2, 7, 3, 8, 4, 6};
+```
+
+The `LIS` program above would return 6, which is the correct answer. However, the `LongestIncreasingSubsequence` program would return 5 instead.

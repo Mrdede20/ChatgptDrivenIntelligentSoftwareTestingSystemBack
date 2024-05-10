@@ -1,0 +1,27 @@
+Yes, there are inputs that can make the two programs have different outputs.
+
+Test input:
+
+```
+1
+5 1 4
+1 2 0
+1 3 1
+2 4 0
+2 5 1
+```
+
+Expected output for the first program:
+
+```
+NO
+```
+
+Expected output for the second program:
+
+```
+True
+```
+
+Explanation: 
+In this input, there is only one path from node 1 (A) to node 4 (B) which is (1, 2, 4) with XOR sum of 0. Therefore, the expected output for the first program should be "NO" as there is only one path that doesn't contain any cycle or duplicate edge. However, the expected output for the second program should be "True" as there are two paths from node 1 to node 4 with XOR sums of 0. These paths are (1, 2, 4) and (1, 3, 2, 4).

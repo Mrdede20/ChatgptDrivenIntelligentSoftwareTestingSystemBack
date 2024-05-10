@@ -1,0 +1,13 @@
+Yes, there are inputs which make the two programs above have different output. Here's an example test case:
+
+```
+text = "hello world, this is a long text that needs to be wrapped"
+cols = 10
+
+# Output for the first program:
+# ['hello worl', 'd, this is', 'a long tex', 't that nee', 'ds to be w', 'rapped']
+# Output for the second program:
+# ['hello', 'world,', 'this', 'is a long', 'text that', 'needs to', 'be', 'wrapped']
+```
+
+As you can see, the first program splits the text into lines based on the last occurrence of a space within the column limit, while the second program splits the text into lines based on the first occurrence of a space within the column limit. This results in different line breaks and therefore different output.

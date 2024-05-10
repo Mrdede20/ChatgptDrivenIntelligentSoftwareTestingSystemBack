@@ -1,0 +1,11 @@
+Yes, there are test cases which will result in different output for the two programs. Here's an example with n = 3:
+
+With the first program, pascal(3) returns:
+
+[[1], [1, 1], [1, 2, 1]]
+
+With the second program, pascal(3) returns:
+
+[[1], [1, 1], [1, 2, 1], [1, 3, 3, 1]]
+
+As you can see, the second program generates an additional row.

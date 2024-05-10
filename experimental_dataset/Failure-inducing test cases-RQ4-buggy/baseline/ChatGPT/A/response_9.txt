@@ -1,0 +1,22 @@
+response@ChatGPT:
+Test case:
+
+Input:
+2
+5 2 7
+3 8 1
+10 10 10
+
+Expected output:
+2
+3
+10
+10
+10
+
+Actual output:
+2
+8
+1
+Error message: AssertionError: Test Failed - Incorrect output.
+

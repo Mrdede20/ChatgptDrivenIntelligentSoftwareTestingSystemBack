@@ -1,0 +1,7 @@
+The purpose of the code is to find the length of the longest common substring between two input strings `s` and `t`. It uses dynamic programming (DP) to solve the problem efficiently by iterating through all possible substrings of `s` and `t` and checking whether they match. If a match is found, it updates the DP table to store the length of the longest common substring up to that point.
+
+The algorithm starts by importing the `Counter` module from the `collections` library. The DP table `dp` is initialized as a `Counter` object, which is a dictionary that counts the occurrences of each key. This is useful for storing the length of the longest common substring found so far, without having to worry about initializing the table with zeros.
+
+The algorithm then iterates through all possible substrings of `s` and `t` using two nested loops. If the characters at position `i` in `s` and position `j` in `t` match, it updates the DP table by setting the value of `dp[i,j]` to the length of the longest common substring that ends at positions `(i-1, j)` plus 1.
+
+Finally, the algorithm returns the maximum value in the DP table. If the table is empty, it returns 0, indicating that no common substring was found.

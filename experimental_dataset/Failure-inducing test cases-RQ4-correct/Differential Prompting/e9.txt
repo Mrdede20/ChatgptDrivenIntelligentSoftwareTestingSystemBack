@@ -1,0 +1,11 @@
+Yes, there can be an input that makes the two programs have different output.
+
+Here's an example input:
+
+```
+1
+5
+1 0 1 0 1
+```
+
+For this input, the first program would output `6` and the second program would output `5`.

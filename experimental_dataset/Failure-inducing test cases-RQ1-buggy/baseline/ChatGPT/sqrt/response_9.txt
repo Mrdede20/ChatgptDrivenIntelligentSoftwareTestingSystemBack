@@ -1,0 +1,9 @@
+Test case:
+x = 4
+epsilon = -1
+
+Expected Result:
+The program should throw an error or handle the negative epsilon input.
+
+Actual Result:
+The program enters an infinite loop and never returns a result, resulting in a test failure.

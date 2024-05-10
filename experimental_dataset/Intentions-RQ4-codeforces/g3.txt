@@ -1,0 +1,7 @@
+This code is intended to solve a problem related to finding if there are two paths between two given vertices in an undirected tree with weighted edges. The input includes the number of test cases (`t`) and for each test case, it includes the number of nodes in the tree (`n`), two vertices of interest (`a` and `b`) and the weights of edges connecting the nodes of the tree.
+
+The code first reads the input and stores the edge weights in a dictionary-like list `edges`. Then, it performs a Breadth-First Search (BFS) from the vertex `a` by recursively visiting all the neighboring vertices of each visited vertex `x` and updating the visited array (`visited`) and the path array from `a` to `x` (`fromA`) with the corresponding weight of the edge connecting `x` and its neighbor `y`. It also computes an array of tuples (`queue`) with the next vertices to visit and their corresponding path values (`v^edges[x][y]` XOR operation is used here). The BFS is stopped as soon as all vertices are visited or there are no more vertices to be visited.
+
+Similarly, a BFS is performed from the vertex `b` to compute the path array from `b` to each vertex `x` (`fromB`). Then, the script compares the two path arrays to see if there is at least one vertex `x` that can be reached by two different paths with XOR sum greater than zero (`v1 = len(set(fromA)&set(fromB))>1`) or if there is at least one vertex that can be reached more than twice from `b` (`v2=fromB.count(0)>2`).
+
+Finally, the script outputs `"YES"` if one of the two conditions above is satisfied, and `"NO"` otherwise.

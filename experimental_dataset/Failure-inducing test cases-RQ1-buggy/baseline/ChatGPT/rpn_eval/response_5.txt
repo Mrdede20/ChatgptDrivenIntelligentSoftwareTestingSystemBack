@@ -1,0 +1,12 @@
+Sure, here's a test case that could trigger a bug and cause test failure for the rpn_eval() program:
+
+# Test case 1
+tokens = [2, 3, '+', 4, '*']
+expected_output = 20
+assert rpn_eval(tokens) == expected_output
+
+This test case uses the input tokens = [2, 3, '+', 4, '*'], which represents the expression (2 + 3) * 4 in Reverse Polish Notation (RPN) format. The expected output is 20, since that's the correct result of evaluating this expression.
+
+However, this test case could trigger a bug in the rpn_eval() function if the program doesn't handle the order of operations correctly. Specifically, if the program evaluates the expression from left to right, instead of performing the multiplication before the addition, it would produce the wrong result (10 instead of 20), and the test case would fail.
+
+To fix this potential bug, the op() function should be modified to handle the order of operations correctly. One way to do this is to define a priority for each operator and evaluate the operations in order of priority, using a stack to keep track of the intermediate results.

@@ -1,0 +1,3 @@
+The `powerset` function returns a list of all possible subsets of a given list `arr`, including the empty set and the original list itself. It does this by recursively splitting the list into a first element (`first`) and the rest of the list (`rest`) and then recursively generating the power set from the `rest` list. The `rest` list power set is then used to construct the power set of the entire list by concatenating the `first` element to each subset in the `rest` list power set. 
+
+For example, the power set of `[1, 2, 3]` is `[[1, 2, 3], [1, 2], [1, 3], [1], [2, 3], [2], [3], []]`.

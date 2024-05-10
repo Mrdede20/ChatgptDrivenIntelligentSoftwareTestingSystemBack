@@ -1,0 +1,16 @@
+Yes, there is an input that can make the two programs have different output. 
+
+Test case:
+```
+hanoi(2, start=1, end=2)
+```
+
+The first program will return the following steps:
+```
+[(1, 2), (1, 3), (2, 3)]
+```
+
+While the second program will return the following steps:
+```
+[(1, 2), (2, 1), (2, 3)]
+```

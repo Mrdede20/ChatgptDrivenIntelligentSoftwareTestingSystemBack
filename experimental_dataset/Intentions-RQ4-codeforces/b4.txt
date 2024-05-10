@@ -1,0 +1,12 @@
+The intention of the following code is to take an integer n as input, followed by n pairs of inputs. Each pair consists of an integer a and a string s. For each pair, the code determines the ASCII value of the highest character in the string s that is greater than the integer a and print its position in the alphabets (i.e., its value minus 96).
+
+To break it down:
+- The first line `n=int(input())` takes an integer n as input.
+- The variable `a` is initialized to 0.
+- The for loop `for i in range(n):` runs n times, each time accepting two inputs, an integer `a` and a string `s`.
+- The second line inside the for loop `a=int(input())` takes an integer `a` as input.
+- The third line inside the for loop `s=input()` takes a string `s` as input.
+- The next for loop `for i in range(len(s)):` iterates over all the characters in the string `s`.
+- The if condition `if ord(s[i])>a:` checks if the ASCII value of the current character is greater than `a`.
+- If it is true, the control enters the if block and `a=ord(s[i])` updates the value of `a` to the ASCII value of the current character.
+- Finally, `print(a-96)` prints the position of the highest character in the string `s` that is greater than `a`.

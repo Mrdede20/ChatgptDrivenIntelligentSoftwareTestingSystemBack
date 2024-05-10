@@ -1,0 +1,8 @@
+There is a syntactical error in the second program which will cause it to not compile. The import statements should specify `java` before `util`. The correct import statements for the second program should look like:
+
+```
+import java.util.ArrayList;
+import java.util.List;
+```
+
+Other than that, the input/output behavior of the two programs should be the same.

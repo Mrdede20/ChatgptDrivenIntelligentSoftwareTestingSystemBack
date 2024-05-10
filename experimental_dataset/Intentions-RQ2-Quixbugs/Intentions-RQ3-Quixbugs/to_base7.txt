@@ -1,0 +1,5 @@
+The intention of the given code is to implement a function called "to_base". The purpose of this function is to convert a given base-10 integer into a string representation of that integer in the given target base.
+
+The function takes two input arguments: "num", which is a base-10 integer to be converted, and "b", which is the target base to which we want to convert the integer. The function then uses a while loop to divide the integer by the target base and keep adding the remainders to the result string. The string representation of the integer in the target base is returned as the output of the function.
+
+The "string" module is used in the function to define the "alphabet" variable, which contains digits and uppercase letters that will be used to represent the remainders in the target base. This function can be used for performing integer base conversion in Python.

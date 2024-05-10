@@ -1,0 +1,3 @@
+The difference in the two programs is in the line that checks the size of the left list in the `mergesort` method. In the first program, the condition is `if (arr.size() < 1)` which is incorrect because it will not sort arrays with a size of 1. The correct condition is `if (arr.size() <= 1)`. This condition is correctly implemented in the second program.
+
+So, the input which would make the two programs produce different output is an array with a size of 1. In this case, the first program will not sort the array and return it as is, while the second program will still sort the array correctly.

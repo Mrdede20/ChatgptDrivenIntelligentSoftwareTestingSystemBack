@@ -1,0 +1,18 @@
+One possible test case that could trigger a bug and cause a test failure in the program is:
+
+tokens = [1, 2, 3, '+', '*', 4, '/']
+assert rpn_eval(tokens) == 2.5
+
+This test case is using Reverse Polish Notation (RPN) to evaluate an arithmetic expression that consists of multiplication, addition, and division operations.
+
+The expected result of this expression is 2.5 (computed as (1 + 2 * 3) / 4). However, the implementation of the rpn_eval function uses the wrong order of operands when calling the op function for the multiplication and addition operations. Specifically, it pops the operands a and b from the stack in the wrong order. This results in the multiplication and addition operations being evaluated with the wrong operands, causing the function to return an incorrect result.
+
+To fix the bug, the implementation of the op function should swap the order of its operands for the multiplication and addition operations:
+
+def op(symbol, a, b):
+    return {
+        '+': lambda a, b: a + b,
+        '-': lambda a, b: a - b,
+        '*': lambda a, b: b * a, # fix: swap the order of operands
+        '/': lambda a, b: a / b
+    }[symbol](a, b)

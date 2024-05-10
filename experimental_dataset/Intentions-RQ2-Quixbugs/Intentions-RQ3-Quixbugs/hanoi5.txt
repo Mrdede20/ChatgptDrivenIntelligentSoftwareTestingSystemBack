@@ -1,0 +1,7 @@
+The code defines a recursive function "hanoi" that implements the algorithm for solving the Towers of Hanoi puzzle. The function takes three arguments: the height of the stack of disks to be moved, and the numbers of the pegs where the initial stack resides and where the stack must be moved. 
+
+If the height of the stack is greater than zero, the function recursively calls itself with the height of the stack reduced by one, and the same starting peg and a helper peg assigned as the peg that is neither the starting nor the ending peg. 
+
+The function then appends a tuple representing the move of the top disk from the starting peg to the ending peg to the list of steps, and then recursively calls itself again with the height of the stack reduced by one, the helper peg as the starting peg, and the ending peg as the destination peg.
+
+The function returns an ordered list of pairs (a, b) representing the shortest series of steps necessary to move the stack of disks from the starting peg to the ending peg.

@@ -1,0 +1,5 @@
+This code defines a class Solution that contains a method BinaryInversions. The method takes two inputs n which is the number of bits and bits which is a list of 0s and 1s. The method finds two binary strings from the given bits such that the first binary string has a 1 to the left of where the first 0 is, and the second binary string has a 0 to the left of where the first 1 is. 
+
+Then it finds the number of inversions, i.e number of swaps required to sort the original bit list versus the first binary string and versus the second binary string. Finally, the method returns the maximum number of inversions amongst the three cases. 
+
+The input is read from the standard input and output is printed on the standard output.

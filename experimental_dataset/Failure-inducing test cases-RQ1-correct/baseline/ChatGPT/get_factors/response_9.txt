@@ -1,0 +1,21 @@
+response@ChatGPT:
+
+
+Yes, a test case that could trigger a bug in the code could be when the input value for "n" is a prime number. In this case, the code fails to return an empty list and goes straight to the for loop, which will not find any factor for the prime number and consequently, it will return a list containing the number itself, which is incorrect. 
+
+For example, if the input value is 17, the function should return an empty list, but it will return [17].
+
+request@user:
+Give us such test case. Use assert.
+
+response@ChatGPT:
+Here is a test case that uses assert to verify that the function get_factors() correctly computes the prime factors of a given number:
+
+assert get_factors(15) == [3, 5]
+assert get_factors(21) == [3, 7]
+assert get_factors(28) == [2, 2, 7]
+assert get_factors(35) == [5, 7]
+assert get_factors(39) == [3, 13]
+
+These assert statements check if the computed factors for each given number match the expected list of prime factors. If any of the assertions fail, an AssertionError will be raised indicating that the function did not return the expected result.
+

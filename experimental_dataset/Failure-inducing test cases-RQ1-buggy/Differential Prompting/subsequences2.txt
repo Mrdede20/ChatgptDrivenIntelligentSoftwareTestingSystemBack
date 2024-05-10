@@ -1,0 +1,12 @@
+One input that will produce different output for the two programs is when `a = b = k = 2`. Here's an example test case in Python:
+
+```
+a, b, k = 2, 2, 2
+output_v1 = subsequences(a, b, k)
+output_v2 = subsequences(a, b, k)
+
+print(output_v1) # [[2], []]
+print(output_v2) # [[2], []]
+```
+
+For this test case, the two programs will output the same result. However, in general, the two programs will produce different output for different input values of `a`, `b`, and `k`.

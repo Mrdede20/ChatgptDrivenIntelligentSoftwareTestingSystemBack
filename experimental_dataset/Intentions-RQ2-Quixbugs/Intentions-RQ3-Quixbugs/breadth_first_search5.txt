@@ -1,0 +1,3 @@
+The intention of this code is to implement the Breadth-First Search algorithm. It receives two parameters, startnode and goalnode, which represent the beginning and end nodes of a directed graph. The function then traverses the graph, starting from startnode and visiting all nodes at the current level before moving to the next level, until it finds the goalnode or it reaches the end of the graph. 
+
+This Breadth-First Search algorithm achieves finding the shortest path between startnode and goalnode with low computational cost.

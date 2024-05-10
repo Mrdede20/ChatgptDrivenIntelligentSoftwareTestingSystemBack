@@ -1,0 +1,5 @@
+The intention of the code is to implement a function `get_factors` that takes an integer `n` and finds the prime factors of `n`.
+
+The function checks if `n` is equal to 1, and if so, returns an empty list. Otherwise, the function iterates from 2 up to the square root of `n` and checks if `n` is divisible by that number. If it is, the function recursively calls itself with the quotient `n // i` and the result is returned as a list with `i` appended to it. If no factor is found in the loop, an empty list is returned.
+
+The function can be used to find the prime factors of an integer `n` by calling `get_factors(n)`. The output is a list of prime factors of `n` and it is guaranteed to be in ascending order.

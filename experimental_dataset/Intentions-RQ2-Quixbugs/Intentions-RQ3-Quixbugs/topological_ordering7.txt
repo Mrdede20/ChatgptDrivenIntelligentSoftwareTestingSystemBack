@@ -1,0 +1,5 @@
+The intention of the code is to perform a topological sort on a directed acyclic graph represented as a list of nodes. The function takes in the list of nodes and returns a list of nodes in a topological order. 
+
+The implementation starts by creating a list of all nodes in the input list that don't have incoming edges, i.e., nodes without any predecessors. Then, it iterates over this list of ordered nodes and for each node, iterates over its outgoing nodes, checking if all the successors of the nextnode node are already present in the ordered_nodes list. If this is the case, the nextnode can be safely appended to the ordered_nodes list.
+
+At the end of the loop, the function returns a list of ordered nodes, which represents a topological order of the input directed acyclic graph.

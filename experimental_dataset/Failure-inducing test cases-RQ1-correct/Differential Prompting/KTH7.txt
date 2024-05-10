@@ -1,0 +1,1 @@
+No, the two programs are essentially doing the same thing - finding the kth smallest element in an ArrayList of integers using the quickselect algorithm. They may differ in terms of implementation, but the output for any given input should be the same.

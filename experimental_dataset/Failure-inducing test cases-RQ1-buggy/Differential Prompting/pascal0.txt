@@ -1,0 +1,3 @@
+
+
+Yes, there is an input which makes the two programs have different output. When `n` is less than or equal to 1, the first program returns a list containing one list with a single element (`[[1]]`), while the second program returns a list containing `n` single-item lists (`[[1], [1]]` for `n=2`).

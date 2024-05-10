@@ -1,0 +1,9 @@
+Yes, there is an input that can make the two programs have different output. 
+
+For example, consider the input `arr = [1, 0, 1]` and `k = 2`. 
+
+For the first implementation, the output will be `[0, 1, 1]`, which is correct. 
+
+For the second implementation, the output will be `[1, 0, 0]`, which is incorrect. This is because in the second implementation, the `enumerate()` function is used on the original `arr` list instead of the `counts` list, so it will produce different indices for the `sorted_arr` list. 
+
+Therefore, it is important to use the correct variables in the implementation to ensure accurate results.

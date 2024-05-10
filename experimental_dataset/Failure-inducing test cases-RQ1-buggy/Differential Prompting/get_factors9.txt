@@ -1,0 +1,16 @@
+Yes, there are inputs that can make the two programs have different output. Here is a test case that demonstrates the difference:
+
+```
+n = 15
+
+# The first function will return [3, 5]
+print(get_factors(n))
+
+# The second and third functions will return [3, 5] followed by an empty list
+print(get_factors(n))
+print(get_factors(n))
+```
+
+In the first function, it uses a square root approach to find the prime factorization of the input integer `n`. In this case, the output of the function will be `[3, 5]`.
+
+In the second and third functions, they use a simpler approach but that involves checking the factors of all numbers starting from 2 up to the given number. In this case also, the output of the functions is `[3, 5]`. As you can see, these two functions will keep running and append empty list to the result because there aren't any factors left.

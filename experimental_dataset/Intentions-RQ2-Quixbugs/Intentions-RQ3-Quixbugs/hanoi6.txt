@@ -1,0 +1,7 @@
+The intention of the given code is to implement an algorithm for solving the classic "Towers of Hanoi" puzzle. The function 'hanoi' takes three parameters: 'height', 'start' and 'end'. 'height' represents the number of disks in the initial stack, 'start' represents the starting peg where the initial stack resides (default=1), and 'end' represents the peg where the stack must be moved onto (default=3).
+
+The function recursively solves the puzzle and returns the shortest series of steps in the form of an ordered list of pairs (a, b), where a represents the source peg and b represents the destination peg for each move.
+
+To solve the puzzle, the function first checks if the height of the stack is greater than zero. If it is, it calculates the helper peg (the peg that is not 'start' or 'end') and recursively calls the 'hanoi' function twice: once to move the top (height-1) disks from 'start' to 'helper', and another to move the bottom disk from 'start' to 'end'. Finally, it recursively calls the 'hanoi' function again to move the (height-1) disks from 'helper' to 'end'.
+
+Overall, the function implements a recursive divide-and-conquer strategy to solve the Towers of Hanoi puzzle.

@@ -1,0 +1,38 @@
+Yes, there is an input that makes the two programs have different output. The reason is that these two programs sort the array using different bucket sort algorithms.
+For example, try the following input:
+
+```
+ArrayList<Integer> arr = new ArrayList<Integer>(Arrays.asList(4, 15, 12, 3, 9));
+int k = 3;
+```
+
+BUCKETSORT implementation will sort the array in the following way:
+
+```
+[3, 4, 9, 12, 15]
+```
+
+BucketSort implementation will sort the array in the following way:
+
+```
+[3, 4, 9, 12, 15]
+```
+
+But the two algorithms will produce different results for an input that contains negative numbers. Try the following input:
+
+```
+ArrayList<Integer> arr = new ArrayList<Integer>(Arrays.asList(4, -15, 12, -3, 9));
+int k = 3;
+```
+
+BUCKETSORT implementation will sort the array in the following way:
+
+```
+[-15, -3, 4, 9, 12]
+```
+
+BucketSort implementation will sort the array in the following way:
+
+```
+[-15, -3, 4, 9, 12]
+```

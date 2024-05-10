@@ -1,0 +1,3 @@
+Unfortunately, there is no input that can make the two programs have different outputs because they are exactly the same:
+
+Both functions have the same name "minimum_spanning_tree" and identical code. Even if they were defined in different modules or files, since there is no difference in the code, they would still produce the same output for any given input.

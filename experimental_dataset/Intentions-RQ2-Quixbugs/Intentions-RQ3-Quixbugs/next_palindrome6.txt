@@ -1,0 +1,7 @@
+This code defines a function, `next_palindrome(digit_list)`, which is used to find the next palindrome integer when given the current palindrome integer as an array of base 10 digits.
+
+The function starts by computing the indices of the middle digits of the palindrome integer, based on whether the length of the integer is odd or even.
+
+It then enters a loop that checks each pair of corresponding digits on opposite sides of the middle digit(s), starting from the middle and working outward. If the digit on the left is greater than the digit on the right, the function replaces the right digit with the left digit, and then exits the loop, returning the digit list as it is. If the left digit is less than the right digit, the function replaces the right digit with the left digit and then moves to the digit pair to the left, repeating the process. If both digits are equal to each other, the function just moves on to the next pair of digits.
+
+If the loop finishes without encountering a pair of digits with the left digit greater than the right digit, then the input palindrome is a number consisting of all 9's (for example [9,9,9,9]). In this case, the function returns the next palindrome which is formed by adding 1 to the left-most digit of the palindrome, and making all other digits 0 (for example [1,0,0,0,1]).

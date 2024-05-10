@@ -1,0 +1,27 @@
+Yes, there can be different outputs for the two programs. 
+
+To generate a test input, you can use the following:
+
+```
+2
+5
+1 0 0 0 1
+6
+0 0 1 1 1 0
+```
+
+For this input, the first program will output:
+
+```
+5
+5
+```
+
+And the second program will output:
+
+```
+3
+4
+``` 
+
+Therefore, this input can be used as a test case to check if the two programs are providing different outputs.

@@ -1,0 +1,7 @@
+Here is a test case that triggers a bug and results in test failure for the program:
+
+assert pascal(0) == []
+
+Explanation:
+
+The current implementation of the pascal() function does not handle the case when n is 0, i.e., it does not return an empty list as expected. Instead, it returns a list containing one element, [1]. The test case above checks whether calling pascal(0) returns an empty list, which is the expected result. If the implementation is correct, the test should pass. However, since the implementation does not handle this case correctly, the test will fail.

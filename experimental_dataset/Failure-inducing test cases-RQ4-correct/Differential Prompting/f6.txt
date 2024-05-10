@@ -1,0 +1,35 @@
+Yes, there can be an input that makes the two programs have different outputs. 
+
+Test Input Reasoning:
+
+We can test for the case where the total coins needed to select are greater than the sum of all the elements in the array.
+
+This is interesting because in the first program, the program will proceed to select the entire array until d elements have been selected. While in the second program, the code will return "Impossible"
+
+Test Input:
+
+5
+5 20 2
+9 7 -6 3 8 
+4 15 2
+4 7 2 -6
+6 12 2
+12 10 -8 7 9 2
+4 10 3
+7 6 5 4
+3 30 3
+10 20 15
+
+Expected Output:
+
+Impossible
+Impossible
+Impossible
+Impossible
+Impossible
+
+Test Output Reasoning:
+
+In all the test cases, the total sum of the coins we can select is less than what is required to select d coins from the array.
+
+For instance, in the first test case, we only have 9 coins to select and we need 20. It is not possible to pick any d elements that will give us the required coins. Thus the output is impossible for both programs. The other test cases follow a similar pattern.

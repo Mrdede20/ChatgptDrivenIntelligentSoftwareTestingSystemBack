@@ -1,0 +1,5 @@
+This code defines a function `pascal(n)` which takes a positive integer `n` as input and generates the first `n` rows of Pascal's triangle. The resulting triangle is represented as a list of `n` lists, where each inner list represents a row in the triangle. 
+
+In Pascal's triangle, each number in a row is the sum of the two numbers directly above it in the previous row. The first and last numbers in each row are always 1. Therefore, the function uses nested loops to generate each row by summing the two adjacent numbers from the previous row, and appends each new row to a list which is eventually returned as the result.
+
+The function assumes that the input `n` satisfies the precondition `n >= 1`, meaning that `n` must be a positive integer, to ensure a valid output.

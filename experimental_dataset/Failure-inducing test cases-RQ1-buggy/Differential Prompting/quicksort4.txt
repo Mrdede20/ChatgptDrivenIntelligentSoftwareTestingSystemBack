@@ -1,0 +1,9 @@
+Yes, there is an input which makes the two programs have different outputs. This happens when there are repeating elements in the input array. Here's an example:
+
+quicksort([4, 2, 5, 2, 3])
+
+The first implementation will return: [2, 2, 3, 4, 5]
+
+The second implementation will return: [2, 2, 3, 5, 4]
+
+This happens because in the second implementation, we include equal elements in the "greater" list, while in the first implementation we include them in the "lesser" list. If we change the order of the repeated elements in the input array, we'll see that the outputs will be swapped.

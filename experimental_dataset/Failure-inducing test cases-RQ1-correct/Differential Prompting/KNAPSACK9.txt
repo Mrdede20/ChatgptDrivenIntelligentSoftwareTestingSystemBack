@@ -1,0 +1,17 @@
+Yes, there are input cases that can make these two programs output different results. 
+
+The main difference between these two programs is the initialization of the `memo` array. In the first program, the `memo` array is initialized with 0's for all elements, including the first row and column. In the second program, the `memo` array is initialized with 0's for all elements except the first row and column.
+
+Therefore, if the input items array contains an item with weight 0, the two programs will give different results. The first program will correctly handle the item with weight 0 and output the correct result, while the second program will skip this item and potentially output an incorrect result.
+
+Here's an example input that will demonstrate the difference:
+
+```java
+int[][] items = {{0, 10}, {3, 20}};
+int capacity = 3;
+
+System.out.println(KNAPSACK.knapsack(capacity, items)); // returns 30
+System.out.println(knapsack(capacity, items)); // returns 20
+```
+
+In this example, the first item has weight 0 and value 10, and the second item has weight 3 and value 20. The knapsack capacity is 3. The first program will correctly include the first item with weight 0 and output a result of 30, while the second program will skip the first item and output a result of 20.

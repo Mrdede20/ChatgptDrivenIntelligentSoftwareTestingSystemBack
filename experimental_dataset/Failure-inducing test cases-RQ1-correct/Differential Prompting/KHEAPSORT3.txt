@@ -1,0 +1,10 @@
+Yes, the two programs may have different output for some inputs. Specifically, the difference lies in the fact that the first program uses a single priority queue to maintain the k smallest elements and then sorts the remaining elements, while the second program creates a priority queue of size k and sorts it after polling all the elements from the input list. This may lead to different ordering of elements for certain inputs. 
+
+Here's an example input that causes the two programs to produce different outputs:
+
+```
+ArrayList<Integer> arr = new ArrayList<>(Arrays.asList(5, 2, 1, 6, 3, 4));
+int k = 3;
+```
+
+For this input, the first program would output `[1, 2, 3, 4, 5, 6]`, while the second program would output `[3, 2, 1, 4, 5, 6]`.

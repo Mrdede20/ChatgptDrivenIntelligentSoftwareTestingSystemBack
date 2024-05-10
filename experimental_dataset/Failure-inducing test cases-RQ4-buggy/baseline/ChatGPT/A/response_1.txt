@@ -1,0 +1,22 @@
+response@ChatGPT:
+Test Case:
+
+Input:
+3
+3 5 4
+8 6 7
+1 9 2
+
+Expected Output:
+5
+7
+2
+
+Actual Output:
+5
+6
+2
+
+Explanation:
+The program is supposed to print the middle element after sorting the input values in each iteration. However, in the second iteration, instead of printing 7 (the middle element), it prints 6. This is because the program is not resetting the value of 'i' in the second iteration of the while loop, and hence, it ends up skipping the first input value in the second iteration. This results in the wrong output and a test failure.
+

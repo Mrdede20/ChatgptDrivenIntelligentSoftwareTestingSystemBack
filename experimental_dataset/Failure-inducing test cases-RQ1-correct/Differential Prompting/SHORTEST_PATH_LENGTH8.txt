@@ -1,0 +1,24 @@
+Yes, the two programs have different inputs. 
+
+The first program works with a graph represented by a `Map<List<Node>, Integer>`, where the keys are edges represented by a list of two `Node` objects and the value is the length of the edge. 
+
+The second program works with a graph represented by a `Map<String, Map<String, Integer>>`, where the keys are strings representing the vertices and the values are another `Map<String, Integer>` representing the edges and their corresponding lengths.
+
+Here is an example test case that would have different output for the two programs:
+```
+Map<List<Node>, Integer> graph1 = new HashMap<>();
+Node start1 = new Node(1);
+Node middle1 = new Node(2);
+Node goal1 = new Node(3);
+graph1.put(Arrays.asList(start1, middle1), 3);
+graph1.put(Arrays.asList(middle1, goal1), 4);
+
+Map<String, Map<String, Integer>> graph2 = new HashMap<>();
+graph2.put("a", new HashMap<String, Integer>() {{ put("b", 3); }});
+graph2.put("b", new HashMap<String, Integer>() {{ put("c", 4); }});
+
+int result1 = SHORTEST_PATH_LENGTH.shortest_path_length(graph1, start1, goal1);
+int result2 = ShortestPath.shortest_path_length(graph2, "a", "c");
+```
+
+In the above test case, `result1` would be 7 (3 + 4), while `result2` would be 7 (3 + 4) as well.

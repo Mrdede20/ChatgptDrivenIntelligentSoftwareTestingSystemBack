@@ -1,0 +1,43 @@
+response@ChatGPT:
+
+
+Yes, there are several test cases that can potentially trigger a bug in the program, such as:
+
+- If the input n is negative or zero, the function will not handle this case properly and may produce unexpected output or error.
+
+- If the input n is a non-integer value, such as a float or a string, the function may throw a TypeError or produce incorrect output.
+
+- If the input n is a large prime number, the function may take a long time to run and consume a lot of memory, as it tries to factorize the number by trial division up to its square root.
+
+- If the input n is a perfect square, the function may return only one factor instead of two, as it stops iterating the range after finding the first factor.
+
+- If the input n is a composite number with multiple prime factors, the function may return only one factor and miss the rest, as it only checks for factors up to the square root of n.
+
+request@user:
+Give us such test case. Use assert.
+
+response@ChatGPT:
+# Test case 1: For an input of 12, expected output is [2, 2, 3]
+
+assert get_factors(12) == [2, 2, 3]
+
+
+# Test case 2: For an input of 50, expected output is [2, 5, 5]
+
+assert get_factors(50) == [2, 5, 5]
+
+
+# Test case 3: For an input of 81, expected output is [3, 3, 3, 3]
+
+assert get_factors(81) == [3, 3, 3, 3]
+
+
+# Test case 4: For an input of 1, expected output is []
+
+assert get_factors(1) == []
+
+
+# Test case 5: For an input of 29, expected output is [29]
+
+assert get_factors(29) == [29]
+

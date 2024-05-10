@@ -1,0 +1,5 @@
+The intention of the code is to implement Kruskal's algorithm to find the Minimum Spanning Tree (MST) for an undirected connected graph. 
+
+The MST is a set of edges that connects all vertices in the graph with the minimum total weight, and it does not contain a cycle. Kruskal’s algorithm is a greedy algorithm that builds the MST step-by-step from the lightest edge to the heaviest one, so that it never forms a cycle. It works by sorting the edges in non-decreasing order of weight and then considering each edge in turn to add it to the MST. If it creates a cycle, the algorithm discards it; otherwise, it adds it to the MST.   
+
+The input to `minimum_spanning_tree` is a dictionary `weight_by_edge` where the keys are pairs of nodes that represent edges in the graph, and the values are the corresponding edge weights. The output is a set of edges that form the MST of the input graph.

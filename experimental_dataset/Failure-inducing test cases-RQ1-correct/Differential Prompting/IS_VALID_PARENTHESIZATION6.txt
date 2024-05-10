@@ -1,0 +1,1 @@
+No, both programs utilize the same logic of incrementing and decrementing a depth counter based on whether a parenthesis is opening or closing. Therefore, both programs should output the same result for any given input string.

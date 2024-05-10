@@ -1,0 +1,7 @@
+This code seems to be solving a problem. It takes an integer input 't' which denotes the number of test cases. For each test case, it takes an integer input 'n' which denotes the number of elements in array 's' and then takes 'n' space-separated integers as input and stores them in a list 's'. 
+
+Then, it finds the two maximum elements' indices among the elements in the list 's'. It assigns the first maximum element's index to 'mx[0]' and the second maximum to 'mx[1]'. 
+
+Finally, it goes through each element of the list 's' and subtracts it from the maximum element whichever is not its index. Thus, for each test case, it outputs a list of absolute differences between the elements and their maximum element excluding that element.
+
+For instance, an input of 't=2', 'n=5', and 's' as '3 1 5 6 7', will give an output '6 2 2 1 0' followed by a new line, and then for the next test case input, it will have an output based on the same algorithm.

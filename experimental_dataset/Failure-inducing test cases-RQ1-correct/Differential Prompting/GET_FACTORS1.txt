@@ -1,0 +1,1 @@
+No, both programs have the same logic and will produce the same output for all possible inputs. The second program has an import statement error, it should be "import java.util.ArrayList;" instead of ".util.ArrayList;".

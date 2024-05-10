@@ -1,0 +1,43 @@
+Yes, there is a test case that can make the two programs have different output.
+
+Here's a test case:
+
+```
+# define the node class
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.successor = None
+
+# define the nodes
+node1 = Node(1)
+node2 = Node(2)
+node3 = Node(3)
+node4 = Node(4)
+
+# create a cycle in the nodes
+node1.successor = node2
+node2.successor = node3
+node3.successor = node4
+node4.successor = node2
+
+# test the two programs
+print(detect_cycle(node1))  # expected output: True
+
+def detect_cycle(node):
+    hare = tortoise = node
+
+    while True:
+        if hare.successor is None or hare.successor.successor is None:
+            return False
+
+        tortoise = tortoise.successor
+        hare = hare.successor.successor
+
+        if hare is tortoise:
+            return True
+
+print(detect_cycle(node1))  # expected output: False
+```
+
+The first version of the `detect_cycle` function returns `True` for the given test case because it checks whether `hare` and `tortoise` are the same node, without checking their values. In contrast, the second version of the function returns `False` for the same test case because it checks whether `hare` and `tortoise` have the same value and the same reference.

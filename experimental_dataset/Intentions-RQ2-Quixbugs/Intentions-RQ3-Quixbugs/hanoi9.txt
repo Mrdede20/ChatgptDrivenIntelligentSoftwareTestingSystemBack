@@ -1,0 +1,7 @@
+The code represents an algorithm for solving the Towers of Hanoi puzzle. The goal is to move a stack of differently-sized disks from one peg to another, following a specific set of rules - a single disk can be moved at a time, and no disk can be placed on top of a smaller disk. 
+
+The `hanoi` function takes in the height of the initial stack of disks, as well as the pegs where the initial stack resides and where it must be moved onto. It recursively breaks down the problem into smaller sub-problems until it reaches the base case of height 0. 
+
+During each recursive call, the function identifies the 'helper' peg, the peg that is not the start or end peg. It then recursively moves the smaller sub-stacks from the start peg to the helper peg, and from the helper peg to the end peg, until the entire stack has been moved. 
+
+The function returns an ordered list of pairs representing the steps taken to move the stack of disks to the required peg.

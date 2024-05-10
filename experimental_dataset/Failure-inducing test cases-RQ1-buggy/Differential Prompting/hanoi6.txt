@@ -1,0 +1,22 @@
+Yes, there are inputs that can make the two implementations output different results. One such input would be setting the `height` parameter to 0, which would cause the recursive solution to return an empty list of steps (`[]`), while the iterative solution would return an empty list (`steps = []`) with no steps appended to it. 
+
+Here's an example test case in Python:
+
+```
+# Test case
+height = 0
+start = 1
+end = 3
+
+# Recursive solution
+print(hanoi(height, start, end))  # []
+
+# Iterative solution
+print(hanoi(height, start, end))  # []
+```
+
+Output:
+```
+[]
+[]
+```

@@ -1,0 +1,5 @@
+The intention of the code is to implement the Floyd Warshall algorithm for finding the length of the shortest paths between all possible pairs of nodes in a directed graph. 
+
+The code takes in two inputs - the number of nodes in the graph, and a dictionary containing the edge length keyed by an ordered pair of node ids. It then uses a nested loop to update the shortest path lengths between each pair of nodes by considering all intermediate nodes. Finally, it returns a dictionary containing the shortest path length keyed by an ordered pair of node ids.
+
+The implementation uses the defaultdict object from the collections module to handle the case when the distance between two nodes is not known. It initially sets the distance between a node and itself to 0 and all other distances to infinity. The algorithm then updates these distances based on the length of the shortest path that goes through an intermediate node k.

@@ -1,0 +1,8 @@
+Yes, one possible input that makes the output of the programs different is:
+
+coins = [1, 2, 5]
+total = 5
+
+The first six implementations have a common bug: they always pass the original `coins` list to the recursive calls, instead of passing the rest of the list, as they should. This will cause the function to keep including the same coin multiple times in the same combination, resulting in duplicate ways to represent the same solution. Hence, the results of all these implementations will include duplicates and will be bigger than they should.
+
+The last implementation, which correctly passes the rest of the list to the recursive calls, will not include duplicates and will have the correct result.

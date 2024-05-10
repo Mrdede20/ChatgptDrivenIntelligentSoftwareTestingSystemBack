@@ -1,0 +1,5 @@
+The intention of the code is to implement the Newton-Raphson method for finding the square root of a given number x, such that the result is guaranteed to be within an epsilon range of the actual square root. 
+
+The code initializes an approximate value of the square root as x/2 and then iteratively refines it until the difference between the actual value and the approximate value is less than the given epsilon. The formula used for refining the approximation is the Newton-Raphson method formula.
+
+The function takes in two arguments, x and epsilon, and returns an approximate value of the square root of x that is within the interval [sqrt(x)-epsilon, sqrt(x)+epsilon].

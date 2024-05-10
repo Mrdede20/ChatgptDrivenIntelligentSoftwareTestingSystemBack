@@ -1,0 +1,7 @@
+The intention of the given function `pascal(n)` is to generate the first n rows of the Pascal's triangle and return them as a list of n lists. 
+
+The function first initializes the rows with the first row of the triangle, which is just a single element, i.e., 1. Then, for each row ranging from 1 to n-1, the function generates the current row by iterating through each column and by adding the values from the previous row that are immediately diagonally above and diagonally above to the left of the current position. The generated row is then added to the rows list.
+
+Finally, the function returns the rows list containing the first n rows of the Pascal's triangle. 
+
+The function assumes that the input n is greater than or equal to 1.

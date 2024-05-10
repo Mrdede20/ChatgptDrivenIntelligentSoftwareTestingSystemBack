@@ -1,0 +1,9 @@
+The `pascal` function takes an integer `n` as input and returns the first `n` rows of Pascal's Triangle as a list of lists.
+
+Pascal's Triangle is a triangular array of numbers in which each number is the sum of the two numbers immediately above it. The first row contains just the number 1, and each subsequent row is constructed by adding adjacent pairs of numbers from the previous row, with a 1 added at each end.
+
+The implementation of the `pascal` function uses a nested loop to generate each row of the triangle based on the values in the previous row. It first creates the first row of the triangle containing only 1. It then builds each subsequent row by computing the sum of the values in the two cells immediately above the cell in the current row. 
+
+Finally, it appends each new row to a list `rows` containing all previously computed rows, and returns the complete list of rows at the end. 
+
+Overall, the `pascal` function generates and returns an array of n lists, with each list containing the numbers for a specific row of Pascal's Triangle.

@@ -1,0 +1,13 @@
+This code probably solves a problem related to finding a particular path/graph in a network given in the form of input. 
+
+The first input takes in an integer t, which means the number of test cases.
+
+For each test case:
+
+- ncd is an input array that holds three integers, n, a, and b.
+    - n -- the number of vertices
+    - a, b -- the starting and ending points 
+- Using the edges list, the code creates a dictionary of dictionaries called 'edges', contains the list of vertices and its corresponding edges
+- From line 22-32, the code searches the distance of all its edges from starting point to all other vertices and store in the fromA list
+- From line 35-47, the code searches the distance of all its edges from the end point to all other vertices and store them in fromB list
+- Then, from line 49-52, the code compares the fromA and fromB lists to decide whether there exists a path or not. If either one of the conditions is True, then it prints YES, else it prints NO.

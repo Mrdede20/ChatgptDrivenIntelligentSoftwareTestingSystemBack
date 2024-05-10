@@ -1,0 +1,29 @@
+#FT
+assert find_first_in_sorted([], 5) == -1
+
+#FT
+assert find_first_in_sorted([1, 2, 3, 4, 5], 6) == -1
+
+#PT
+assert find_first_in_sorted([1, 2, 3, 4, 5], 1) == 0
+
+#PT
+assert find_first_in_sorted([1, 2, 3, 4, 5], 5) == 4
+
+#PT
+assert find_first_in_sorted([1, 2, 2, 3, 4, 5], 2) == 1
+
+#FT
+assert find_first_in_sorted([1, 2, 3, 4, 5], 0) == -1
+
+#FT
+assert find_first_in_sorted([1, 2, 3, 4, 5], 6) == -1
+
+#PT
+assert find_first_in_sorted([1, 2, 2, 3, 4, 5], 3) == 3
+
+#FT
+assert find_first_in_sorted([2, 1, 4, 3, 5], 3) == -1
+
+#PT
+assert find_first_in_sorted([5], 5) == 0

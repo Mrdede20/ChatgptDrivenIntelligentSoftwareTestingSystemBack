@@ -1,0 +1,5 @@
+The code intends to find the next palindrome for a given number represented as an array of digits. Palindrome is a number that can be read same forward and backward. For example, 121 and 1221 are palindromes. 
+
+The input digit_list is a list of digits of a number that is already a palindrome. The code first checks if incrementing just one of the center digit(s) (if present), results in a new palindrome. If not, it increments the number by changing both the mid digits simultaneously to 0 and continues checking from center towards the ends, incrementing the digits until it finds the next palindrome. 
+
+The output of the function is an array of digits representing the next palindrome. If the length of the input array is odd, then the middle digit of the output will always be incremented. If the length is even, then both middle digits will be incremented simultaneously.

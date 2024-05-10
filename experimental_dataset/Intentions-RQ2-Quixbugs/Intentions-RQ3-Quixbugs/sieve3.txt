@@ -1,0 +1,3 @@
+The code is an implementation of the Sieve of Eratosthenes algorithm that generates all prime numbers up to the given `max` value. The algorithm iteratively removes multiples of each prime number, starting from 2, and keeps track of the remaining numbers, which will be prime numbers eventually. The `max` value represents the upper bound of the range of numbers to be checked for primality. 
+
+The function `sieve(max)` initializes an empty `primes` list and iterates over the range of integers between 2 and `max`. For each integer `n`, it checks if it is divisible only by primes already in the list `primes`. If it is, then it is appended to the list `primes`. Finally, the list `primes` containing all the prime numbers up to and including `max` is returned.

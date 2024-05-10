@@ -1,0 +1,18 @@
+Yes, there may be inputs that make the two programs output different results.
+
+Here's a test input:
+
+```
+2
+4 10 2
+1 2 3 4
+5 20 3
+5 4 3 2 1
+```
+
+For this input:
+
+- The first program outputs `2` and `1`.
+- The second program outputs `1` and `0`.
+
+Therefore, the two programs have different outputs for this input.

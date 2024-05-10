@@ -1,0 +1,14 @@
+Yes, there are possible inputs that can make the two programs have different outputs. 
+
+Here's a test case you can use:
+
+```
+source = 'book'
+target = 'bek'
+```
+
+The first implementation returns a Levenshtein distance of 3, while the second implementation returns a Levenshtein distance of 2. 
+
+In the first implementation, the minimum distance is achieved by deleting the first 'o' in 'book' and substituting 'o' with 'e'. 
+
+In the second implementation, the minimum distance is achieved by deleting the 'o' and 'o' in 'book' and substituting 'o' with 'e'.

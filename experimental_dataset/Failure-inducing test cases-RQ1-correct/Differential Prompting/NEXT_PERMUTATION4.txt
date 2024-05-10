@@ -1,0 +1,11 @@
+Yes, there are inputs that can make the two programs output different results. Here is an example:
+
+```java
+ArrayList<Integer> input = new ArrayList<>(Arrays.asList(1, 2, 3));
+ArrayList<Integer> result1 = NEXT_PERMUTATION.next_permutation(input);
+ArrayList<Integer> result2 = NEXT_PERMUTATION_v2.next_permutation(input);
+System.out.println(result1); // Output: [1, 3, 2]
+System.out.println(result2); // Output: [2, 1, 3]
+```
+
+In this example, `NEXT_PERMUTATION.next_permutation()` implements a algorithm to generate the lexicographically next permutation of a given list. whereas `NEXT_PERMUTATION_v2.next_permutation()` implements a simplified version of the same algorithm. These two implementations can give different results on certain inputs.

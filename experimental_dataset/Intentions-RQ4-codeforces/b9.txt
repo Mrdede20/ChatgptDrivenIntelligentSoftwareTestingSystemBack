@@ -1,0 +1,5 @@
+This code takes an integer `n` as input from the user. It then reads `n` pairs of inputs. Each pair consists of an integer `a` and a string `s`. For each pair, it finds the ASCII value of the largest character in `s` that is greater than the integer `a`. It then prints the difference between the ASCII value of that character and the ASCII value of lowercase letter "a".
+
+For example, if `n=2`, and the two pairs of inputs are `3 abcdefgh` and `2 zxY`, the output will be as follows:
+- For the first input pair, the largest character in `abcdefgh` that is greater than `3` is `h`, which has an ASCII value of `104`. The ASCII value of lowercase "a" is `97`. So the output will be `104-97=7`.
+- For the second input pair, the largest character in `zxY` that is greater than `2` is `z`, which has an ASCII value of `122`. The output will be `122-97=25`.

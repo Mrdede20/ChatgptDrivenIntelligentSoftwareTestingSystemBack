@@ -1,0 +1,19 @@
+Test case:
+
+n = 3
+length_by_edge = {
+    (0, 1): 1,
+    (1, 2): 2,
+    (2, 0): 4
+}
+
+result = shortest_path_lengths(n, length_by_edge)
+
+assert result[(0, 2)] == 3, f"Expected 3 but got {result[(0, 2)]}"
+
+Explanation:
+
+-The input graph has 3 nodes, with edges (0,1) with length 1, (1,2) with length 2, and (2,0) with length 4.
+-The expected shortest path length from node 0 to node 2 is 3 (path 0-1-2), but the algorithm might fail to return the correct answer due to the negative cycle in the graph.
+-Specifically, when the algorithm processes the edge (2,0) during the last iteration of the outer loop (k=n-1), it will update the length of the path (0,2) to 4 instead of 3, due to the negative cycle.
+-Therefore, the expected output is 3, but the algorithm might return 4, resulting in a test failure.

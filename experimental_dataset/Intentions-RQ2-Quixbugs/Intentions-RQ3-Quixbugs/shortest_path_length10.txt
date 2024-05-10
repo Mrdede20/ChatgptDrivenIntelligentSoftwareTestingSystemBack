@@ -1,0 +1,7 @@
+The code is an implementation of Dijkstra's algorithm for finding the shortest path between two nodes in a directed graph.
+
+The function `shortest_path_length` takes three arguments: `length_by_edge`, which is a dictionary containing the length of each edge in the graph, `startnode`, which is the starting node for the path, and `goalnode`, which is the node that we want to reach. 
+
+The function initializes a Fibonacci heap with the starting node and a distance of 0. It then iteratively examines the node with the smallest distance from the heap, adding its unvisited neighbors to the heap with their distances updated as necessary. Once it finds the goal node, it returns the shortest distance to it.
+
+The functions `get` and `insert_or_update` are helper functions used to manipulate the Fibonacci heap efficiently.

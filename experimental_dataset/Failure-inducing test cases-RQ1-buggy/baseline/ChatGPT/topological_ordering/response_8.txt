@@ -1,0 +1,11 @@
+Test case:
+nodes = [Node(value=1, successors=[Node(value=2), Node(value=3)]), Node(value=2, successors=[Node(value=3)], predecessors=[Node(value=1)])]
+
+Expected result:
+The topological ordering should be [Node(value=1), Node(value=2), Node(value=3)]
+
+Actual result:
+The topological ordering is [Node(value=1), Node(value=3), Node(value=2)]
+
+Bug:
+The program does not correctly handle nodes with multiple predecessors. In this test case, Node(value=2) should come after Node(value=1) in the ordering, but it is mistakenly placed after Node(value=3). This is because the program does not take into account the order of nodes in the predecessors list.

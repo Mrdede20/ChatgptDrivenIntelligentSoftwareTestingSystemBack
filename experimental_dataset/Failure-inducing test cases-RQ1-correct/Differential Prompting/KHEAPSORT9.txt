@@ -1,0 +1,8 @@
+Yes, there is an input that can make the two programs have different output. Here's an example input:
+
+ArrayList<Integer> arr = new ArrayList<Integer>(Arrays.asList(2, 3, 1, 5, 4, 7, 6));
+int k = 3;
+
+With this input, the output of KHEAPSORT will be [1, 2, 3, 4, 5, 6, 7], while the output of KHeapSort will be [1, 2, 3, 5, 4, 6, 7]. 
+
+The reason for the difference is that KHEAPSORT maintains a single priority queue for all elements, while KHeapSort maintains multiple priority queues - one for the first k elements, and another for the remaining elements. This causes a slight difference in the way the elements are sorted and inserted into the sorted list.

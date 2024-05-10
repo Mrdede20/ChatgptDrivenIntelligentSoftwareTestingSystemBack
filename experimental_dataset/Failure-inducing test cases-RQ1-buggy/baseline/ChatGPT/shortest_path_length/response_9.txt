@@ -1,0 +1,30 @@
+One possible test case that could trigger a bug and result in test failure is:
+
+length_by_edge = {
+    (node1, node2): 1,
+    (node2, node1): 1,
+    (node2, node3): 2,
+    (node3, node2): 2,
+    (node3, node4): 3,
+    (node4, node3): 3,
+    (node4, node5): 4,
+    (node5, node4): 4
+}
+
+startnode = node1
+goalnode = node5
+
+node1 = Node()
+node2 = Node()
+node3 = Node()
+node4 = Node()
+node5 = Node()
+
+node1.successors = [node2]
+node2.successors = [node3]
+node3.successors = [node4]
+node4.successors = [node5]
+
+assert shortest_path_length(length_by_edge, startnode, goalnode) == 8
+
+This test case creates a graph with five nodes (node1 to node5) and eight edges with different weights. Node1 is the start node and node5 is the goal node. The shortest path between these two nodes is node1 -> node2 -> node3 -> node4 -> node5, with a total weight of 8. However, the shortest_path_length function may fail to find the correct path because it uses a Fibonacci heap to store unvisited nodes, which may have unexpected behavior for certain edge cases.

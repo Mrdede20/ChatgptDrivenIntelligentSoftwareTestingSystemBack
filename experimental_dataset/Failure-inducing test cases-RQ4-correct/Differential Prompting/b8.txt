@@ -1,0 +1,15 @@
+Yes, there is an input that can make the two programs have different output. 
+
+Test Input:
+2
+5 java
+4 code
+
+Expected Output:
+10
+8
+
+Explanation: 
+For the first input, the maximum unicode value in the first program is ord('v') = 118, which gives an output of 118-96 = 22. The maximum unicode value in the second program is ord('a') = 97, which gives an output of 97-96 = 1.
+
+For the second input, the maximum unicode value in the first program is ord('e') = 101, which gives an output of 101-96 = 5. The maximum unicode value in the second program is ord('o') = 111, which gives an output of 111-96 = 15.

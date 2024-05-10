@@ -1,0 +1,7 @@
+The code is implementing the Merge Sort algorithm, which is a popular sorting algorithm that uses a divide-and-conquer approach to sort an array. 
+
+The main function `mergesort()` takes an unsorted array as input and recursively divides it into two halves until each element is a separate array. It then merges each pair of adjacent arrays to form larger sorted arrays until only a single sorted array remains.
+
+`merge()` is a helper function that takes in two sorted arrays (left and right) and returns a new sorted array that combines the elements from both arrays.
+
+The time complexity of Merge Sort is O(n*log(n)), which makes it an efficient sorting algorithm for large datasets. The implementation here uses recursion and nested functions to simplify the code and make it easier to read.

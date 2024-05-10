@@ -1,0 +1,7 @@
+The intention of the code is to implement the `bitcount` function which takes a non-negative integer `n` and returns the number of 1-bits in the binary encoding of `n`. 
+
+The `bitcount` function uses a bitwise XOR operation along with a loop to count the number of 1-bits in the binary encoding of `n`. 
+
+The XOR operation is used to toggle the rightmost 1-bit in the binary representation of `n`, and this operation is repeated until `n` becomes 0. The number of times the operation is repeated is equivalent to the number of 1-bits in the binary encoding of the original `n`.
+
+The code also includes some test cases to demonstrate the output of the `bitcount` function for different input parameters.

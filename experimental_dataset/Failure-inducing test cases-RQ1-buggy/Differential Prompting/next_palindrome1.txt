@@ -1,0 +1,3 @@
+Yes, the two programs have different output for some input. 
+
+For example, if we call the first function with the input `digit_list=[9,9]`, it will return `[1,0,0]`, while the second function will return `[1,0,1]`. This is because the first function assumes that the input is already a palindrome, and returns the next highest palindrome after the input. However, the second function checks if the input is a palindrome and returns the next palindrome regardless of whether the input is a palindrome or not.

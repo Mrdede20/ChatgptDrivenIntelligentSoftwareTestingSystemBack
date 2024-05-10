@@ -1,0 +1,87 @@
+#PT
+node1 = Node(1)
+node2 = Node(2, node1)
+node3 = Node(3, node2)
+node4 = Node(4, node3)
+node5 = Node(5, node4)
+reversed_list = reverse_linked_list(node5)
+assert reversed_list.value == 1
+
+#PT
+n1 = Node(value=1)
+n2 = Node(value=2)
+n3 = Node(value=3)
+n1.successor = n2
+n2.successor = n3
+assert reverse_linked_list(n1) == n3
+
+#PT
+node1 = Node(1)
+node2 = Node(2)
+node3 = Node(3)
+node4 = Node(4)
+node5 = Node(5)
+node1.successor = node2
+node2.successor = node3
+node3.successor = node4
+node4.successor = node5
+reversed_head = reverse_linked_list(node1)
+assert reversed_head.value == 5
+
+#PT
+node4 = Node(4, None)
+node3 = Node(3, node4)
+node2 = Node(2, node3)
+node1 = Node(1, node2)
+new_head = reverse_linked_list(node1)
+assert new_head.value == 4
+
+#PT
+node1 = Node(value=1)
+node2 = Node(value=2)
+node3 = Node(value=3)
+node4 = Node(value=4)
+node1.successor = node2
+node2.successor = node3
+node3.successor = node4
+new_head = reverse_linked_list(node1)
+assert new_head.value == 4
+
+#PT
+node1 = Node(1)
+node2 = Node(2)
+node3 = Node(3)
+node1.successor = node2
+node2.successor = node3
+assert reverse_linked_list(node1) == node3
+
+#FF
+node = Node()
+result = reverse_linked_list(node)
+assert result is None
+
+#PT
+node1 = Node(1)
+node2 = Node(2)
+node3 = Node(3)
+node1.successor = node2
+node2.successor = node3
+assert reverse_linked_list(node1) == node3
+
+#PT
+node1 = Node(1)
+node2 = Node(2)
+node3 = Node(3)
+node1.successor = node2
+node2.successor = node3
+reversed_list = reverse_linked_list(node1)
+assert reversed_list == node3
+
+#PT
+node1 = Node(1)
+node2 = Node(2)
+node3 = Node(3)
+node1.successor = node2
+node2.successor = node3
+new_head = reverse_linked_list(node1)
+assert new_head == node3

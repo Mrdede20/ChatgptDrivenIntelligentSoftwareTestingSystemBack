@@ -1,0 +1,9 @@
+The given code is for solving a problem related to valleys and peaks in a series of numbers.
+
+The input contains information about the series of numbers. The length of the series is given in the first line and the subsequent lines contain the integers that represent the series.
+
+The function solve() computes whether there exists only one valley in the series that separates it into two parts with strictly increasing and strictly decreasing numbers respectively. If such a valley exists, then the function returns True, otherwise, it returns False.
+
+The code uses a list to store the position of valleys in the series. It checks if the current index is part of a pre-existing valley or is the start of a new valley. If it is the start of a new valley, then it checks if it satisfies the requirements of being a winning valley. If a winning valley is found, then the function returns True. If there are more than one winning valleys, then the function returns False.
+
+Finally, the code prints 'YES' if solve() returns True, otherwise, it prints 'NO'. This process is repeated for the given number of test cases.

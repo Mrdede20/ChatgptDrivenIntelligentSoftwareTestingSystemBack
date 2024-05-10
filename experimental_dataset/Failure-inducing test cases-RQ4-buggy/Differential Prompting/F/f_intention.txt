@@ -1,0 +1,14 @@
+correct: https://codeforces.com/contest/1760/submission/187848133
+bug: https://codeforces.com/contest/1760/submission/187848067
+
+This code appears to be solving a programming problem related to coins and selection. Here is a brief overview of what the code is doing:
+
+The first line of the code takes an integer input to determine the number of test cases that follow.
+For each test case, the code takes three integer inputs: n, c, and d. These values represent the number of coins available, the cost of the item to purchase, and the maximum number of coins that can be selected for purchase, respectively. The code then takes a list of integers A that represents the values of each available coin.
+The list A is then sorted in descending order and stored back into A.
+If the sum of the first d elements of A is greater than or equal to c, the code prints "Infinity" and moves on to the next test case.
+If the product of the first element of A and d is less than c, the code prints "Impossible" and moves on to the next test case.
+Otherwise, the code initializes the variables l, r, and mid. These variables are used to perform a binary search for the maximum number of coins that can be selected for purchase.
+Within the while loop, the code calculates the sum of the first (mid + 1) elements of A, and then calculates the total number of coins that can be selected for purchase using the formula d // (mid + 1) and d % (mid + 1). This formula calculates the maximum number of groups of (mid + 1) coins that can be selected and the remaining number of coins that cannot be selected in a complete group. The code then calculates the total value of the selected coins using these values.
+If the total value of the selected coins is greater than or equal to c, the code moves the lower bound of the binary search to mid. Otherwise, the code moves the upper bound of the binary search to mid - 1.
+The while loop continues until the lower bound is greater than or equal to the upper bound. The code then prints the value of (mid - 1) as the maximum number of coins that can be selected for purchase.

@@ -1,0 +1,1 @@
+Yes, for example the input [3,1,2] will produce different outputs for the two implementations. The first implementation will return 2, while the second implementation will return 3.

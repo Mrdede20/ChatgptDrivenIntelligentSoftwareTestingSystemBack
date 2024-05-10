@@ -1,0 +1,9 @@
+The `kheapsort` function is a sorting algorithm that takes an almost-sorted array as input and returns a generator that yields the elements in sorted order. It sorts the array in `O(n log k)` time, where `n` is the length of the array and `k` is the maximum allowed displacement of an element from its final sorted position. The algorithm is based on the `heapq` module in Python which provides an efficient implementation of the heap data structure. 
+
+The `heap` list is initially populated with the first `k` elements of the input array `arr`. It is then converted into a heap using the `heapify` function from the `heapq` module. 
+
+For each element `x` in `arr`, the function yields the result of `heappushpop(heap, x)`, which pushes the element onto the heap and returns the smallest element from the heap. 
+
+Finally, the remaining elements in the heap are yielded using the `heappop` function until the heap is empty.
+
+This algorithm is useful when we have a partially sorted array and want to sort it efficiently, without spending more computational resources needed for sorting an unsorted array.

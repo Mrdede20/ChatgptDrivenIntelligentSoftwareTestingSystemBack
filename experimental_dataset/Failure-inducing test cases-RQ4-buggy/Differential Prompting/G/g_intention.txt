@@ -1,0 +1,14 @@
+correct: https://codeforces.com/contest/1760/submission/188274049
+bug: https://codeforces.com/contest/1760/submission/188273201
+
+The code reads input for a number of test cases t and for each test case, it reads three integers n, a, and b from the input. The integers a and b represent two nodes in a tree of n nodes.
+
+Then, the code reads n-1 lines of input, each representing an edge in the tree. Each line contains three integers u, v, and w, where u and v are the indices of the nodes connected by the edge, and w is the weight of the edge.
+
+After reading the input, the code performs two breadth-first searches (BFS) on the tree starting from the nodes a and b. During the BFS, the code computes the XOR value of the weights of the edges along the path from the starting node to each visited node.
+
+Finally, the code checks if there exist at least two nodes that can be reached from both a and b such that the XOR of the weights of the edges along the paths from a and b to these nodes is different. The code also checks if there exist more than two nodes that can be reached from b such that the XOR of the weights of the edges along the paths from b to these nodes is zero.
+
+If either of these conditions is true, the code prints "YES". Otherwise, it prints "NO".
+
+The code also has some debugging statements that print the input and intermediate data for the 53rd test case.

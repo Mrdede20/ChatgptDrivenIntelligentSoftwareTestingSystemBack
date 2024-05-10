@@ -1,0 +1,6 @@
+Test Case:
+Input: to_base(10, 0)
+Expected Output: TypeError: unsupported operand type(s) for //: 'int' and 'int'
+
+Explanation:
+The program takes two arguments - num and b, where num is the decimal number to be converted to base b. In the test case above, we have given 0 as the base, which is not a valid input since the base should be greater than 0. When the program tries to execute the line num = num // b, it will result in a TypeError since we are trying to perform a division operation between an integer and another integer value 0. Thus, the program will fail to execute correctly and result in a test failure.

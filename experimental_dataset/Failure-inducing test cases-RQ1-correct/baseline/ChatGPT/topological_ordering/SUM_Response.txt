@@ -1,0 +1,114 @@
+#PT
+node1 = Node(value=1)
+node2 = Node(value=2)
+node3 = Node(value=3)
+node4 = Node(value=4)
+node5 = Node(value=5)
+node1.outgoing_nodes = [node2, node3]
+node2.outgoing_nodes = [node4]
+node3.outgoing_nodes = [node4, node5]
+node4.outgoing_nodes = [node5]
+node2.incoming_nodes = [node1]
+node3.incoming_nodes = [node1]
+node4.incoming_nodes = [node2, node3]
+node5.incoming_nodes = [node3, node4]
+sorted_nodes = topological_ordering([node1, node2, node3, node4, node5])
+expected_output = [node1, node2, node3, node4, node5]
+assert sorted_nodes == expected_output, "Test Case Failed: Output doesn't match expected result"
+
+#PT
+node = Node(value=1)
+ordered = topological_ordering([node])
+assert ordered == [node], f"Expected [node], but got {ordered}"
+
+#PT
+node1 = Node("A")
+node2 = Node("B")
+node3 = Node("C")
+node4 = Node("D")
+node5 = Node("E")
+node6 = Node("F")
+node1.successors = [node2, node3]
+node2.successors = [node4]
+node3.successors = [node4, node5]
+node4.successors = [node6]
+node2.incoming_nodes = [node1]
+node3.incoming_nodes = [node1]
+node4.incoming_nodes = [node2, node3]
+node5.incoming_nodes = [node3]
+node6.incoming_nodes = [node4]
+node1.outgoing_nodes = [node2, node3]
+node2.outgoing_nodes = [node4]
+node3.outgoing_nodes = [node4, node5]
+node4.outgoing_nodes = [node6]
+result = topological_ordering([node1, node2, node3, node4, node5, node6])
+assert result == [node1, node2, node3, node4, node5, node6] # Expected result: A -> B -> C -> D -> E -> F
+
+#FF
+node_a = Node(value="A")
+node_b = Node(value="B")
+node_c = Node(value="C")
+node_d = Node(value="D")
+node_a.outgoing_nodes.append(node_b)
+node_a.outgoing_nodes.append(node_c)
+node_b.incoming_nodes.append(node_a)
+node_c.incoming_nodes.append(node_a)
+node_c.outgoing_nodes.append(node_d)
+node_d.incoming_nodes.append(node_c)
+assert topological_ordering([node_a, node_b, node_c, node_d]) == [node_a, node_b, node_c, node_d]
+
+#FF
+node1 = Node(value=1)
+node2 = Node(value=2)
+node3 = Node(value=3)
+node4 = Node(value=4)
+node1.outgoing_nodes = [node2, node3]
+node2.incoming_nodes = [node1]
+node2.outgoing_nodes = [node4]
+node3.incoming_nodes = [node1]
+node3.outgoing_nodes = [node4]
+node4.incoming_nodes = [node2, node3]
+assert topological_ordering([node1, node2, node3, node4]) == [node1, node2, node3, node4], "Test case failed"
+
+#FF
+node1 = Node(value='1')
+node2 = Node(value='2')
+node3 = Node(value='3')
+node4 = Node(value='4')
+node1.successors = [node2, node3]
+node2.successors = [node4]
+node3.successors = [node4]
+node4.predecessors = [node2, node3]
+ordered_nodes = topological_ordering([node1, node2, node3, node4])
+assert ordered_nodes == [node1, node3, node2, node4]
+
+#FF
+node1 = Node(value=1, successor=node2)
+node2 = Node(value=2, successors=[node3], incoming_nodes=[node1])
+node3 = Node(value=3, predecessors=[node2])
+assert topological_ordering([node1, node2, node3]) == [node1, node2, node3]
+
+#FF
+nodes = []
+for i in range(5):
+    nodes.append(Node(value=i))
+nodes[1].incoming_nodes = [nodes[0]]
+nodes[1].predecessors = [nodes[0]]
+nodes[0].outgoing_nodes = [nodes[1]]
+nodes[0].successors = [nodes[1]]
+nodes[2].incoming_nodes = [nodes[0], nodes[1]]
+nodes[2].predecessors = [nodes[0], nodes[1]]
+nodes[0].outgoing_nodes.append(nodes[2])
+nodes[1].outgoing_nodes.append(nodes[2])
+nodes[0].successors.append(nodes[2])
+nodes[1].successors.append(nodes[2])
+nodes[3].incoming_nodes = [nodes[2]]
+nodes[3].predecessors = [nodes[2]]
+nodes[2].outgoing_nodes = [nodes[3]]
+nodes[2].successors = [nodes[3]]
+nodes[4].incoming_nodes = [nodes[3]]
+nodes[4].predecessors = [nodes[3]]
+nodes[3].outgoing_nodes = [nodes[4]]
+nodes[3].successors = [nodes[4]]
+ordered_nodes = topological_ordering(nodes)
+assert ordered_nodes == [nodes[0], nodes[1], nodes[2], nodes[3], nodes[4]], "Test failed: Incorrect topological ordering"

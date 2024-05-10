@@ -1,0 +1,23 @@
+Test case: 
+
+Input: max = 1
+
+Expected output: []
+
+Actual output: []
+
+Bug/Issue: The program does not check if the input value of max is less than 2. The current implementation will return an empty list for max = 1, but mathematically there are no prime numbers less than 2. 
+
+Fix: Add a condition to check if max is less than 2 and return an appropriate error message. 
+
+Revised code: 
+
+def sieve(max):
+    if max < 2:
+        return "Invalid input"
+    primes = []
+    for n in range(2, max + 1):
+        if any(n % p > 0 for p in primes):
+            primes.append(n)
+    return primes
+

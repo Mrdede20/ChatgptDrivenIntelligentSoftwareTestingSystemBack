@@ -1,0 +1,15 @@
+Test Case:
+
+arr = [4, 2, 8, 1, 9, 7]
+
+Expected Output:
+
+[1, 2, 4, 7, 8, 9] (Sorted array)
+
+Actual Output:
+
+[1, 2, 4, 7, 8]
+
+Explanation:
+
+The code is missing the elements greater than the pivot element in the recursive call. Therefore, the element "9" is missing from the sorted array result, leading to a bug in the program.

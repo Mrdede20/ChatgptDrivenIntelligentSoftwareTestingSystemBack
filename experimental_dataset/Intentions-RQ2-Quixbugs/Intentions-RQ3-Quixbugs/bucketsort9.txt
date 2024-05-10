@@ -1,0 +1,5 @@
+The code defines a function `bucketsort` that implements the bucket sort algorithm. Bucket sort is a sorting algorithm that works on a list of small integers. It initially creates a list of empty buckets, indexed by the integers that will appear in the input list. Then for each element of the input list, it increments the count in the corresponding bucket. Finally, it concatenates the lists in the buckets into the sorted output list.
+
+The function takes two arguments: `arr` which is the input list to be sorted and `k` which is an upper bound of the size of the integers in the list `arr`. The function first initializes a counts list of size k with zeros. Then it loops through each element of `arr` and increments the corresponding location in the count list by one. Next, it creates the sorted output list by looping through the count list and concatenating a list of i's to the sorted_arr list, where i represents the index of the count list.
+
+Lastly, the function returns the sorted_arr list.  The function assumes that all elements in `arr` are integers and are smaller than k.

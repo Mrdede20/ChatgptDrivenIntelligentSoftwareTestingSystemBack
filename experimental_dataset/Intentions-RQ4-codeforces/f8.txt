@@ -1,0 +1,9 @@
+This code seems to solve a problem where we have given an array A of size n, and coins c and we can select d maximum elements we have to select a subset of A that contains d maximum elements. We can select elements from A repeatedly to form a new array B of length d.
+
+The goal is to select such array B of length d such that the sum of the elements in the array B is the maximum and we can get the sum of the array B greater than or equals to c using the minimum number of selections.
+
+This code uses binary search to find the maximum value of the number of elements to be repeated to generate the array B. If the sum of the top d elements of A is greater than or equal to c, then we can select all the top d elements of A in one go and return infinity as an output.
+
+If the sum of the highest-value element of A multiplied by d is less than c, then it's impossible to make such B, so we return impossible.
+
+Otherwise, we perform binary search to find the maximum number of times we need to repeat the top x elements (where x is given by mid) to get the required sum and select the elements optimally.

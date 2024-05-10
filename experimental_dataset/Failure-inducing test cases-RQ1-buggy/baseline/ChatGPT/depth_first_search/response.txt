@@ -1,0 +1,85 @@
+#PT
+node1 = Node(1)
+assert depth_first_search(node1, node1) == True
+
+#PT
+node1 = Node(1)
+node2 = Node(2)
+assert depth_first_search(node1, node2) == False
+
+#PT
+node1 = Node(1)
+node2 = Node(2)
+node3 = Node(3)
+node4 = Node(4)
+node1.successors = [node2]
+node2.successors = [node3]
+node3.successors = [node4]
+node4.successors = [node1]
+assert depth_first_search(node1, node3) == True
+
+#PT
+node1 = Node(1)
+node2 = Node(2)
+node3 = Node(3)
+node4 = Node(4)
+node5 = Node(5)
+node6 = Node(6)
+node1.successors = [node2, node3]
+node2.successors = [node4]
+node3.successors = [node4]
+node5.successors = [node6]
+assert depth_first_search(node1, node5) == False
+
+#PT
+node1 = Node(1)
+node2 = Node(2)
+node1.successor = node2
+node1.successors = [node2]
+assert depth_first_search(node1, node2) == True
+
+#PT
+node1 = Node(1)
+node2 = Node(2)
+node3 = Node(3)
+node4 = Node(4)
+node1.successors = [node2]
+node2.successors = [node3]
+node3.successors = [node4]
+node4.predecessors = [node3, node2, node1]
+assert depth_first_search(node1, node4) == True
+
+#PT
+node1 = Node(1)
+node2 = Node(2)
+node3 = Node(3)
+node4 = Node(4)
+node5 = Node(5)
+node6 = Node(6)
+node1.successors = [node2, node3]
+node2.successors = [node4]
+node3.successors = [node4]
+node5.outgoing_nodes = [node6]
+assert depth_first_search(node1, node5) == False
+
+#PT
+node1 = Node(1)
+node2 = Node(2)
+node3 = Node(3)
+node4 = Node(4)
+node1.successors = [node2]
+node2.successors = [node3]
+node3.successors = [node4]
+node4.incoming_nodes = [node3, node2, node1]
+assert depth_first_search(node1, node4) == True
+
+#PT
+node1 = Node(1)
+node2 = Node(2)
+node3 = Node(1)
+node1.successors = [node2]
+node2.successors = [node3]
+assert depth_first_search(node1, node3) == True
+
+#IT
+assert depth_first_search(None, Node(1)) == False

@@ -1,0 +1,10 @@
+No, there is no input that makes those two programs produce different output. Both functions compute the greatest common divisor of two numbers using the Euclidean Algorithm, but the first one is implemented using recursion, while the second one uses a while loop. However, both approaches will always produce the same result for the same inputs. Here is an example test case you can use:
+
+```
+a = 54
+b = 24
+print(gcd_recursive(a, b))
+print(gcd_iterative(a, b))
+```
+
+The output for both functions should be 6.

@@ -1,0 +1,5 @@
+The intention of the given Python code is to calculate the Levenshtein distance between two strings. The Levenshtein distance is calculated as the minimum number of single-character edits (removal, addition, or substitution) required to transform the source string into the target string. 
+
+The function takes two input parameters - "source" and "target" which represent the two strings for which we want to calculate the Levenshtein distance. 
+
+The code checks if either of the input string is empty. If yes, it returns the length of the non-empty string. If both strings are non-empty, it compares the first character of both strings. If the characters are same, it recursively calls the function by removing the first character from both the strings. If the first characters are not the same, the function recursively calls itself three times by removing the first character from source, removing the first character from target, and by replacing the first character of source with the first character of target. The function returns the minimum of these three options plus one to account for the change made.

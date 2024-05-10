@@ -1,0 +1,35 @@
+#FF
+result = subsequences(0, 3, 2)
+assert result == [[0, 1], [0, 2], [0, 3], [1, 2], [1, 3], [2, 3]], "Test Case 1 Failed"
+
+#FF
+assert subsequences(1, 3, 2) == [[1, 2], [1, 3], [2, 3]]
+
+#FF
+a = 1
+b = 5
+k = 2
+expected_result = [[1,2], [1,3], [1,4], [1,5], [2,3], [2,4], [2,5], [3,4], [3,5], [4,5]]
+assert subsequences(a, b, k) == expected_result
+
+#FF
+assert subsequences(1, 3, 2) == [[1, 2], [1, 3], [2, 3]]
+
+#FF
+assert subsequences(1, 3, 2) == [[1, 2], [1, 3], [2, 3]]
+
+#PT
+sequence = subsequences(1, 5, 2)
+assert sequence == [[1, 2], [1, 3], [1, 4], [2, 3], [2, 4], [3, 4]], "Test Case 1 Failed"
+
+#FF
+assert subsequences(1, 3, 2) == [[1, 2], [1, 3], [2, 3]]
+
+#FF
+assert subsequences(0, 3, 2) == [[0, 1], [0, 2], [0, 3], [1, 2], [1, 3], [2, 3]]
+
+#FF
+assert subsequences(1, 3, 2) == [[1, 2], [1, 3], [2, 3]]
+
+#FF
+assert subsequences(1, 4, 2) == [[1, 2], [1, 3], [1, 4], [2, 3], [2, 4], [3, 4]]

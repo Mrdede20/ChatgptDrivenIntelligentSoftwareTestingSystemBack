@@ -1,0 +1,12 @@
+Test case:
+text = "Hello world! This is a long text and should be wrapped into multiple lines when passed to the wrap function."
+cols = 10
+
+Expected output:
+["Hello", "world! This", "is a long", "text and", "should be", "wrapped", "into", "multiple", "lines when", "passed to", "the wrap", "function."]
+
+Actual output:
+["Hello", "world! T", "his is a", "long text", "and", "should", "be wrapped", "into multiple", "lines when", "passed to", "the wrap function."]
+
+Explanation:
+The function does not correctly wrap the text when the last word in a line length is greater than the given number of columns. In the actual output, the word "This" gets split incorrectly and "long text" should have been on the same line. This test case triggers this bug and results in test failure.

@@ -1,0 +1,8 @@
+This code takes input from the user and performs some calculations based on a given criteria. Here's what it does:
+
+1. The code takes input "n" (number of test cases).
+2. For each test case, it takes input "c" (the total amount of coins required), "d" (the number of selections allowed), and "A" (a list of costs for each item).
+3. It then sorts the list A in descending order, since we need to select the most expensive items first.
+4. If the sum of costs of the top "d" items in list A is greater than or equal to "c", it prints "Infinity" since we can select those top items any number of times to reach the required sum.
+5. If the cost of the most expensive item in list A multiplied by "d" is less than "c", it's impossible to select enough items to reach the required sum, so it prints "Impossible".
+6. Otherwise, it uses binary search to find the maximum number of items we can select to reach the required "c" amount of coins. It starts by selecting all items and then keeps dividing items into groups until it finds the maximum number of selections that we can make. After finding that number, it prints the result as "mid-1".

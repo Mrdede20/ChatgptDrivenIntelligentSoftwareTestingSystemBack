@@ -1,0 +1,6 @@
+Yes, there is. One such example could be `n = 4`. 
+
+For the first program, `get_factors(4)` would return `[2, 2]`.
+For the second and third programs, `get_factors(4)` would return `[2, 2]`. 
+
+However, the second program would also return `[2]` for `get_factors(2)` while the other two programs would leave an empty list for this input.

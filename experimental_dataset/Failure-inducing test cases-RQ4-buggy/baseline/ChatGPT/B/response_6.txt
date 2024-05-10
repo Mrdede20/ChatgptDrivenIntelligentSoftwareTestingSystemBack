@@ -1,0 +1,25 @@
+response@ChatGPT:
+Test case:
+
+Input:
+3
+98
+abc
+101
+def
+104
+ghi
+
+Expected output:
+2
+5
+8
+
+Actual output:
+1
+5
+8
+
+Explanation:
+The actual output of the first test case is incorrect. It should be 2 because the character with the highest ASCII value in the string "abc" is 'c', which has an ASCII value of 99. Therefore, a should take the value of 99 and the output should be 99 - 96 = 3. However, the program output 1 instead, indicating a bug in the code that needs to be fixed.
+

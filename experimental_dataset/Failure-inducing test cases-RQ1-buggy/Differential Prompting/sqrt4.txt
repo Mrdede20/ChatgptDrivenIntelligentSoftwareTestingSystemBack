@@ -1,0 +1,12 @@
+Yes, there are inputs that can make the two programs have different outputs. 
+
+Here's a test case:
+
+```
+x = 2
+epsilon = 0.0001
+```
+
+With this test case, the first implementation will return `1.4142156862745097`, while the second implementation will return `1.4142135623746899`. 
+
+The difference is caused by the fact that the first implementation compares the absolute difference between `x` and `approx ** 2`, while the second implementation compares the absolute difference between `x` and `approx * approx`, which is mathematically equivalent, but may result in different floating-point values due to rounding errors.

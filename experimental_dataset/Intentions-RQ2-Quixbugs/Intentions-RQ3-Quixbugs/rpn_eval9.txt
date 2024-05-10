@@ -1,0 +1,9 @@
+The `rpn_eval` function evaluates expressions given in Reverse Polish Notation (RPN). RPN is a way of representing arithmetic expressions in which each operator follows its operands. For example, `3 + 5` would be represented as `3 5 +` in RPN. 
+
+The function defines an inner function `op` that takes an operator symbol and two operands and performs the corresponding operation on them using a dictionary of lambda functions. 
+
+The function then initializes an empty list called `stack` and iterates through each token in the list of input `tokens`. If a token is a float, it is appended to the `stack`. If it is an operator symbol, the `op` function is called with the two most recent float values from the `stack`, and the result is appended back onto the `stack`.
+
+Finally, the remaining value in the `stack` is returned as the result of the evaluation. 
+
+The intention of the function is to provide a simple and efficient implementation of RPN evaluation for evaluating arithmetic expressions provided in RPN format.

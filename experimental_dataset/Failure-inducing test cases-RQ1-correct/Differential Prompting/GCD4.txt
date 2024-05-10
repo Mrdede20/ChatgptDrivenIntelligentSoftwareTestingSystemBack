@@ -1,0 +1,1 @@
+No, the two programs will produce the same output for any input since they are both implementing the same recursive algorithm for computing the gcd of two numbers. The only difference between the two programs is in their formatting and the addition of a main method for running the second program independently.

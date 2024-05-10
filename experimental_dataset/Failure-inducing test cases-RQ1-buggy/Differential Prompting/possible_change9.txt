@@ -1,0 +1,8 @@
+Yes, there is an input that makes the programs have different output. When the coins list contains negative values, the programs will have different behaviors. Only the last implementation will handle this case properly by returning 0 for any negative coin value. Here's an example test case:
+
+```
+coins = [1, 2, -3, 5]
+total = 10
+```
+
+This test case will return 10 for the last implementation, while the other implementations will result in an infinite loop or a maximum recursion depth exceeded error due to attempting to subtract a negative coin value from the total.

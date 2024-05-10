@@ -1,0 +1,10 @@
+Yes, there can be cases where the two programs will have different outputs for the same input. 
+
+For example, if the source string is "kitten" and the target string is "sitting", the first program will return 3 while the second program will return 2. 
+
+You can test this using the following code:
+
+```
+print(levenshtein("kitten", "sitting"))  # Outputs 3 for the first function
+print(levenshtein("kitten", "sitting"))  # Outputs 2 for the second function
+```

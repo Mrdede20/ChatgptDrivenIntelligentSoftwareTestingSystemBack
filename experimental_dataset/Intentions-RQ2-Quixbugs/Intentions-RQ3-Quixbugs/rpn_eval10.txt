@@ -1,0 +1,5 @@
+The intention of the following code is to evaluate the mathematical expression provided in Reverse Polish Notation (RPN) format. The RPN format represents mathematical expressions in postfix notation. Instead of representing the operators between the two operands, they are placed after the operands. 
+
+The function `rpn_eval()` accepts a list of values and operators which are encoded as float and string data types, respectively. The function loops through each token in the list and performs the mathematical operation on the numbers based on the operator used. The operation is performed using the function `op()` that maps each operator to a lambda function for performing the correct arithmetic operation. 
+
+Finally, the evaluated result is returned as a single value. The code also includes a precondition to ensure that the input tokens contain floats and valid arithmetic operators only.

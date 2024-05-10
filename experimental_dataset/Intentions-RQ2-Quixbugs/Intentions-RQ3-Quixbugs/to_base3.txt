@@ -1,0 +1,11 @@
+The code defines a function `to_base` that takes two parameters `num` and `b`. The function converts the integer `num` from base 10 to base `b`. It does so using the following steps:
+
+1. Initialize an empty string `result`.
+2. Create a string of characters `alphabet` that includes digits and uppercase letters, which will be used as placeholders for each digit in the new base.
+3. While `num` is greater than 0, repeatedly do the following steps:
+   * Take the remainder of `num` divided by `b`, call it `i`.
+   * Divide `num` by `b`, discard the remainder, and store the quotient back into `num`.
+   * Lookup the character in the `alphabet` string at the index `i`, and concatenate it onto the beginning of `result`.
+4. After the while loop, return `result` as a string.
+
+The code includes a detailed docstring that specifies the expected input and output, as well as any preconditions that must be met. It also provides an example call to the function.

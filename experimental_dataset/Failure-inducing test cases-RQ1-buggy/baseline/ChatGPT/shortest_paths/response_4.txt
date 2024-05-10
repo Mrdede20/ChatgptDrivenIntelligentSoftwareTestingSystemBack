@@ -1,0 +1,14 @@
+Test case:
+
+Input:
+source = 'A'
+weight_by_edge = {('A', 'B'): 2, ('A', 'C'): 4, ('B', 'D'): 1, ('C', 'D'): 3}
+
+Expected Output:
+{'A': 0, 'B': 2, 'C': 4, 'D': 3}
+
+Actual Output:
+{'A': 0, 'B': 2, 'C': 4, 'D': inf}
+
+Explanation:
+The program should calculate the shortest path from the source node 'A' to all other nodes. However, the actual output for node 'D' is 'inf', which indicates that there is no path from 'A' to 'D' in the given graph. This is a bug in the program, as there is a path from 'A' to 'D' with total weight of 3 (A -> B -> D). The bug can be triggered by providing the above input to the program.

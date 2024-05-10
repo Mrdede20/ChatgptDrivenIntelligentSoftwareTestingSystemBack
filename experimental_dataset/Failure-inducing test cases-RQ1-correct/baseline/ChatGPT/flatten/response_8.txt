@@ -1,0 +1,27 @@
+response@ChatGPT:
+
+
+Yes, there is a test case which can trigger a bug in the program below.
+For example, consider the input `arr = [1, [2, [3]]]` 
+When we apply the `flatten()` function to this input, the output should be `[1, 2, 3]`
+However, due to the bug in the program, the output of this input will be `[1, 2, [3]]` because the program does not properly flatten nested lists beyond the first level.
+
+request@user:
+Give us such test case. Use assert.
+
+response@ChatGPT:
+# Test Case 1
+assert list(flatten([1, 2, [3, 4], 5])) == [1, 2, 3, 4, 5]
+
+# Test Case 2
+assert list(flatten([1, [2, [3, [4, 5]]]])) == [1, 2, 3, 4, 5]
+
+# Test Case 3
+assert list(flatten([])) == []
+
+# Test Case 4
+assert list(flatten([[1, 2, 3], [], [4, 5, 6]])) == [1, 2, 3, 4, 5, 6]
+
+# Test Case 5
+assert list(flatten([[[[[[1]]]]]])) == [1]
+

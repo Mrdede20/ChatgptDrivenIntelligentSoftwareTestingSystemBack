@@ -1,0 +1,26 @@
+Yes, there could be an input that makes the two programs have different outputs.
+
+Test input:
+
+1
+3 1 3
+1 2 1
+2 3 2
+
+Expected output:
+
+YES
+
+Explanation:
+
+Path from node 1 to node 3: 1 -> 2 -> 3
+
+XOR sum of path: 1 ^ 2 = 3
+
+Path from node 3 to node 1: 3 -> 2 -> 1
+
+XOR sum of path: 2 ^ 1 = 3
+
+Both paths have the same XOR sum, so the expected output is "YES".
+
+However, the second program may output "NO" for this input because it only checks if there exists two XOR sums that are the same, and doesn't take into account the fact that the two XOR sums belong to the same path.

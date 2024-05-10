@@ -1,0 +1,7 @@
+The intention of the code is to implement a function called `get_factors(n)` that takes an integer `n` and returns a list of prime factors of `n`. 
+
+The code uses a recursive approach to find the prime factors of `n`. First, it checks if `n` is equal to one, in which case it returns an empty list. Then, it uses a for loop to iterate from 2 to the square root of `n` plus one, checking for each value of `i` whether `n` is divisible by `i`. If `n % i` is zero, it means that `i` is a prime factor of `n`, and the function returns a list that contains `i` concatenated with a recursive call to `get_factors(n // i)`. 
+
+If the for loop completes without finding a prime factor, the function returns an empty list. 
+
+The code includes a set of preconditions and examples that specify the inputs and expected outputs of the function.

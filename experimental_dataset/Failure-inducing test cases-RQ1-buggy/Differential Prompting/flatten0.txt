@@ -1,0 +1,1 @@
+No, the two programs are exactly the same. They both define a generator function named "flatten" which recursively flattens a list. Both have the same implementation, and will produce the same output for any given input.

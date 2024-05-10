@@ -1,0 +1,97 @@
+#PT
+startnode = Node(value=1)
+assert depth_first_search(startnode, startnode)
+
+#PT
+A = Node(value='A')
+B = Node(value='B')
+C = Node(value='C')
+D = Node(value='D')
+E = Node(value='E')
+F = Node(value='F')
+A.successors = [B, C]
+B.successors = [D, E]
+C.successors = [E, F]
+D.successors = [E]
+E.successors = [F]
+assert depth_first_search(A, F) == True
+
+#PT
+node1 = Node(value=1)
+node2 = Node(value=2)
+node3 = Node(value=3)
+node4 = Node(value=4)
+node1.successors = [node2]
+node2.successors = [node3]
+node3.successors = [node4]
+assert depth_first_search(node1, node4) == True
+
+#PT
+node1 = Node(1)
+node2 = Node(2)
+node3 = Node(3)
+node4 = Node(4)
+node1.successors = [node2, node3]
+node2.successors = [node4]
+node4.successors = [node3]
+assert depth_first_search(node1, node4) == True
+
+#PT
+node1 = Node()
+node2 = Node()
+node3 = Node()
+node4 = Node()
+node1.successors = [node2]
+node2.successors = [node3, node4]
+path1 = depth_first_search(node1, node4) # Valid path
+path2 = depth_first_search(node2, node1) # Invalid path
+assert path1 == True
+
+#PT
+node1 = Node(value=1)
+node2 = Node(value=2)
+node3 = Node(value=3)
+node4 = Node(value=4)
+node5 = Node(value=5)
+node1.successors.append(node2)
+node2.successors.append(node3)
+node2.successors.append(node4)
+node4.successors.append(node5)
+assert depth_first_search(node1, node5) == True
+
+#PT
+node1 = Node(value=1)
+node2 = Node(value=2)
+node3 = Node(value=3)
+node4 = Node(value=4)
+node5 = Node(value=5)
+node1.successors.append(node2)
+node2.successors.append(node3)
+node2.successors.append(node4)
+node4.successors.append(node5)
+assert depth_first_search(node1, node5) == True
+
+#FF
+node1 = Node(value=1)
+node2 = Node(value=2)
+node3 = Node(value=3)
+node4 = Node(value=4)
+node5 = Node(value=5)
+node6 = Node(value=6)
+node1.successors = [node2, node3]
+node2.successors = [node4]
+node3.successors = [node5]
+node5.successors = [node6]
+assert depth_first_search(node1, node6) == False
+
+#PT
+a = Node(value='A')
+b = Node(value='B')
+c = Node(value='C')
+d = Node(value='D')
+e = Node(value='E')
+a.successors = [b, c]
+b.successors = [d]
+c.successors = [d, e]
+d.successors = [e]
+assert depth_first_search(a, e) == True

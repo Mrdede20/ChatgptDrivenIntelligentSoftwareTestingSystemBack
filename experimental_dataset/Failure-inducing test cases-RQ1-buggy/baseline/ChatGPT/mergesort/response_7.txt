@@ -1,0 +1,11 @@
+Test case:
+
+arr = [4, 3, 2, 1]
+
+Expected output:
+
+[1, 2, 3, 4]
+
+Explanation:
+
+The input array is not sorted, and the expected output is the sorted array. The mergesort algorithm should sort the array in ascending order. However, in the current implementation of the algorithm, the merge function compares elements using the less than or equal to operator (<=). Therefore, if two elements in the array are equal, the merge function will always append the left element first. This leads to an incorrect order in the sorted array when there are duplicates in the input array. In the test case above, the input array contains duplicates, and the algorithm fails to sort it correctly. The expected output is [1, 2, 3, 4], but the actual output will be [1, 2, 3, 4, 4].

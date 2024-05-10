@@ -1,0 +1,26 @@
+Yes, there is an input that makes the two programs have different output. The input is as follows:
+
+```
+List<WeightedEdge> edges = new ArrayList<>();
+edges.add(new WeightedEdge(0, 1, 2));
+edges.add(new WeightedEdge(0, 2, 3));
+edges.add(new WeightedEdge(1, 2, 1));
+edges.add(new WeightedEdge(1, 3, 1));
+edges.add(new WeightedEdge(2, 3, 2));
+```
+
+The output of the two programs for this input is as follows:
+
+```
+MINIMUM_SPANNING_TREE:
+0 - 1 (2)
+1 - 2 (1)
+1 - 3 (1)
+
+KruskalsAlgorithm:
+0 - 1 (2)
+1 - 2 (1)
+2 - 3 (2)
+``` 
+
+As you can see, the two programs produce different minimum spanning trees for this input.

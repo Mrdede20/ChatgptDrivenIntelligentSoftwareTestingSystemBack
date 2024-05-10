@@ -1,0 +1,1 @@
+No, both programs are solving the same problem using dynamic programming and have the same logic. The only difference is the data structures used to implement the memoization table. The first program uses a defaultdict while the second program uses a 2D list, but they ultimately accomplish the same goal.

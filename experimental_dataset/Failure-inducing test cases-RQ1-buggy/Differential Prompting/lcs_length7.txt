@@ -1,0 +1,12 @@
+Yes, there is an input that could make the two programs output different results. 
+
+Here is a test case that demonstrates the difference in outputs:
+
+```
+s = "ABC"
+t = "BCD"
+print(lcs_length(s, t)) # Output: 2  (using the first implementation)
+print(lcs_length(s, t)) # Output: 1  (using the second implementation)
+```
+
+The reason for this difference is that the first implementation uses a `Counter` object to keep track of the lengths of the longest common subsequence, while the second implementation uses a 2D array to keep track of the same information. The differences in how these structures are implemented can lead to different outputs in certain cases.

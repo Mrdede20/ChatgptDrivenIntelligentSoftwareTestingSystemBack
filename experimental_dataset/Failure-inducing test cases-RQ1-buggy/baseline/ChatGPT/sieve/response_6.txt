@@ -1,0 +1,26 @@
+Test case:
+
+sieve(0)
+
+Expected result:
+
+An empty list should be returned as there are no prime numbers in the range (2,0+1). 
+
+Actual result:
+
+The function enters an infinite loop and the program crashes. This is because the range for loop starts from 2 and since the input is 0, the range is empty resulting in the any() function being called with an empty iterable. The behavior of any() function when called with an empty iterable is to return False, which in turn causes the function to append 2 to the primes list and enter into an infinite loop.
+
+Bug: The function does not handle the case when the input maximum value is less than 2.
+
+Solution: Add a condition to handle the case when the input max value is less than 2 and return an empty list. 
+
+Modified program:
+
+def sieve(max):
+    primes = []
+    if max < 2:
+        return primes
+    for n in range(2, max + 1):
+        if any(n % p > 0 for p in primes):
+            primes.append(n)
+    return primes

@@ -1,0 +1,41 @@
+Test Case: 
+
+Test Case 1: When the value of x is negative.
+
+Input: sqrt(-5,0.00001)
+Expected Output: Raises a ValueError.
+
+Test Case 2: When the value of epsilon is negative.
+
+Input: sqrt(25,-0.00001)
+Expected Output: Raises a ValueError.
+
+Test Case 3: When the value of epsilon is greater than the value of x.
+
+Input: sqrt(4, 10)
+Expected Output: Returns 2 as output, which is incorrect.
+
+Test Case 4: When the value of x is zero.
+
+Input: sqrt(0, 0.0001)
+Expected Output: Returns 0 as output, which is correct.
+
+Test Case 5: When the value of x is large.
+
+Input: sqrt(1000000, 0.00001)
+Expected Output: Returns 1000.00003 as output, which is correct.
+
+Test Case 6: When the value of epsilon is small.
+
+Input: sqrt(9, 0.00000000000001)
+Expected Output: Returns 3.0 as output, which is correct.
+
+Test Case 7: When the value of x is a decimal.
+
+Input: sqrt(2.5, 0.001)
+Expected Output: Returns 1.581 as output, which is correct.
+
+Test Case 8: When the value of x is a non-numeric string.
+
+Input: sqrt('abcd', 0.0001)
+Expected Output: Raises a TypeError.

@@ -1,0 +1,37 @@
+#PT
+assert quicksort([]) == []
+
+#PT
+arr = [3, 5, 1, 8, 2]
+sorted_arr = [1, 2, 3, 5, 8]
+assert quicksort(arr) == sorted_arr
+
+#PT
+assert quicksort([]) == []
+
+#PT
+assert quicksort([]) == []
+
+#PT
+assert quicksort([]) == []
+
+#PT
+assert quicksort([]) == []
+
+#PT
+assert quicksort([]) == []
+
+#PT
+arr = [4, 2, 8, 1, 5]
+expected_result = [1, 2, 4, 5, 8]
+assert quicksort(arr) == expected_result, f"Expected: {expected_result}, but got: {quicksort(arr)}"
+
+#PT
+arr = [3, 2, 1, 5, 4] 
+expected_output = [1, 2, 3, 4, 5]
+sorted_arr = quicksort(arr)
+assert sorted_arr == expected_output, "Quick sort not working as expected"
+
+#PT
+arr = [3, 2, 1, 4, 5]
+assert quicksort(arr) == [1, 2, 3, 4, 5]

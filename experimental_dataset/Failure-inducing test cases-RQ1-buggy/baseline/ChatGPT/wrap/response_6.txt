@@ -1,0 +1,16 @@
+Test Case:
+
+text = "This is a sentence which is longer than the specified column width"
+cols = 10
+
+Expected Output:
+
+['This is a', ' sentence', ' which is', ' longer th', 'an the sp', 'ecified c', 'olumn wid', 'th']
+
+Actual Output:
+
+['This is a', ' sentence', ' which is', ' longer', ' than the', ' specified', ' column', ' width']
+
+Test Result:
+
+The program fails to wrap the text correctly when the last word of a line exceeds the specified column width. This test case results in a test failure as the actual output does not match the expected output.

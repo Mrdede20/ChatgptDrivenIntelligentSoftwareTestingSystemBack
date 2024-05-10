@@ -1,0 +1,7 @@
+Yes, there is an input that will provide different output for the two `rpn_eval` functions. Here is a test case that will make the functions behave differently:
+
+```
+tokens = [2, 3, 4, '*', '+', 5, '/']
+```
+
+For the first `rpn_eval` function, the result will be `0.6`, while for the second `rpn_eval` function, the result will be `3.4`. The reason why the results are different is because the order of the arguments for the lambda function in the `op` dictionary is swapped between the two `rpn_eval` implementations.

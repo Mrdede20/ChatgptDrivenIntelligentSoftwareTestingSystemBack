@@ -1,0 +1,12 @@
+There is a difference between the two programs that could cause them to have different output. Specifically, the first program checks for an additional condition that the value at the mid index should not be the same as its previous index value, before deciding to return the mid index as the answer. The second program simply finds the first occurrence of the given value and returns its index.
+
+Here's a test case that can produce different output for the two programs:
+
+```java
+int[] arr = {2, 3, 3, 3, 5};
+int x = 3;
+System.out.println(FIND_FIRST_IN_SORTED.find_first_in_sorted(arr, x)); // Output: 1
+System.out.println(find_first_in_sorted(arr, x)); // Output: 2
+```
+
+In this case, the first program will return the index 1 as the first occurrence of the value 3 (since the third element is also 3, and the first program checks for this condition), whereas the second program will return the index 2 as the first occurrence.

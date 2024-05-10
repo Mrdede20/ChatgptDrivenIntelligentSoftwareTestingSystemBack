@@ -1,0 +1,5 @@
+The intention of the given code is to sort a given list of integers using Merge Sort algorithm. The function `mergesort()` implements the Merge Sort algorithm recursively. 
+
+The `merge()` function is a helper function used to merge two sorted arrays (left and right) into a single sorted array. The `mergesort()` function recursively calls itself to divide the input list into smaller sub-lists until the sub-lists contain only one or zero elements. Then the `merge()` function is used to merge the sub-lists in a sorted order. 
+
+Finally, the fully merged and sorted list is returned.

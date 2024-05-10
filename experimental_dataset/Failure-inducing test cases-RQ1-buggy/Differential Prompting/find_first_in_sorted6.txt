@@ -1,0 +1,16 @@
+Yes, there is an input which makes the three programs have different output. 
+
+An example input would be:
+- arr = [1, 2, 2, 3, 4]
+- x = 2
+
+The first two programs might return 1 which is the index of the first occurrence of 2 in the array, while the last program will return 2, which is the correct index of the first occurence of 2 in the array. So, the third program is the correct algorithm for this binary search problem.
+
+Here is the code to verify the outputs:
+
+```
+arr = [1, 2, 2, 3, 4]
+x = 2
+
+print(find_first_in_sorted(arr, x))  # output will be 2
+```

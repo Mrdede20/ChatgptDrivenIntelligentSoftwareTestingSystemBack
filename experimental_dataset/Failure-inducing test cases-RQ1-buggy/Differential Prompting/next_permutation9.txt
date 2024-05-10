@@ -1,0 +1,11 @@
+Yes, there are inputs that can make these two programs output different results. One such example input is `[3, 2, 1]`.
+
+When `next_permutation` is called with `[3, 2, 1]`, the first implementation will return `[1, 2, 3]` as the next permutation, while the second implementation will return `None` to indicate that there is no next permutation.
+
+This happens because the first implementation checks for the next smallest permutation by finding the first pair of adjacent elements in the sequence where the left element is smaller than the right element. It then swaps the left element with the next greater element on its right, and reverses the remaining sequence.
+
+In the case of `[3, 2, 1]`, there is no such pair of elements, so the function returns the reversed sequence as the result.
+
+On the other hand, the second implementation finds the next smallest permutation by starting at the end of the sequence and finding the rightmost element that is smaller than the element to its right. It then swaps this element with the smallest element that is greater than it in the suffix of the sequence to its right, and reverses the suffix.
+
+In the case of `[3, 2, 1]`, the function cannot find such an element to swap, so it returns `None` to indicate that there is no next permutation.

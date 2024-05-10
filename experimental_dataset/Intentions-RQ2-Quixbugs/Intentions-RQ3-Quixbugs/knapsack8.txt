@@ -1,0 +1,8 @@
+The code implements a solution to the Knapsack Problem, which involves selecting items to fill a knapsack (or backpack) in a way that maximizes the total value of the items while not exceeding the weight capacity of the knapsack. The function `knapsack` takes two arguments:
+
+- `capacity`: an integer representing the maximum weight capacity of the knapsack
+- `items`: a list of tuples, where each tuple contains two integers: the weight and the value of an item to be considered for the knapsack.
+
+The function returns the maximum total value that can be achieved by selecting a combination of items whose total weight does not exceed the capacity of the knapsack.
+
+The implementation uses dynamic programming to avoid the exponential time complexity that a recursive approach would have. Specifically, it utilizes a memoization technique to store and reuse the results obtained in the subproblems of solving the original problem. This results in a time complexity of O(nc), where n is the number of items and c is the capacity of the knapsack.

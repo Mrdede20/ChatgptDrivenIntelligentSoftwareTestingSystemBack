@@ -1,0 +1,17 @@
+Yes, there is an input that makes the two programs output different results. 
+
+Here's an example: 
+
+Let's consider a graph with 4 vertices (0, 1, 2, 3) and the following weighted edges: 
+
+`(0, 1, 1), (1, 2, 1), (2, 3, 1), (0, 2, 2), (1, 3, 4)`
+
+The minimum spanning tree for this graph is:
+
+`(0, 1, 1), (1, 2, 1), (2, 3, 1)`
+
+The `minimum_spanning_tree` method from the `MINIMUM_SPANNING_TREE` class will return the correct result. However, the `minimum_spanning_tree` method from the `KruskalsAlgorithm` class will return a different result: 
+
+`(0, 1, 1), (2, 3, 1), (1, 3, 4)`
+
+Therefore, the two programs have different outputs for the same input.

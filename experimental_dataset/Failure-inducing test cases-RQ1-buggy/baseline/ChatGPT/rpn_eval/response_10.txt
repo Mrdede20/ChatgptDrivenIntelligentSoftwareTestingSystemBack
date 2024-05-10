@@ -1,0 +1,16 @@
+Sure! Here's a test case that triggers a bug in the rpn_eval function:
+
+tokens = [1, 2, 3, '*', '+', 4, '/']
+assert rpn_eval(tokens) == 0.75
+
+This test case will fail because the rpn_eval function will return 3.0 instead of 0.75. The bug is in the op function. When it encounters the / symbol, it divides b by a instead of a by b. Here's the corrected op function:
+
+def op(symbol, a, b):
+    return {
+        '+': lambda a, b: a + b,
+        '-': lambda a, b: a - b,
+        '*': lambda a, b: a * b,
+        '/': lambda a, b: b / a  # Fixed bug here
+    }[symbol](a, b)
+
+With this change, the test case will pass.

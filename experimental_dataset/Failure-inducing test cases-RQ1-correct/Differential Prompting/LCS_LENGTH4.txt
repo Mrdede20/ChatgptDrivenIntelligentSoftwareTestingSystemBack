@@ -1,0 +1,1 @@
+No, there is no input that can make the two programs output different results as they both compute the length of the longest common subsequence of two strings using different techniques.

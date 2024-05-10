@@ -1,0 +1,6 @@
+Yes, there is an input that can cause these two programs to produce different outputs. One possible test case is:
+
+String a = "aab";
+String b = "baa";
+
+For the first program, the output should be "aa". However, for the second program, the output should be "aa" or "ba", depending on the order in which the recursive calls are made.

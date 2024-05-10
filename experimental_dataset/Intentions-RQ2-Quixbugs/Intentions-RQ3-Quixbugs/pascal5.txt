@@ -1,0 +1,13 @@
+The function `pascal(n)` generates the first `n` rows of Pascal's Triangle and returns as a list of lists.  
+
+Pascal's Triangle is a mathematical concept that displays the coefficients of the binomial expansion for any given power of a binomial. The binomial coefficients are arranged in a triangular pattern. In Pascal's Triangle, the first and last element of each row is 1 and each subsequent value is the sum of the two values immediately above it. 
+
+For example, the first five rows of Pascal's Triangle are: 
+
+        1
+       1 1
+      1 2 1
+     1 3 3 1
+    1 4 6 4 1
+
+The function implements the logic through creating a list of lists. The first row is [1], then, for each subsequent row, the function generates each element by summing up the two elements of the previous row that are directly above and diagonally beside the current element.

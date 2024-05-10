@@ -1,0 +1,30 @@
+#FF
+assert pascal(0) == [] #error [[1]]
+
+#PT
+assert pascal(0) == [[1]]
+
+#PT
+assert pascal(0) == [[1]]
+
+#FF
+assert pascal(0) == [[]] #error [[1]]
+
+#FF
+assert pascal(0) == [] #error [[1]]
+
+#PT
+# Test case to trigger IndexError for rows[-1] in line 9
+assert pascal(0) == [[1]]
+
+#FF
+assert pascal(0) == [] #error [[1]]
+
+#FF
+assert pascal(0) == [[]] #error [[1]]
+
+#FF
+assert pascal(0) == [] #error [[1]]
+
+#FT
+assert pascal(2) == [[1], [1, 1]]

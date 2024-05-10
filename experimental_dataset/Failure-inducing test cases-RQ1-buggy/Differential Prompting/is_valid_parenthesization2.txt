@@ -1,0 +1,7 @@
+Yes, there is a test case which will produce different output for the given programs. 
+
+The test case is: 
+
+`"())("` 
+
+The first nine programs will return True for this test case, while the last program will return False.

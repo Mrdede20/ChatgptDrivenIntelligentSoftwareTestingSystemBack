@@ -1,0 +1,1 @@
+The two programs are identical and will produce the same output for any input. The second program is just an alternative implementation that is more compact and easier to read.

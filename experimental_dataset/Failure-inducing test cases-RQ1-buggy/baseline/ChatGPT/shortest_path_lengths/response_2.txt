@@ -1,0 +1,34 @@
+Here's a possible test case that triggers a bug and results in a test failure:
+
+n = 4
+length_by_edge = {
+    (0, 1): 1,
+    (1, 2): 1,
+    (2, 3): 1,
+    (3, 0): 1,
+    (0, 2): 100,
+    (1, 3): 100,
+}
+expected_output = {
+    (0, 0): 0,
+    (0, 1): 1,
+    (0, 2): 2,
+    (0, 3): 101,
+    (1, 0): 101,
+    (1, 1): 0,
+    (1, 2): 1,
+    (1, 3): 100,
+    (2, 0): 100,
+    (2, 1): 101,
+    (2, 2): 0,
+    (2, 3): 1,
+    (3, 0): 1,
+    (3, 1): 100,
+    (3, 2): 101,
+    (3, 3): 0,
+}
+
+# Call the function with the input and compare the result with the expected output
+assert shortest_path_lengths(n, length_by_edge) == expected_output
+
+The test case has a graph with four nodes and six edges. There are two cycles in the graph, one of length four and another of length two. There are two paths from node 0 to node 3: one with length 101 and another with length 202. The shortest path between those two nodes has length 101, but the algorithm returns length 202, which is incorrect. The bug is caused by the fact that the algorithm does not consider negative weights, so it gets stuck in the longer cycle and fails to find the shortest path.

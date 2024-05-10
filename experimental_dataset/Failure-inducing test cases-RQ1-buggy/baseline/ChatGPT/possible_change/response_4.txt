@@ -1,0 +1,23 @@
+Test Case:
+
+coins = [1, 3, 5]
+total = 7
+
+Expected Output:
+The function should return 2, since there are two ways to make the total of 7 with the given coins: {1,1,1,1,1,1,1} and {1,1,1,1,3}.
+
+Bug:
+However, the program will go into an infinite loop and never terminate when the above input is passed to it. This is because it is not handling the case where the list of coins becomes empty (i.e., rest is an empty list) properly, causing it to continuously call itself with an empty list of coins and never terminate.
+
+To fix this, we can add a base case to check if the list of coins is empty and return 0 if it is. The updated function would be:
+
+def possible_change(coins, total):
+    if total == 0:
+        return 1
+    if total < 0 or not coins:
+        return 0
+
+    first, *rest = coins
+    return possible_change(coins, total - first) + possible_change(rest, total)
+
+With the above fix, the function should now return the expected output of 2 for the input (coins = [1, 3, 5], total = 7).

@@ -1,0 +1,7 @@
+The intention of the code is to implement the Bucket Sort algorithm, which is used to sort a list of small integers efficiently. The function takes an input list and an upper bound of the size of the integers in the list, and returns the sorted list. 
+
+The algorithm works by first initializing a list of counts with k elements, where k is the upper bound. Each element of the input list is then incremented at the corresponding index in the counts list. This effectively counts the number of occurrences of each element in the list.
+
+Next, a new empty list is created to hold the sorted elements. We loop through indexes of the counts list, and for each index we extend the sorted list with the corresponding number repeated "count" times.
+
+The final result is a sorted list that contains all the elements from the input list.

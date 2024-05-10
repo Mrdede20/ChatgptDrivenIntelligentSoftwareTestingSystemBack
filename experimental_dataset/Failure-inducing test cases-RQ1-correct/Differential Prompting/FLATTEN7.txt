@@ -1,0 +1,15 @@
+There is a difference in the imports used in the two programs. 
+
+The first program uses the import statement: 
+```java
+import java.util.*;
+```
+
+while the second program uses:
+```java
+import .util.ArrayList;
+```
+
+The second program assumes that the ArrayList used will always be from the package `.util`. If someone uses a different package name, the code will not compile. 
+
+So, if someone uses the FLATTEN program with a different package name for ArrayList, the two programs will have different output.

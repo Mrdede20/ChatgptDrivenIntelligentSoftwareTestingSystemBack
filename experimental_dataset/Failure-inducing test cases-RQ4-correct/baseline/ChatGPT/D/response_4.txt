@@ -1,0 +1,26 @@
+response@ChatGPT:
+One test case that could trigger a bug is:
+
+Input:
+5
+6 2 2 2 6
+7 6 8 1 1
+6 1 6 6 1
+8 1 1 8 1 1 8
+1 2 3 2 1
+
+Output:
+YES
+NO
+YES
+YES
+NO
+
+This test case includes different scenarios, such as a simple uphill and downhill, a more complex uphill and downhill, a sequence with a valley at the beginning and end, and a symmetric sequence that reaches the same peak twice. This can help ensure the algorithm handles all cases correctly.
+
+request@user:
+Give us such test case. 
+
+response@ChatGPT:
+For which program or system would you like me to provide a test case? Please provide more context so I can give you a relevant test case.
+

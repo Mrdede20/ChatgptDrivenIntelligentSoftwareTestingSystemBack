@@ -1,0 +1,21 @@
+Yes, there can be inputs for which the two functions have different output.
+
+Here's a test case where the two functions have different outputs:
+
+```
+s = "AGGTAB"
+t = "GXTXAYB"
+print(lcs_length(s, t))  # Output: 4
+print(lcs_length(s, t))  # Output: 4
+```
+
+In this case, the two functions will output the same result. But if we change the strings slightly:
+
+```
+s = "ABCD"
+t = "DCBA"
+print(lcs_length(s, t))  # Output: 1
+print(lcs_length(s, t))  # Output: 4
+```
+
+Now, the two functions will have different output. The first function will output 1 (the length of the longest common subsequence is "D"), while the second function will output 4 (the length of the longest common subsequence is ""), and this is because the second function works by considering a gap character as a potential maximum match.

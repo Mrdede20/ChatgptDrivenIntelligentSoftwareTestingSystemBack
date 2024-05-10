@@ -1,0 +1,29 @@
+#FF
+response_1 #-8 -3 3 -5
+
+#PT
+response_2
+
+#FF
+response_3 #-4 0 -2 0
+
+#PT
+response_4
+
+#FF
+response_5 #-4 -3 -2 -1 1
+
+#PT
+response_6
+
+#FF
+response_7 #0
+
+#FF
+response_8 #-5 2 -2 -3 -4
+
+#FF
+response_9 #-4 -3 -2 -1 1
+
+#FF
+response_10 #0

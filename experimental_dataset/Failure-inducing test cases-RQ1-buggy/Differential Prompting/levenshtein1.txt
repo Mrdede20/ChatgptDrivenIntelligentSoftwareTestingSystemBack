@@ -1,0 +1,12 @@
+Yes, there is an input which makes the two programs below have different output. Here's an example:
+
+```
+source = 'abcd'
+target = 'dcba'
+```
+
+The first program will return 4, while the second program will return 6.
+
+In the first program, the input strings are compared character by character, and the maximum number of substitutions required to turn one string into the other is returned. In this case, the strings have no characters in common, so all characters must be substituted, leading to a distance of 4.
+
+In the second program, the Levenshtein distance is calculated using dynamic programming. The distance is 2 substitutions (a->d, b->c), 1 deletion (d), and 1 insertion (a), for a total distance of 4. However, the recursive calls in the second program will search multiple possible paths, leading to a greater number of function calls and a slightly slower execution time.

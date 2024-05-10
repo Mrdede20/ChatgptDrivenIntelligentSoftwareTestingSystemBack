@@ -1,0 +1,1 @@
+No, there is no way to have different outputs for the two `flatten` functions provided. These functions are identical, as they have the same code. It looks like the second function is simply a duplicate of the first.

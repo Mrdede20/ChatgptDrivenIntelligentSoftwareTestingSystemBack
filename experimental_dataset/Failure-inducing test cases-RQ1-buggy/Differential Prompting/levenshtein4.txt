@@ -1,0 +1,13 @@
+Yes, there are inputs that can make the two programs have different output. Here's an example:
+
+```
+source = 'abc'
+target = 'ac'
+
+print(levenshtein(source, target))  # Output: 1
+print(levenshtein(source, target))  # Output: 2
+```
+
+The first program considers the first character of `source` and `target` to be different, so it calculates the minimum of the distances obtained by inserting, deleting, or substituting the first character of `source`. This results in a distance of 1: the characters 'b' and 'c' in `source` are deleted.
+
+The second program, on the other hand, doesn't consider the three possible operations separately. Instead, it tries to find the minimum distance by recursively calculating the distances of the substrings obtained by deleting the first character of `source`, deleting the first character of `target`, or replacing the first character of `source` with the first character of `target`. In this case, the minimum distance is obtained by inserting the character 'c' from `target` into `source`, resulting in a distance of 2.

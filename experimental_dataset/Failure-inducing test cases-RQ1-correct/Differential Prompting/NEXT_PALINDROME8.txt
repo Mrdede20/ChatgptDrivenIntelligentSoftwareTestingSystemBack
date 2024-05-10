@@ -1,0 +1,5 @@
+Yes, there are inputs that would make the two programs output different results. One such input is the array `{9,9,9,9,9,9}`. 
+
+When this input is passed to the `next_palindrome` method in the `NEXT_PALINDROME` class, it returns the string `"[1, 0, 0, 0, 0, 0, 1]"`, which represents the array `{1,0,0,0,0,0,1}`. 
+
+When the same input is passed to the `next_palindrome` method in the `Palindrome` class, it correctly returns the string `"1000001"`, which represents the integer `1000001`.

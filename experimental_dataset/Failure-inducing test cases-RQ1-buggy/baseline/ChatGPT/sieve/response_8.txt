@@ -1,0 +1,48 @@
+Test case: 
+
+1. Input: sieve(0) 
+Expected Output: []
+Actual Output: []
+
+2. Input: sieve(1) 
+Expected Output: []
+Actual Output: []
+
+3. Input: sieve(2) 
+Expected Output: [2]
+Actual Output: [2]
+
+4. Input: sieve(10) 
+Expected Output: [2, 3, 5, 7]
+Actual Output: [2, 3, 5, 7]
+
+5. Input: sieve(-10) 
+Expected Output: []
+Actual Output: []
+
+6. Input: sieve(100) 
+Expected Output: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
+Actual Output: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
+
+7. Input: sieve("a") 
+Expected Output: TypeError
+Actual Output: TypeError
+
+Bug Description: 
+The program does not have any syntax or logical issues. However, the range function starts at 2 and goes up until the input value. If the input value is negative, the function will not return any values, but neither will it raise an error. Therefore, the function passes the test case number 5, which shouldn't be the case. The program should raise a ValueError for negative input. 
+
+Fix: 
+We should add a check for negative input values and raise a ValueError if the input is negative. 
+
+The updated program is: 
+
+def sieve(max):
+  if max < 0:
+    raise ValueError("max value can't be negative.")
+
+  primes = []
+  for n in range(2, max + 1):
+    if any(n % p > 0 for p in primes):
+      primes.append(n)
+  return primes
+

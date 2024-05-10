@@ -1,0 +1,28 @@
+Is there a test case which can triggers a bug in the program below?
+
+def reverse_linked_list(node):
+    prevnode = None
+    while node:
+        nextnode = node.successor
+        node.successor = prevnode
+        prevnode = node
+        node = nextnode
+    return prevnode
+
+class Node:
+    def __init__(self, value=None, successor=None, successors=[], predecessors=[], incoming_nodes=[], outgoing_nodes=[]):
+        self.value = value
+        self.successor = successor
+        self.successors = successors
+        self.predecessors = predecessors
+        self.incoming_nodes = incoming_nodes
+        self.outgoing_nodes = outgoing_nodes
+
+    def successor(self):
+        return self.successor
+
+    def successors(self):
+        return self.successors
+
+    def predecessors(self):
+        return self.predecessors

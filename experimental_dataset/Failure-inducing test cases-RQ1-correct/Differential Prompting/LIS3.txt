@@ -1,0 +1,7 @@
+Yes, there is an input that can make the two programs have different output.
+
+For example, consider the input array: {4, 4, 4}
+
+The first program (LIS) will correctly return a length of 1, as there is only one non-decreasing subsequence: {4}
+
+However, the second program (LongestIncreasingSubsequence) will incorrectly return a length of 3, as it only checks for strictly increasing subsequences and not non-decreasing ones.

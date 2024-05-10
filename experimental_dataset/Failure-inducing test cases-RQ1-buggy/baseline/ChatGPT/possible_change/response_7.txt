@@ -1,0 +1,10 @@
+Test case:
+
+coins = [1, 5, 10]
+total = 15
+
+Expected output: 4
+
+Actual output: RecursionError: maximum recursion depth exceeded
+
+Explanation: The function uses recursion to explore all possible combinations of coins to add up to the total amount. However, for certain inputs, the function can end up in an infinite recursion loop and exceed the maximum recursion depth allowed by the system. In this test case, the function keeps trying to subtract 10 from the remaining total until it reaches a negative value, triggering the second if statement and returning 0. However, since there are no more coins left to try, the function cannot backtrack and tries to call possible_change(rest, total) again, causing an infinite recursion loop. To fix this, the function should also check if there are no more coins left to try before calling possible_change(rest, total).

@@ -1,0 +1,23 @@
+Both programs have different package declarations at the top, so they cannot be compiled as is. However, assuming the correct package declarations are inserted, the two programs are essentially the same algorithm implemented differently, so their output will be the same for any input.
+
+Here's an example test case using the given `shunting_yard` method:
+
+```java
+package correct_java_programs;
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<String> infix = new ArrayList<>(Arrays.asList("3", "*", "4", "+", "5"));
+        List postfix = SHUNTING_YARD.shunting_yard(infix);
+        System.out.println(postfix);  // prints [3, 4, *, 5, +]
+        
+        ArrayList<String> infix2 = new ArrayList<>(Arrays.asList("3", "*", "4", "+", "5"));
+        ArrayList<String> postfix2 = ShuntingYard.shunting_yard(infix2);
+        System.out.println(postfix2);  // prints [3, 4, *, 5, +]
+    }
+}
+```
+
+Both programs generate the same output `[3, 4, *, 5, +]` for the input "3 * 4 + 5".

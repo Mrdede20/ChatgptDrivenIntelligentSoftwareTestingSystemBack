@@ -1,0 +1,17 @@
+Test Case:
+
+Input: x = 9, epsilon = 0.001
+Expected Output: 3.00009155413138
+Actual Output: 3
+
+Explanation:
+
+The program uses the Babylonian method to calculate the square root of a given number x with a given accuracy epsilon.
+
+In this test case, we are testing the function with input value x = 9, epsilon = 0.001. The expected output is 3.00009155413138.
+
+However, the actual output is 3, which is incorrect.
+
+This failure occurs because the program does not handle inputs with very small epsilon values properly. When epsilon is very small, the loop condition abs(x - approx) > epsilon becomes true for a longer time, resulting in more iterations. Eventually, the approx value gets stuck at a value slightly lower than the actual square root. As a result, the final output is incorrect.
+
+To fix this bug, the program should use a different condition for stopping the loop, such as a maximum number of iterations.

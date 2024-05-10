@@ -1,0 +1,21 @@
+Test case:
+
+# Test Case 1
+weight_by_edge = {('A', 'B'): 1, ('A', 'C'): 2, ('B', 'C'): 3}
+assert minimum_spanning_tree(weight_by_edge) == {('A', 'B'), ('A', 'C')}
+
+Explanation:
+
+The above test case will trigger a bug in the program. The bug is related to the use of setdefault method on group_by_node dictionary. When a new node is encountered for the first time, it is added to the group_by_node dictionary with a set containing only the node itself. However, this set should be updated to include all the nodes that are connected to it. This is done using the update method.
+
+In the given test case, the weight of the edges are such that the minimum spanning tree should include edges ('A', 'B') and ('A', 'C'). However, due to the bug in the code, the program fails to include edge ('A', 'C') in the minimum spanning tree. The reason for this is that when the edge ('B', 'C') is processed, the sets corresponding to nodes 'B' and 'C' are merged together. However, the set corresponding to node 'A' is not updated to include nodes 'B' and 'C'. As a result, when the edge ('A', 'C') is processed, the sets corresponding to nodes 'A' and 'C' are already merged together, and the condition group_by_node.setdefault(u, {u}) != group_by_node.setdefault(v, {v}) fails, causing the edge ('A', 'C') to be skipped.
+
+To fix the bug, we can update the sets corresponding to nodes 'A', 'B', and 'C' to include all the nodes in the group at the beginning of the function, before processing the edges. This can be done using the following code:
+
+for edge in weight_by_edge:
+    u, v = edge
+    group_by_node.setdefault(u, {u}).update(group_by_node.setdefault(v, {v}))
+    group_by_node.setdefault(v, {v}).update(group_by_node.setdefault(u, {u}))
+
+With this modification, the function should return the correct result for the given test case.
+

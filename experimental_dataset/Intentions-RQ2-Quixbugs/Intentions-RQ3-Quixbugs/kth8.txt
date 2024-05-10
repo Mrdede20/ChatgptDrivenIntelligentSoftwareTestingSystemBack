@@ -1,0 +1,5 @@
+The given code implements QuickSelect algorithm which enables to find the kth smallest element from an unsorted list. It works by selecting a pivot and partitioning the list into elements smaller and larger than the pivot. Based on the position of pivot in sorted order, the algorithm decides whether to search the left or right sub-list. It recursively searches for the kth smallest element until it is found.
+
+The function takes an unsorted list "arr" and an integer "k" as inputs. The if condition checks if k is less than the number of elements less than pivot in the list, in which case it recursively calls the function on the sub-list of elements less than pivot. The elif condition checks if k is greater than or equal to the number of elements less than or equal to pivot in the list, in which case it recursively calls the function on the sub-list of elements greater than pivot. The else condition simply returns the pivot if it is the kth element.
+
+The output is the kth-lowest element of arr (0-based).

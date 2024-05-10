@@ -1,0 +1,1 @@
+No, both programs are implementing binary search and should give the same output for any input array and query element.

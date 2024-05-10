@@ -1,0 +1,1 @@
+There is no input that can make the two programs output differently. Both programs implement a depth-first search algorithm, and their implementations are equivalent. The second implementation is just more optimized and refactored with the use of a helper function.

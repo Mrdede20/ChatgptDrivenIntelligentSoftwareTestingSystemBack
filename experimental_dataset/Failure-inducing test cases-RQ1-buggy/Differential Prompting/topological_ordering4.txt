@@ -1,0 +1,37 @@
+Yes, there are inputs that can make these two programs have different outputs. The difference is due to the order in which the nodes are added to the output list.
+
+For example, consider the following directed graph:
+
+    A --> B
+
+    C --> B
+
+In the first implementation, if the input nodes are listed as [A, B, C], the output will be [A, C, B], whereas the second implementation will produce the output [B, A, C].
+
+To test this, you can create a Directed Acyclic Graph (DAG) with the nodes as described above and pass it to both implementations. Here's some sample code that demonstrates this:
+
+```
+class Node:
+    def __init__(self, name):
+        self.name = name
+        self.incoming_nodes = set()
+        self.outgoing_nodes = set()
+
+    def __repr__(self):
+        return self.name
+
+# Create nodes
+A = Node("A")
+B = Node("B")
+C = Node("C")
+
+# Set up edges
+A.outgoing_nodes.add(B)
+C.outgoing_nodes.add(B)
+B.incoming_nodes.add(A)
+B.incoming_nodes.add(C)
+
+# Test both implementations
+print(topological_ordering([A, B, C]))  # Output: [A, C, B]
+print(topological_ordering_v2([A, B, C]))  # Output: [B, A, C]
+```

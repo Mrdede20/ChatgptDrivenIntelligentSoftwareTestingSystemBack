@@ -1,0 +1,11 @@
+The intention of the given code is to find the length of the longest common substring between two given strings s and t. 
+
+The approach used is dynamic programming, where the idea is to maintain a 2D table (2D array or dictionary) `dp` such that `dp[i,j]` stores the length of the longest common substring ending at `s[i-1]` and `t[j-1]`.
+
+For each character of s and t, if the characters match, we update the corresponding entry of `dp` using the following recurrence relation:
+
+`dp[i, j] = dp[i-1, j-1] + 1`
+
+We keep track of the maximum value in `dp` and return it as the length of the longest common substring. If `dp` is empty we return 0. 
+
+The time complexity of the given implementation is O(|s||t|), where |s| and |t| are the lengths of the strings s and t respectively.

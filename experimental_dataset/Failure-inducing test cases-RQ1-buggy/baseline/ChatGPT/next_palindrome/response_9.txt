@@ -1,0 +1,11 @@
+Test Case:
+
+digit_list = [1, 2, 9, 9, 2, 1]
+
+Expected Result:
+
+The function should return [1, 3, 0, 0, 3, 1], which is the next palindrome number after the input list.
+
+Test Case Explanation:
+
+The input list digit_list contains 6 digits and is not a palindrome. The function should return the next palindrome number after the input list. The middle two digits of the input list are 9 and 9, which means that the function needs to carry over the digits to the left and right of them. The function will add 1 to the high_mid digit (2) and to the low_mid digit (2) to obtain [1, 2, 0, 0, 2, 1]. Then the function will continue to the next iteration, add 1 to the high_mid digit (0) and to the low_mid digit (0) to obtain [1, 3, 0, 0, 2, 1]. At this point, the function should return [1, 3, 0, 0, 3, 1], which is the expected result. However, there is a bug in the function that causes it to return [1, 3, 0, 0, 2, 1] instead. The bug is in the line that sets digit_list[low_mid] = 0. It should set it to 1 instead, because the low_mid digit needs to carry over to the next digit. This bug causes the function to return an incorrect result, which triggers a test failure.

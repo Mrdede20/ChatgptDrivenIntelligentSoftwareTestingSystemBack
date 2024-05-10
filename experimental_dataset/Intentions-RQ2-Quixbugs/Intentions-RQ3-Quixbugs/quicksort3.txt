@@ -1,0 +1,7 @@
+The code is an implementation of the quicksort algorithm. 
+
+The quicksort algorithm is a sorting algorithm that works by partitioning an array into two sub-arrays based on a pivot element. The sub-arrays are then sorted recursively. 
+
+In this Python code, the `quicksort` function takes an input list `arr` and sorts it using the quicksort algorithm. The function first checks if the list is empty. If it is, an empty list is returned. Otherwise, the function selects the first element of the list as the pivot element and creates two sub-lists: `lesser` - a list of all elements that are less than the pivot, and `greater` - a list of all elements that are greater than the pivot. The function then recursively calls itself with the `lesser` and `greater` sub-lists and combines the sorted sub-lists with the pivot in the middle to return the sorted list. 
+
+The function has a time complexity of O(n*log(n)) on average, which makes it an efficient algorithm for sorting large lists of data.

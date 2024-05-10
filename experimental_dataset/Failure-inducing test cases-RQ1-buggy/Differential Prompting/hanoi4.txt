@@ -1,0 +1,13 @@
+Yes, there are inputs that can make the two programs output different results, specifically when the height is equal or greater than 3. Here is an example:
+
+```
+height = 3
+start = 1
+end = 2
+
+hanoi(height, start, end)  # output: [(1, 2), (2, 3), (3, 2), (2, 1), (1, 3), (3, 2), (2, 1)]
+
+hanoi_optimized(height, start, end)  # output: [(1, 2), (2, 3), (3, 1), (1, 2), (2, 3)]
+```
+
+As you can see, the two programs output different sequences of moves for the same input.

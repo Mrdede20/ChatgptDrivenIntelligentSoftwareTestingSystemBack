@@ -1,0 +1,9 @@
+Yes, there is a possibility that the two programs will have different outputs for certain inputs.
+
+The reason why is because the two programs use different implementations of the Dijkstra's algorithm for finding the shortest path in a graph. 
+
+The SHORTEST_PATHS program implements a simpler version of Dijkstra's algorithm that iteratively updates the weights of each node. However, this implementation may not always find the most optimal path.
+
+The DijkstraAlgorithm program implements an optimized version that uses a priority queue to keep track of the nodes with the shortest distance. This implementation is guaranteed to find the most optimal path, but may take longer to execute for larger graphs.
+
+Depending on the input, the performance and accuracy of each implementation may vary, resulting in different outputs.

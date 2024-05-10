@@ -1,0 +1,1 @@
+No, both programs implement the same logic to find the length of the longest common subsequence (LCS) between two strings using dynamic programming. Therefore, they should produce the same output for all inputs.

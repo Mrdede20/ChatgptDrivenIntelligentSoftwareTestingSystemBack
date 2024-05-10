@@ -1,0 +1,20 @@
+Yes, there is an input that could make the two programs have different output. Specifically, if the value of `a` in the first program is initialized to `None` instead of `0`, and a non-numeric value is entered as the first input, the first program will throw a `TypeError`, whereas the second program will run without error but will output `0`.
+
+Here is some test input to demonstrate this:
+
+```
+2
+non_numeric_value string1
+99 string2
+```
+The first line of input specifies that there are two test cases. 
+
+In the first test case, the first input value (`a`) is a string, not a number. This will cause the first program to throw a `TypeError`, whereas the second program will run without error and output `0`. 
+
+In the second test case, the first input value (`a`) is a number, and the string contains characters with unicode values greater than `a`. Both programs will output the correct maximum unicode value minus 96 (since the input characters are all lowercase letters). 
+
+So the expected output for this input is:
+```
+0
+25
+```

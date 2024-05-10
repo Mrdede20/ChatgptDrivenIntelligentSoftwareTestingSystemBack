@@ -1,0 +1,9 @@
+Test case:
+
+assert pascal(0) == []
+
+Expected output: An empty list.
+
+Actual output: [[1]]
+
+Explanation: The function does not handle the case where n is equal to zero. When n equals zero, the function should return an empty list. However, the current implementation returns a list containing a single element, which is incorrect.

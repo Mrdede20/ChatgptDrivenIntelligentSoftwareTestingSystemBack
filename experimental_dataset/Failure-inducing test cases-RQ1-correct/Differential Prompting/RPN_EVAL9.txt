@@ -1,0 +1,1 @@
+There is no difference in the output of both programs as they implement the same core logic with different coding styles and syntax.

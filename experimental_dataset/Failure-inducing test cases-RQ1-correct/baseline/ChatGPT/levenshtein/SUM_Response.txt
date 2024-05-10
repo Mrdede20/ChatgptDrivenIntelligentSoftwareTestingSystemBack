@@ -1,0 +1,29 @@
+#PT
+assert levenshtein('kitten', 'sitting') == 3
+
+#PT
+assert levenshtein("hello", "hello") == 0
+
+#PT
+assert levenshtein('abc', 'abc') == 0
+
+#PT
+assert levenshtein("hello", "hello") == 0
+
+#PT
+assert levenshtein("abcdefg", "abcde") == 2
+
+#PT
+assert levenshtein('kitten', 'sitting') == 3
+
+#PT
+assert levenshtein('kitten', 'sitting') == 3
+
+#PT
+assert levenshtein('kitten', 'sitting') == 3
+
+#PT
+assert levenshtein('cat', 'cot') == 1
+
+#PT
+assert levenshtein("word", "word") == 0

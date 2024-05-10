@@ -1,0 +1,13 @@
+The function `find_first_in_sorted` is a binary search implementation to find the lowest index of a given element `x` in a sorted array `arr`. It returns the index of the first occurrence of the element `x` in the array, or -1 if the element is not present in the array.
+
+The implementation uses two pointers `lo` and `hi` to mark the start and end positions of the search range respectively. The search range is halved at each step by computing the middle position `mid`.
+
+If the value at the middle position `mid` is equal to `x` and it is the first occurrence of `x` in the array, then the function returns the index `mid`.
+
+If the value at the middle position `mid` is greater than `x`, the search range is adjusted by moving the `hi` pointer to `mid`.
+
+Otherwise, if the value at the middle position `mid` is less than `x`, the search range is adjusted by moving the `lo` pointer to `mid`.
+
+If the search ends without finding the element `x`, the function returns -1.
+
+The time complexity of this algorithm is O(log n) which is much faster than O(n) linear search in unsorted arrays.

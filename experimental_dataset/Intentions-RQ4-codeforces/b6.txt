@@ -1,0 +1,3 @@
+The intention of the code is to take an input integer 'n', followed by 'n' lines of input. Each input line contains a positive integer and a string. The code then checks the ASCII code of each character in the string and finds the maximum ASCII code. Finally, it prints the difference of the maximum ASCII code and 96. 
+
+It is assumed that the input string contains only lowercase English letters. And the code essentially calculates the position of the highest letter in the English alphabet (i.e., the position of 'z' in the alphabet) and outputs it.

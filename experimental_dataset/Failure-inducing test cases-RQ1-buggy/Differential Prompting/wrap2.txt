@@ -1,0 +1,20 @@
+Yes, there is an input that could make the two programs have different outputs. Here's an example:
+
+text = "hello world"
+cols = 5
+
+The first program will return the following list of strings:
+
+['hello', 'world']
+
+The second program will return the following list of strings:
+
+['hello', 'world']
+
+In this case, both programs will have the same output. However, if the input text was "hello   world" (with multiple spaces between "hello" and "world"), the first program would return the following list of strings:
+
+['hello', '', '', 'world']
+
+The second program, on the other hand, would still return:
+
+['hello', 'world']

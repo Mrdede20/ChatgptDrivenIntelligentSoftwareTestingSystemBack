@@ -1,0 +1,3 @@
+The intention of the code is to provide an implementation for the QuickSort algorithm in python. QuickSort is a popular sorting algorithm that works by partitioning an array into two subarrays, according to the elements that are greater or smaller than a chosen pivot element. The algorithm then recursively sorts the two subarrays until the entire array is sorted. 
+
+The implementation creates a list named lesser, which holds all the elements that are smaller than the pivot. Then, another list called greater holds all the elements greater than the pivot. The pivot element is then concatenated with the two subarrays, which are recursively sorted by calling the quicksort function on each. Finally, the sorted sub-arrays are concatenated with the pivot element and returned.

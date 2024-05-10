@@ -1,0 +1,5 @@
+The intention of this code is to perform a modified binary search algorithm to find the lowest index of a given value `x` in a sorted list `arr`. If the value is not present in the list, the function returns -1. 
+
+The modification to the traditional binary search algorithm is that if the mid value of the array is equal to the given value `x`, the function checks if it is the first occurrence of `x` in the array, by verifying if the previous value (at index `mid-1`) is not equal to `x`. This way, the algorithm knows it has found the first occurrence of the value in the sorted array.
+
+If `x` is not found at the end of the algorithm, the function returns -1.

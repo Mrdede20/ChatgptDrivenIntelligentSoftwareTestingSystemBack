@@ -1,0 +1,1 @@
+Yes, the two programs have different names and different implementations, so while they both perform the bucket sort algorithm, they may have different ways of handling edge cases or sorting the data. Therefore, they may have different outputs for certain inputs depending on their implementation details.

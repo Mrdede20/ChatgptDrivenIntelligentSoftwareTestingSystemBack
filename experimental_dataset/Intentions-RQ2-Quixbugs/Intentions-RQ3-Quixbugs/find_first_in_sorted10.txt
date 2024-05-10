@@ -1,0 +1,5 @@
+The intention of the code is to perform a binary search on a sorted list of integers to find the index of the first occurrence of a given value 'x'. If the value is found, it returns the index of the first occurrence. If the value is not found, it returns -1.
+
+The algorithm works by dividing the list into two equal halves and checking if the middle element is equal to the value we are searching for. If it is, we check if it is the first occurrence by checking if the previous element is not equal to the value. If it is the first occurrence, we return its index. If it is not, we continue the search on the left half of the list. If the middle element is greater than the value we are searching for, we continue searching on the left half of the list. If the middle element is less than the value we are searching for, we continue searching on the right half of the list.
+
+This algorithm has a time complexity of O(logn) as it reduces the search space by half in each iteration. It is an efficient way of searching on a sorted list.

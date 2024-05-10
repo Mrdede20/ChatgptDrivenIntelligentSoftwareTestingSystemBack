@@ -1,0 +1,5 @@
+The intention of the code is to implement the Bellman-Ford algorithm, which is used to find the shortest path from a source node to every other node in a weighted graph that may contain negative edges (as long as there are no negative-weight cycles). The algorithm assumes that the input graph contains no negative-weight cycles. 
+
+The `shortest_paths` function takes two inputs: `source` which is the source node and `weight_by_edge` which is a dictionary containing edge weights keyed by an ordered pair of node ids. The function returns a dictionary mapping each node id to the minimum weight of a path from the source node to that node.
+
+The function first initializes a `weight_by_node` dictionary with the nodes mapped to infinity except for the `source` node which is mapped to 0. It then loops through the `weight_by_edge` dictionary and uses the Bellman-Ford algorithm to calculate the minimum path weights from the `source` node to every other node in the graph. Finally, the function returns the `weight_by_node` dictionary.

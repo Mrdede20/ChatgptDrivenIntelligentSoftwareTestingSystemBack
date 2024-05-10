@@ -1,0 +1,1 @@
+There is no difference between the outputs of the two programs for any input. Both programs perform binary search on a sorted array and return the index of the element if it is found or -1 if it is not present in the array. They use different implementations of binary search algorithm, but the logic is the same.

@@ -1,0 +1,10 @@
+Yes, there are inputs that can make the two programs produce different outputs. This is because the two programs differ in their approach to string comparison and the calculation of minimum edit distance. For example, the second program handles substitutions explicitly with a third recursive call, whereas the first program treats substitutions as a combination of deletions and insertions. 
+
+Here's a test case that will produce different outputs:
+
+```
+source = "kitten"
+target = "knitting"
+```
+
+Using the first program, the output will be 3, while the second program will produce an output of 2.

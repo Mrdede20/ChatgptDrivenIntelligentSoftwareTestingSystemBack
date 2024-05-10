@@ -1,0 +1,11 @@
+Yes, there is an input that makes the two programs have different output. The programs differ in their approach to solving the Tower of Hanoi problem, and thus the order in which they output the steps to solve the problem. 
+
+Here is a test case that would result in different output for the two programs:
+
+```
+hanoi(4, 1, 2)
+```
+
+The first program solves the problem by recursively solving smaller and smaller sub-problems until it arrives at the base case (stack height 1), at which point it appends the step to move the top disc to the destination pole to a list of steps. It then continues to solve the sub-problems in reverse order, appending each step to the same list of steps.
+
+The second program, on the other hand, uses a stack data structure to keep track of the sub-problems to solve. Each time it pops a sub-problem off the stack, it examines its height. If the height is 1, it appends the step to move the top disc to the destination pole to a list of steps. If the height is greater than 1, it breaks the problem down into two smaller sub-problems and pushes them onto the stack in a specific order (the order that the second program pushes and pops sub-problems from the stack is critical to its correctness). In this test case, the order in which the second program solves the sub-problems results in a different sequence of steps being output compared to the first program.

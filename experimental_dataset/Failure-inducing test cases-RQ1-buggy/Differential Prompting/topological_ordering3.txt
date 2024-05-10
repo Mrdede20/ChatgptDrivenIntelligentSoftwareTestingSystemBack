@@ -1,0 +1,24 @@
+Yes, there can be inputs that make the two programs have different output. This is because the first implementation uses a different algorithm for topological sorting than the second implementation.
+
+Here's a test case that will produce different output:
+
+```
+class Node:
+    def __init__(self, value, incoming=None, outgoing=None):
+        self.value = value
+        self.incoming_nodes = incoming or []
+        self.outgoing_nodes = outgoing or []
+
+# Create the following graph:
+# A -> B -> C
+#      B -> D
+a = Node('A')
+b = Node('B', incoming=[a])
+c = Node('C', incoming=[b])
+d = Node('D', incoming=[b])
+b.outgoing_nodes = [c, d]
+
+print(topological_ordering([a,b,c,d]))
+```
+
+Executing this test case with the two implementations of `topological_ordering` will give different outputs. The first implementation returns `[a, b, c, d]` while the second implementation returns `[a, b, d, c]`.

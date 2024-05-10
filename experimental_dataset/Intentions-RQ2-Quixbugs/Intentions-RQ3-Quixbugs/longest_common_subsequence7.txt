@@ -1,0 +1,10 @@
+The given code finds the longest common subsequence between two given strings 'a' and 'b'. It recursively reduces the problem by comparing the first character of both the strings `a[0]` and `b[0]`. 
+
+If both the characters match, it concatenates the character to the result string, and recursively call the function by removing the first character from 'a'. 
+
+If both the characters do not match, it runs recursive comparison for two possibilities:-
+
+1. By removing the first character from 'b'
+2. By removing first character from 'a'
+
+And, then returns the subsequence with the maximum length from it, thus finding the longest common subsequence between 'a' and 'b'.

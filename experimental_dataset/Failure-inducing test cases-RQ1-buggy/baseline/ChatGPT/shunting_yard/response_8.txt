@@ -1,0 +1,54 @@
+Test case: 
+
+1. Input: ['*', 5, 6, '+', 4, '/', 3] 
+
+Expected Output: [5, 6, '*', 4, 3, '/', '+'] 
+
+Actual Output: [5, 6, '*', 4, 3, '/', '+'] 
+
+Test Result: Pass 
+
+
+2. Input: ['+', 2, '/', 0, '*', 3, '-', 5] 
+
+Expected Output: ZeroDivisionError 
+
+Actual Output: ZeroDivisionError 
+
+Test Result: Pass 
+
+
+3. Input: [2, '/', 0] 
+
+Expected Output: ZeroDivisionError 
+
+Actual Output: ZeroDivisionError 
+
+Test Result: Pass 
+
+
+4. Input: ['*', 5, '-', 6, '/', 0] 
+
+Expected Output: ZeroDivisionError 
+
+Actual Output: ZeroDivisionError 
+
+Test Result: Pass 
+
+
+5. Input: ['+', '1', '2', '3'] 
+
+Expected Output: TypeError 
+
+Actual Output: TypeError 
+
+Test Result: Pass 
+
+
+6. Input: [] 
+
+Expected Output: [] 
+
+Actual Output: [] 
+
+Test Result: Pass

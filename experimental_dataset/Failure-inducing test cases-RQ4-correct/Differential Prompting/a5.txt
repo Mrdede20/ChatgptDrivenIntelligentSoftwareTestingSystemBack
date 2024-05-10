@@ -1,0 +1,46 @@
+Yes, there is an input that makes the two programs have different output.
+
+Here's a possible input that would cause the two programs to have different output:
+
+Input:
+```
+2
+1 1 100
+50 40 30
+100 200 300
+```
+
+Output of first program:
+```
+1
+40
+200
+300
+```
+
+Output of second program:
+```
+1
+40
+100
+```
+
+To generate this input in Java, you can use the following code:
+
+```java
+import java.util.Scanner;
+
+public class TestInputGenerator {
+    public static void main(String[] args) {
+        int t = 2;
+        System.out.println(t);
+
+        System.out.println("1 1 100");
+        System.out.println("50 40 30");
+
+        System.out.println("100 200 300");
+    }
+}
+``` 
+
+This will output the required input to the console. You can then copy and paste this output to test your programs.

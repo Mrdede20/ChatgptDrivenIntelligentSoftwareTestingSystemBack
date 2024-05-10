@@ -1,0 +1,27 @@
+response@ChatGPT:
+
+
+Yes, there are several test cases that can trigger bugs in the program. Here are some examples:
+
+1. Test case with invalid input: If the input tokens list contains an element that is not an integer or an operator (+,-,*,/), the program will raise an exception. For example, shunting_yard([2, '+', '3']) will raise a TypeError.
+
+2. Test case with unbalanced parentheses: If the input tokens list contains parentheses that are not closed properly, the program will not be able to convert the expression to reverse Polish notation. For example, shunting_yard(['(', '2', '+', '3']) will result in an empty rpntokens list, since the program will wait for the closing parenthesis that never comes.
+
+3. Test case with wrong order of operators: If the input tokens list contains operators that have a higher precedence than the previous operator, the program will produce incorrect results. For example, shunting_yard(['2', '*', '3', '-', '4']) will produce a reversed Polish notation list [2, 3, '*', 4, '-'], which is equivalent to (2*3)-4, instead of the correct result 2*(3-4).
+
+4. Test case with division by zero: If the input tokens list contains a division operator with 0 as the second operand, the program will raise a ZeroDivisionError. For example, shunting_yard(['4', '/', '0']) will raise a ZeroDivisionError.
+
+These are just some examples, there may be other test cases that can trigger bugs in the program, depending on the specific implementation and requirements.
+
+request@user:
+Give us such test case. Use assert.
+
+response@ChatGPT:
+def test_shunting_yard():
+\    assert shunting_yard([2, '+', 3, '*', 4]) == [2, 3, 4, '*', '+']
+\    assert shunting_yard([10, '/', 2, '+', 3]) == [10, 2, '/', 3, '+']
+\    assert shunting_yard([5, '*', 6, '-', 7, '/', 8]) == [5, 6, '*', 7, 8, '/', '-']
+\    assert shunting_yard([2, '-', 3, '/', 4, '*', 5]) == [2, 3, 4, '/', 5, '*', '-']
+
+test_shunting_yard()
+

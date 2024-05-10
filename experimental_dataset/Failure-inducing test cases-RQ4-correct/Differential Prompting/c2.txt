@@ -1,0 +1,31 @@
+Yes, the two programs can have different output for input where there are repeating numbers in the array.
+
+Test input:
+3
+4
+1 4 4 7
+5
+3 2 2 5 4
+6
+2 2 2 2 2 2
+
+Expected output for the first program:
+6 3 -3 -6 
+6 1 1 -2 -1 
+0 0 0 0 0 0 
+
+Expected output for the second program:
+3
+3
+0
+1
+2
+2
+2
+2
+2
+
+Explanation:
+In the first program, since both the maximum numbers are the same in the first and second test cases, the differences will be different. In the third test case, all numbers are the same so the output will be 0 for all differences.
+
+In the second program, since we are computing absolute differences, the output will be the same for all test cases even if there are repeating numbers.

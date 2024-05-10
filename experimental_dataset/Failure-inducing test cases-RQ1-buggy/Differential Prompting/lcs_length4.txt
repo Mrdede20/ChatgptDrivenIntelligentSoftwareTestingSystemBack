@@ -1,0 +1,15 @@
+Yes, there is at least one input which makes the two programs have different output.
+
+Here's a test case that produces different output:
+
+```
+s = "abcda"
+t = "adcba"
+print(lcs_length(s, t)) 
+```
+
+The first program (`lcs_length`) uses a `Counter` object to keep track of the length of the longest common subsequence, while the second program uses a 2D array. In this test case, the order in which the characters appear in `s` and `t` is different. Specifically, the characters "a" and "d" appear in different order.
+
+The first program (`lcs_length`) will return 3, which is the length of the longest common subsequence ("abc"). 
+
+The second program (`lcs_length`) will return 2, which is the length of the longest common subsequence ("ab").

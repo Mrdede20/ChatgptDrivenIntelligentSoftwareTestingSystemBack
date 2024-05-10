@@ -1,0 +1,55 @@
+response@ChatGPT:
+
+
+Yes, there is a test case that can trigger a bug in the program above.
+
+Consider the following input text and column value:
+
+text = "This is a long sentence that should be wrapped."
+cols = 10
+
+The expected output should be a list of three lines:
+
+[
+    "This is a",
+    "long",
+    "sentence that should be wrapped."
+]
+
+However, the current implementation of the program will produce the following output:
+
+[
+    "This is",
+    "a long",
+    "sentence",
+    "that",
+    "should be",
+    "wrapped."
+]
+
+The bug occurs because the 'rfind' method is used to look for the last occurrence of a space character within the first 'cols' characters of 'text'. However, this can lead to splitting the text in the middle of a word, which is not what we want. To fix the bug, a different approach should be used to determine the end of each line, such as counting the number of characters in each line and making sure to break at word boundaries.
+
+request@user:
+Give us such test case. Use assert.
+
+response@ChatGPT:
+Here's an example test case for the above code using assert:
+
+# Test case: wrapping text with 10 columns
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse imperdiet, tortor vel aliquet sodales, mi ante commodo nisi, vel varius sapien odio quis dui. Curabitur iaculis consectetur nisl, in tincidunt nibh vehicula ut. Integer auctor, sapien ut pellentesque commodo, orci nunc fringilla elit, id fringilla nulla velit nec nulla."
+cols = 10
+expected_output = ["Lorem ipsum", "dolor sit", "amet,", "consectetur", "adipiscing", "elit.", "Suspendisse", "imperdiet,", "tortor vel", "aliquet", "sodales,", "mi ante", "commodo nisi,", "vel varius", "sapien odio", "quis dui.", "Curabitur", "iaculis", "consectetur", "nisl,", "in", "tincidunt", "nibh", "vehicula", "ut.", "Integer", "auctor,", "sapien ut", "pellentesque", "commodo,", "orci nunc", "fringilla", "elit,", "id", "fringilla", "nulla velit", "nec nulla."]
+assert wrap(text, cols) == expected_output
+
+# Test case: wrapping text with 20 columns
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse imperdiet, tortor vel aliquet sodales, mi ante commodo nisi, vel varius sapien odio quis dui. Curabitur iaculis consectetur nisl, in tincidunt nibh vehicula ut. Integer auctor, sapien ut pellentesque commodo, orci nunc fringilla elit, id fringilla nulla velit nec nulla."
+cols = 20
+expected_output = ["Lorem ipsum dolor", "sit amet,", "consectetur", "adipiscing elit.", "Suspendisse", "imperdiet,", "tortor vel aliquet", "sodales,", "mi ante commodo", "nisi,", "vel varius sapien", "odio quis dui.", "Curabitur iaculis", "consectetur nisl,", "in tincidunt nibh", "vehicula ut.", "Integer", "auctor,", "sapien ut pellentesque", "commodo,", "orci nunc", "fringilla elit,", "id fringilla nulla", "velit nec nulla."]
+assert wrap(text, cols) == expected_output
+
+# Test case: wrapping text with 100 columns
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse imperdiet, tortor vel aliquet sodales, mi ante commodo nisi, vel varius sapien odio quis dui. Curabitur iaculis consectetur nisl, in tincidunt nibh vehicula ut. Integer auctor, sapien ut pellentesque commodo, orci nunc fringilla elit, id fringilla nulla velit nec nulla."
+cols = 100
+expected_output = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse imperdiet, tortor vel aliquet sodales, mi ante commodo nisi, vel varius sapien odio quis dui. Curabitur iaculis consectetur nisl, in tincidunt nibh vehicula ut. Integer auctor, sapien ut pellentesque commodo, orci nunc fringilla elit, id fringilla nulla velit nec nulla."]
+assert wrap(text, cols) == expected_output
+

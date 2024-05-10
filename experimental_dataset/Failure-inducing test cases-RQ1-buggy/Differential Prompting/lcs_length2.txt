@@ -1,0 +1,8 @@
+Yes, there is an input that makes the two programs have different outputs. Here's a test case that demonstrates this:
+
+s = "ABB"
+t = "BAA"
+
+With the first implementation, `lcs_length(s,t)` returns 1, while the second implementation returns 0. The correct answer is 1, as the longest common subsequence between "ABB" and "BAA" is "B". 
+
+Note that the first implementation uses a dictionary (Counter) to store the results of previous subproblems, while the second implementation uses a 2D list. This can lead to differences in results for some inputs, particularly if the strings are long and the longest common subsequence is short.

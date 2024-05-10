@@ -1,0 +1,5 @@
+The intention of the code is to implement a generator function called "flatten", which accepts a nested list as input and returns a generator that yields its non-list objects in a flattened way. 
+
+The function achieves this by recursively iterating over the given list and its sub-lists. Whenever a non-list item is encountered, it is yielded to the caller. If a sub-list is encountered, the function is called recursively with the sub-list as argument. 
+
+Overall, the code provides an efficient and memory-friendly way to flatten a nested list data structure into a single list.

@@ -1,0 +1,5 @@
+The intention of the code is to implement the Sieve of Eratosthenes algorithm to generate all prime numbers up to and including a given positive integer `max`. 
+
+The algorithm starts by initializing an empty list `primes`. Then, it iterates through all integers from 2 to `max`, checking whether each integer is divisible by any of the primes in the list `primes` that have been found so far. If the integer is not divisible by any of the primes, it is added to the list of primes `primes`.
+
+Once all the integers up to `max` have been checked, the function returns the list `primes` containing all the prime numbers up to and including `max`.

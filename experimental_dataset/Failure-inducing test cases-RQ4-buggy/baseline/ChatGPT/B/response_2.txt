@@ -1,0 +1,17 @@
+response@ChatGPT:
+Test Case:
+
+1. Input:
+   n = 2
+   a = 5
+   s = "bcd"
+
+   Expected Output:
+   2
+
+   Actual Output:
+   1
+
+Explanation:
+When the program executes the line "if ord(s[i])>a:" with the input values above, it will not enter the block of code since 98 (the ASCII value of 'b') is not greater than 5. This means that the value of 'a' (which should represent the highest ASCII value of any character in the string 's') will remain at 5. The program will then print (a-96), which is 9, instead of the expected result of 2.
+

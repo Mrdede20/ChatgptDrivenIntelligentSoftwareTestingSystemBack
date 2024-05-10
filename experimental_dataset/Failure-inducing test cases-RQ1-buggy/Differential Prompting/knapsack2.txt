@@ -1,0 +1,1 @@
+No, both programs have the same functionality and should output the same result for any input. There is no specific test case where one program gives a different output than the other.

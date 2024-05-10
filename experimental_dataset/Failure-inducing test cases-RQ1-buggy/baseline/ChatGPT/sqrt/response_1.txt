@@ -1,0 +1,14 @@
+Test Case:
+
+Input:
+x = 2
+epsilon = 0.00001
+
+Expected Output:
+1.414213
+
+Actual Output:
+1.41421356
+
+Explanation:
+The program's output has gone beyond the precision difference defined by the epsilon value. It resulted in the wrong approximation of square root, and it does not equal the expected output. Therefore, the program has failed to meet the expected output, and it exposes a bug.

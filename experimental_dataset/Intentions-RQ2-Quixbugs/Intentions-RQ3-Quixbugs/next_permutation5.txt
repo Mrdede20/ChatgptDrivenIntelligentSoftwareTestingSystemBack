@@ -1,0 +1,7 @@
+The code defines a function named `next_permutation`, which takes a list called `perm` containing a sequence of unique integers as input. It computes and returns the lexicographically next permutation of the elements of the `perm` list as output.
+
+The function uses a nested loop to iterate through the `perm` list in reverse order. It checks if there is any pair of integers (i, j) in the list such that i < j and perm[i] < perm[j]. If such a pair exists, it swaps element i with j, and reverses the order of the suffix i + 1 to len(perm) -1. The resulting permutation is then returned.
+
+The function works by finding the rightmost element that is smaller than its next element, and then swap that element with the smallest element to the right that is bigger than it. This ensures that the resulting permutation is lexicographically greater than the original one, and it is the smallest possible permutation that is greater than the original one. If no such element is found, the input list is sorted in reverse order, indicating that it is already the maximum possible permutation.
+
+The code assumes that the input list is not already sorted in reverse order, or it will return `None`. This code can be useful in combinatorial problems where we need to generate or enumerate all possible permutation of elements in a given list.

@@ -1,0 +1,5 @@
+Yes, there are inputs that will make the two programs above have different outputs. One such input is when source and target are both empty strings. In the first program, the function will return 0, while in the second program, the function will return None. Here's the code to test this:
+
+```
+print(levenshtein("", ""))  # prints 0 in first program, None in second program
+```

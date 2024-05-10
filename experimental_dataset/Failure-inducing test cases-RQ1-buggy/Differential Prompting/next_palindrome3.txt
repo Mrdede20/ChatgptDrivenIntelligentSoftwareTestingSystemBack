@@ -1,0 +1,9 @@
+Yes, there is an input which can make the two programs have different output. Here is a test case:
+
+```
+digit_list = [1, 5, 8, 5, 1]
+print(next_palindrome(digit_list.copy()))
+print(next_palindrome(digit_list.copy()))
+```
+
+The first program will output `[1, 6, 0, 6, 1]` and then `[1, 6, 0, 6, 1]` again, while the second program will output `[1, 6, 0, 6, 1]` and then `[1, 6, 1, 6, 1]`.

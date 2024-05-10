@@ -1,0 +1,92 @@
+#FF
+node1 = Node(value=1, successor=Node(value=2))
+assert node1.successor == Node(value=2)
+
+#PT
+node1 = Node(1)
+node2 = Node(2)
+node3 = Node(3)
+node1.successor = node2
+node2.successor = node3
+assert detect_cycle(node1) == False
+
+#PT
+node1 = Node(1)
+node2 = Node(2)
+node3 = Node(3)
+node4 = Node(4, node1)
+node1.successor = node2
+node2.successor = node3
+node3.successor = node4
+assert detect_cycle(node1) == True
+
+#PT
+n1 = Node()
+n2 = Node()
+n3 = Node()
+n4 = Node()
+n1.successor = n2
+n2.successor = n3
+n3.successor = n4
+n4.successor = n1
+assert detect_cycle(n1) == True
+
+#PT
+node1 = Node(1)
+node2 = Node(2)
+node3 = Node(3)
+node4 = Node(4)
+node1.successor = node2
+node2.successor = node3
+node3.successor = node4
+node4.successor = node2
+assert detect_cycle(node1) == True
+
+#PT
+head = Node(1)
+node_2 = Node(2)
+node_3 = Node(3)
+head.successor = node_2
+node_2.successor = node_3
+node_3.successor = head
+assert detect_cycle(head) == True
+
+#PT
+a = Node('a')
+b = Node('b')
+c = Node('c')
+d = Node('d')
+a.successor = b
+b.successor = c
+c.successor = d
+d.successor = b
+assert detect_cycle(a) == True
+
+#PT
+node1 = Node()
+node2 = Node(successor=node1)
+node3 = Node(successor=node2)
+node1.successor = node3
+assert detect_cycle(node1) == True
+
+#PT
+node_1 = Node(1)
+node_2 = Node(2)
+node_3 = Node(3)
+node_4 = Node(4)
+node_1.successor = node_2
+node_2.successor = node_3
+node_3.successor = node_4
+node_4.successor = node_2
+assert detect_cycle(node_1) == True
+
+#PT
+n1 = Node(1)
+n2 = Node(2)
+n3 = Node(3)
+n4 = Node(4)
+n1.successor = n2
+n2.successor = n3
+n3.successor = n4
+n4.successor = n2
+assert detect_cycle(n1) == False

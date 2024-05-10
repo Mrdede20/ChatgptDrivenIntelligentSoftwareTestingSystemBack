@@ -1,0 +1,20 @@
+Both programs should produce the same output for all inputs. The second program is just a modified version of the first program that uses a helper function and passes in the length of the strings as parameters, but the logic and recursion structure is the same. Therefore, you can use the same test case to verify that they produce the same output. 
+
+Here's an example test case you can use to verify that the programs produce the same output:
+
+```
+String s1 = "ABCDGH";
+String s2 = "AEDFHR";
+String expectedOutput = "ADH";
+String output1 = LONGEST_COMMON_SUBSEQUENCE.longest_common_subsequence(s1, s2);
+String output2 = LONGEST_COMMON_SUBSEQUENCE.lcs_helper(s1, s2, s1.length(), s2.length());
+
+// check if the outputs match
+if (output1.equals(expectedOutput) && output2.equals(expectedOutput)) {
+    System.out.println("Both programs produce the same output.");
+} else {
+    System.out.println("The programs produce different outputs.");
+}
+``` 
+
+This test case should print "Both programs produce the same output."

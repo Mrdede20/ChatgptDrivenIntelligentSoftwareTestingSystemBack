@@ -1,0 +1,5 @@
+The intention of the provided code is to implement a function `rpn_eval` that evaluates a mathematical expression encoded in Reverse Polish Notation (RPN). 
+
+The RPN expression is represented as a list of values and operators. The `rpn_eval` function scans through the list from left to right and pushes all the numbers it encounters onto a stack. When an operator is encountered, it pops the two most recent values from the stack and applies the operator to those values, and then pushes the result back onto the stack. At the end of the iteration, the function returns the top value left on the stack which is the final result of evaluating the RPN expression.
+
+The `op` function is a helper function defined inside the `rpn_eval` function. It takes an operator symbol (`+`, `-`, `*`, `/`) and two numbers as input arguments, and returns the result of applying that operator on the two values. Instead of using a series of if-else statements or a switch statement to select the appropriate function based on the operator symbol, it uses a dictionary of lambda functions to look up and apply the function for the selected operator symbol.

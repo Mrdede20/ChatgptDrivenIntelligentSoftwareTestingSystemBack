@@ -1,0 +1,13 @@
+Test case:
+
+text = "This is a test for line wrapping functionality. This test case is designed to have a word that is longer than the column width to test boundary conditions of the algorithm."
+cols = 20
+
+Expected output:
+['This is a test for', 'line wrapping', 'functionality. This', 'test case is', 'designed to have a', 'word that is longer', 'than the column width', 'to test boundary', 'conditions of the', 'algorithm.']
+
+Actual output:
+['This is a test for', 'line wrapping', 'functionality. This', 'test case is', 'designed to have a', 'word that is longer t', 'han the column width', 'to test boundary cond', 'itions of the', 'algorithm.']
+
+Explanation:
+The algorithm doesn't handle words longer than the column width correctly. In this case, the word "longer" is longer than the column width (20), so it splits the word between two lines instead of moving the whole word to the next line. This results in a failed test case.

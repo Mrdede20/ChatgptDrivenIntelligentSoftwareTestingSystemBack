@@ -1,0 +1,13 @@
+Test case:
+
+n = 4
+length_by_edge = {(0, 1): 2, (0, 2): 6, (1, 2): 3, (1, 3): 1, (2, 3): 5}
+
+Expected Output:
+{(0, 0): 0, (0, 1): 2, (0, 2): 5, (0, 3): 3, (1, 0): float('inf'), (1, 1): 0, (1, 2): 3, (1, 3): 1, (2, 0): float('inf'), (2, 1): float('inf'), (2, 2): 0, (2, 3): 5, (3, 0): float('inf'), (3, 1): float('inf'), (3, 2): float('inf'), (3, 3): 0}
+
+However, when n = 2 and length_by_edge = {(0, 1): 1, (1, 0): 1} the function fails to find the correct shortest path and will result in an infinite loop.
+
+This is because the function is based on the Floyd-Warshall algorithm, which assumes that the input graph is a directed acyclic graph (DAG), or at least does not contain any negative weight cycles. The given test case creates a graph with a negative weight cycle, where there is a path from 0 to 1 with a total weight of -1. This causes the algorithm to fail as it tries to reduce the distance from 0 to 1 infinitely by cycling through the negative weight edge.
+
+To fix this, the input graph should be checked for negative weight cycles before applying the algorithm.

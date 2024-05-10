@@ -1,0 +1,5 @@
+The intention of the given code is to create a function named `pascal` which takes an integer 'n' as an input and returns the first 'n' rows of Pascal's triangle as a list of n lists. 
+
+In this function, initially, one row is set which is just `[1]`. Then, the function iterates over the range `(1, n)` and for every iteration, a new row is created. In every iteration of this loop, two inner loops are created; one loop for iterating over all the positions in a row and the other loop for adjusting the values for each position in the new row. 
+
+The newly created row is appended to the list named 'rows' at the end of each iteration, and in the end, the 'rows' variable containing all the rows of Pascal's triangle up to 'n' number of rows is returned.

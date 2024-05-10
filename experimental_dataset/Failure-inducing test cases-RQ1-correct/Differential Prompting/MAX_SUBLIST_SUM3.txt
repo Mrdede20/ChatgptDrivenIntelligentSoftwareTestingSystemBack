@@ -1,0 +1,6 @@
+Yes, there are inputs which make the two programs give a different output. The first program considers an empty sublist to have a sum of 0 and in case an input array has all negative numbers, it returns 0. On the other hand, the second program considers an empty sublist to have a sum of Integer.MIN_VALUE and in case all numbers are negative, it returns the largest element in the input array. Here is a test case which illustrates the difference:
+
+```
+int[] arr = {-1, -2, -3};
+System.out.println(MAX_SUBLIST_SUM.max_sublist_sum(arr)); // Output of first program is 0, output of second program is -1
+```

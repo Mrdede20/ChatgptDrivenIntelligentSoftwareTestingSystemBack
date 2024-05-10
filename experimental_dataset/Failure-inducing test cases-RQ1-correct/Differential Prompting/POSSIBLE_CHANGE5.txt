@@ -1,0 +1,7 @@
+Yes, there is an input that makes the two programs have different output. The input is:
+
+int[] coins = {1, 2, 3};
+
+int total = 4;
+
+The output of POSSIBLE_CHANGE's possible_change(int[] coins, int total) is 4, while the output of CoinChange's possible_change(int[] coins, int total) is 3.

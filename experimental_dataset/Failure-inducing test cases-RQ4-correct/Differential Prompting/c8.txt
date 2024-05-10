@@ -1,0 +1,15 @@
+Yes, there is an input which makes the two programs have different output.
+
+Test Input:
+
+1
+5
+1 8 6 7 10
+
+Expected Output of Program 1:
+
+2 5 -1 0 -3 
+
+Expected Output of Program 2:
+
+7 0 2 1 4

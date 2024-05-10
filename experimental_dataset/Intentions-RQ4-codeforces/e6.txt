@@ -1,0 +1,11 @@
+This code defines a class `Solution` with a single method `BinaryInversions()`. The method expects two arguments - an integer `n` and a list of binary integers `bits` of length `n`. 
+
+The goal of the method is to find the maximum number of inversions that can be achieved by changing at most two bits of the input list `bits`. An inversion is defined as a pair of indices `(i,j)` such that `i<j` and `bits[i] > bits[j]`. 
+
+The method first creates three copies of the input list `bits` - `first`, `second`, and `orig`. It then sets a flag for two of these copies - `hasFirst` and `hasSecond`. These flags are initially set to `True`.
+
+The method then iterates over the input list and updates the `first` and `second` list as follows - it changes the first `0` bit in `bits` to `1` in `first` and the last `1` bit in `bits` to `0` in `second`. The aim of this step is to generate two alternate versions of the original input list with two bits changed.
+
+The method then initializes certain variables `first_sum`, `second_sum`, `orig_sum`, `first_zeros`, `second_zeros`, and `orig_zeros`. It then iterates over the length of the input list in reverse order and updates these variables to keep track of the total number of inversions and zeros in the list `bits`, `first`, and `second`.
+
+Finally, the method returns the maximum number of inversions that can be achieved by changing at most two bits of the original input list.

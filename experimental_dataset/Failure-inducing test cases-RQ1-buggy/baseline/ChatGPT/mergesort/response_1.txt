@@ -1,0 +1,15 @@
+Here's a test case that could trigger a bug and result in a test failure:
+
+arr = [3, 2, 1]
+expected_output = [1, 2, 3]
+assert mergesort(arr) == expected_output
+
+This test case is testing the behavior of the mergesort() function when given an array that is not already sorted. The expected output is the sorted version of the input array. However, due to a bug in the merge() function, this test case will fail.
+
+The bug is that the merge() function does not handle the case where one of the input arrays is empty correctly. Specifically, if left is empty, the code result.extend(left[i:] or right[j:]) will append the entire right array to the result list, instead of only appending the remaining elements of right. This will result in an incorrect output for the test case, causing it to fail.
+
+To fix the bug, we need to change the line result.extend(left[i:] or right[j:]) to:
+
+result.extend(left[i:]) if j == len(right) else result.extend(right[j:])
+
+This will correctly append only the remaining elements of the non-empty array to the result list.

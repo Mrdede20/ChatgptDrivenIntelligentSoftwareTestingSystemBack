@@ -1,0 +1,5 @@
+The intention of the code is to define a function called "bitcount(n)" that takes a non-negative integer as input and returns the number of 1-bits in its binary encoding. 
+
+The implementation of the function is using the XOR (^) operator to flip the least significant bit of the input number n and then count the number of iterations until n becomes 0 in a while loop. This is based on the observation that n ^ (n-1) flips the least significant 1-bit of n to 0, and this process is repeated until all the 1-bits in n have been flipped to 0, at which point the loop exits and the count of iterations is returned as the number of 1-bits in the binary encoding of n.
+
+The code also includes some sample function calls to test the implementation for various input values including negative and zero numbers.

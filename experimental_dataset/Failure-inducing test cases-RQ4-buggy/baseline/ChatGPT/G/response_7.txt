@@ -1,0 +1,11 @@
+response@ChatGPT:
+Test case:
+t=1
+n=3
+a=0
+b=1
+1 2 1
+1 3 2
+
+This test case has a graph with 3 nodes and two edges with weights. The source node is 0 and the destination node is 1. This should output "YES" as the path from A to B can be either 0-1 or 0-2-1, and both have a XOR value of 2. However, the program may fail to handle the case where the queue is initialized with (-1,0) for all nodes, resulting in the incorrect value being stored for some nodes in the queue. This will result in a wrong answer being outputted, causing the test case to fail.
+

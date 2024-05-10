@@ -1,0 +1,1 @@
+No, the two programs implement the same algorithm, which is the Longest Common Subsequence problem. Each program uses a different data structure to store the values of the dynamic programming matrix, but the logic remains the same. Both programs will give the same output for any input.

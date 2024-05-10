@@ -1,0 +1,18 @@
+response@ChatGPT:
+
+
+
+Yes, a test case that can trigger a bug in the program is "())(","())()". This input contains an invalid parenthesization where a closing parenthesis is encountered before any corresponding opening parenthesis leading to a negative depth that is not detected by the program.
+
+request@user:
+Give us such test case. Use assert.
+
+response@ChatGPT:
+assert is_valid_parenthesization("()")
+assert is_valid_parenthesization("((()))")
+assert is_valid_parenthesization("()()()")
+assert not is_valid_parenthesization("(")
+assert not is_valid_parenthesization(")")
+assert not is_valid_parenthesization("(()")
+assert not is_valid_parenthesization("())")
+

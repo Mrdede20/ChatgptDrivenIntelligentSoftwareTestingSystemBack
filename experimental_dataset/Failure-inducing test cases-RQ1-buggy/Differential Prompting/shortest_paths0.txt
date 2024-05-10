@@ -1,0 +1,1 @@
+No, both programs have the same code and output, except for the difference in comments. The second code provides more comments on what the code does, but the actual implementation of the algorithm is the same as the first one.

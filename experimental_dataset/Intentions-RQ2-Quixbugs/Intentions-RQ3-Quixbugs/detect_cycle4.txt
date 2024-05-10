@@ -1,0 +1,5 @@
+The intention of this code is to detect whether a given linked list has a cycle or not. The code implements the "tortoise-and-hare" algorithm, also known as the "Floyd's cycle-finding algorithm", which is a well-known algorithm to detect if a linked list contains a cycle or not. 
+
+The algorithm works by moving two pointers through the linked list at different speeds, one slow pointer (tortoise) and one fast pointer (hare). If there exists a loop in the linked list, sooner or later the slower pointer will end up pointing to a node that the faster pointer has already visited before. At that point, we can be sure that there is a cycle in the linked list. If the faster node reaches the end of the linked list, then there must be no cycle.
+
+This code takes a starting node of a linked list as input and returns True if the linked list contains a cycle and False otherwise.

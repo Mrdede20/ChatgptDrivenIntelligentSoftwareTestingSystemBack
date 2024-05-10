@@ -1,0 +1,1 @@
+No, both programs are performing the same functionality of converting a given number to a given base. They are using different implementations but the output for the same input should be identical.

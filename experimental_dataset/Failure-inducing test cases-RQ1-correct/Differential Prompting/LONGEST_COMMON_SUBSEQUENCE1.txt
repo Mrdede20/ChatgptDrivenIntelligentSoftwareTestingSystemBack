@@ -1,0 +1,1 @@
+No, both programs use the same algorithm to find the longest common subsequence between two given strings. Thus, they will output the same result for any given input.

@@ -1,0 +1,6 @@
+This code takes an input `n`, which represents the number of test cases.
+For each test case, the code reads an integer `a`, followed by a string `s`.
+The code then checks each character in `s`, and if the character's ASCII value is greater than `a`, it updates `a` to be the ASCII value of that character.
+Finally, the code prints out the value of `a-96` for each test case.
+
+This code essentially finds the largest ASCII value in a given string and subtracts 96 from it. The subtraction of 96 is because the ASCII value of lowercase `a` is 97, and the code wants the output to start from 1 instead of 97.

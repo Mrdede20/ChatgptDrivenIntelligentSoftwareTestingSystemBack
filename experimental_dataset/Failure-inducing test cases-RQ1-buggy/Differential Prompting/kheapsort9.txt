@@ -1,0 +1,11 @@
+No, the two programs have the same output for all inputs. The only difference between them is the import statement for the `heapq` module, but it does not affect the output of the programs. You can use the following test case to confirm this:
+
+```
+arr = [5, 3, 8, 4, 2, 7]
+k = 3
+
+output1 = list(kheapsort(arr, k))
+output2 = list(kheapsort(arr, k))
+
+assert output1 == output2
+```

@@ -1,0 +1,24 @@
+Yes, the two programs can have different output for certain inputs. 
+
+Here is the test case that shows the difference: 
+
+```python
+source = 'A'
+weight_by_edge = {
+    ('A', 'B'): 1,
+    ('B', 'C'): -1,
+    ('C', 'A'): 2
+}
+
+result1 = shortest_paths(source, weight_by_edge)
+result2 = shortest_paths(source, weight_by_edge)
+
+print(result1)
+print(result2)
+```
+
+The first program will return `{'A': 0, 'B': 1, 'C': 0}` while the second program will return `{'A': 0, 'B': 1, 'C': -1}`. 
+
+The reason for the difference is that the two programs have different ways of initializing the `weight_by_node` dictionary. In the first program, all nodes are initialized to `float('inf')` except for the source node, which is initialized to 0. In the second program, the same thing happens but is achieved in a more explicit way. 
+
+However, in cases where there are negative-weight cycles in the graph, the first program may produce incorrect results while the second program can detect the negative cycle and return `None`.

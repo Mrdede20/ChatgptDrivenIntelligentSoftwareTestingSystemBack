@@ -1,0 +1,19 @@
+response@ChatGPT:
+Test Case:
+
+Input:
+1
+4 1 4
+1 2 10
+2 3 10
+2 4 1
+
+Expected Output:
+YES
+
+Explanation:
+The graph has two central nodes: 2 and 3, with equal shortest distances to nodes 1 and 4. 
+When traversing from node a=1 to node b=4, there are two possible paths: 1-2-4 or 1-2-3-4, both with XOR distance 11. 
+Thus, set(fromA) and set(fromB) will have more than one common element.
+The program should output YES, but it will not due to the incorrect check implemented in line 25.
+

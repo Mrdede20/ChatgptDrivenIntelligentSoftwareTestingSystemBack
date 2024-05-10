@@ -1,0 +1,110 @@
+Yes, there can be an input which makes the two programs have different output.
+
+Test Input Reasoning:
+
+Let's consider the simplest input where we have only one mountain of height 1.
+
+Test Input
+
+1
+1
+1
+
+Test Output Reasoning:
+
+For the first program, the output will be YES, meaning only one mountain exists.
+For the second program, the output will be NO, since there is no peak.
+
+Thus the output of the two programs will be different. 
+
+Test Output
+
+NO
+
+YES
+
+Test Input Reasoning:
+
+Let's consider an input where we have only two mountains, of height 1 which are at different heights.
+
+Test Input
+
+1
+2
+1 2
+
+Test Output Reasoning:
+
+For both programs, the output will be YES since there is only one peak and it satisfies the condition.
+
+Thus the output of the two programs will be the same.
+
+Test Output
+
+YES
+YES
+
+Test Input Reasoning:
+
+Let's consider an input where we have only two mountains, of height 1 which are at same heights.
+
+Test Input
+
+1
+2
+1 1
+
+Test Output Reasoning:
+
+For the first program, the output will be YES, since only one mountain exists.
+For the second program, the output will be NO, since there is no peak.
+
+Thus the output of the two programs will be different.
+
+Test Output
+
+NO
+YES
+
+Test Input Reasoning:
+
+Let's consider an input where we have three mountains, of height 1 which are at different heights.
+
+Test Input
+
+1
+3
+1 2 1
+
+Test Output Reasoning:
+
+For both programs, the output will be YES since there is only one peak and it satisfies the condition.
+
+Thus the output of the two programs will be the same.
+
+Test Output
+
+YES
+YES
+
+Test Input Reasoning:
+
+Let's consider an input where we have three mountains, of height 1 which are at the same heights.
+
+Test Input
+
+1
+3
+1 1 1
+
+Test Output Reasoning:
+
+For the first program, the output will be YES, since only one mountain exists.
+For the second program, the output will be NO.
+
+Thus the output of the two programs will be different.
+
+Test Output
+
+NO
+YES

@@ -1,0 +1,1 @@
+No, the two programs will have the same output for any given input as they are both implementing the same algorithm to find the kth smallest element in an array using quick-select approach. The only difference is in their function names.

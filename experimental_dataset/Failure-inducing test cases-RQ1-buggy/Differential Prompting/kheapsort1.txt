@@ -1,0 +1,1 @@
+No, these two programs are identical and will always produce the same output given the same input. Both programs implement the same kheapsort algorithm using Python's heapq module.

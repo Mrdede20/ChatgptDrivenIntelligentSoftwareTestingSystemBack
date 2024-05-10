@@ -1,0 +1,5 @@
+The given code is for implementing Bucket Sort algorithm which is a sorting algorithm that works by distributing elements of an array into a number of buckets. Each bucket then gets sorted individually, either using a different sorting algorithm, or by recursively applying the bucket sorting algorithm. Finally, the sorted buckets are merged back together to form the sorted array.
+
+The code takes two input parameters `arr` and `k`. `arr` is an array of integers which needs to be sorted and `k` is the upper bound of the size of the integers in arr (not inclusive). The code then uses counting sort algorithm to sort each bucket individually and merge them back to form the final sorted array.
+
+The output of the code is the elements of `arr` in sorted order.

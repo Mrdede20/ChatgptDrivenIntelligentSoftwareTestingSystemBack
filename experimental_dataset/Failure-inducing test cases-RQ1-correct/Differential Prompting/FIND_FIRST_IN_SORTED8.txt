@@ -1,0 +1,1 @@
+There is no input that makes the two programs have different output. Both programs implement binary search, which has a well-defined behavior and should return the same index for any given input array and search value.

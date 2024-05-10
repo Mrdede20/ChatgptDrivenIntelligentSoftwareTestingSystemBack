@@ -1,0 +1,7 @@
+This code takes input 't', which is the number of test cases. Then, it takes input for 't' number of tests, where each test consists of three integers. 
+
+For each test case, the three integers are sorted in ascending order and the middle integer is printed. This process is repeated three times for each test case.
+
+Once all the test cases are processed, the value of 't' is decremented by 1 until it becomes 1, after which the loop exits and the program stops.
+
+In summary, the code finds the middle number out of three numbers for 't' number of test cases.

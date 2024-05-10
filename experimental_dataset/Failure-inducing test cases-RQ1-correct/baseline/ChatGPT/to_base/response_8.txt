@@ -1,0 +1,32 @@
+response@ChatGPT:
+
+
+Yes, if the input 'b' is less than 2 or greater than 36, the program will raise an error as there are only 36 digits and digits for any base less than 2 or greater than 36 cannot be represented using the string module. 
+
+A possible test case would be:
+- Test case 1: to_base(10, 1) - this will raise a ValueError since base cannot be less than 2.
+
+request@user:
+Give us such test case. Use assert.
+
+response@ChatGPT:
+# Testing to_base function
+def test_to_base():
+
+    # test case 1
+    assert to_base(10, 2) == '1010'
+
+    # test case 2
+    assert to_base(15, 16) == 'F'
+
+    # test case 3
+    assert to_base(0, 10) == '0'
+
+    # test case 4
+    assert to_base(255, 16) == 'FF'
+
+    # test case 5
+    assert to_base(345, 8) == '531'
+
+test_to_base()
+

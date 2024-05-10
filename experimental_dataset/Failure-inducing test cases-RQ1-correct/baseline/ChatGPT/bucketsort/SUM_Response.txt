@@ -1,0 +1,49 @@
+#PT
+arr1 = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3]
+assert bucketsort(arr1, 10) == [1, 1, 2, 3, 3, 4, 5, 5, 6, 9]
+
+#PT
+arr = [3, 8, 7, 5, 2, 1, 9, 6, 4, 0]
+k = 10
+assert bucketsort(arr, k) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+#IT
+arr = [10, 58, 36, 24, 15]
+k = 6
+sorted_arr = bucketsort(arr, k)
+assert sorted_arr == [10, 15, 24, 36, 58], "Error: Bucket sort failed for given input"
+
+#PT
+assert bucketsort([3,6,2,8,1,7,0,4,5], 9) == [0, 1, 2, 3, 4, 5, 6, 7, 8]
+
+#PT
+arr = [4, 1, 3, 2]
+k = 5
+expected_output = [1, 2, 3, 4]
+assert bucketsort(arr, k) == expected_output
+
+#PT
+arr = [5, 2, 9, 1, 5, 6, 3]
+k = max(arr) + 1
+sorted_arr = bucketsort(arr, k)
+assert sorted_arr == [1, 2, 3, 5, 5, 6, 9], "Error: Bucket sort did not sort the list correctly."
+
+#PT
+arr1 = [1, 4, 2, 3, 5]
+k1 = 6
+expected_output1 = [1, 2, 3, 4, 5]
+assert bucketsort(arr1, k1) == expected_output1
+
+#PT
+unsorted_arr = [4, 5, 1, 6, 2, 7, 3]
+sorted_arr = bucketsort(unsorted_arr, 8)
+assert sorted_arr == [1, 2, 3, 4, 5, 6, 7]
+
+#PT
+assert bucketsort([5, 3, 1, 6, 7, 2], 8) == [1, 2, 3, 5, 6, 7]
+
+#PT
+arr = [4, 2, 1, 7, 9, 10, 3]
+k = 11
+sorted_arr = bucketsort(arr, k)
+assert sorted_arr == [1, 2, 3, 4, 7, 9, 10], "Failed: The array was not sorted correctly."

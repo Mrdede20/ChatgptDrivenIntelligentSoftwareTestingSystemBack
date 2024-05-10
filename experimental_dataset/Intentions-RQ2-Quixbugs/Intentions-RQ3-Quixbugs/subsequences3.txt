@@ -1,0 +1,5 @@
+The code defines a function `subsequences` that takes three arguments: `a`, `b`, and `k`. It returns all the possible length-`k` ascending sequences (where each element is greater than the previous element) of integers that fall within the range `a` to `b` (both inclusive).
+
+The code uses a recursive approach where it starts by finding all the possible subsequences that start with `a`, then `a+1`, and so on, until it reaches `b-k+1`. For each starting point, it appends the starting point value to the rest of the subsequences that are returned by recursively calling the `subsequences` function with updated `a`, `b`, and `k-1` arguments. The results are collected in a list `ret` and returned at the end.
+
+For example, `subsequences(a=1, b=5, k=3)` returns `[[1, 2, 3], [1, 2, 4], [1, 3, 4], [2, 3, 4]]`.

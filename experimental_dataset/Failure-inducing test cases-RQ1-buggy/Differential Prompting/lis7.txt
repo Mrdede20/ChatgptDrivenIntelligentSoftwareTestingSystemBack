@@ -1,0 +1,5 @@
+Yes, there exist inputs that can make the two programs have different output. Here is an example input:
+
+arr = [3, 1, 2, 5, 4]
+
+For this input, the first program would return 3, which is the length of the longest increasing subsequence [1, 2, 5]. However, the second program would return 4, which is the length of the longest increasing subsequence [1, 2, 4, 5].

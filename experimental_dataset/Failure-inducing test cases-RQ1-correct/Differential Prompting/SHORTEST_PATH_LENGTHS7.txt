@@ -1,0 +1,54 @@
+Yes, the two programs could potentially have different output for certain inputs. The first program uses Floyd-Warshall algorithm (which has a run-time complexity of O(n^3)) to find the shortest path lengths between all pairs of vertices in a weighted graph, while the second program uses a simplified version of Floyd-Warshall algorithm which has a slightly different implementation, but is still O(n^3) in terms of time complexity. 
+
+To illustrate a test case where the two programs produce different outputs, consider the following input:
+```
+numNodes = 4
+length_by_edge = {
+    [1, 2]: 2,
+    [2, 3]: 3,
+    [3, 4]: 4,
+    [1, 4]: 1,
+}
+```
+
+Running `SHORTEST_PATH_LENGTHS.shortest_path_lengths(numNodes, length_by_edge)` would output:
+```
+{
+    [1, 1]: 0,
+    [1, 2]: 2,
+    [1, 3]: 5,
+    [1, 4]: 1,
+    [2, 1]: 2147483647,
+    [2, 2]: 0,
+    [2, 3]: 3,
+    [2, 4]: 5,
+    [3, 1]: 2147483647,
+    [3, 2]: 2147483647,
+    [3, 3]: 0,
+    [3, 4]: 4,
+    [4, 1]: 2147483647,
+    [4, 2]: 2147483647,
+    [4, 3]: 2147483647,
+    [4, 4]: 0
+}
+```
+
+Running `ShortestPath.shortest_path_lengths(numNodes, length_by_edge)` would output:
+```
+{
+    [1, 2]: 2,
+    [1, 3]: 5,
+    [1, 4]: 1,
+    [2, 1]: 2147483647,
+    [2, 3]: 3,
+    [2, 4]: 5,
+    [3, 1]: 2147483647,
+    [3, 2]: 2147483647,
+    [3, 4]: 4,
+    [4, 1]: 2147483647,
+    [4, 2]: 2147483647,
+    [4, 3]: 2147483647
+}
+```
+
+As you can see, the output is different for paths involving vertices `4` and `2`.

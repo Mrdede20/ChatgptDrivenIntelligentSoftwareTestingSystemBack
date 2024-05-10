@@ -1,0 +1,12 @@
+Yes, there is an input that can make the two programs have different output. This is because the two programs have different approaches in generating the Pascal's triangle. For example, if you input a negative integer, the first program will return an empty list while the second program will return an empty list with one row. The first program checks the indices of previous rows before using them whereas the second program always tries to access the previous row even if it does not exist. Here is an example to show this:
+
+```
+# Test case
+n = -5
+
+# Output for the first program
+print(pascal(n))  # []
+
+# Output for the second program
+print(pascal(n))  # [[1]]
+```

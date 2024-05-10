@@ -1,0 +1,5 @@
+Yes, the output of the two programs can be different for certain inputs. 
+
+The first program (MERGESORT) returns a sorted ArrayList of Integers. The second program (MergeSort) also returns a sorted ArrayList of Integers but uses a different implementation. The difference is that the first program uses the less than or equal to operator (<=) in the merge method to determine which element to add to the result ArrayList in case of a tie. The second program uses only the less than operator (<) which could result in a different ordering of elements in certain cases.
+
+For example, suppose we have the following input ArrayList: [2, 2, 1, 1]. The MERGESORT program would return [1, 1, 2, 2], while the MergeSort program would return [1, 2, 2, 1].

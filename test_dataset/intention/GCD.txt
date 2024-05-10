@@ -1,0 +1,11 @@
+This program is to solve the greatest common divisor of two numbers.
+Input
+Enter an integer in the first line, and also enter an integer in the second line
+Output
+Output an integer
+Example
+input
+2
+4
+output
+2

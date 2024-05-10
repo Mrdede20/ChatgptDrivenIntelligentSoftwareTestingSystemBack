@@ -1,0 +1,5 @@
+The `sqrt` function implements the Newton-Raphson method to approximate the square root of a given number `x` with given precision `epsilon`. The function repeatedly updates its `approx` variable until the absolute value of the difference between `x` and `approx` falls below `epsilon`. Finally, the function returns the computed approximation.
+
+The function has a precondition that `x >= 1` and `epsilon > 0`. The function returns a float approximation of the square root of `x`, within the interval `[sqrt(x) - epsilon, sqrt(x) + epsilon]`. 
+
+As an example, if we call the `sqrt` function with `sqrt(2, 0.01)`, the function will return an approximation of the square root of 2, accurate to within 0.01: `1.4166666666666665`.

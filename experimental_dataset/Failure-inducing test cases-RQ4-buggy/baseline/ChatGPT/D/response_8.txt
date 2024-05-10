@@ -1,0 +1,36 @@
+response@ChatGPT:
+Test case:
+
+Input:
+5
+5 4 3 2 1
+5 3 4 2 1
+1 2 3 4 5
+1 2 3 2 1
+1 2 1
+
+Expected output:
+NO
+YES
+YES
+YES
+YES
+
+Explanation:
+The program is supposed to determine if there exists a single valley in the sequence of numbers, such that the sides of the valley are either strictly increasing or strictly decreasing. The first three test cases have such valleys and should pass, but the last two do not have such valleys and should fail.
+
+Test case 1:
+The input is a strictly decreasing sequence, and hence does not have any valleys. The program should return NO.
+
+Test case 2:
+The input has a valley at indices 1 to 3, where the sides of the valley are 5-3-4 and are strictly decreasing and increasing respectively. Hence, the program should return YES.
+
+Test case 3:
+The input has a valley at indices 0 to 4, where the sides of the valley are 1-2-3-4-5 and are strictly increasing. Hence, the program should return YES.
+
+Test case 4:
+The input has a valley at indices 0 to 4, where the sides of the valley are 1-2-3-2-1 and are not strictly increasing or decreasing. Hence, the program should return YES.
+
+Test case 5:
+The input has a valley at indices 0 to 2, where the sides of the valley are 1-2-1 and are not strictly increasing or decreasing. Hence, the program should return YES.
+

@@ -1,0 +1,16 @@
+Test Case: 
+1. Input: num = 10, b = 0
+    Expected Output: ValueError
+    Reason: The value of 'b' for base cannot be 0. This should raise a ValueError.
+2. Input: num = -10, b = 2 
+    Expected Output: TypeError
+    Reason: The function does not handle negative numbers, and since the function uses integer division, attempting to divide negative numbers will result in a TypeError.
+3. Input: num = 123, b = 6
+    Expected Output: '231'
+    Reason: This is a valid test case and should pass. 
+4. Input: num = 15, b = 16
+    Expected Output: 'F' 
+    Reason: This is a valid test case and should pass.
+5. Input: num = 'Fifteen', b = 10
+    Expected Output: TypeError
+    Reason: The function expects an integer for 'num', and passing a string will cause a TypeError.

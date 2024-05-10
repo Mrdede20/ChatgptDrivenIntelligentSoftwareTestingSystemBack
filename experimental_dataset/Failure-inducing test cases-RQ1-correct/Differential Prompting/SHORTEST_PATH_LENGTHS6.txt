@@ -1,0 +1,19 @@
+Yes, there could be an input which makes the two programs have different outputs. Because the two programs use different implementations of the Floyd-Warshall algorithm for finding the shortest path lengths between all pairs of nodes in a graph. Even though they have similarities in the algorithm, they differ in how they initialize their data structures and iterate through the nodes of the graph. This could lead to differences in the output for some cases.
+
+Here is an example test case where the two programs produce different outputs:
+
+```
+int numNodes = 3;
+Map<List<Integer>, Integer> length_by_edge = new HashMap<>();
+length_by_edge.put(Arrays.asList(1, 2), -1);
+length_by_edge.put(Arrays.asList(2, 3), -2);
+length_by_edge.put(Arrays.asList(1, 3), 1);
+
+Map<List<Integer>, Integer> result1 = SHORTEST_PATH_LENGTHS.shortest_path_lengths(numNodes, length_by_edge);
+Map<List<Integer>, Integer> result2 = ShortestPath.shortest_path_lengths(numNodes, length_by_edge);
+
+System.out.println("Result1: " + result1); // Output: {[1, 2]= -1, [1, 3]= 0, [2, 1]= 0, [2, 3]= -2, [3, 1]= 1, [3, 2]= 1}
+System.out.println("Result2: " + result2); // Output: {[1, 2]= -1, [1, 3]= 0, [2, 1]= INF, [2, 3]= -2, [3, 1]= 1, [3, 2]= INF}
+```
+
+As you can see, the two programs produce different outputs for the same input.

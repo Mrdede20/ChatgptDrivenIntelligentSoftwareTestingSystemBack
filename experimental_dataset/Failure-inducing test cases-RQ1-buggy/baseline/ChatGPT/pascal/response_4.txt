@@ -1,0 +1,11 @@
+Test Case:
+To trigger a bug in the given pascal(n) function, we need to pass an input value of n = 0, which will cause the program to raise an IndexError exception.
+
+The reason for this error is that the range() function in the second loop will start from 0 and run up to but not including r, which is 0 in this case, so the loop will not execute at all, and the rows list will remain empty. However, in the line upleft = rows[r - 1][c - 1] if c > 0 else 0, r - 1 will be -1, which will raise an IndexError.
+
+Test Code:
+
+assert pascal(0) == [[]]
+
+Expected Output:
+The expected output is a list containing a single empty list []. However, the program will raise an IndexError exception due to the invalid index r - 1 in the line upleft = rows[r - 1][c - 1] if c > 0 else 0.

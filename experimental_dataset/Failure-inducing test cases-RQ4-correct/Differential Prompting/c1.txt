@@ -1,0 +1,14 @@
+Yes, there is an input that makes the two programs output different results.
+
+Here's an input that would make the two programs output different results:
+
+Input:
+1
+5
+1 5 3 2 4
+
+Expected Output for the first program:
+3 -1 1 2 0 
+
+Expected Output for the second program:
+4 0 2 3 1

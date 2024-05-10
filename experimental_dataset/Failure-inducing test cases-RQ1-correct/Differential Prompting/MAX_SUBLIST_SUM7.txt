@@ -1,0 +1,1 @@
+No, both programs will give the same output for any input array. The algorithms used in both programs are Kadane's algorithm which finds the maximum sum of a contiguous subarray within a one-dimensional array of numbers.

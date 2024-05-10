@@ -1,0 +1,14 @@
+Test Case:
+
+nodes = [
+    Node("A", successors=[Node("C"), Node("B")]), 
+    Node("B", predecessors=[Node("A"), Node("C")]), 
+    Node("C", predecessor=Node("A"), successors=[Node("B"), Node("D")]),
+    Node("D", predecessor=Node("C"))
+]
+
+Expected Output: ["A", "C", "B", "D"]
+
+Bug: The program fails to correctly order the nodes in the expected topological order when there is a cycle in the graph. In this test case, there is a cycle between nodes A, B, and C. The program does not detect this cycle and includes all the nodes in the ordered list, but in the wrong order. 
+
+Actual Output: ["A", "C", "B", "D"] (test passes, but the order is incorrect)

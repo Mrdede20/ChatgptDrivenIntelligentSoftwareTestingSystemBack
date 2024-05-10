@@ -1,0 +1,7 @@
+The intention of the code is to perform a breadth-first search algorithm to determine whether a goal node is reachable from a starting node in a directed graph. The algorithm uses a queue data structure to visit the nodes in the graph in order of their distance from the starting node. 
+
+The function takes in two inputs, the start node and the goal node. It returns True if the goal node is reachable from the start node, and False otherwise.
+
+The algorithm works by starting at the start node and adding its successors to the queue. It then removes the first node from the queue and checks if it is the goal node. If the node is the goal node, it returns True. Otherwise, it adds the unexplored successors of the node to the queue and adds them to the set of nodes seen.
+
+The algorithm continues until it either finds the goal node and returns True, or the queue is empty and it returns False.

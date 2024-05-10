@@ -1,0 +1,39 @@
+Test Case:
+
+nodes = []
+
+node1 = Node(value=1)
+
+node2 = Node(value=2)
+
+node3 = Node(value=3)
+
+node4 = Node(value=4)
+
+node1.successors = [node2]
+
+node2.successors = [node3]
+
+node3.successors = [node4]
+
+node4.successors = [node2]
+
+nodes.append(node1)
+
+nodes.append(node2)
+
+nodes.append(node3)
+
+nodes.append(node4)
+
+Expected Result:
+
+The topological_ordering method should return an ordered list of nodes: node1, node2, node3, node4.
+
+Actual Result:
+
+The topological_ordering method generates a cycle in the graph and results in an infinite loop causing the program to get stuck. Therefore, the test case fails.
+
+Bug Description:
+
+The bug in the program is that the topological_ordering method does not check for cycles in the graph. It blindly adds the nodes in the order they appear in the list, causing an infinite loop when it encounters a cycle. In the test case above, node2 and node3 form a cycle, causing the program to get stuck in an infinite loop while traversing the graph.

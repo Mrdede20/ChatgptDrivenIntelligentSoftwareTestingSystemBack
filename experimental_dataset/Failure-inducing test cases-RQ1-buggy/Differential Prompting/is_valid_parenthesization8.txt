@@ -1,0 +1,1 @@
+No, all of the programs would give the same output for any given input.

@@ -1,0 +1,8 @@
+Yes, there are inputs that will make the two programs have different outputs. Here's a sample input:
+
+```java
+String a = "abcdeb";
+String b = "bcedba";
+```
+
+The first program uses a "top-down" approach (i.e., recursively), while the second one uses a "bottom-up" approach (i.e., iteratively). Because of this difference, the two programs may have different outputs for certain inputs.

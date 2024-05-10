@@ -1,0 +1,1 @@
+It's difficult to tell without knowing what the `Node` class looks like and how the `getSuccessors()` and `getNeighbors()` methods are implemented. However, assuming they are functionally equivalent, there's no input that will make the programs produce different output. They both implement a breadth-first search algorithm to find a path from `startnode` to `goalnode`.

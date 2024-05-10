@@ -1,0 +1,13 @@
+Yes, for example, when a=1, b=5 and k=2, the two programs will give different output.
+
+For the first program:
+```
+subsequences(1, 5, 2) -> [[1, 2], [1, 3], [1, 4], [2, 3], [2, 4], [3, 4]]
+```
+
+For the second program:
+```
+subsequences(1, 5, 2) -> [[1, 2], [1, 3], [1, 4], [1, 5], [2, 3], [2, 4], [2, 5], [3, 4], [3, 5], [4, 5]]
+```
+
+The first program generates subsequences of length k by considering all k-length subsequences that start with each element i, whereas the second program generates subsequences of length k by considering all k-length subsequences that contain each element i. This leads to different output for some inputs.

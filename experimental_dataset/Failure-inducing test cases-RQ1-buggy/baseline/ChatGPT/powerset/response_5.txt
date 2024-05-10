@@ -1,0 +1,19 @@
+One possible test case that can trigger a bug and result in test failure for the given program is as follows:
+
+Input: 
+arr = [1, 2, 2]
+
+Expected Output:
+[[], [1], [2], [2], [1, 2], [1, 2], [2, 2], [1, 2, 2]]
+
+Explanation:
+The expected output is the list of all possible subsets of the input array arr, including the empty subset. Note that the input array has multiple occurrences of the element 2, so the resulting subsets can have duplicate elements as well. The expected output includes all these duplicates.
+
+Bug/Issue:
+However, the given program has a bug that causes it to remove the duplicates from the resulting subsets. This is because the program uses a simple list comprehension to generate the subsets, which treats each subset as an ordered list and does not allow duplicates. As a result, the program fails to generate the correct subsets for inputs with duplicate elements.
+
+Actual Output:
+[[], [1], [2], [1, 2], [2, 2], [1, 2, 2]]
+
+Test Result:
+The test fails as the actual output is missing some expected subsets that contain duplicate elements.

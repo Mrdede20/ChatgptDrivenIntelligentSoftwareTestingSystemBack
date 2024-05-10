@@ -1,0 +1,15 @@
+Test Case:
+
+nodes = [Node(value="A", successors=[Node(value="B")]), Node(value="B", predecessors=[Node(value="A")])]
+
+Expected Output:
+
+The program should return a list containing nodes in topological order: [Node(value="A"), Node(value="B")]. 
+
+Actual Output:
+
+The program returns an empty list: [].
+
+Explanation:
+
+The bug is in the definition of the Node class. The successor attribute and method in the Node class are defined twice; once as an attribute and once as a method. This can create confusion and result in unexpected behavior. In the test case above, the input node B is defined with a predecessor node A, indicating that A must come before B in the topological ordering. However, the program fails to detect this relationship and returns an empty list as a result. The bug is likely caused by the duplicate definition of the successor attribute and method in the Node class.

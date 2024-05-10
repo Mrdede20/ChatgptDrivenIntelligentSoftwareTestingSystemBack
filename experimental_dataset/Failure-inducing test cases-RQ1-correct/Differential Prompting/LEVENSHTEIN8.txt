@@ -1,0 +1,3 @@
+Yes, there can be inputs that will give different outputs in the two programs. 
+
+For example, if you pass two empty strings ("") as arguments to both functions, the first program will return 0, while the second program will return 0.

@@ -1,0 +1,33 @@
+Yes, there could be test cases where the two programs have different outputs.
+
+The first program `SHORTEST_PATHS` calculates the shortest distances between nodes in an undirected weighted graph represented by `weight_by_edge` map. It uses the Bellman-Ford algorithm to find the shortest path between the source node and every other node in the graph.
+
+The second program `DijkstraAlgorithm` calculates the shortest distances between nodes in an undirected weighted graph represented by `weight_by_edge` map. It uses Dijkstra's algorithm to find the shortest path between the source node and every other node in the graph.
+
+The two programs use different algorithms to find the shortest distances, which means they may produce different outputs for certain inputs.
+
+Here's an example input that could result in different outputs:
+
+```
+Source node: A
+
+Edges:
+(A, B): 1
+(A, C): 2
+(B, D): 3
+(C, D): 1
+```
+
+Using this input, the `SHORTEST_PATHS` program should produce the following output:
+
+```
+{A=0, B=1, C=2, D=3}
+```
+
+while the `DijkstraAlgorithm` program should produce the following output:
+
+```
+{A=0, B=1, C=2, D=3}
+```
+
+In this case, the two programs produce the same output, but there could be other inputs where they produce different outputs.

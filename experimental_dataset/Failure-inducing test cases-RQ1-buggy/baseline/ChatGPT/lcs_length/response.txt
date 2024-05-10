@@ -1,0 +1,29 @@
+#PT
+assert lcs_length("", "") == 0
+
+#FT
+assert lcs_length("hello", "world") == 1
+
+#FT
+assert lcs_length("hello world", "world hello") == 5
+
+#FC
+assert lcs_length("abcdabcd", "bcdabcd") == 6 #error 7
+
+#PT
+assert lcs_length("abcde", "fghij") == 0
+
+#PT
+assert lcs_length("abcdefghijklmnopqrstuvwxyz", "123456789") == 0
+
+#PT
+assert lcs_length("123456789", "abcdefghijklmnopqrstuvwxyz") == 0
+
+#FT
+assert lcs_length("hello", "hello") == 5
+
+#PT
+assert lcs_length("a", "a") == 1
+
+#PT
+assert lcs_length("abcde", "123") == 0

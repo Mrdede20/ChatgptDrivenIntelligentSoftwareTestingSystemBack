@@ -1,0 +1,5 @@
+The `find_in_sorted` function performs a binary search on a sorted list of integers (`arr`) to find the index of a given value (`x`). It does this by defining a nested function called `binsearch` that takes in a start and end index as arguments, and recursively divides the array in half until it finds the index of the target value or until there are no more values to search. 
+
+If the value at the midpoint of the current search range is less than the target value, then the function calls itself with the right half of the range. Similarly, if the value at the midpoint is greater than the target value, then the function calls itself with the left half of the range. 
+
+The function returns the index of the target value in the original array or -1 if the target value is not found in the array.

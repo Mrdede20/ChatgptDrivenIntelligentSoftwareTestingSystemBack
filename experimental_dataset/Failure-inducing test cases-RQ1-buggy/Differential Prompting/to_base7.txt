@@ -1,0 +1,8 @@
+Yes, there is an input which makes the two programs have different output. Here's a test case you can use in Python:
+
+```python
+num = int("1" + "0" * 50)
+b = 16
+```
+
+This input represents a very large number (10^50) converted into hexadecimal (base 16). The first and third implementations should return the correct result, while the second implementation may fail due to memory limitations when constructing the reversed string.

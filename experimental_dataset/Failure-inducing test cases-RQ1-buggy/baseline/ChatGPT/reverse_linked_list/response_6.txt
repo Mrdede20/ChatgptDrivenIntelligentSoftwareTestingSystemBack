@@ -1,0 +1,18 @@
+Here's a test case that could trigger a bug in the reverse_linked_list function:
+
+# Create a linked list with three nodes
+node1 = Node(value=1)
+node2 = Node(value=2)
+node3 = Node(value=3)
+node1.successor = node2
+node2.successor = node3
+
+# Reverse the linked list
+result = reverse_linked_list(node1)
+
+# Check if the linked list is reversed correctly
+assert result == node3
+assert result.successor == node2
+assert result.successor.successor == node1
+
+This test case creates a linked list with three nodes and calls the reverse_linked_list function to reverse it. The expected output is a new linked list with the same nodes, but in reverse order. However, the reverse_linked_list function has a bug in the line node.successor = prevnode, which should be node.successor, prevnode = prevnode, node.successor. This bug causes the function to return None instead of the reversed linked list, resulting in a test failure.

@@ -1,0 +1,5 @@
+The intention of the code is to implement the Sieve of Eratosthenes algorithm for finding all the prime numbers up to a given number `max`. The function takes an integer `max` as input and returns a list of primes up to and including `max`. 
+
+The main idea of the algorithm is to start with a list of all integers from 2 to `max`, and repeatedly remove the multiples of the smallest remaining number in the list. The remaining numbers are all prime.
+
+In this implementation, `primes` is initialized as an empty list, and the loop iterates over all numbers from 2 to `max+1`. For each number `n`, the condition `any(n % p > 0 for p in primes)` checks whether `n` is divisible by any of the current `primes`. If it is not, then `n` is prime and is added to the `primes` list. Finally, the function returns the list of primes.

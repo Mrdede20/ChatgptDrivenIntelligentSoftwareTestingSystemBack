@@ -1,0 +1,16 @@
+Test case:
+
+n = 3
+length_by_edge = {
+    (0, 1): 5,
+    (1, 2): 3,
+    (2, 0): 4
+}
+
+result = shortest_path_lengths(n, length_by_edge)
+
+assert result[(0, 2)] == 7
+
+Explanation:
+
+The shortest_path_lengths function implements the Floyd-Warshall algorithm to find the shortest path between all pairs of vertices in a directed weighted graph. The test case above creates a graph with three vertices and three edges such that there is a negative cycle in the graph. The shortest path between vertices 0 and 2 should be 7, but the Floyd-Warshall algorithm fails to find the correct result because it does not handle negative cycles. The function returns a dictionary with the shortest path lengths between all pairs of vertices, so we can check the result for (0, 2) and assert that it is incorrect. This test case will fail because the function does not handle negative cycles correctly.

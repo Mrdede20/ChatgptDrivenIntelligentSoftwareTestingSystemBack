@@ -1,0 +1,7 @@
+Generate test cases that trigger a bug and result in test failure for the program below.
+
+def gcd(a, b):
+    if b == 0:
+        return a
+    else:
+        return gcd(a % b, b)

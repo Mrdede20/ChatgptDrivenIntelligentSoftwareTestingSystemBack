@@ -1,0 +1,7 @@
+The intention of this code is to implement the Quickselect algorithm in Python. Quickselect is an efficient algorithm for finding the kth-lowest element of an unsorted list.
+
+The function takes in an array (arr) and an integer k as input. It first chooses the first element of the array as the pivot value. Then it splits the array into two subarrays, one containing all elements below the pivot and the other containing all elements above the pivot. It then checks if the kth element is in the lower subarray, the upper subarray, or is the pivot itself.
+
+If the kth element is in the lower subarray, the function recursively calls itself on the lower subarray and the same value of k. If the kth element is in the upper subarray, the function recursively calls itself on the upper subarray and the new value of k that corresponds to the position of the kth element in the upper subarray. Finally, if the kth element is the pivot itself, the function simply returns the pivot value.
+
+The output of the function is the kth-lowest element of arr (0-based index).

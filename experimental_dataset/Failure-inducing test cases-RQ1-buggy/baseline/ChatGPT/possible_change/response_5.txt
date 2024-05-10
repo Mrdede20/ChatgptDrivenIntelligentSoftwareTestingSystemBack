@@ -1,0 +1,8 @@
+Test case:
+
+coins = [1, 2, 5]
+total = 12
+assert possible_change(coins, total) == 13
+
+Explanation:
+This test case will trigger a bug in the possible_change() function. The expected output is 13, which is the correct number of possible ways to make change for a total of 12 using the given set of coins [1, 2, 5]. However, the function will return a value of 15 due to an issue with the recursive call to possible_change() with the coins parameter. Specifically, the recursive call should pass the rest list to the next invocation of possible_change(), but instead it passes the original coins list, causing the function to count certain combinations of coins twice. This bug results in the test case failing.

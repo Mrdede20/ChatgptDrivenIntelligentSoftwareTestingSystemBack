@@ -1,0 +1,21 @@
+Yes, there is an input that makes the two programs have different output. 
+
+Here is the test case:
+
+```
+arr = [1, 2, 3]
+```
+
+When `arr` is passed to the first implementation:
+
+```
+[[3], [2], [2, 3], [1], [1, 3], [1, 2], [1, 2, 3]]
+```
+
+When `arr` is passed to the second and third implementations:
+
+```
+[[1, 2, 3], [1, 2], [1, 3], [1], [2, 3], [2], [3], []]
+```
+
+So, the order of the subsets is different in the two sets of output. The first implementation generates subsets with larger elements first, whereas the second and third implementations generate subsets with smaller elements first.

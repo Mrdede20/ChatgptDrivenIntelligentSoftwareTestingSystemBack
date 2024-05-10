@@ -1,0 +1,8 @@
+Test Case:
+sieve(1)
+
+Expected Result:
+The function should return an empty list because there are no prime numbers less than or equal to 1.
+
+Actual Result:
+The function returns [2]. This is incorrect because 2 is not a prime number less than or equal to 1. This test case triggers a bug in the program and results in test failure.

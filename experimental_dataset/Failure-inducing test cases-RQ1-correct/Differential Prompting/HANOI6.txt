@@ -1,0 +1,1 @@
+No, both programs solve the classic Towers of Hanoi problem recursively and output the same set of moves for a given input.

@@ -1,0 +1,1 @@
+No, there is no such input that can make these two programs have different output. Both programs are using binary search to find an element in a sorted array and they return the same output for the same input. The implementation of binary search may differ slightly, but the basic algorithm and the idea behind the implementation are the same in both programs.

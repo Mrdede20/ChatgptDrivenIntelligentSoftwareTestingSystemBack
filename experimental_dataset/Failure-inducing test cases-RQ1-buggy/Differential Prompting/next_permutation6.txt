@@ -1,0 +1,17 @@
+Yes, there is an input which makes the two programs have different output. The difference is in the 3rd line of the first program:
+```
+if perm[i] < perm[i + 1]:
+```
+It checks if the current element is less than the next element.
+
+On the other hand, in the second program, the condition is:
+```
+if perm[i] >= perm[i+1]:
+```
+It checks if the current element is greater than or equal to the next element.
+
+Here's an input that makes the two programs produce different output:
+```
+perm = [1, 3, 2]
+```
+The first program produces `[2, 1, 3]` as the next permutation, while the second program produces `[2, 3, 1]`.

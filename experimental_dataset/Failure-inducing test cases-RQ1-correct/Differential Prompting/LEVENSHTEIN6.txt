@@ -1,0 +1,12 @@
+Yes, there is an input that produces different output for the two programs. 
+
+The first program implements the recursive version of the Levenshtein distance algorithm, which is often slower than the more efficient dynamic programming approach used in the second program. 
+
+An example input that produces different output for the two programs is:
+
+s1 = "kitten"
+s2 = "sitting"
+
+The first program calculates the Levenshtein distance between the two strings as 3, while the second program calculates it as 3 as well. 
+
+However, for longer strings, the difference in performance between the two algorithms becomes more pronounced, with the recursive approach becoming much slower than the dynamic programming approach.

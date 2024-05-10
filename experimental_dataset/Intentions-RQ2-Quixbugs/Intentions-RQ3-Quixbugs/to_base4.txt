@@ -1,0 +1,5 @@
+The given code defines a function named `to_base()` that converts a given integer number `num` in base-10 to a target base `b` using integer base conversion algorithm. The target base can be any value between 2 to 36. The function returns a string representing the value of the given number `num` in the target base.
+
+The algorithm works by continuously dividing the given number `num` by the target base `b` and converting the remainder to the corresponding character from the base's alphabet. Eventually, a string of such characters is constructed which represent the value of the given `num` in the target base.
+
+The function uses the `string` module to define an alphabet for the target base, which is a concatenation of digits and uppercase characters.

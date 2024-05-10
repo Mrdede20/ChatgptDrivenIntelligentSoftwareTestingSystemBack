@@ -1,0 +1,12 @@
+Yes, there are inputs that can make the two programs output different results. 
+
+Here's a test case that demonstrates the difference:
+
+```
+s = "AAABBB"
+t = "ABAABBA"
+```
+
+The first implementation uses a `Counter` to keep track of the LCS length for all pairs of prefixes of `s` and `t`. The second implementation uses a 2D table to do the same thing. When the two implementations try to find the LCS length of `s` and `t` using this test case, they will have different maximum values stored in their respective data structures. 
+
+The first implementation would return 3, while the second implementation would return 4.

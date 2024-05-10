@@ -1,0 +1,5 @@
+This code reads in an integer t, which represents the number of test cases. Then it runs a loop for t times. In each iteration, it reads in three integers n, a, b and creates an empty list edges. It then loops from 0 to n-2 and reads in three integers u, v, w which represent an undirected edge between node u and node v with edge weight w. It populates the edges list with this edge information. 
+
+After that, the code performs two breadth-first searches starting at node a (fromA) and node b (fromB) respectively. It stores the distance traveled from node a to each node in the fromA list and also does the same for node b in the fromB list. It then checks if there are more than one common nodes between fromA and fromB or if there are more than two nodes fromB with 0 distance from b. If either of these conditions is true, it outputs "YES", otherwise it outputs "NO". 
+
+There is also an if statement inserted for debugging purposes in which it prints some variables if the current iteration q is equal to 52.

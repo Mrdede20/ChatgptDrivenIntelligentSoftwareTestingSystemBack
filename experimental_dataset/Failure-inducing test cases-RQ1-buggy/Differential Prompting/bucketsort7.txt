@@ -1,0 +1,12 @@
+Yes, there is an input for which the two programs above have different output. Here's an example test case:
+
+```
+arr = [1, 3, 2, 3]
+k = 4
+```
+
+With the first implementation, `bucketsort(arr, k)` returns `[1, 2, 3, 3]`.
+
+With the second implementation, `bucketsort(arr, k)` returns `[1, 3, 3, 0]`. 
+
+This is because in the second implementation, the outer loop iterates over `arr` instead of `counts`. As a result, in the second implementation, `counts` remains unchanged and `counts[i]` will always be `0`. Therefore, `sorted_arr` will contain zeroes instead of the correct counts of each element.

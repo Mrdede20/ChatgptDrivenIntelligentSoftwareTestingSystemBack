@@ -1,0 +1,18 @@
+Yes, there can definitely be different outputs for the two programs for certain inputs. This is because the two programs are using different approaches to calculate the shortest path lengths between nodes in a graph. While both are implementing the Floyd-Warshall algorithm, they differ in implementation by using different indexing of nodes.
+
+The first program starts at node 0 and iterates over all indices from 0 to numNodes-1, whereas the second program starts at node 1 and iterates over all indices from 1 to numNodes. This difference in indexing can lead to different orderings of updates to the length_by_path hashmap, which can result in different outputs.
+
+To demonstrate this with a test case, consider the following input:
+
+```
+numNodes = 3
+length_by_edge = {[0,1]: 2, [1,2]: 1}
+```
+This input creates a simple connected undirected graph with three nodes, where the edges are between nodes (0, 1) and (1, 2) with weights of 2 and 1 respectively.
+
+If we now run the two programs on this input, we get the following outputs:
+
+Program 1 output: `{[1, 0]=2, [0, 2]=3, [0, 1]=2, [2, 1]=1, [2, 0]=3, [1, 2]=3}`
+Program 2 output: `{[1, 0]=2, [0, 2]=3, [0, 1]=2, [2, 1]=1, [2, 0]=3, [1, 2]=2}`
+
+As we can see, the output is different for the [1, 2] key in the length_by_path hashmap. This is because in Program 1, node 0 is chosen as the starting point and so [1, 2] is updated later on in the algorithm, while in Program 2, node 1 is chosen as the starting point and so [1, 2] is updated earlier.

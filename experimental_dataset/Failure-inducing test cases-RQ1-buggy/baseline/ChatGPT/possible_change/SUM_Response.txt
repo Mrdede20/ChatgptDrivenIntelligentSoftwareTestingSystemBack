@@ -1,0 +1,58 @@
+#FC
+coins = [1, 5, 10, 25]
+total = 30
+expected_output = 8
+assert possible_change(coins, total) == expected_output #error 18
+
+#FC
+coins = [1, 2, 5, 10]
+total = 14
+expected_output = 4
+assert possible_change(coins, total) == expected_output #error 19
+
+#FC
+coins = [1, 5, 10, 25]
+total = 30
+expected_output = 13
+assert possible_change(coins, total) == expected_output #error 18
+
+#FC
+coins = [1, 3, 5]
+total = 7
+expected_output = 2
+assert possible_change(coins, total) == expected_output #error 4
+
+#FT
+coins = [1, 2, 5]
+total = 12
+assert possible_change(coins, total) == 13
+
+#FC
+coins = [1, 5, 10, 25]
+total = 30
+expected_output = 8
+assert possible_change(coins, total) == expected_output #error 18
+
+#FC
+coins = [1, 5, 10]
+total = 15
+expected_output = 4
+assert possible_change(coins, total) == expected_output #error 6
+
+#FC
+coins = [5, 10, 25]
+total = 30
+expected_output = 2
+assert possible_change(coins, total) == expected_output #error 5
+
+#FC
+coins = [1, 3, 5]
+total = 7
+expected_output = 2
+assert possible_change(coins, total) == expected_output #error 4
+
+#FT
+coins = [1, 2, 5]
+total = 12
+expected_output = 13
+assert possible_change(coins, total) == expected_output

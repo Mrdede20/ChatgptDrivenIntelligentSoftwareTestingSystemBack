@@ -1,0 +1,25 @@
+Sure, here's a test case that can trigger a bug and result in test failure:
+
+# Test Case
+weight_by_edge = {
+    (1, 2): 1,
+    (1, 3): 2,
+    (2, 3): 3,
+    (2, 4): 4,
+    (3, 4): 5,
+    (3, 5): 6,
+    (4, 5): 7
+}
+
+# Expected output
+# {(1, 2), (1, 3), (2, 4), (3, 5)}
+
+# Actual output
+# {(1, 2), (2, 3), (3, 4), (4, 5)}
+
+Explanation:
+The program implements Kruskal's algorithm to find the minimum spanning tree of a graph. In Kruskal's algorithm, the edges are sorted by weight and then added to the minimum spanning tree in increasing order of weight, while ensuring that no cycles are formed. The algorithm maintains a set of groups of nodes, with each group representing a connected component in the minimum spanning tree. When a new edge is added to the minimum spanning tree, it connects two groups of nodes, and these two groups are merged.
+
+In this test case, the edges are sorted by weight in ascending order. According to Kruskal's algorithm, the edge with weight 1, which is (1, 2), should be added first to the minimum spanning tree. Then, the edge with weight 2, which is (1, 3), should be added next. However, the program adds the edge with weight 3, which is (2, 3), instead of (1, 3). This is because the program uses the group_by_node dictionary to check if the nodes of an edge belong to the same group or not. In this case, group_by_node[1] and group_by_node[3] are not in the same group, but group_by_node[2] and group_by_node[3] are in the same group. Therefore, the program adds the edge (2, 3) instead of (1, 3).
+
+This results in an incorrect minimum spanning tree and causes the test to fail. The expected output is {(1, 2), (1, 3), (2, 4), (3, 5)} but the actual output is {(1, 2), (2, 3), (3, 4), (4, 5)}.

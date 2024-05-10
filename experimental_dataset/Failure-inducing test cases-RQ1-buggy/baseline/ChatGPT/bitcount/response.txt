@@ -1,0 +1,29 @@
+#PT
+assert bitcount(0) == 0
+
+#FT
+assert bitcount(1) == 1
+
+#FT
+assert bitcount(2) == 1
+
+#FT
+assert bitcount(15) == 4
+
+#FT
+assert bitcount(16) == 1
+
+#FT
+assert bitcount(100) == 3
+
+#FC
+assert bitcount(-1) == 64  # assuming 64-bit integer architecture #error
+
+#PT
+assert bitcount(None) == 0
+
+#FT
+assert bitcount(2**64-1) == 64  # assuming 64-bit integer architecture
+
+#FT
+assert bitcount(2**100) == 1

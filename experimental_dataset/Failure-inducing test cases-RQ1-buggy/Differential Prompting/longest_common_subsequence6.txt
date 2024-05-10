@@ -1,0 +1,11 @@
+Yes, there is an input which makes the two programs have different output. Here's a test case:
+
+```
+a = 'ababa'
+b = 'babab'
+
+print(longest_common_subsequence_1(a, b))  # Output: 'abab'
+print(longest_common_subsequence_2(a, b))  # Output: 'bbbb'
+```
+
+The first program `longest_common_subsequence_1` returns 'abab' as the longest common subsequence of 'ababa' and 'babab'. The second program `longest_common_subsequence_2` returns 'bbbb' as the longest common subsequence of the same input strings.

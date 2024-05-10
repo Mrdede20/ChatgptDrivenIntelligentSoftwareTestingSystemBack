@@ -1,0 +1,11 @@
+Test Case:
+
+Input: n = 0
+Expected Output: []
+
+Explanation:
+The expected output for an input of 0 is an empty list, as there are no rows in Pascal's triangle for n = 0. However, the current implementation of the pascal function returns a list containing a single row with a value of 1. Therefore, this test case will trigger a bug and result in a test failure.
+
+Example Usage:
+
+assert pascal(0) == []

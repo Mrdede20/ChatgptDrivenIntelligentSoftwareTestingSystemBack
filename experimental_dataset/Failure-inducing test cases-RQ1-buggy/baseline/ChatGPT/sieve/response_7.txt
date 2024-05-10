@@ -1,0 +1,9 @@
+Test Case:
+
+Input: max = 15
+
+Expected Output: [2, 3, 5, 7, 11, 13]
+
+Actual Output: [2, 3, 5, 7, 11, 15] 
+
+Explanation: The sieve function is expected to return a list of all prime numbers up to the input max (inclusive). However, the actual output includes the non-prime number 15. This is because the if statement only checks if the remainder of n divided by primes list is greater than 0, but it doesn't check if n itself is already a multiple of a number in the primes list. To trigger this bug, we can choose an input value that includes a composite number that is not being correctly identified by the sieve function. In this case, the number 15 is not being correctly identified as composite, resulting in a failure in the test.

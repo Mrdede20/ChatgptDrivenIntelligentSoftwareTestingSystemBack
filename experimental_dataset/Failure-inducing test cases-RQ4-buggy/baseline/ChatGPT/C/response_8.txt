@@ -1,0 +1,17 @@
+response@ChatGPT:
+Test Case:
+
+Input:
+1
+3
+1 2 3
+
+Expected Output:
+2 1 0 
+
+Actual Output:
+2 1
+
+Explanation:
+The program is supposed to find the two maximum elements in the list and subtract the second maximum element from all the remaining elements and print the result. However, in this case, the program is failing to print the result for the last element (3) as it is not processed inside the loop. This is due to the fact that the print statement is inside the loop and there is no print statement after the loop to print the last element.
+

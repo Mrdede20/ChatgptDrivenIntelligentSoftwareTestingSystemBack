@@ -1,0 +1,9 @@
+Yes, there is an input that would make the two programs have different output. 
+
+Test case: `n = 3`
+
+The first program will output `[[1], [1, 1], [1, 2, 1]]`. 
+
+The second program will output `[[1], [1, 1], [1, 2, 1], [1, 3, 3, 1]]`. 
+
+The two programs produce different outputs because the second program calculates one more row than the first program.

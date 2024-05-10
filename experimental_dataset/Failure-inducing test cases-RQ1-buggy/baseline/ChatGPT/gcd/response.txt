@@ -1,0 +1,29 @@
+#PT
+assert gcd(0, 0) == 0
+
+#FT
+assert gcd(-10, 5) == 5
+
+#FT
+assert gcd(-10, -5) == -5
+
+#FC
+assert gcd(10.5, 5) == 5 #error 0.5
+
+#FC
+assert gcd(10.5, 5.2) == 0.1 #error 1.865174681370263e-14
+
+#IT
+assert gcd('10', 5) == 5
+
+#IT
+assert gcd('10', '5') == 5
+
+#IT
+assert gcd([10], 5) == 5
+
+#IT
+assert gcd([10], [5]) == 5
+
+#IT
+assert gcd(None, 5) == 5

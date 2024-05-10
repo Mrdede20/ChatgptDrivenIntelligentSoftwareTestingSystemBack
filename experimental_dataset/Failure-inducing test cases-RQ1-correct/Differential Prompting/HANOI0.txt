@@ -1,0 +1,1 @@
+No, the two programs will produce the same output for the same input, because they both solve the tower of Hanoi problem using recursion with the same base case and same recursive cases. The only difference is the implementation details and the method signature.

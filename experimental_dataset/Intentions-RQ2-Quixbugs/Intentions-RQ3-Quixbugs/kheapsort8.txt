@@ -1,0 +1,7 @@
+The `kheapsort` function implements a sorting algorithm called "K-Heapsort" which can sort an almost-sorted array in O(n log k) time, where n is the length of the array and k is the maximum displacement of each element from its sorted position. 
+
+The implementation first creates a heap of the first k elements of the array using the `heapify` method from the `heapq` module. It then iterates through the remaining elements of the array and yields the result of `heappushpop(heap, x)`, which adds the next element to the heap and returns the smallest element currently in the heap. This effectively sorts the array with a sliding window of size k. 
+
+After iterating through all elements, the remaining elements in the heap are yielded in sorted order using the `heappop` method until the heap is empty. 
+
+The function returns a generator that generates the sorted elements of the input array.

@@ -1,0 +1,3 @@
+The intention of the code is to find the number of distinct ways to make change adding up to the given "total" value using only the coins of the given denominations ("coins" list). This is done by recursively reducing the "total" value by subtracting the denominations of each coin and calling the same function for the new "total" value with the remaining denominations, until the "total" value becomes zero (which means a valid way of making change has been found and 1 is returned) or less than zero (which means a valid way of making change is not possible and 0 is returned).
+
+The function returns the sum of the recursive calls for the remaining denominations with the new "total" value, which gives the total number of distinct ways to make the required change.

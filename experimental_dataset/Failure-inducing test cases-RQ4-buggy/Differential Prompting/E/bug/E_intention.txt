@@ -1,0 +1,21 @@
+correct: https://codeforces.com/contest/1760/submission/185595324
+bug: https://codeforces.com/contest/1760/submission/185594867
+
+This code defines a class called Solution that contains a single method called BinaryInversions. The purpose of the BinaryInversions method is to find the maximum number of inversions that can be created in a binary sequence of length n by flipping at most two bits.
+
+The method takes two arguments: n, which represents the length of the binary sequence, and bits, which is a list of n integers representing the binary sequence.
+
+The method first creates three copies of the bits list, called first, second, and orig, using the Python slice notation to make copies of the original list. It then initializes three variables, hasFirst, hasSecond, and hasOrig, to True.
+
+The method then loops over the bits list, looking for the first zero from the left and the first one from the right. When it finds the first zero from the left, it sets the corresponding bit in the first list to 1 and sets hasFirst to False. Similarly, when it finds the first one from the right, it sets the corresponding bit in the second list to 0 and sets hasSecond to False.
+
+The method then initializes six variables, first_sum, second_sum, orig_sum, first_zeros, second_zeros, and orig_zeros, to zero.
+
+The method then loops over the bits list in reverse order. For each bit, it checks whether it is zero or one in each of the three lists. If it is zero in the first list, it increments orig_zeros, because this bit is not counted as an inversion in the original list. If it is one in the first list, it adds orig_zeros to orig_sum, because this bit contributes to the total number of inversions in the original list. Similarly, the method updates second_zeros and second_sum for the second list and first_zeros and first_sum for the first list.
+
+Finally, the method returns the maximum of orig_sum, first_sum, and second_sum, which represents the maximum number of inversions that can be created by flipping at most two bits. The code then takes input from the user in the following format:
+
+The first line contains an integer t, representing the number of test cases.
+For each test case, the first line contains an integer n, representing the length of the binary sequence, followed by n integers separated by spaces, representing the binary sequence.
+The code then prints the output for each test case using the print function.
+

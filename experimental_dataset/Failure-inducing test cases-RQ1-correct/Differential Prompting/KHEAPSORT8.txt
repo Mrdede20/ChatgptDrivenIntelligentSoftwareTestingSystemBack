@@ -1,0 +1,1 @@
+No, the two programs perform the same task of sorting an ArrayList in ascending order using a k-heap method with the difference being variable names and minor implementation details. So, the output for any input should be the same in both programs.

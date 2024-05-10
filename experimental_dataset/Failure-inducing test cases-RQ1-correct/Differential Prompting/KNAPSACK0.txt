@@ -1,0 +1,1 @@
+No, the two programs implement the same algorithm for solving the knapsack problem, so there is no input that could make them have different output. They just have different variable naming and minor differences in the order of operations, but the logic is the same.

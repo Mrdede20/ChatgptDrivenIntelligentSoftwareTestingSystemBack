@@ -1,0 +1,9 @@
+Yes, there is an input which makes the two programs have different output. This will happen when the input list contains all 9's. Here's a test case for Python:
+
+```
+digit_list = [9, 9, 9, 9]
+print(next_palindrome(digit_list.copy()))
+print(next_palindrome(digit_list.copy()))
+```
+
+The first call to `next_palindrome` will return `[1, 0, 0, 0, 1]`, while the second call will return `[1, 0, 0, 0, 0, 1]`. The first program will output `[1, 0, 0, 0, 1]`, while the second program will output `[1, 0, 0, 0, 0, 1]`.

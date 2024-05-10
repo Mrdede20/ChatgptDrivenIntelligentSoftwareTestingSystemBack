@@ -1,0 +1,19 @@
+Test case:
+
+coins = [1, 2, 5, 10]
+total = 14
+
+Expected Output:
+The function should return 4, indicating that there are 4 possible ways to make change for 14 using the coins provided ([1, 2, 5, 10]):
+
+-10, 2, 2
+-5, 5, 2, 2
+-5, 5, 2, 1, 1
+-5, 5, 1, 1, 1, 1
+
+However, the current implementation of the function returns 5, which is incorrect.
+
+Explanation:
+The issue with the current implementation is that it doesn't handle duplicate combinations. For example, the combination of 2, 2, 10 is counted twice as it is computed once when the first 2 is chosen from coins and again when the second 2 is chosen.
+
+To fix this bug, the function should keep track of the previously computed combinations and avoid recomputing them.

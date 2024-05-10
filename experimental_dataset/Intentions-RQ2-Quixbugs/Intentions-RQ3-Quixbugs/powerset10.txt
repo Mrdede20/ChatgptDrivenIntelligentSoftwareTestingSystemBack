@@ -1,0 +1,7 @@
+The `powerset` function takes a list `arr` and returns a list of all the possible subsets of `arr`, including the empty set and `arr` itself. It uses recursion to generate all the subsets, starting with the empty list as the base case.
+
+The function works by recursively finding all the subsets of the remaining elements of the list (`rest`) and then adding the first element of the original list (`first`) to each of those subsets. This generates all the possible subsets that include `first`. Then, it combines those subsets with the subsets that don't include `first` (i.e., the ones generated from `rest`), since every subset of the original list is either a subset that includes `first` or one that doesn't.
+
+The function then returns the list of all the combined subsets.
+
+Note that the function assumes that `arr` has no duplicate elements, so it may not work correctly for lists with duplicates. Also note that the function uses a Python 3-specific feature (`*rest`) to extract the first element of the list and the remaining elements.

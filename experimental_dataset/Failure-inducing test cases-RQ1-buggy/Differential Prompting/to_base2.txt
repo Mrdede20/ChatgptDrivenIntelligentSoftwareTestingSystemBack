@@ -1,0 +1,7 @@
+Yes, there is at least one input that makes the two programs have different output.
+
+Test case:
+num = 90
+b = 10
+
+The first two implementations return "90" as the output, while the last implementation returns "00090".

@@ -1,0 +1,54 @@
+One possible test case that could trigger a bug and result in test failure for the program above is:
+
+n = 4
+length_by_edge = {
+    (0, 1): 2,
+    (0, 2): 1,
+    (1, 3): 5,
+    (2, 3): 3,
+}
+
+result = shortest_path_lengths(n, length_by_edge)
+expected = {
+    (0, 0): 0,
+    (0, 1): 2,
+    (0, 2): 1,
+    (0, 3): 4,
+    (1, 0): float('inf'),
+    (1, 1): 0,
+    (1, 2): float('inf'),
+    (1, 3): 5,
+    (2, 0): float('inf'),
+    (2, 1): float('inf'),
+    (2, 2): 0,
+    (2, 3): 3,
+    (3, 0): float('inf'),
+    (3, 1): float('inf'),
+    (3, 2): float('inf'),
+    (3, 3): 0,
+}
+
+assert result == expected
+
+In this test case, the input length_by_edge represents a graph with four nodes and four edges. The expected output is the shortest path lengths between all pairs of nodes in the graph, computed using the Floyd-Warshall algorithm implemented by the shortest_path_lengths function.
+
+However, there is a bug in the program that causes it to produce incorrect output for this test case. Specifically, the shortest path length between nodes 1 and 2 is computed as float('inf') instead of 3. This is because the program does not initialize the length_by_path dictionary with the edge lengths provided in the input, which causes the algorithm to incorrectly assume that there is no edge between nodes 1 and 2.
+
+To fix this bug, the shortest_path_lengths function should initialize the length_by_path dictionary with the edge lengths provided in the input as follows:
+
+def shortest_path_lengths(n, length_by_edge):
+    length_by_path = defaultdict(lambda: float('inf'))
+    length_by_path.update({(i, i): 0 for i in range(n)})
+    length_by_path.update(length_by_edge)
+
+    for k in range(n):
+        for i in range(n):
+            for j in range(n):
+                length_by_path[i, j] = min(
+                    length_by_path[i, j],
+                    length_by_path[i, k] + length_by_path[k, j]
+                )
+
+    return length_by_path
+
+With this fix, the program should correctly compute the shortest path lengths for the given test case.

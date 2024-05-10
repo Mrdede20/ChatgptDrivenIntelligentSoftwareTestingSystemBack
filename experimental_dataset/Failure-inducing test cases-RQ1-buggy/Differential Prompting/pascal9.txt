@@ -1,0 +1,7 @@
+Yes, there exist inputs that would make the two programs output different results. One such input is when n=1.
+
+For the first program, with n=1, the output will be [[1]].
+
+However, for the second program, with n=1, the output will be [[1, 1]].
+
+This is because the second program has an extra condition in the inner loop that checks whether i > 1, which will be false for n=1 and skip over the loop, resulting in a different output.

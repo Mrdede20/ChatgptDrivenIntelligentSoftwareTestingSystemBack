@@ -1,0 +1,1 @@
+The two programs have some differences in syntax, but they are essentially doing the same thing, which is generating the power set of a given input set. Given that they are essentially identical, they will produce the same output for any given input.

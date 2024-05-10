@@ -1,0 +1,28 @@
+Here's a test case that could trigger a bug and result in test failure:
+
+# Test case to trigger bug in reverse_linked_list function
+def test_reverse_linked_list_bug():
+    # Create a linked list with three nodes
+    node1 = Node(1)
+    node2 = Node(2)
+    node3 = Node(3)
+
+    # Link the nodes together
+    node1.successor = node2
+    node2.successor = node3
+
+    # Reverse the linked list
+    reversed_list = reverse_linked_list(node1)
+
+    # Verify that the linked list is reversed
+    assert reversed_list == node3
+    assert node3.successor == node2
+    assert node2.successor == node1
+
+In this test case, we create a linked list with three nodes (1 -> 2 -> 3). We then call the reverse_linked_list function on the first node of the linked list (node1). The expected result is a new linked list with the order reversed (3 -> 2 -> 1).
+
+However, there's a bug in the implementation of the Node class. The successor attribute is used both to store the next node in the linked list and to store the previous node when reversing the list. This can cause unexpected behavior when iterating through the list.
+
+To trigger the bug, we need to create a linked list where the successor attribute of a node is also in its successors list. This will cause the reverse_linked_list function to get stuck in an infinite loop.
+
+In the test case above, we create a linked list where node2 is both the successor of node1 and in the successors list of node1. This should trigger the bug and cause the test to fail.

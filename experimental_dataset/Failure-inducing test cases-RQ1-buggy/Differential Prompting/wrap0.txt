@@ -1,0 +1,13 @@
+Yes, there are inputs that could make the two programs output different results. 
+
+The first program starts by trying to find the last space character within the given number of columns. If it finds a space, it splits the text at that position and appends it to the list of lines. If it doesn't find a space, it splits the text at the given number of columns, even if that means chopping off a word.
+
+The second program starts by checking whether the remaining text is shorter than the given number of columns. If it is, it appends it to the list of lines and exits the loop. If it isn't, it tries to find the last space character within the given number of columns. If it finds a space, it splits the text at that position and appends it to the list of lines. If it doesn't find a space, it splits the text at the given number of columns, even if that means chopping off a word.
+
+Therefore, the difference between the two programs lies in the order in which they perform the checks, which could affect the way long words are wrapped. For example, consider the input "Python is a powerful programming language" and the number of columns is set to 8. The first program outputs:
+['Python', 'is a', 'powerful', 'programm', 'ing', 'language']
+
+While the second program outputs:
+['Python', 'is a', 'powerful', 'program', 'ming', 'language']
+
+As you can see, the first program split the word "programming" to "programm" and "ing", while the second program split it to "program" and "ming".

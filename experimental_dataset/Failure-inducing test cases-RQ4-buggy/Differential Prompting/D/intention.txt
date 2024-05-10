@@ -1,0 +1,7 @@
+Bug: https://codeforces.com/contest/1760/submission/200624838
+Correct: https://codeforces.c  om/contest/1760/submission/200625008
+This code is a Python implementation of a solution to a programming problem. The problem statement is not included in the code, but it seems to be related to analyzing a list of numbers and determining if there exists a pair of adjacent numbers that are both local minima (i.e., a valley).
+
+The code defines a function solve that takes a list L as input and returns a boolean value indicating whether there exists a pair of adjacent elements in the list that form a valley. The function does this by iterating through the list and keeping track of all the valleys it finds. If it encounters a pair of adjacent elements that form a valley and that valley is the only one found so far, the function returns True. Otherwise, it returns False.
+
+The code also defines two lambda functions ii and iilist to facilitate reading input from standard input. Finally, the code uses a loop to read the input and call solve on each list of numbers, printing "YES" if a valley is found and "NO" otherwise.

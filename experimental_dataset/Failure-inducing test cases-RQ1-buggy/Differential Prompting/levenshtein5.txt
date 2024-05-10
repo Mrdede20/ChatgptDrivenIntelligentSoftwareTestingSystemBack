@@ -1,0 +1,12 @@
+Yes, there are inputs that could make the two programs have different output. 
+
+As an example, consider the inputs source = "abc" and target = "bcd". 
+
+In the first program, the output would be 2, while the output of the second program would be 3. This is because the first program considers two deletions to transform "abc" into "bcd", while the second program considers one deletion and one substitution. 
+
+Here's the output when the test case is run in Python:
+
+```python
+print(levenshtein("abc", "bcd")) # Output: 2
+print(levenshtein("abc", "bcd")) # Output: 3 
+```

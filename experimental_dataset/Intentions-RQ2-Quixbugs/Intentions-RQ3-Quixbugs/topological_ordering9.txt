@@ -1,0 +1,5 @@
+The intention of this code is to perform a topological sort on a directed acyclic graph (DAG) represented by a list of nodes. The topological sorting produces a linear ordering of nodes such that for every directed edge (u, v) from node u to node v, u comes before v in the ordering. 
+
+The algorithm first finds all the nodes with no incoming edges, i.e., the sources of the DAG, and adds them to an ordered list. It then iteratively adds nodes that have their dependencies already added to this list. This is done by checking if the set of ordered nodes is a superset of the set of outgoing nodes of the current node. Once all nodes are included in the ordered list, it is returned. 
+
+The resulting list represents the nodes in an order that puts each node before all the nodes it has directed edges to. This ordering can be useful in a variety of applications, such as in scheduling tasks based on their dependencies.

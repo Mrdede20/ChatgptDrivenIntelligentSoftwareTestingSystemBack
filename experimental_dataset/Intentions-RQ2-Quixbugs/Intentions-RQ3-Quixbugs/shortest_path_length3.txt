@@ -1,0 +1,13 @@
+The code implements Dijkstra's algorithm to find the shortest path between two nodes in a directed graph. 
+
+It takes in three arguments: 
+
+1. length_by_edge: a dictionary of edges in the form of ordered pairs of nodes, and their corresponding lengths. 
+
+2. startnode: the node to start the search from. 
+
+3. goalnode: the node that is the target of the search. 
+
+The function returns the shortest path length between the start and goal nodes. 
+
+In the implementation, a Fibonacci heap is used to store unvisited nodes, sorted by their distances. The algorithm keeps track of visited nodes to avoid revisiting them. At each step, it examines each successor of the current node and calculates the distance from the startnode to the successor node through the current node. If the calculated distance is shorter than the distance stored for the successor node, it updates it with the new distance and adds the successor to the unvisited nodes heap. The process continues until the algorithm reaches the goalnode, or until all nodes have been visited.

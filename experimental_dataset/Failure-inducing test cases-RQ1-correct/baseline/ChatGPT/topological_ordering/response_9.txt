@@ -1,0 +1,53 @@
+response@ChatGPT:
+
+
+There is no specific test case mentioned in the program. However, there are potential bugs that could be triggered by different scenarios. Some possible test cases that could trigger bugs are:
+
+1. Test case where there is a node with no incoming nodes but has a successor:
+\
+\    node1 = Node(value=1, successor=node2)
+\    node2 = Node(value=2, successors=[node3], incoming_nodes=[node1])
+\    node3 = Node(value=3, predecessors=[node2])
+\
+\    assert topological_ordering([node1, node2, node3]) == [node1, node2, node3]
+\
+   In this case, the program should return a list with the nodes in order of their dependencies. However, since `node1` has no incoming nodes, it will be added to the `ordered_nodes` list even though it is not the first in the order.
+
+2. Test case where nodes have multiple incoming or outgoing nodes:
+\
+\    node1 = Node(value=1)
+\    node2 = Node(value=2, incoming_nodes=[node1], outgoing_nodes=[node3])
+\    node3 = Node(value=3, incoming_nodes=[node2])
+\    node4 = Node(value=4, incoming_nodes=[node1], outgoing_nodes=[node3])
+\
+\    assert topological_ordering([node1, node2, node3, node4]) == [node1, node2, node4, node3]
+\
+   In this case, the program should return a list with the nodes in order of their dependencies. However, since `node2` and `node4` have the same incoming node (`node1`), there is no way to determine their order. The program could potentially fail to correctly order these nodes.
+
+request@user:
+Give us such test case. Use assert.
+
+response@ChatGPT:
+# Test case for topological_ordering
+
+def test_topological_ordering():
+    # Create a directed acyclic graph
+    
+    #           1
+    #         /  \
+    #         2   3
+    #             \
+    #              4
+    #             / \
+    #            5   6
+    
+    node1 = Node(1)
+    node2 = Node(2, node1)
+    node3 = Node(3, node1)
+    node4 = Node(4, successors=[node1, node3])
+    node5 = Node(5, node4)
+    node6 = Node(6, node4)
+    
+    # Verify that the correct topological ordering is returned
+    assert topological_ordering([node1, node2, node3, node4, node5, node6]) == [node2, node3, node1, node4, node5, node6]
+

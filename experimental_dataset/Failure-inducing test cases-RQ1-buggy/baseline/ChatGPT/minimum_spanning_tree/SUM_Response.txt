@@ -1,0 +1,153 @@
+
+#FC
+weight_by_edge = {
+    (0, 1): 10,
+    (1, 2): 5,
+    (2, 3): 10,
+    (3, 0): 5,
+    (0, 2): 20,
+    (1, 3): 20
+}
+# Intentional bug: should be weight_by_edge.__getitem__, but written as weight_by_edge.getitem
+result = minimum_spanning_tree(weight_by_edge)
+# Expected output: {(1, 2), (0, 1), (2, 3)}
+print(result) #error {(0, 1), (1, 2), (3, 0)}
+
+#FC
+weight_by_edge = {
+    (1, 2): 5,
+    (1, 3): 7,
+    (2, 3): 3,
+    (2, 4): 2,
+    (3, 4): 8,
+    (4, 5): 4,
+    (5, 6): 6,
+    (6, 4): 9
+}
+expected_output = {(2, 4), (1, 2), (4, 5), (5, 6), (3, 4)}
+assert minimum_spanning_tree(weight_by_edge) == expected_output #error {(2, 4), (1, 2), (2, 3), (4, 5), (5, 6)}
+
+#FT
+# Test Case
+weight_by_edge = {
+    (1, 2): 1,
+    (1, 3): 2,
+    (2, 3): 3,
+    (2, 4): 4,
+    (3, 4): 5,
+    (3, 5): 6,
+    (4, 5): 7
+}
+# Expected output
+# {(1, 2), (1, 3), (2, 4), (3, 5)}
+# Actual output
+# {(1, 2), (2, 3), (3, 4), (4, 5)}
+expected_output = {(1, 2), (1, 3), (2, 4), (3, 5)}
+assert minimum_spanning_tree(weight_by_edge) == expected_output
+
+#FT
+# Test Case 1
+weight_by_edge = {('A', 'B'): 1, ('A', 'C'): 2, ('B', 'C'): 3}
+assert minimum_spanning_tree(weight_by_edge) == {('A', 'B'), ('A', 'C')}
+
+#FT
+weight_by_edge = {
+    (1, 2): 1,
+    (1, 3): 2,
+    (2, 3): 3,
+    (2, 4): 4,
+    (3, 4): 5,
+    (3, 5): 6,
+    (4, 5): 7,
+    (4, 6): 8,
+    (5, 6): 9,
+    (5, 7): 10,
+    (6, 7): 11
+}
+expected_result = {
+    (1, 2),
+    (1, 3),
+    (2, 4),
+    (3, 5),
+    (4, 6),
+    (5, 7)
+}
+assert minimum_spanning_tree(weight_by_edge) == expected_result
+
+#FT
+# Test case
+graph = {
+    (1, 2): 1,
+    (2, 3): 2,
+    (3, 1): 3,
+    (4, 5): 4,
+    (5, 6): 5,
+    (6, 4): 6,
+}
+# Expected output
+# {(1, 2), (2, 3), (4, 5), (5, 6)}
+# Actual output
+# {(1, 2), (2, 3), (3, 1), (4, 5), (5, 6), (6, 4)}
+expected_output = {(1, 2), (2, 3), (4, 5), (5, 6)}
+assert minimum_spanning_tree(graph) == expected_output
+
+#FT
+weight_by_edge = {(0, 1): 4, (1, 2): 2, (0, 2): 3, (2, 3): 1}
+expected_output = {(1, 2), (0, 2), (2, 3)}
+actual_output = minimum_spanning_tree(weight_by_edge)
+assert actual_output == expected_output, f"Test case failed: expected {expected_output}, but got {actual_output}"
+
+#FC
+weight_by_edge = {
+    (0, 1): 1,
+    (0, 2): 2,
+    (1, 2): 3,
+    (1, 3): 4,
+    (2, 3): 5,
+    (3, 4): 6,
+    (4, 5): 7,
+    (5, 6): 8,
+    (6, 7): 9,
+    (7, 8): 10,
+    (8, 9): 11,
+    (9, 0): 12,
+}
+expected_result = {
+    (0, 1),
+    (0, 2),
+    (1, 3),
+    (2, 3),
+    (3, 4),
+    (4, 5),
+    (5, 6),
+    (6, 7),
+    (7, 8),
+    (8, 9),
+}
+assert minimum_spanning_tree(weight_by_edge) == expected_result #error {(0, 1), (3, 4), (6, 7), (4, 5), (0, 2), (8, 9), (5, 6), (1, 3), (7, 8)}
+
+#FC
+weight_by_edge = {(1,2): 5, (1,3): 2, (2,3): 3, (3,4): 1, (4,5): 1, (5,6): 1, (6,7): 1, (7,8): 1, (8,9): 1, (9,10): 1, (10,11): 1, (11,12): 1, (12,13): 1, (13,14): 1, (14,15): 1, (15,16): 1, (16,17): 1, (17,18): 1, (18,19): 1, (19,20): 1, (20,21): 1, (21,22): 1, (22,23): 1, (23,24): 1, (24,25): 1, (25,26): 1, (26,27): 1, (27,28): 1, (28,29): 1, (29,30): 1, (30,31): 1, (31,32): 1, (32,33): 1, (33,34): 1, (34,35): 1, (35,36): 1, (36,37): 1, (37,38): 1, (38,39): 1, (39,40): 1, (40,41): 1, (41,42): 1, (42,43): 1, (43,44): 1, (44,45): 1, (45,46): 1, (46,47): 1, (47,48): 1, (48,49): 1, (49,50): 1}
+expected_output = {(3, 4), (4, 5), (2, 3), (1, 3), (7, 8), (9, 10), (6, 7), (5, 6), (11, 12), (13, 14), (15, 16), (17, 18), (19, 20), (21, 22), (23, 24), (25, 26), (27, 28), (29, 30), (31, 32), (33, 34), (35, 36), (37, 38), (39, 40), (41, 42), (43, 44), (45, 46), (47, 48), (49, 50)}
+assert minimum_spanning_tree(weight_by_edge) == expected_output #error {(3, 4), (26, 27), (35, 36), (44, 45), (12, 13), (21, 22), (22, 23), (31, 32), (8, 9), (40, 41), (49, 50), (17, 18), (1, 3), (27, 28), (25, 26), (36, 37), (13, 14), (45, 46), (32, 33), (41, 42), (18, 19), (4, 5), (5, 6), (46, 47), (14, 15), (23, 24), (9, 10), (10, 11), (19, 20), (28, 29), (37, 38), (6, 7), (15, 16), (24, 25), (47, 48), (33, 34), (42, 43), (43, 44), (20, 21), (29, 30), (38, 39), (39, 40), (48, 49), (34, 35), (11, 12), (2, 3), (7, 8), (30, 31), (16, 17)}
+
+
+#FT
+# Test Case
+graph = {
+    (0, 1): 1,
+    (0, 2): 2,
+    (1, 2): 3,
+    (1, 3): 4,
+    (2, 3): 5,
+    (2, 4): 6,
+    (3, 4): 7,
+    (3, 5): 8,
+    (4, 5): 9
+}
+# expected result
+expected_mst_edges = {(0, 1), (0, 2), (1, 3), (2, 4), (3, 5)}
+# call the function
+actual_mst_edges = minimum_spanning_tree(graph)
+# check the result
+assert actual_mst_edges == expected_mst_edges, f"Expected {expected_mst_edges}, but got {actual_mst_edges}"

@@ -1,0 +1,7 @@
+Is there a test case which can triggers a bug in the program below?
+
+def sqrt(x, epsilon):
+    approx = x / 2
+    while abs(x - approx ** 2) > epsilon:
+        approx = 0.5 * (approx + x / approx)
+    return approx

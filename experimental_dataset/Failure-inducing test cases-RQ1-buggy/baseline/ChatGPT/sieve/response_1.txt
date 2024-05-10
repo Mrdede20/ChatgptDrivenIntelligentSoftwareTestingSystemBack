@@ -1,0 +1,24 @@
+Test Case: 
+
+1. Input: sieve(10) 
+2. Expected output: [2, 3, 5, 7] 
+3. Actual output: [2, 3, 5, 8] 
+
+Bug description: The code is failing to sieve out the number 8, which is not a prime number. 
+
+Explanation: In line 3 of the code, the loop starts with n = 2 and checks if any remainder of n divided by primes is greater than 0, which is true for all primes at this point since primes is an empty list. Thus, n is appended to primes. The loop continues with n = 3 and checks if 3 % 2 (the only value in primes) is greater than 0, which is true since 3 is an odd number. Thus, 3 is appended to primes. The same logic applies to 5, and primes becomes [2, 3, 5]. 
+
+When the loop reaches n = 7, it checks if 7 % 2, 7 % 3, and 7 % 5 are greater than 0, which are all true. Thus, 7 is appended to primes. However, when the loop reaches n = 8, it checks if 8 % 2, 8 % 3, and 8 % 5 are greater than 0, which are all false. Thus, 8 is erroneously appended to primes. 
+
+To fix the bug, line 3 of the code should be modified to check if all remainders of n divided by primes are greater than 0 instead of any remainder. 
+
+Modified code: 
+
+def sieve(max):\ 
+    primes = [] 
+    for n in range(2, max + 1):\ 
+        if all(n % p > 0 for p in primes):\ 
+            primes.append(n) 
+    return primes 
+
+With this modification, the test case should pass with the expected output of [2, 3, 5, 7].

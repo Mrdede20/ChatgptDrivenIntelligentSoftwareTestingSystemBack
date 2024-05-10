@@ -1,0 +1,26 @@
+Yes, there is an input that makes the two programs produce different outputs. This happens because the two programs use different implementations of the Kruskal's algorithm to compute the minimum spanning tree of a weighted graph. 
+
+To produce a different output for the two programs, we could use the following input graph:
+
+```
+    1
+  /   \
+2-      -3
+  \   /
+    4
+```
+Using this graph as input data, the first program should output the following edges in the MST:
+
+```
+1 - 2 (1)
+2 - 4 (2)
+2 - 3 (3)
+```
+
+while the second program should output these edges:
+
+```
+1 - 2 (1)
+2 - 3 (3)
+3 - 4 (2)
+```

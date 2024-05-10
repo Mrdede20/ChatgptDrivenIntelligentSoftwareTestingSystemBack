@@ -1,0 +1,7 @@
+The code implements the Longest Increasing Subsequence (LIS) algorithm to find the length of the longest increasing subsequence in a given sequence of integers. 
+
+The LIS problem is defined as follows: Given an array of integers, find the length of the longest subsequence such that all elements of the subsequence are sorted in increasing order.
+
+The algorithm works by keeping track of a dictionary `ends` which stores the last element of the subsequence of a given length. The variable `longest` keeps track of the length of the longest subsequence found so far. For each element `val` in the input array, the algorithm finds the longest increasing subsequence that ends with an element smaller than `val`. Then, it checks if `val` can be added to any of these subsequences to form a longer subsequence.
+
+The code returns the length of the longest increasing subsequence in the input array.

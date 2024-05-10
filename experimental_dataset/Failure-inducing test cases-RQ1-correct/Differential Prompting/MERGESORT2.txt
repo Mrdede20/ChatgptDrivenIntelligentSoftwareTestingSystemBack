@@ -1,0 +1,1 @@
+No, the two programs essentially perform the same Merge Sort algorithm and use the same logic to merge two sorted sub-arrays. Any input of integers will produce the same output in both programs.

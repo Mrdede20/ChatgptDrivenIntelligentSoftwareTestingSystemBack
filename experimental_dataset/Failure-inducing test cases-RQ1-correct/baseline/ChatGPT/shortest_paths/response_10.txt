@@ -1,0 +1,42 @@
+response@ChatGPT:
+
+
+Yes, there are several test cases that could potentially trigger a bug in the program. Here are a few examples:
+
+1. If the weight_by_edge dictionary is empty, the program could raise an exception when trying to iterate over its items.
+
+2. If the source node is not present in the weight_by_edge dictionary, the program could raise an exception when trying to set its distance to zero.
+
+3. If there is a negative-weight cycle in the graph, the program could get stuck in an infinite loop, as it will continue to update the distances of the affected nodes without ever converging on a solution.
+
+4. If there are duplicate
+
+request@user:
+Give us such test case. Use assert.
+
+response@ChatGPT:
+#Test case for shortest_paths function
+
+def test_shortest_paths():
+    weight_by_edge = {
+        (0, 1): 5,
+        (0, 2): 3,
+        (1, 2): 1,
+        (1, 3): 4,
+        (2, 3): 3,
+        (2, 4): 5,
+        (3, 4): 2
+    }
+    assert shortest_paths(0, weight_by_edge) == {0: 0, 1: 5, 2: 3, 3: 9, 4: 7}
+    
+    weight_by_edge = {
+        ('a', 'b'): 5,
+        ('a', 'c'): 3,
+        ('b', 'c'): 1,
+        ('b', 'd'): 4,
+        ('c', 'd'): 3,
+        ('c', 'e'): 5,
+        ('d', 'e'): 2
+    }
+    assert shoertest_paths('a', weight_by_edge) == {'a': 0, 'b': 5, 'c': 3, 'd': 9, 'e': 7}
+

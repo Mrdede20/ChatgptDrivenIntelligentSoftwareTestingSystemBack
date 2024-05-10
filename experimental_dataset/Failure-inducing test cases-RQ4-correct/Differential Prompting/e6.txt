@@ -1,0 +1,8 @@
+Yes, there are definitely inputs that can make the two programs output different results. Here is one possible input:
+
+Input:
+1
+6
+0 1 0 1 1 0
+
+The first program will output 6, while the second program will output 4.

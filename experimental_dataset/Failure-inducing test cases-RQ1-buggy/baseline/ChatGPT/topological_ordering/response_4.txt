@@ -1,0 +1,14 @@
+Test Case:
+
+nodes = [Node(1), Node(2), Node(3)]
+nodes[0].outgoing_nodes.append(nodes[1])
+nodes[1].outgoing_nodes.append(nodes[2])
+nodes[2].outgoing_nodes.append(nodes[0])
+
+Expected Output:
+
+The function should raise an error or exception and fail the test because the input graph is not a DAG (Directed Acyclic Graph). The given graph has a cycle and therefore, no feasible topological ordering is possible.
+
+Actual Output:
+
+ {'An error or exception is not raised and the test passes successfully because the function does not handle cycles in the input graph. It assumes that the input graph is a valid DAG and returns a possible topological ordering for any connected acyclic graph. Therefore, the program may produce incorrect results or be unreliable when the input graph contains cycles.'}

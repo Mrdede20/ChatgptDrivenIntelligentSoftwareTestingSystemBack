@@ -1,0 +1,15 @@
+No, both of the provided functions behave the same way and return the same output for any input values a and b. 
+
+Here's a test case in Python:
+
+```
+a = 36
+b = 48
+
+if gcd(a, b) == gcd(a, b):
+    print("Both functions returned the same output")
+else:
+    print("The two functions returned different outputs")
+```
+
+The output of this program will always be "Both functions returned the same output".

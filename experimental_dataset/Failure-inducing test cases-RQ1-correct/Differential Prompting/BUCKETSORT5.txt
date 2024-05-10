@@ -1,0 +1,3 @@
+It's impossible to tell with certainty whether or not there is an input that would make the two programs have different output, without access to the implementation of the ArrayList and Collections classes imported in the second program.
+
+However, assuming that they are the standard ArrayList and Collections classes from the Java standard library, the two programs should produce the same output for any input.

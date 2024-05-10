@@ -1,0 +1,29 @@
+#PT
+assert gcd(10, 20) == 10
+
+#PT
+assert gcd(10, 25) == 5
+
+#PT
+assert gcd(24, 36) == 12
+
+#PT
+assert gcd(6, 9) == 3
+
+#PT
+assert gcd(20, 8) == 4
+
+#PT
+assert gcd(10, 25) == 5
+
+#PT
+assert(gcd(16, 24) == 8)
+
+#PT
+assert gcd(10, 25) == 5
+
+#PT
+assert gcd(10, 25) == 5
+
+#PT
+assert gcd(14, 28) == 14

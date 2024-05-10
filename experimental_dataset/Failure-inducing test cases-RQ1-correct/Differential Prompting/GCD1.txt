@@ -1,0 +1,1 @@
+No, both the programs will have the same output for all inputs. The second program contains the main method as well, allowing it to print the GCD of 24 and 36, but the method used to calculate the GCD is the same in both programs.

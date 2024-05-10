@@ -1,0 +1,5 @@
+Yes, there exists input for which the different versions of the code will have different output. Below is an example:
+
+`parens = "))()"`
+
+The first code version and the last code version using a stack will return False, while the other code versions will return True.

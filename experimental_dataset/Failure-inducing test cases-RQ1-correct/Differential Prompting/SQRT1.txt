@@ -1,0 +1,1 @@
+No, the two programs will always produce the same output for any input. Both of them use the same approach to calculate the square root of a number and differ only in naming conventions of the variables used.

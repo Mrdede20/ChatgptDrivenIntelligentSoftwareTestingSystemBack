@@ -1,0 +1,7 @@
+The intention of this code is to implement the Bucket Sort algorithm, which is a comparison sort algorithm that operates by distributing the elements of an array into a number of buckets, and then sorting each bucket individually. In this code, the input array `arr` is assumed to contain only small integers, and the upper bound of the size of the integers is given by `k`, which is not inclusive. 
+
+The code first initializes a list `counts` of length `k`, with all values initialized to zero. It then counts the number of occurrences of each integer in `arr`, and stores the counts in the corresponding index of `counts`. 
+
+Next, the code creates an empty list `sorted_arr` and iterates over every integer `i` and its corresponding `count` in `counts`. For each integer `i`, it adds `count` copies of `i` to the `sorted_arr` list. The resulting `sorted_arr` list contains all the elements of `arr`, sorted in non-decreasing order. 
+
+Finally, the sorted array is returned.

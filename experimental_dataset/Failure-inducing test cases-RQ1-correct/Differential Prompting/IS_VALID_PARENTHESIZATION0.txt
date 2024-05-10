@@ -1,0 +1,1 @@
+No, the two programs will always produce the same output for every possible input string of parentheses, since they both count the depth of the parentheses to check for validity.

@@ -1,0 +1,7 @@
+The intention of the following code is to take an input of a positive integer 'n', 'n' number of pairs of inputs: an integer 'a' and a string 's', and then for each pair of inputs, find the character with the highest Unicode number in the string and print the difference between its Unicode value and 96.
+
+The code first takes input 'n', then it initializes a variable 'a' to 0. It then starts a for loop that iterates n times. In each iteration, it takes input integer 'a' and string 's', initializes a variable 'a' to 0, and starts another for loop.
+
+The second for loop iterates through each character in the string 's' using 'len(s)', compares the Unicode value of each character with 'a' using the 'ord(s[i]) > a' conditional statement and sets the value of 'a' to the Unicode value of the highest character.
+
+Finally, it prints the difference between the value of 'a' and 96 for each pair of inputs. This is done using the 'print(a-96)' statement.

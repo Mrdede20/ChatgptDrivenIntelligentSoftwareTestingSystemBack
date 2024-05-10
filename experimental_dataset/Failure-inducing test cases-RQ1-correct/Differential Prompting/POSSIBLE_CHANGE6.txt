@@ -1,0 +1,5 @@
+Yes, there is an input that makes the two programs produce different output. 
+
+For example, if you run `possible_change(new int[]{1, 2, 3}, 5)` on both implementations, the first one will return 5 while the second one will return 4. This is because the first implementation processes the coins array before the rest array, while the second implementation processes the rest array before the coins array. 
+
+To fix this, you should ensure that the order in which the arrays are processed is consistent across the implementations.

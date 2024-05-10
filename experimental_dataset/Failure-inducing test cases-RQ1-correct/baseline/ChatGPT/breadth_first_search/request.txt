@@ -1,0 +1,39 @@
+Is there a test case which can triggers a bug in the program below?
+
+from collections import deque as Queue
+
+def breadth_first_search(startnode, goalnode):
+    queue = Queue()
+    queue.append(startnode)
+
+    nodesseen = set()
+    nodesseen.add(startnode)
+
+    while queue:
+        node = queue.popleft()
+
+        if node is goalnode:
+            return True
+        else:
+            queue.extend(node for node in node.successors if node not in nodesseen)
+            nodesseen.update(node.successors)
+
+    return False
+
+class Node:
+    def __init__(self, value=None, successor=None, successors=[], predecessors=[], incoming_nodes=[], outgoing_nodes=[]):
+        self.value = value
+        self.successor = successor
+        self.successors = successors
+        self.predecessors = predecessors
+        self.incoming_nodes = incoming_nodes
+        self.outgoing_nodes = outgoing_nodes
+
+    def successor(self):
+        return self.successor
+
+    def successors(self):
+        return self.successors
+
+    def predecessors(self):
+        return self.predecessors

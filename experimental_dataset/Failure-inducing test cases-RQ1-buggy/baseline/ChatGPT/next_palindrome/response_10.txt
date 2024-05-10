@@ -1,0 +1,13 @@
+Test case:
+
+digit_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+Expected output:
+
+[1, 2, 3, 4, 6, 5, 4, 3, 2, 1]
+
+Explanation:
+
+The program should return the next palindrome of the given digit list. In this case, the given digit list is [1, 2, 3, 4, 5, 6, 7, 8, 9]. The expected output is [1, 2, 3, 4, 6, 5, 4, 3, 2, 1].
+
+However, the current implementation of the function has a bug. When the digit in the middle of the digit list is 9, the program sets both that digit and its corresponding digit to 0 and increments the next digit in the digit list. In this case, the digit in the middle of the digit list is 5, but the program incorrectly sets it to 0, resulting in an incorrect output of [1, 2, 3, 4, 0, 6, 7, 8, 9].

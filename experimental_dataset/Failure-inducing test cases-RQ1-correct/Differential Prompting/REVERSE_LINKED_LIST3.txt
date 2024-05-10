@@ -1,0 +1,14 @@
+There is no difference in the output of these two programs for any input, as they both implement the same logic to reverse a linked list. However, the first implementation is within a class named REVERSE_LINKED_LIST whereas the second implementation seems to be a standalone method. To use the first implementation, you would need an object of the REVERSE_LINKED_LIST class to call the reverse_linked_list method, whereas you can directly call the second implementation. Here is an example on how to use the given implementation:
+ 
+```
+Node head = new Node(1);
+head.setSuccessor(new Node(2));
+head.getSuccessor().setSuccessor(new Node(3));
+Node reversedHead = new REVERSE_LINKED_LIST().reverse_linked_list(head);
+while(reversedHead != null) {
+    System.out.println(reversedHead.getData());
+    reversedHead = reversedHead.getSuccessor();
+}
+``` 
+
+Note that Node class implementation is missing here. Please import the right class or implement Node class by yourself.

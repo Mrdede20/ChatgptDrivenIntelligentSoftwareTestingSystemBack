@@ -1,0 +1,11 @@
+Test case:
+sqrt(25, 0.1)
+
+Expected Result:
+5.0
+
+Actual Result:
+6.25
+
+Explanation:
+The function uses the approximation formula to calculate the square root of a number. However, it fails to handle cases where the initial approximation is incorrect. In this test case, the expected square root of 25 is 5.0. However, the actual result returned by the function is 6.25, which is incorrect.

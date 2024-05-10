@@ -1,0 +1,7 @@
+The function `reverse_linked_list` intends to reverse a singly-linked list, where each node only points to its successor. The function takes the head node of the list as input and returns the new head node of the reversed list.
+
+The function uses a `while` loop to traverse the list and reverses the direction of the successor pointers of each node. The loop continues until the `node` variable points to `None`, which indicates the end of the original list has been reached.
+
+The `prevnode` variable initially set to `None` keeps track of the previous node that is encountered in the list. At every iteration of the `while` loop, `prevnode` is updated to the current node that was just processed before moving the `node` variable to the next node.
+
+Eventually, `prevnode` will point to the original tail node of the list. When the loop ends, it will be returned as the new head node of the reversed list.

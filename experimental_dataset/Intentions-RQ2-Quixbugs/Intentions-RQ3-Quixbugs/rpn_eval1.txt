@@ -1,0 +1,5 @@
+The intention of the code is to implement a function `rpn_eval(tokens)` to evaluate a list of values and operators encoded in Reverse Polish Notation (RPN) and return the result. The function uses a nested function `op(symbol, a, b)` to define the four arithmetic operations for two given operands `a` and `b`. It then scans the input `tokens` list and for each token, appends it to a stack if it is a float, or applies the corresponding operation to the last two operands on the stack and pushes the result back to the stack. Finally, it returns the only remaining item in the stack as the result of the RPN expression. 
+
+The precondition for this function specifies that each element of the input `tokens` list must be either a float or one of the four arithmetic operation symbols ('+', '-', '*', '/') as a string. 
+
+An example usage of the function is given in the docstring and it demonstrates how to use this function to calculate a mathematical expression in RPN notation.

@@ -1,0 +1,7 @@
+This code takes input for a graph with nodes and edges and checks if the distance between two nodes A and B is odd or even. The input format for each test case is as follows.
+- The first line of input contains T, the number of test cases.
+- The first line of each test case contains a single integer N, the number of nodes in the graph.
+- The second line of each test case contains three integers 'a', 'b', and 'd' separated by space. a and b are indices of the two vertices, and d is the distance between them.
+- The next N-1 lines contain the edges, where each line contains three integers: 'u', 'v', and 'w', separated by space. This represents an undirected edge between vertices u and v weighted with w.
+
+Finally, for each test case, it will print "YES" if the distance between nodes A and B is odd or "NO" if it is even.

@@ -1,0 +1,5 @@
+The intention of the code is to check whether the given string of parentheses, i.e. 'parens', is a properly nested parenthesis expression or not.
+
+The code achieves this by iterating over each character in the string and maintaining a depth counter that is incremented each time an opening parenthesis is encountered and decremented each time a closing parenthesis is encountered. If the depth counter ever becomes negative, then the expression is not properly nested and False is returned. Otherwise, if the loop completes successfully without encountering any errors, then the expression is considered properly nested and True is returned as output.
+
+The code also satisfies the given precondition that the input string must only contain parenthesis characters '()' .

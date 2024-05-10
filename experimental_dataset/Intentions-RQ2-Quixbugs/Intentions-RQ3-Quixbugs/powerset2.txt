@@ -1,0 +1,7 @@
+This code defines a function called `powerset` which takes a list as input and returns a list of lists representing every possible subset of the original list. 
+
+The function uses recursion to find subsets. For a non-empty list, the function takes the first element (called `first`) and finds all subsets of the remaining elements (called `rest_subsets`) by calling `powerset` recursively on the remaining elements. Then, it combines `first` with each subset of `rest_subsets` by adding it to the start of each subset (using a list comprehension), and returns the resulting list of lists. 
+
+For an empty list, the function returns a list containing a single empty list (which is always a subset of any list).
+
+The function assumes that the input list has no duplicate elements.

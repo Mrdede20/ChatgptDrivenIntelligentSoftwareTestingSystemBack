@@ -1,0 +1,26 @@
+response@ChatGPT:
+
+
+Yes, there are several test cases that can trigger a bug in this program. One example could be:
+
+Input: [9, 9, 9]
+Expected Output: [1, 0, 0, 1]
+Actual Output: [0, 0, 0]
+
+In this case, the program fails to correctly increment the first digit (9) and sets both it and the corresponding digit on the other side to 0, resulting in an incorrect output.
+
+request@user:
+Give us such test case. Use assert.
+
+response@ChatGPT:
+
+
+def test_next_palindrome():
+    assert next_palindrome([1, 2, 3]) == [1, 2, 4]
+    assert next_palindrome([4, 6, 3, 4]) == [4, 6, 4, 4]
+    assert next_palindrome([9, 9, 9]) == [1, 0, 0, 1]
+    assert next_palindrome([1, 0, 0, 0, 1]) == [1, 0, 0, 1, 1]
+    assert next_palindrome([5]) == [6]
+    
+test_next_palindrome()
+

@@ -1,0 +1,32 @@
+
+correct:https://codeforces.com/contest/1760/submission/188311315
+Bug: https://codeforces.com/contest/1760/submission/188310057
+This code appears to be solving a programming problem involving arrays. Here's a breakdown of what the code is doing:
+
+First, the code reads an integer t from standard input, which represents the number of test cases to run.
+
+For each test case, the code reads an integer n from standard input, which represents the length of an array.
+
+The code reads the array s from standard input by splitting a string of integers separated by spaces into a list of integers.
+
+The code initializes a list mx with two elements, both set to 0.
+
+The code then loops over the elements of s using a for loop with index i.
+
+Inside the loop, the code checks whether s[i] is greater than or equal to s[mx[0]], which is the current maximum element seen so far.
+
+If it is, then the second maximum element is updated to the previous maximum element and the maximum element is updated to i.
+
+If s[i] is not greater than or equal to s[mx[0]], but it is greater than or equal to s[mx[1]], then the second maximum element is updated to i.
+
+After finding the two maximum elements in s, the code loops over the elements of s again using a for loop with index i.
+
+Inside this loop, the code checks whether i is equal to the index of the first maximum element mx[0].
+
+If it is, then the code prints the difference between the first maximum element and the second maximum element, s[i]-s[mx[1]], followed by a space.
+
+If i is not equal to mx[0], then the code prints the difference between the current element and the first maximum element, s[i]-s[mx[0]], followed by a space.
+
+After printing the differences for all elements in s, the code prints a newline character to move to the next line for the next test case.
+
+In summary, the code finds the two maximum elements in an array, and for each element in the array, prints the difference between that element and the maximum element if it is not the maximum element, and the difference between that element and the second maximum element if it is the maximum element.

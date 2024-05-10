@@ -1,0 +1,29 @@
+#PT
+assert list(flatten([])) == []
+
+#IT
+assert list(flatten(5)) == [5]
+
+#FT
+assert list(flatten([5])) == [5]
+
+#FT
+assert list(flatten([1, 2, "a", "b"])) == [1, 2, "a", "b"]
+
+#FT
+assert list(flatten([1, [2, "a"], 3])) == [1, 2, "a", 3]
+
+#FT
+assert list(flatten([[1, 2], "a", ["b", 3]])) == [1, 2, "a", "b", 3]
+
+#FT
+assert list(flatten([[[[[[1, "a"]]]]]])) == [1, "a"]
+
+#FT
+assert list(flatten([[[[[[1, "a"], 2, "b"]]]]])) == [1, "a", 2, "b"]
+
+#PT
+assert list(flatten([[]])) == []
+
+#PT
+assert list(flatten([[], [], []])) == []

@@ -1,0 +1,26 @@
+response@ChatGPT:
+Test Case:
+Input:
+3
+101
+abcd
+105
+xyz
+111
+mnop
+
+Expected Output:
+2
+25
+15
+
+Actual Output:
+2
+25
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+NameError: name 'i' is not defined
+
+Explanation:
+The test case includes an input of three lines, including the number of iterations, character code and string value. Although the first two iterations of the program run smoothly, the third iteration triggers a bug in the code resulting in a runtime error. The program does not recognize the second index variable 'i' in the second line of code in the for loop. Thus, the program is unable to print the final output result and results in a test failure.
+

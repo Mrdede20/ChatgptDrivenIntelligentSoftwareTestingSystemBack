@@ -1,0 +1,7 @@
+The intention of the code is to implement the bucket sort algorithm for sorting a list of small integers where the upper bound of the size of the integers is known. 
+
+The implementation firstly creates an array `counts` of length `k` with all elements initialized to 0. Then, for each element in the list `arr`, the corresponding count in the `counts` array is incremented. 
+
+After counting the occurrences of each integer in `arr`, the `sorted_arr` list is populated by extending each integer `i` in the list with its corresponding count `count`. By doing so, the sorted list is obtained in ascending order. 
+
+Finally, the sorted list is returned. 

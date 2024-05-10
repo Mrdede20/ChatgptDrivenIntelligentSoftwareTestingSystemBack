@@ -1,0 +1,26 @@
+Yes, there is an input that would make the two programs output different values. In class POSSIBLE_CHANGE the recursive call should be passed the parameter `rest` instead of `coins`. This is the corrected POSSIBLE_CHANGE program: 
+
+```
+package correct_java_programs;
+
+import java.util.Arrays;
+
+public class POSSIBLE_CHANGE {
+    public static int possible_change(int[] coins, int total) {
+        if (total == 0) {
+            return 1;
+        }
+        if (total < 0 || coins.length == 0) {
+            return 0;
+        }
+
+        int first = coins[0];
+        int[] rest = Arrays.copyOfRange(coins, 1, coins.length);
+        return possible_change(rest, total) + possible_change(coins, total - first);
+    }
+}
+```
+
+In the original version, `coins` is passed to both recursive calls. 
+
+`CoinChange` will produce the expected output, but `POSSIBLE_CHANGE` will produce different results for some inputs.

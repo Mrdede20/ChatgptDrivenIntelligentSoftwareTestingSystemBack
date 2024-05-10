@@ -1,0 +1,5 @@
+The above code is intended to solve a problem, where you have an input `t` which represents the number of test cases. Each test case consists of 2 inputs: `n` which represents the number of integers in the list, and `s` which is a list of `n` integers. 
+
+For each test case, the code finds the two maximum values in the list `s` and stores the indices of these values in the list `mx`. Then, for each integer in the list `s`, the code determines if it is the first maximum or the second maximum, and prints the absolute difference between the value of that integer and the other maximum value. 
+
+Finally, after processing each test case, the code prints a newline character to separate the outputs of the test cases.

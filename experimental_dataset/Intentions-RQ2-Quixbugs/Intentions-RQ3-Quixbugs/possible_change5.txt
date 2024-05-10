@@ -1,0 +1,7 @@
+The intention of the code is to find the number of distinct ways to make change adding up to a given total, using the provided list of coin denominations. The function uses recursion to explore all possible combinations of coins that can add up to the total. 
+
+The function first checks if the total is zero, in which case there is only one way to make change (i.e., using no coins). If the total is negative, there is no way to make change using the given coins, so the function returns 0.
+
+Otherwise, the function considers the first coin denomination in the list, subtracts it from the total, and recursively makes a call to itself with the updated total and the original list of coins. It then adds the result of this recursive call to the result of another recursive call that uses the rest of the coin denominations in the list and the original total.
+
+The function continues this recursion until all possible combinations of coins and totals have been explored. Finally, it returns the total count of distinct combinations of coins that add up to the given total.

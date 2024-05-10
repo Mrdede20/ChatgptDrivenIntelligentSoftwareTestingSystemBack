@@ -1,0 +1,93 @@
+#FT
+node1 = Node(1)
+node2 = Node(2)
+node3 = Node(3)
+node4 = Node(4)
+node5 = Node(5)
+node1.successor = node2
+node2.successor = node3
+node3.successor = node4
+node4.successor = node5
+reversed_list = reverse_linked_list(node1)
+assert reversed_list.successor.successor.successor.successor == node1
+
+#FT
+node1 = Node(value=1)
+node2 = Node(value=2)
+node3 = Node(value=3)
+node1.successor = node2
+node2.successor = node3
+reversed_list = reverse_linked_list(node1)
+assert reversed_list.successor.successor.value == 1
+
+#FT
+node1 = Node(value=1)
+node2 = Node(value=2)
+node3 = Node(value=3)
+node1.successor = node2
+node2.successor = node3
+new_head = reverse_linked_list(node1)
+assert new_head.successor.successor.successor == None
+
+#FT
+node1 = Node(1)
+node2 = Node(2)
+node3 = Node(3)
+node4 = Node(4)
+node1.successor = node2
+node2.successor = node3
+node3.successor = node4
+reversed_list = reverse_linked_list(node1)
+assert reversed_list.successor.successor.successor.value == 1
+
+#FT
+node1 = Node(1)
+node2 = Node(2)
+node3 = Node(3)
+node1.successor = node2
+node2.successor = node3
+reversed_list = reverse_linked_list(node1)
+assert node2.successor == node1
+
+#FT
+node1 = Node(value=1)
+node2 = Node(value=2)
+node3 = Node(value=3)
+node1.successor = node2
+node2.successor = node3
+result = reverse_linked_list(node1)
+assert result.successor.successor == node1
+
+#FT
+node1 = Node(value=1)
+node2 = Node(value=2)
+node3 = Node(value=3)
+node1.successor = node2
+node2.successor = node3
+result = reverse_linked_list(node1)
+assert result.value == 3
+
+#FT
+node3 = Node(3)
+node2 = Node(2, node3)
+node1 = Node(1, node2)
+reversed_list = reverse_linked_list(node1)
+assert reversed_list == node3
+
+#FT
+node1 = Node(value=1)
+node2 = Node(value=2)
+node3 = Node(value=3)
+node1.successor = node2
+node2.successor = node3
+reversed_node = reverse_linked_list(node1)
+assert reversed_node.successor.value == 2
+
+#FT
+node1 = Node(value=1)
+node2 = Node(value=2)
+node3 = Node(value=3)
+node1.successor = node2
+node2.successor = node3
+result = reverse_linked_list(node1)
+assert result.successor.successor == node1

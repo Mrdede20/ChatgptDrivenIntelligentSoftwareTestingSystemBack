@@ -1,0 +1,19 @@
+Yes, the two programs will have a different output for the input array that has duplicates. Here is the example of such input:
+
+```
+arr = [5, 3, 1, 1, 5, 8, 4, 0]
+```
+
+The first implementation will return:
+
+```
+[0, 1, 1, 3, 4, 5, 5, 8]
+```
+
+While the second implementation will return:
+
+```
+[0, 1, 1, 3, 4, 5, 8, 5]
+```
+
+As you can see, the position of the duplicates is different in the sorted lists.

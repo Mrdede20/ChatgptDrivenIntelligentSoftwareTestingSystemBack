@@ -1,0 +1,29 @@
+#IT
+response_1
+
+#IT
+response_2
+
+#FF
+response_3 #NO
+
+#FF
+response_4 #NO
+
+#IT
+response_5
+
+#PT
+response_6
+
+#
+response_7
+
+#IT
+response_8
+
+#IT
+response_9
+
+#FF
+response_10 #NO

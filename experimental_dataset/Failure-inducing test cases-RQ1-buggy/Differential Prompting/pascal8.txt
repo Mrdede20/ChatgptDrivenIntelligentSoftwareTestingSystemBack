@@ -1,0 +1,5 @@
+Yes, there is an input that makes the two programs have a different output. 
+
+For example, if we call `pascal(2)` with the first implementation, it will return `[[1], [1, 1]]`. However, if we call `pascal(2)` with the second implementation, it will return `[[1], [1, 1], [1, 2, 1]]`.
+
+This is because the two implementations are generating Pascal's triangle differently. The first implementation generates Pascal's triangle by summing the two values above the current cell, while the second implementation generates it by taking the sum of adjacent values in the previous row.

@@ -1,0 +1,31 @@
+#FC
+x = 2
+epsilon = 0.00001
+assert sqrt(x, epsilon) == 1.414213 #error 1.4142156862745097
+
+#FC
+assert sqrt(5, 0.0001) == RecursionError #error 2.2360679779158037
+
+#FC
+assert sqrt(25, 0.1) == 5.0 #error 5.000012953048684
+
+#FT
+assert sqrt(4, 0.1) == 2.0
+
+#IT
+assert sqrt(-5,0.00001) == ValueError
+
+#PT
+assert sqrt(0, 0.0001) == 0
+
+#FC
+assert sqrt(9, 0.001) == 3.00009155413138 #error 3.000015360039322
+
+#FC
+assert sqrt(16, 0.0001) == 4.00005 #error 4.0000001858445895
+
+#IT
+assert sqrt(4, -1) == KeyError
+
+#PT
+assert sqrt(0, 0.01) == 0

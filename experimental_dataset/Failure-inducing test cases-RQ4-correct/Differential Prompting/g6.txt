@@ -1,0 +1,28 @@
+Yes, there is an input that can make the two programs have different output. Here is a test input:
+
+```
+1
+5 1 4
+1 2 1
+2 3 1
+2 4 0
+4 5 1
+```
+
+The first program will output `YES` while the second program will output `False`.
+
+To generate this input, you can use the following code:
+
+```java
+int t = 1;
+int n = 5, a = 1, b = 4;
+int[][] inputEdges = {{1, 2, 1}, {2, 3, 1}, {2, 4, 0}, {4, 5, 1}};
+
+System.out.println(t);
+System.out.println(n + " " + (a+1) + " " + (b+1));
+for (int[] edge : inputEdges) {
+    System.out.println(edge[0] + " " + edge[1] + " " + edge[2]);
+}
+```
+
+Note: I increased the values of `a` and `b` by 1, because the first program subtracts 1 from them, but the second program doesn't.

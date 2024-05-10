@@ -1,0 +1,10 @@
+Test case:
+
+Input: x = 4, epsilon = 0.1
+Expected Output: 2.0
+
+However, the actual output is 2.0049999999999994, which fails the test.
+
+Explanation:
+
+The program calculates the square root of x using an iterative method that stops when the difference between the current approximation and the actual result is within the specified epsilon value. However, due to the limited precision of floating-point arithmetic, the while loop may not terminate at the exact value of the square root. In this case, the approximation found is slightly larger than the actual result, leading to a failure of the test case. To fix this issue, the program may need to use a more accurate algorithm or handle the rounding errors appropriately.

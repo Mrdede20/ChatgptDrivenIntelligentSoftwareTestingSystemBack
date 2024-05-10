@@ -1,0 +1,16 @@
+Yes, there is an input which makes the two programs have different output. The reason for this is because the second program has a different order of arguments in the `op` function compared to the first program. Here is a test case that shows the difference:
+
+```
+>>> tokens = [2, 3, 4, '+', '*', 5, '-']
+>>> rpn_eval(tokens)
+-9
+
+>>> rpn_eval(tokens)
+5
+```
+
+In the first program, `rpn_eval` uses the `op` function with the arguments `b` and `a`, while the second program uses it with `a` and `b`. This means that the multiplication operand (`*`) will be evaluated differently in each program, resulting in different output. 
+
+In the first program, the multiplication will be computed as `3 * 4`, which is equal to `12`, and then added to `2`, resulting in `14`. The subtraction operand (`-`) will then subtract `5` from `14`, resulting in `-9`. 
+
+In the second program, the multiplication will be computed as `4 * 3`, which is equal to `12`, and then added to `2`, resulting in `14`. The subtraction operand will then subtract `14` from `5`, resulting in `5`.

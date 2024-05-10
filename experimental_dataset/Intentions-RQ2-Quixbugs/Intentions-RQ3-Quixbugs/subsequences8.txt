@@ -1,0 +1,7 @@
+The function `subsequences` takes three arguments: `a`, `b`, and `k`. It returns all possible length-k ascending sequences of integers in the range of `a` and `b` (inclusive). 
+
+The function works by creating an empty list called `ret`. It then loops over every potential starting value (`i`) from `a` to `b+1-k`. For each starting value, it recursively calls itself with the starting value shifted one index to the right (`i+1`), and reduces `k` by one. 
+
+The recursive call returns a list of subsequences that start with the new starting value. These subsequences are appended to the current starting value and added to the `ret` list. Finally, the full list of all possible subsequences is returned at the end of the loop.
+
+In short, the function is a clever implementation of backtracking algorithm to generate all possible subsequences in the given range while ensuring that they are also in ascending order.

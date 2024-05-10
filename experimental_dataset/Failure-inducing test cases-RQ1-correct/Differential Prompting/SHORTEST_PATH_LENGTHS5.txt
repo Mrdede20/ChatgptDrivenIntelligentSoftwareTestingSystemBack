@@ -1,0 +1,21 @@
+Yes, there are several inputs which can make the two programs have different output as both programs are calculating the shortest path lengths through different algorithms. For example, you can try the following test case:
+
+```
+int numNodes = 4;
+Map<List<Integer>, Integer> length_by_edge = new HashMap<>();
+length_by_edge.put(Arrays.asList(1, 2), 3);
+length_by_edge.put(Arrays.asList(2, 3), 1);
+length_by_edge.put(Arrays.asList(3, 4), 2);
+length_by_edge.put(Arrays.asList(4, 1), 4);
+
+// Call both functions and compare the results
+Map<List<Integer>, Integer> pathLengths1 = SHORTEST_PATH_LENGTHS.shortest_path_lengths(numNodes, length_by_edge);
+Map<List<Integer>, Integer> pathLengths2 = ShortestPath.shortest_path_lengths(numNodes, length_by_edge);
+
+System.out.println("Shortest paths 1:");
+System.out.println(pathLengths1);
+System.out.println("Shortest paths 2:");
+System.out.println(pathLengths2);
+```
+
+In this case, the output of the two programs are different.

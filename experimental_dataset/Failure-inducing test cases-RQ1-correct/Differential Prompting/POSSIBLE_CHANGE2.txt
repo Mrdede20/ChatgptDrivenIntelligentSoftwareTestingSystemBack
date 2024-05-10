@@ -1,0 +1,7 @@
+Yes, the two programs will have different output for some inputs. 
+
+The method `possible_change` in the class `POSSIBLE_CHANGE` recursively calls itself with the original array `coins` each time, while the method `possible_change` in the class `CoinChange` makes a recursive call with the remaining coins after `first` coin is chosen. 
+
+This means that the order of the `total` and `coins` parameters that are passed to the recursive calls will be different in the two programs, potentially leading to different results for certain inputs. 
+
+For example, if we change the input array to `{5, 2, 1}` and `total` to `10`, the two programs will output different answers. `POSSIBLE_CHANGE` will return 4 and `CoinChange` will return 3.

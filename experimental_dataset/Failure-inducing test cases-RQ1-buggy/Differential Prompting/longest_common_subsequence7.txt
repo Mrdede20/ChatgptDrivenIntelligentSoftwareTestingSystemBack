@@ -1,0 +1,10 @@
+Yes, there are inputs that could make the two programs have different output. This occurs when the `longest_common_subsequence` function is called with recursive arguments `a` and `b` that evaluate to the same sequence of characters but are different objects in memory. 
+
+Here's an example input in Python:
+
+```
+a = 'hello'
+b = ''.join(['h','e','l','l','o'])
+```
+
+In the first program, the returned value will be `"hello"` while in the second program it will be `None`, because the `if (a, b) in memo` check will fail since the memory locations of `a` and `b` are different despite both having the same characters.

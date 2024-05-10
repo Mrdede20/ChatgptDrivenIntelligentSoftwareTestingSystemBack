@@ -1,0 +1,5 @@
+Yes, the input that can make the above programs output differently is:
+
+`"())("` 
+
+The given code will return `False` but the last code using the stack approach will return `False`.

@@ -1,0 +1,5 @@
+The intention of the code is to implement the QuickSelect algorithm to efficiently find the kth element (0-indexed) in an unsorted list of integers. 
+
+QuickSelect is a variation of the QuickSort algorithm that works by selecting a pivot element from the list, partitioning the list into two sub-lists of elements smaller and larger than the pivot, and then recursively applying the partitioning process to the sub-list that contains the desired kth element until only that element is left. 
+
+The code accomplishes this by first selecting the first element of the list as the pivot, and then creating two sub-lists of elements below and above the pivot. It then compares the size of these sub-lists to determine which sub-list the kth element must be in, and applies the partitioning process recursively until only the kth element is left.

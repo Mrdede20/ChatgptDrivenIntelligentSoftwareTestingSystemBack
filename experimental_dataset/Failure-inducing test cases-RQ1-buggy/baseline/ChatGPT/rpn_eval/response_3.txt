@@ -1,0 +1,9 @@
+Test case:
+
+tokens = [2, 3, 4, '+', '*']
+
+Explanation:
+
+The test case above evaluates the expression 2 * (3 + 4) using reverse Polish notation (RPN). The expected output is 14.0, but the function will return 5.0.
+
+This is because the op function is popping the operands in the wrong order. In the case of the addition operation, it should be b + a instead of a + b. This means that in the test case above, the op function will be evaluated as op('+', 4, 3), which will return 7.0. Then, when the multiplication operation is applied, it will be evaluated as op('*', 7.0, 2), which will return 14.0. However, the function will instead return 5.0, which is the result of evaluating 2 * 3 - 4 instead.

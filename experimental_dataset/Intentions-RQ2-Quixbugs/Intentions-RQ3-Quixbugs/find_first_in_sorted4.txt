@@ -1,0 +1,7 @@
+The intention of the code is to perform a binary search on a sorted list to find the first occurrence of a given value. The function takes two parameters, an array of integers and a target value to search. It uses a while loop for the search and updates the indexes based on conditions. 
+
+The algorithm keeps narrowing down the bounds of the search by comparing the middle index of the current bounds with the target value with each iteration. If the target value is less than or equal to the value at the middle index, it updates the upper bound to the current index. Otherwise, it updates the lower bound to the current index plus one. The loop exits either when the target value is found or when the lower and upper bounds meet.
+
+If the target value is found, it checks if it is the first occurrence of that value. If it is, it returns the index where it was found. If not, it will continue searching. If the target value is not found, it returns -1.
+
+In summary, this function performs a fast and efficient binary search to find the first occurrence of the target value in a sorted array.

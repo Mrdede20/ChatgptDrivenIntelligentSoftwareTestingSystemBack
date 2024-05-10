@@ -1,0 +1,8 @@
+Yes, there is an input that makes the two programs have different output. 
+
+Test case:
+
+arr = [1, 2, 2, 3, 4, 5]
+k = 3
+
+For this input, the function kth() returns 4, while the function kth_smallest_element() returns 2.

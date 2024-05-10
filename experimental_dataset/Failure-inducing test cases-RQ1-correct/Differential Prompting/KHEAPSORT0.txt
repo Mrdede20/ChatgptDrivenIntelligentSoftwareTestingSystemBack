@@ -1,0 +1,1 @@
+No, both programs implement the same logic of k-heap sort using a priority queue, so they should produce the same output given the same input.

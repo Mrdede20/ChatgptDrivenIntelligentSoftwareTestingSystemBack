@@ -1,0 +1,1 @@
+No, there is no input that can make the two programs output differently. They both implement the same algorithm to find factors of a number, with minor differences in implementation.

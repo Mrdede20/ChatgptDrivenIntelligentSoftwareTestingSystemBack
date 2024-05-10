@@ -1,0 +1,20 @@
+There seems to be a mistake in the second program where the method is not declared to belong in any class. Here's a corrected version that should be equivalent to the first program:
+
+```java
+public class ReverseLinkedList {
+    public static Node reverseLinkedList(Node head) {
+        Node prev = null;
+        Node curr = head;
+        Node next = null;
+        while (curr != null) {
+            next = curr.getSuccessor();
+            curr.setSuccessor(prev);
+            prev = curr;
+            curr = next;
+        }
+        return prev;
+    }
+}
+```
+
+As for the original question, given the same input linked list, these two programs should always produce the same output.

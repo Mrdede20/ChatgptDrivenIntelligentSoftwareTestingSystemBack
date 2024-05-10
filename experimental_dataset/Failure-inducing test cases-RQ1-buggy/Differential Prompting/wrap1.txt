@@ -1,0 +1,5 @@
+Yes, there are inputs that will make the two programs have different output. Consider the input `text = "Hello world"`, `cols = 6`.
+
+The first program will produce the output `['Hello', 'world']`, while the second program will produce the output `['Hello', 'world']`. However, consider the input `text = "Hello_world"`, `cols = 6`.
+
+The first program will produce the output `['Hello_', 'world']`, while the second program will produce the output `['Hello_', 'world']`.

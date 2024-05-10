@@ -1,0 +1,7 @@
+Yes, there is an input that will produce different output for the two functions. The difference lies in the order in which characters are added to the resultant string. 
+
+The first two functions are very similar, but the characters are added to `result` in a different order. In the first function, the character is added to the beginning of the string (`result = alphabet[i] + result`) whereas in the second function, the character is added to the end of the string (`result = result + alphabet[i]`). 
+
+The third implementation uses a `for` loop instead of a `while` loop, and adds characters to the beginning of the string in the same way as the first implementation. Therefore, the output of the third implementation will be different from that of the first two implementations for some inputs.
+
+For example, `to_base(10, 2)` output for the first two implementations is '1010', while the output for the third implementation is '101'.

@@ -1,0 +1,14 @@
+Yes, there are inputs that can make these programs have different output. 
+
+Test case:
+
+arr = [1, 1, 2, 3, 4, 4, 4, 5, 5, 6]
+x = 4
+
+The first program (using `lo < hi` as the termination condition) will return 4, which is the index of the first occurrence of 4 in the array. 
+
+The second program (using `lo <= hi - 1` as the termination condition) will return -1 because it fails to handle the cases when `lo = hi = 4`. 
+
+The third program (using `lo + 1 <= hi` as the termination condition) will return 4, which is the correct index of the first occurrence of 4 in the array. 
+
+The fourth program (using `lo <= hi` as the termination condition and managing boundaries properly) will also return 4, which is the correct index of the first occurrence of 4 in the array.

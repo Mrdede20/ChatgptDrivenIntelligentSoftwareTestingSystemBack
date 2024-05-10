@@ -1,0 +1,13 @@
+Yes, the two programs will have different output for some inputs. The issue lies in the recursive calls in the possible_change method. 
+
+In the POSSIBLE_CHANGE program, the first recursive call is made with the entire coins array and total decreased by the value of the first coin. In contrast, in the CoinChange program, the first recursive call is made with the rest of the coins array and total is kept the same.
+
+For example, for the input coins = {1,2,5} and total = 7, POSSIBLE_CHANGE returns 6 while CoinChange returns 4. 
+
+To see this, consider the first call:
+
+- POSSIBLE_CHANGE: possible_change(coins, total-first) -> possible_change({1,2,5}, 6) -> (1+1)+(1+1+1)+(1+2+2)
+
+- CoinChange: possible_change(rest, total) + possible_change(coins, total - first) -> possible_change({2,5}, 7) + possible_change({1,2,5}, 6) -> 1+1+1+1
+
+As seen, the order of the recursive calls is different, leading to different output.

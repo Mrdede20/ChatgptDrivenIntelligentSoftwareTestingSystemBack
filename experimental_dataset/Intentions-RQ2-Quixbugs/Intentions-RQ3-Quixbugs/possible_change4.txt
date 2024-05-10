@@ -1,0 +1,3 @@
+The code defines a function named "possible_change" which takes two inputs, a list of positive integers representing coin denominations and an integer "total" which is the value to make change for. The function then calculates the number of distinct ways to make change that adds up to the given "total" using only the coins in the given list of denominations. 
+
+The function recursively calls itself by subtracting the first coin denomination in the list from the total and adds the result to the recursive call of the function with the rest of the denominations in the list.

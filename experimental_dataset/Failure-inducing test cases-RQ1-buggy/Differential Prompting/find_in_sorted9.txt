@@ -1,0 +1,12 @@
+Yes, there is an input that could have different output for the two functions. 
+
+Test case:
+
+```
+arr = [1, 2, 3, 4, 5, 6]
+x = 3.5
+```
+
+For `find_in_sorted`, the output will be -1, because 3.5 is not in the array. This is because the binary search in `binsearch` is looking only at integer indices.
+
+For `binsearch`, the output will be 2, because it returns the index of the closest match. In this case, the closest match is 3 at index 2, because `arr` is sorted and 3.5 is between 3 and 4.

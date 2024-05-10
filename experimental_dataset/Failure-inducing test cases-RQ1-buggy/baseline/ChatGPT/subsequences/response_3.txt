@@ -1,0 +1,16 @@
+Test case:
+
+# Inputs:
+a = 3
+b = 6
+k = 0
+
+# Expected output:
+[]
+
+# Actual output:
+[3, 4, 5, 6]
+
+Explanation:
+
+The program has a base case for k == 0, which should return an empty list. However, when k is set to 0 in the input, the program returns a list with all numbers from a to b, which is not the expected output. This is a bug in the program and the test case should fail.

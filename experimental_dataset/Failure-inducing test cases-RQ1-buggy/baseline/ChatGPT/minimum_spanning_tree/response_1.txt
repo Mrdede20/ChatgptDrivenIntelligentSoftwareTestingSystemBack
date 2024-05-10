@@ -1,0 +1,21 @@
+Test case:
+
+weight_by_edge = {
+    (0, 1): 10,
+    (1, 2): 5,
+    (2, 3): 10,
+    (3, 0): 5,
+    (0, 2): 20,
+    (1, 3): 20
+}
+
+# Intentional bug: should be weight_by_edge.__getitem__, but written as weight_by_edge.getitem
+result = minimum_spanning_tree(weight_by_edge.getitem)
+
+# Expected output: {(1, 2), (0, 1), (2, 3)}
+
+Explanation:
+
+The intentional bug in the test case is the use of weight_by_edge.getitem instead of weight_by_edge.__getitem__ to access the weight of each edge. This will cause a AttributeError exception to be raised, as getitem is not a method of the dictionary class.
+
+As a result, the program will fail to run and raise an exception, causing the test case to fail.

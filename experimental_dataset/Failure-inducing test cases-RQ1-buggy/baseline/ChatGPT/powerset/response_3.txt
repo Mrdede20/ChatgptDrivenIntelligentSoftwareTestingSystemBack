@@ -1,0 +1,9 @@
+test case:
+
+arr = [1, 2, 2]
+expected output: [[], [1], [2], [1, 2], [2, 2], [1, 2, 2]]
+
+def test_powerset():
+    assert powerset([1, 2, 2]) == [[], [1], [2], [1, 2], [2, 2], [1, 2, 2]]
+
+This test case will trigger a bug in the program as it fails to handle duplicate elements in the input array. The output should only have one [2, 2] subset, but it gives two.

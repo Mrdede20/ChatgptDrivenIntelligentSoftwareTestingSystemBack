@@ -1,0 +1,7 @@
+The given code implements the Newton-Raphson method to calculate the square root of a given number 'x' with an error tolerance of 'epsilon'. The initial approximation is taken as x/2 and the algorithm keeps iterating until the absolute difference between the approximated square root and the actual square root is lesser than the error tolerance 'epsilon'. 
+
+The code returns the approximated square root that lies within the range [sqrt(x) - epsilon, sqrt(x) + epsilon]. 
+
+The function precondition specifies that the input 'x' should be greater than or equal to 1 and the input 'epsilon' should be greater than 0. 
+
+The last example shows the usage of this function that gives the output as the approximated square root of 2 with an error tolerance of 0.01.

@@ -1,0 +1,16 @@
+Yes, there are inputs that can make the two programs have different output. Here is an example:
+
+```
+a = 'ABCBDAB'
+b = 'BDCABA'
+```
+
+The first program will return `'BCBA'` as the longest common subsequence, while the second program will return `'BDAB'`.
+
+Explanation:
+
+The first program uses a recursive approach to find the longest common subsequence, while the second program uses memoization to optimize the recursive approach.
+
+In this particular input, the first program will recursively call `longest_common_subsequence(a[1:], b[1:])` with `'BCBDAB'` and `'DCABA'` as parameters, which leads to the result of `'BCBA'`.
+
+The second program, on the other hand, will memoize the results of each calculation and avoid redundant calculations. When it first encounters `longest_common_subsequence(a[1:], b[1:], memo)`, the memo is empty and it doesn't have the result yet, so it will calculate it by recursively calling `longest_common_subsequence('BCBDAB', 'DCABA', memo)`. This will lead to the memoization of the result for the key `('BCBDAB', 'DCABA')` as `'BDAB'`. After that, when it encounters the same subproblem again as a result of the `else` clause in the main function, it already has the result in the memo, so it just returns it. This leads to the result of `'BDAB'`.

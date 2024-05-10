@@ -1,0 +1,9 @@
+This code defines a class `Solution` with a method `BinaryInversions` that takes two arguments, `n` and `bits`. The method finds the maximum number of inversions that can be obtained by flipping exactly two bits in the binary sequence given by `bits`. 
+
+`stdin` and `stdout` are imported from the `sys` module, so the input and output are read and written from the standard input and output streams respectively. 
+
+The code first creates three lists: `first`, `second`, and `orig`, that are copies of `bits`. It then initializes two Boolean variables to `True`, `hasFirst` and `hasSecond`. These will be set to `False` once the first `0` and first `1` in `bits` have been found, respectively. 
+
+Next, it iterates over `bits` to find the position of the first `0` and last `1` in the sequence. It flips the first `0` encountered in `bits` to `1` in `first` and the last `1` encountered in `bits` to `0` in `second`.
+
+The code then initializes several variables that will hold the number of inversions and counts the number of `0`s that come before a `1` in each of `first`, `second`, and `bits`. The maximum of these three counts is returned as the answer.

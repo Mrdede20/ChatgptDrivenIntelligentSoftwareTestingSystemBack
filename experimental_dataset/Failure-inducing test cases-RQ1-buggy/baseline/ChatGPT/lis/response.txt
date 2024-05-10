@@ -1,0 +1,29 @@
+#PT
+assert lis([]) == 0
+
+#PT
+assert lis([1]) == 1
+
+#PT
+assert lis([2, 1]) == 1
+
+#PT
+assert lis([3, 1, 2]) == 2
+
+#FT
+assert lis([4, 2, 3, 1]) == 2
+
+#FT
+assert lis([5, 3, 4, 2, 1]) == 2
+
+#PT
+assert lis([1, 3, 5, 2, 4, 6]) == 4
+
+#PT
+assert lis([1, 1, 1, 1, 1]) == 1
+
+#FF
+assert lis([-5, -3, -1, -4, -2]) == 2 #error 3
+
+#FT
+assert lis([1.5, 2.5, 1.0, 3.5, 2.0]) == 3

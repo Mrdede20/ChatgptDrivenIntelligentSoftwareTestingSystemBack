@@ -1,0 +1,13 @@
+Test Case: 
+
+sqrt(5, 0.0001)
+
+Expected Outcome: 
+
+The function should return the square root approximation of 5 with a max error tolerance of 0.0001.
+
+Actual Outcome: 
+
+The function fails to return the expected output and instead falls into an infinite loop. This is because the initial approximation value for 5 (2.5) is greater than the actual square root of 5, resulting in the while loop never being exited. 
+
+Test Result: FAILED

@@ -1,0 +1,5 @@
+The given code implements the longest common substring algorithm that takes two strings as input and returns the length of their longest common substring. The algorithm calculates the length of the longest common substring by creating a 2D array (Counter) of dimensions len(s) x len(t), where the element at position (i,j) will store the length of the longest common substring up to character i in s and j in t.
+
+Then, the algorithm iterates through each character of s and t and checks if they match. If they match, the length of the longest common substring up to that point is the length of the longest common substring up to the previous character in s and t, plus one. This value is stored in the corresponding element of the 2D array. 
+
+Finally, the algorithm returns the maximum value in the 2D array as the length of the longest common substring. If the 2D array is empty (i.e., s or t is an empty string), the function returns 0.

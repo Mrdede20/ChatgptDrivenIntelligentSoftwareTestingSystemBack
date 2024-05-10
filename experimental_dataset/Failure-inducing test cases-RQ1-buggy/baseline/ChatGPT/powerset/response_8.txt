@@ -1,0 +1,26 @@
+Test case: 
+
+arr = [1, 2, 2]
+
+Expected output: [[], [1], [2], [2], [1,2], [1,2], [2,2], [1,2,2]]
+
+Actual output: [[], [1], [2], [1, 2], [2, 2], [1, 2, 2]]
+
+Explanation: 
+
+The program correctly generates the subsets that include only unique elements from the input array. However, it fails to include all possible subsets that include duplicate elements. In the above test case, it misses two subsets - [2,2] and [1,2,2]. This is because the condition `if arr:` only checks if the input array is not empty, but it does not check for duplicates. 
+
+To fix this bug, we can modify the program to remove duplicates from the input array before generating subsets. Here's the updated code: 
+
+```
+def powerset(arr): 
+    arr = list(set(arr))  # Remove duplicates from input array
+    if arr:
+        first, *rest = arr
+        rest_subsets = powerset(rest)
+        return [[first] + subset for subset in rest_subsets] + rest_subsets
+    else:
+        return [[]]
+```
+
+With this fix, the program will include all possible subsets of `arr`.

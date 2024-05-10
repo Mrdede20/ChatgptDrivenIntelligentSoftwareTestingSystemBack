@@ -1,0 +1,13 @@
+Generate test cases that trigger a bug and result in test failure for the program below.
+
+def kheapsort(arr, k):
+    import heapq
+
+    heap = arr[:k]
+    heapq.heapify(heap)
+
+    for x in arr:
+        yield heapq.heappushpop(heap, x)
+
+    while heap:
+        yield heapq.heappop(heap)

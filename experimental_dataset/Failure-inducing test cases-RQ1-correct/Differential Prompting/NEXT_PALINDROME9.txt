@@ -1,0 +1,1 @@
+Yes, the two programs can have different output for certain inputs. For example, if the input array is [9, 9, 9], the first program will return "[1, 0, 0, 1]", while the second program will return "1001".

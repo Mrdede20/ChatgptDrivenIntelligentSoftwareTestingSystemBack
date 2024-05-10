@@ -1,0 +1,5 @@
+The intention of this code is to calculate the longest subsequence that is common to the two input strings. The function finds the longest sequence of characters that appear in the same order in both strings, and returns this sequence. 
+
+The function uses a recursive approach, in which it breaks down the two strings into smaller strings, and then looks for the longest common subsequence between these smaller strings. If the first characters of the two strings match, it adds this character to the subsequence and continues with the rest of the strings. 
+
+If the first characters do not match, the function calculates the longest common subsequence by comparing the subsequence obtained by removing the first character from one of the strings with that obtained by removing the first character from the other string. And finally, it returns the longest subsequence found of the 3 cases mentioned above by recursively calling the function.

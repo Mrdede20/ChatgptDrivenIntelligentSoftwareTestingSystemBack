@@ -1,0 +1,14 @@
+No, there is no input that would make the two programs have different output. Both functions compute the greatest common divisor (gcd) of two integers using the same Euclidean algorithm. The recursive version uses function calls to implement the gcd, while the iterative version uses a while loop. However, both algorithms have the same time complexity and return the same output for any valid input of two integers. 
+
+Here is a test case you can use to verify that both functions return the same output:
+
+```python
+a = 462
+b = 1071
+
+# Using the recursive algorithm
+assert gcd(a, b) == 21
+
+# Using the iterative algorithm
+assert gcd(a, b) == 21
+```

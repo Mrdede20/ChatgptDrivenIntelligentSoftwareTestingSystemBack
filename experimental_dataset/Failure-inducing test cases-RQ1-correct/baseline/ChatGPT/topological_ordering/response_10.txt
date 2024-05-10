@@ -1,0 +1,50 @@
+response@ChatGPT:
+
+
+It is difficult to determine if there is a test case that can trigger a bug without knowing the intended functionality of the program. However, possible edge cases to test include:
+
+1. An empty list of nodes
+2. A node with no incoming or outgoing nodes
+3. A cyclic graph, where there is no valid topological ordering
+4. A node with a self-loop (an incoming node also being an outgoing node)
+5. Nodes with duplicate values or the same object represented by multiple nodes in the graph.
+
+request@user:
+Give us such test case. Use assert.
+
+response@ChatGPT:
+# Test Case
+
+def test_topological_ordering():
+    # Create nodes
+    nodes = []
+    for i in range(5):
+        nodes.append(Node(value=i))
+
+    # Create dependencies
+    nodes[1].incoming_nodes = [nodes[0]]
+    nodes[1].predecessors = [nodes[0]]
+    nodes[0].outgoing_nodes = [nodes[1]]
+    nodes[0].successors = [nodes[1]]
+
+    nodes[2].incoming_nodes = [nodes[0], nodes[1]]
+    nodes[2].predecessors = [nodes[0], nodes[1]]
+    nodes[0].outgoing_nodes.append(nodes[2])
+    nodes[1].outgoing_nodes.append(nodes[2])
+    nodes[0].successors.append(nodes[2])
+    nodes[1].successors.append(nodes[2])
+
+    nodes[3].incoming_nodes = [nodes[2]]
+    nodes[3].predecessors = [nodes[2]]
+    nodes[2].outgoing_nodes = [nodes[3]]
+    nodes[2].successors = [nodes[3]]
+
+    nodes[4].incoming_nodes = [nodes[3]]
+    nodes[4].predecessors = [nodes[3]]
+    nodes[3].outgoing_nodes = [nodes[4]]
+    nodes[3].successors = [nodes[4]]
+
+    # Test ordering
+    ordered_nodes = topological_ordering(nodes)
+    assert ordered_nodes == [nodes[0], nodes[1], nodes[2], nodes[3], nodes[4]], "Test failed: Incorrect topological ordering"
+

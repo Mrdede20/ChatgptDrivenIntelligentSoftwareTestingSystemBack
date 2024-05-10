@@ -1,0 +1,13 @@
+Yes, the two programs have different outputs for the input `arr = []`. 
+
+- The first program will return `[]` without any errors.
+- The second program will return `None` because the base case `if len(arr) <= 1:` is checking for array length less than or equal to 1, while the input array has length 0. 
+
+To fix the issue in the second program, you can modify the base case to check for length less than 2, like this:
+
+```
+if len(arr) < 2:
+    return arr
+``` 
+
+This will cover both empty arrays and arrays with just one element, making the second program equivalent to the first program in behavior.

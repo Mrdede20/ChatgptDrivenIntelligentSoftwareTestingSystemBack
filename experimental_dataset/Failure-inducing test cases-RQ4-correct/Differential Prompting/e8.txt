@@ -1,0 +1,11 @@
+Yes, there are inputs that can make the two programs have different output. 
+
+Here is a test input that makes the two programs give different output:
+
+```
+1
+5
+1 0 0 0 1
+```
+
+The output for the first program (in Python) is 3, while the output for the second program (in Java) is 4.

@@ -1,0 +1,7 @@
+Test case:
+
+1. Input: shunting_yard(['+', '-', '*', '/', '+']) 
+
+Expected output: [Error/Exception]
+
+Explanation: This test case is expected to fail because the input list contains only operators and no operands. The program is designed to handle tokens of integer type, not operators. This will result in an error or exception when trying to execute the code, which will cause the test case to fail.

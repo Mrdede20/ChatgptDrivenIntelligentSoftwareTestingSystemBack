@@ -1,0 +1,22 @@
+response@ChatGPT:
+Test Case:
+
+Input:
+3
+4 3 2
+2 3 4
+8 4 9
+
+Expected Output:
+3
+3
+8
+
+Actual Output:
+3
+3
+4
+
+Explanation:
+The program sorts the input values in ascending order and then prints the second smallest value. However, in the last iteration of the loop, the program prints 4 instead of the expected 8. This happens because the values are not sorted in descending order, which causes the program to print the second smallest value instead of the second largest value. This is a bug in the program that leads to the test case failing.
+

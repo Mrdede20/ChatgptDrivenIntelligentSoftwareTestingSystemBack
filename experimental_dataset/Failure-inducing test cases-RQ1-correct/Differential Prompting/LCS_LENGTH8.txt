@@ -1,0 +1,1 @@
+No, there is no input that would make the two programs have different output. Both programs implement the same logic for finding the length of the longest common subsequence between two strings using dynamic programming. The first implementation just uses a HashMap of HashMaps to store the intermediate results, while the second implementation uses a 2D array.

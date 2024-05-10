@@ -1,0 +1,7 @@
+The intention of the code is to implement Kruskal's algorithm to find the Minimum Spanning Tree of a weighted, undirected graph. 
+
+The function takes a dictionary `weight_by_edge` as input, where the keys are tuples representing edges and the values are the weights of those edges. The function then sorts the edges based on their weights and iterates over them one by one, adding them to the Minimum Spanning Tree if they do not create a cycle in the tree. 
+
+The function uses a disjoint-set data structure to keep track of the connected components of the graph. Initially, each node is in its own set. As edges are added to the tree, the sets for the nodes that the edge connects are merged together. 
+
+The function returns a set of edges that form the Minimum Spanning Tree of the input graph.

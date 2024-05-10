@@ -1,0 +1,1 @@
+The two programs are functionally equivalent and should have the same output for all inputs. The second program has just refactored the code to use a private helper method, making it easier to read and understand. So there is no input which can make the two programs have different output.

@@ -1,0 +1,1 @@
+The two programs are implementations of the same algorithm of finding prime factors of a number. The outputs should be the same for any input because they both implement the same mathematical algorithm. Therefore, any input should result in the same output for both programs.

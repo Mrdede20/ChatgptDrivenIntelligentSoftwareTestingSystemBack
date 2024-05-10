@@ -1,0 +1,1 @@
+No, the two programs are exactly the same, so they will always produce the same output given the same input. However, keep in mind that the input must be a valid input for this function to work.

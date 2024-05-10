@@ -1,0 +1,1 @@
+The two programs have different imports for ArrayList (java.util.ArrayList vs. .util.ArrayList). Therefore, the second program will not compile and run correctly as is. Once the import is fixed, both programs should produce the same output for any given input.

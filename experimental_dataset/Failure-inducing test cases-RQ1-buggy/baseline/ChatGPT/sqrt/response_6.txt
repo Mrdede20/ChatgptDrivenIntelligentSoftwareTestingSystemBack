@@ -1,0 +1,15 @@
+Test Case:
+
+Input: x = 0, epsilon = 0.0001
+Expected Output: 0
+
+Step by Step Execution:
+
+  - x = 0, epsilon = 0.0001
+  - approx = 0 / 2 = 0
+  - abs(0 - 0) > 0.0001 is False, so the while loop is not executed.
+  - return approx = 0
+
+Observations:
+
+The input value of x = 0 is an edge case, and the program should return 0. However, the current implementation does not consider this case and returns the correct value, but it still implies that the program is not robust enough. Therefore, we need to modify the program to handle this edge case and ensure that it returns 0 for any input value of x = 0.

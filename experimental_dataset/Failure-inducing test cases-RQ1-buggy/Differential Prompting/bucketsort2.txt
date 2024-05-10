@@ -1,0 +1,8 @@
+Yes, there is an input which makes the two programs produce different outputs. Here is a test case that will produce different outputs for the two programs:
+
+```python
+arr = [1, 1, 0, 0]
+k = 2
+print(bucketsort(arr, k))  # Output: [0, 0, 1, 1]
+```
+The first implementation returns the expected output, while the second implementation returns `[0, 1, 0, 1]`.

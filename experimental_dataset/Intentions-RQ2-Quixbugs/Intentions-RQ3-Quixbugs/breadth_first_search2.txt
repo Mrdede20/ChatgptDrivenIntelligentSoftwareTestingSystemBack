@@ -1,0 +1,5 @@
+The code implements the Breadth-first search (BFS) algorithm to determine whether a goal node is reachable from a starting node in a directed graph. 
+
+BFS starts at the starting node, explores all the neighboring nodes at the current depth before moving on to nodes at the next level of depth. It uses a queue data structure to keep track of the nodes to be visited next and a set data structure to keep track of nodes that have already been explored. 
+
+The input to the function is a digraph represented by its nodes, along with the starting node and the goal node. The output is True if the goal node is reachable from the starting node and False otherwise.

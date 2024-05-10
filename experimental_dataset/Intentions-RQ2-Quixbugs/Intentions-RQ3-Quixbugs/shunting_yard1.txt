@@ -1,0 +1,5 @@
+This Python code implements the shunting-yard algorithm which is used to convert an infix expression to its equivalent postfix notation, also known as Reverse Polish Notation (RPN). The function takes a list of tokens as input (infix notation) and returns the reordered tokens as an RPN expression.
+
+The algorithm works by iterating over each token in the input and checks if it is an operator or an operand. If the token is an operand (in this implementation, an integer), it is added directly to the output list. If the token is an operator, it is checked against the operators on the top of the operator stack. The operators on the stack with higher or equal precedence to the current operator are popped off the stack and appended to the output list until an operator with lower precedence is on top of the stack. The current operator is then pushed onto the stack.
+
+After processing all the input tokens, any remaining operators on the stack are popped and appended to the output list. The resulting list represents the input expression in RPN form.

@@ -1,0 +1,9 @@
+Yes, there is an input that can make these two programs output different results.
+
+An example input can be: 
+```
+a = 'aba'
+b = 'bab'
+```
+
+The first program will return "ab" as the longest common subsequence, while the second program will return "bb" as the longest common subsequence.

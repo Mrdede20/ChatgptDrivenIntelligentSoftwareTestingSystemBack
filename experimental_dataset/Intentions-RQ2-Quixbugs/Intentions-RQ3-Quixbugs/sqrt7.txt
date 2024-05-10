@@ -1,0 +1,9 @@
+The intention of the code is to implement the Newton-Raphson method for finding the square root of a given number 'x' with a certain level of precision, specified by 'epsilon'.
+
+The function 'sqrt' takes two inputs- 'x' and 'epsilon' and returns the approximate square root of 'x' with a tolerance level of 'epsilon'.
+
+The Newton-Raphson method uses iterative calculations to find the square root of 'x'. In each iteration, the current approximation of the square root is updated by using the formula (approx + x/approx)/2. This process continues until the difference between the current approximation and the actual square root is less than the tolerance level 'epsilon'.
+
+The function returns the final approximation of the square root, which lies in the interval [sqrt(x) - epsilon, sqrt(x) + epsilon]. 
+
+The preconditions mention that x should be greater than or equal to 1 and the value of epsilon must be greater than 0.

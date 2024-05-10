@@ -1,0 +1,11 @@
+Yes, there exists an input which will make the two programs output different results. Consider the following list as the input:
+
+`[3, 1, 4, 2, 8, 5, 6, 7]`
+
+When using the first implementation of quicksort, the output will be:
+
+`[1, 2, 3, 4, 5, 6, 7, 8]`
+
+When using the second implementation, the output will be:
+
+`[1, 2, 3, 4, 5, 6, 7, 8]`

@@ -1,0 +1,10 @@
+Yes, there is an input which makes the different programs have different output. Specifically, if the `coins` input list contains duplicates, then the programs which use the `in` keyword to check for the presence of coins will treat the duplicates as distinct coins, leading to a different count of possible change combinations.
+
+Here is an example input that will produce different output for the above programs:
+
+```
+coins = [1, 2, 2, 3]
+total = 4
+```
+
+You can test this by running each of the above programs with the input values and comparing their outputs.

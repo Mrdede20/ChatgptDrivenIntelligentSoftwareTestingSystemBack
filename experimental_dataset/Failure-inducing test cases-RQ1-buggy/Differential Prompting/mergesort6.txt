@@ -1,0 +1,7 @@
+Yes, there is an input that can make the two `mergesort` functions have different output. An input with duplicate elements would make the two functions have different output. Here's an example input:
+
+`arr = [5, 3, 1, 2, 3]`
+
+The original `mergesort` function returns a sorted list `[1, 2, 3, 3, 5]`. However, the modified `mergesort` function that checks for `len(arr) == 0` or `len(arr) == 1` before sorting would return the original input list `[5, 3, 1, 2, 3]` unchanged. The same is true for the third `mergesort` function that checks for `len(arr) < 2` before sorting. The last `merge_sort` function does not contain any such modifications, and therefore would also return the sorted list `[1, 2, 3, 3, 5]` for this input.
+
+Feel free to try it out and see for yourself!

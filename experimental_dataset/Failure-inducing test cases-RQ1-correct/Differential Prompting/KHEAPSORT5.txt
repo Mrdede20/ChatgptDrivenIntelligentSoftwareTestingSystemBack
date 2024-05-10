@@ -1,0 +1,1 @@
+Yes, there is an input that can make the two programs output different results. If k > length of inputList in the second program, the program will throw an `IndexOutOfBoundsException`. However, the first program does not have this check and will still run.

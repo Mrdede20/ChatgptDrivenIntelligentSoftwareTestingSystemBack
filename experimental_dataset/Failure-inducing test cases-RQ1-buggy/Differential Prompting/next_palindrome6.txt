@@ -1,0 +1,5 @@
+Yes, there is an input which makes the two programs have different output. Consider the input `digit_list = [9, 9, 9, 8, 9, 9, 9]`. 
+
+The first implementation of `next_palindrome` function would modify the input digit list to `[1, 0, 0, 0, 0, 0, 0, 1]` representing the next highest palindrome. 
+
+On the other hand, the second implementation of the `next_palindrome` function would return `[1, 0, 0, 0, 0, 0, 0, 0, 1]` which is one digit more than the input size, and represents the next highest palindrome.

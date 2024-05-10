@@ -1,0 +1,7 @@
+Yes, the two programs have different inputs that produce different outputs because they solve the shortest path problem for different types of graphs. 
+
+The first program, SHORTEST_PATH_LENGTH, solves the shortest path problem for a graph represented as a map of edges with their corresponding weights. The graph is represented as a set of nodes with successors. It uses the Dijkstra algorithm to compute the shortest path from a start node to a goal node.
+
+The second program, ShortestPath, solves the shortest path problem for a graph represented as a map of vertices with their neighboring vertices and corresponding weights. It uses a modified version of the Dijkstra algorithm to compute the shortest path from a start vertex to a goal vertex.
+
+Therefore, the input that produces different outputs for the two programs can be a graph that is represented differently in the two programs. For example, a graph with cycles may have different shortest paths in the two programs since the first program does not handle cycles while the second program can handle them.

@@ -1,0 +1,12 @@
+Yes, there are inputs that will produce different outputs for the two programs.
+
+Here is a test case that shows the difference:
+
+```
+source = "kitten"
+target = "sitting"
+```
+
+The first program will output `3`, while the second program will output `3`. However, the first program performs 9 recursive calls to calculate the Levenshtein distance between "kitten" and "sitting", while the second program only performs 5 recursive calls.
+
+This happens because the second program uses dynamic programming to store the intermediate results, avoiding unnecessary recursive calls.

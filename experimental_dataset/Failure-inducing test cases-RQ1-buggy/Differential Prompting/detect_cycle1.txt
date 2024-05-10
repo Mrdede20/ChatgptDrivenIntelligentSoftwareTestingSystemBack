@@ -1,0 +1,22 @@
+Yes, there is an input which can make the two programs have different output. Here is a test case that will produce different results:
+
+```
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.successor = None
+
+a = Node(1)
+b = Node(2)
+c = Node(3)
+
+a.successor = b
+b.successor = c
+c.successor = None
+
+# This input will cause the first detect_cycle function to return True,
+# while the second detect_cycle function will return False.
+detect_cycle(a)
+``` 
+
+In the first implementation, the condition to check whether the successor of the hare is None is checked before the successor of the successor of the hare is checked. Therefore, in this test case, the hare will reach the end of the linked list before the tortoise has had a chance to detect a cycle. In the second implementation, the condition to check whether the successor of the hare's successor is None is checked first. Therefore, the hare will move past the end of the linked list in this case, resulting in a False return value.

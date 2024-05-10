@@ -1,0 +1,7 @@
+The given code defines a function `gcd` that calculates the Greatest Common Divisor (GCD) of two non-negative integers `a` and `b`. 
+
+The function first checks if `b` is zero - this is the base case for the recursive implementation of the algorithm. If `b` is zero, the function returns `a` (since any number divides zero). 
+
+If `b` is not zero, then the function calculates the remainder of `a` divided by `b` using the modulus operator `%`. This remainder value is then used as the new value of `a`, and `b` remains the same. The function then recursively calls itself with the new values of `a` and `b`. This continues until `b` becomes zero, at which point the recursion ends and the final value of `a` (which is the GCD) is returned.
+
+The function returns the greatest integer that divides both `a` and `b` without leaving a remainder. The implementation of the function uses the Euclidean algorithm for computing the GCD.

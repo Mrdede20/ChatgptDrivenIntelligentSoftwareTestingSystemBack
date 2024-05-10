@@ -1,0 +1,17 @@
+Test Case:
+test_wrap_with_negative_cols_value()
+
+Test Description:
+This test case is designed to check the edge case where cols value is a negative integer. The expected result is a ValueError exception indicating that the value of cols should be greater than zero.
+
+
+```
+def test_wrap_with_negative_cols_value():
+    text = "This is a long text that needs to be wrapped"
+    cols = -5
+    try:
+        wrap(text, cols)
+        assert False, "Test case failed, no exception was raised"
+    except ValueError:
+        assert True
+```

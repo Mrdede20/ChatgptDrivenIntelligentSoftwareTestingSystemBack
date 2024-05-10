@@ -1,0 +1,5 @@
+The intention of the code is to create a function named "wrap" that takes in two parameters - a string of text and a column width, and returns a list of strings each with a length no longer than the column width by breaking the input text on spaces. 
+
+The function works by repeatedly finding the last space within the column width, then slicing the text up to that space into a line and removing that portion of text from the original text. The resulting list of lines is then returned.
+
+This function is useful for formatting text that needs to be displayed in a fixed-width container or to meet certain display standards.

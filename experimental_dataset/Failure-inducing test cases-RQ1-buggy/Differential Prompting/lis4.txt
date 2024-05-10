@@ -1,0 +1,12 @@
+Yes, there exist inputs that can make the two programs above have different output. The difference is due to the last line of the second program: `longest = max(length + 1, longest)`.
+
+If the input array is `[3, 2, 5, 1, 6]`, the first program returns 3 while the second program returns 4. 
+
+You can test this by running the following code:
+
+```
+    arr = [3, 2, 5, 1, 6]
+
+print("Using first program:", lis(arr))  # Output: 3
+print("Using second program:", lis(arr))  # Output: 4
+```

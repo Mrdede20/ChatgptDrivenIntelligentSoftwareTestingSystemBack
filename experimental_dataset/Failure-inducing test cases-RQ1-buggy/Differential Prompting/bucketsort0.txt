@@ -1,0 +1,5 @@
+Yes, there is an input that could make the two programs have different output. 
+
+The difference between the two programs is in the second for loop where the first program uses `enumerate(counts)` while the second program uses `enumerate(arr)`. If there is an element in `arr` that is not a valid index for `counts`, for example if `arr` contains a value greater than or equal to `k`, then the first program will still work correctly and the second program will throw an `IndexError` as `counts` will not have a corresponding index for that value. 
+
+For example, if `arr = [1, 3, 5, 7]` and `k = 5`, the first program will still output the sorted array `[1, 3, 5, 7]`, while the second program will throw an `IndexError`.

@@ -1,0 +1,30 @@
+#PT
+assert knapsack(0, [(1, 10), (2, 20), (3, 30)]) == 0
+
+#PT
+assert knapsack(10, [(11, 10), (12, 20), (13, 30)]) == 0
+
+#FF
+assert knapsack(10, [(3, 10), (3, 20), (3, 30)]) == 0 #error 60
+
+#PT
+assert knapsack(-10, [(1, 10), (2, 20), (3, 30)]) == 0
+
+#PT
+assert knapsack(10, []) == 0
+
+#IT
+assert knapsack(10, [('a', 10), (2, 20), (3, 30)]) == 0
+
+#FF
+assert knapsack(10, [(1, 10), (-2, 20), (3, 30)]) == 0 #error 60
+
+#FF
+assert knapsack(10, [(1, 10), (2, 20), (1, 10)]) == 0 #error 40
+
+#FC
+items = [(i, i * 10) for i in range(1, 101)]
+assert knapsack(1000, items) == 50050 #error 10000
+
+#PT
+assert knapsack(1, [(2, 10), (3, 20), (4, 30)]) == 0

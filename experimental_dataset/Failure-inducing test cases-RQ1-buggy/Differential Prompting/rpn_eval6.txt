@@ -1,0 +1,9 @@
+Yes, there is an input that makes the two programs have different output. 
+
+Test case:
+
+tokens = [5, 6, 7, '+', '*', 8, 2, '/', '-']
+
+The first program will output -26.0, while the second and third program will output 26.75. 
+
+This happens because the first program uses a different order of operands for the subtraction operator when calling `op()` in the line `op(token, b, a)`. This implies that when the '/' operator is applied, the division is executed with different operands, and that causes the difference in the final output.

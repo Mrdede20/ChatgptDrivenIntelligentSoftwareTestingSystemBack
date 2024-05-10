@@ -1,0 +1,36 @@
+#IT
+tokens = [2, 3, '+']
+assert rpn_eval(tokens) == 5
+
+#IT
+assert rpn_eval([2, 3, '+', 4, '*']) == 20.0
+
+#PT
+tokens = [1.0, 2.0, '+']
+assert rpn_eval(tokens) == 3.0
+
+#PT
+assert rpn_eval([1.0, 2.0, '+']) == 3.0
+
+#IT
+assert rpn_eval([4, 5, '+']) == 9.0
+
+#IT
+assert rpn_eval([1, 2, '+', 3, '*']) == 9
+
+#IT
+assert rpn_eval([1, 2, '+', 3, '*']) == 9.0
+
+#IT
+assert rpn_eval([3, 4, '+', 2, '*']) == 14
+
+#IT
+assert rpn_eval([3, 4, '+', 5, '*']) == 35.0
+
+#PT
+tokens = [4.0, 2.0, '+', 3.0, '*']
+expected_result = 18.0
+result = rpn_eval(tokens)
+assert result == expected_result, f"Error: Expected {expected_result}, but got {result}"
+
+

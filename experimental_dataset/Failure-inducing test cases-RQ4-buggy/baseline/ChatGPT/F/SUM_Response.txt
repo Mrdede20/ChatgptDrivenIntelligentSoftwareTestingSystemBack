@@ -1,0 +1,29 @@
+#FF
+response_1 #Impossible Impossible Impossible
+
+#FF
+response_2 #Impossible
+
+#FF
+response_3 #Infinity Infinity
+
+#FC
+response_4 #0 Impossible Impossible
+
+#FF
+response_5 #Infinity
+
+#FF
+response_6 #Infinity Impossible Infinity
+
+#FF
+response_7 #Impossible
+
+#FF
+response_8 #Infinity Infinity Impossible
+
+#FC
+response_9 #0 0
+
+#FF
+response_10 #Impossible

@@ -1,0 +1,1 @@
+No, both programs take an integer and a base as input and return the corresponding string in that base. They use different variable names, but the algorithm and logic are essentially the same. Therefore, given the same input, they should produce the same output.

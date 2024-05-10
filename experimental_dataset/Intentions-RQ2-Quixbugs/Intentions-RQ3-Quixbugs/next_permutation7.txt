@@ -1,0 +1,15 @@
+The following code implements the concept of the "next permutation" of a given list of numbers. Given a list of unique integers, it finds the lexicographically next permutation of the elements of the list.
+
+The algorithm works as follows:
+
+1. Iterate through the list from right to left until a decreasing number is found. 
+2. Find the smallest number to the right of this decreasing number that is still greater than it.
+3. Swap these two numbers.
+4. Reverse the sequence of numbers to the right of the current position.
+5. Return the modified list as the result. 
+
+This algorithm uses Python's built-in "reversed()" function to reverse part of the list, and returns a new list as the result.
+
+The code defines a function next_permutation(perm) that takes as input a list perm of unique integers and outputs the lexicographically next permutation. If the input list is already in its maximum lexicographic order, the function returns None.
+
+The function uses the above algorithm to find the next permutation and returns it as a list, or returns None if the input list is already the maximum permutation.

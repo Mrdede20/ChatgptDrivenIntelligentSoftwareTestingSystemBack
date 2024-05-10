@@ -1,0 +1,13 @@
+Yes, there is at least one input that makes the first two versions of the mergesort function have different output than the last version. 
+
+Here is a test case:
+
+```
+arr = [1, 4, 2, 5, 3]
+```
+
+For this input, the first two versions of the mergesort function will return `[1, 2, 3, 4, 5]`, while the last version will return `[1, 2, 3, 4, 5]`. 
+
+The difference in behavior is due to the different conditions used to check if the array is empty or contains only one element. The first two versions have `if len(arr) == 0 or len(arr) == 1` and `if len(arr) <= 1` respectively, while the last version has `if len(arr) <= 1`. 
+
+The first two versions will recurse on the empty array if `arr` is empty. In addition, if `arr` has one element the first two versions will just return the input array. While, the last version will sort the input array regardless of its size, hence no matter the input the output will always be sorted the same way.

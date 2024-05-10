@@ -1,0 +1,20 @@
+Yes, there are inputs that make the two programs output different results.
+
+Test case:
+```
+hanoi(3, 1, 3)
+```
+
+The recursive implementation returns:
+```
+[(1, 3), (1, 2), (3, 2), (1, 3), (2, 1), (2, 3), (1, 3)]
+```
+
+The iterative implementation returns:
+```
+[(1, 3), (3, 2), (2, 1), (3, 1), (2, 3), (1, 3)]
+``` 
+
+This is because the recursive implementation divides the problem into smaller subproblems until it reaches the base case, where the disk is directly moved from start to end. The iterative implementation, on the other hand, simulates the process of moving disks by keeping track of the height, start, and end of each stack of disks. 
+
+Since the implementation details are different, small differences like the order of the moves may occur.

@@ -1,0 +1,104 @@
+#PT
+node_a = Node('A')
+node_b = Node('B')
+node_c = Node('C')
+node_d = Node('D')
+node_e = Node('E')
+node_a.successors = [node_b, node_c]
+node_b.successors = [node_c, node_d]
+node_d.successors = [node_e]
+node_e.successors = [node_c]
+assert breadth_first_search(node_a, node_a) == True
+
+#PT
+n1 = Node(value=1)
+n2 = Node(value=2)
+n3 = Node(value=3)
+n4 = Node(value=4)
+n5 = Node(value=5)
+n1.successors = [n2, n3]
+n2.successors = [n4]
+n3.successors = [n4, n5]
+n4.successors = [n5]
+assert breadth_first_search(n1, n5) == True
+
+#FF
+node2 = Node()
+node3 = Node()
+node1 = Node(value=1, successors=[node2])
+node2 = Node(value=2, successors=[node3], predecessors=[node1])
+node3 = Node(value=3, predecessors=[node2])
+assert breadth_first_search(node1, node3) == True
+
+#PT
+nodeA = Node('A')
+nodeB = Node('B')
+nodeC = Node('C')
+nodeD = Node('D')
+nodeE = Node('E')
+nodeF = Node('F')
+nodeA.successors = [nodeB, nodeC]
+nodeB.successors = [nodeD, nodeE]
+nodeC.successors = [nodeE, nodeF]
+assert breadth_first_search(nodeA, nodeD) == True
+
+#PT
+node1 = Node('1')
+node2 = Node('2')
+node3 = Node('3')
+node4 = Node('4')
+node5 = Node('5')
+node1.successors = [node2, node3]
+node2.successors = [node4, node5]
+node3.successors = [node5]
+assert breadth_first_search(node1, node5) == True
+
+#PT
+nodeA = Node("A")
+nodeB = Node("B")
+nodeC = Node("C")
+nodeD = Node("D")
+nodeE = Node("E")
+nodeA.successors = [nodeB, nodeC]
+nodeB.successors = [nodeD]
+nodeC.successors = [nodeD, nodeE]
+assert breadth_first_search(nodeA, nodeB) == True
+
+#PT
+node1 = Node(1)
+node2 = Node(2)
+node3 = Node(3)
+node4 = Node(4)
+node5 = Node(5)
+node1.successors = [node2, node3]
+node2.successors = [node3, node4]
+node3.successors = [node5]
+node5.successors = [node4]
+assert breadth_first_search(node1, node4) == True
+
+#PT
+node_a = Node("A")
+node_b = Node("B")
+node_c = Node("C")
+node_d = Node("D")
+node_e = Node("E")
+node_a.successors = [node_b, node_c]
+node_b.successors = [node_d, node_e]
+node_c.successors = [node_e]
+node_d.successors = [node_b]
+node_e.successors = []
+assert breadth_first_search(node_a, node_e) == True
+
+#PT
+a = Node()
+b = Node()
+c = Node()
+d = Node()
+e = Node()
+f = Node()
+a.successors = [b, c]
+b.successors = [d, e]
+c.successors = [f]
+f.successors = [e]
+e.successors = [d]
+assert breadth_first_search(a, e) == True

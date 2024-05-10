@@ -1,0 +1,24 @@
+Yes, there is an input that can make the programs have different outputs. If `startnode` and `goalnode` are instances of a class that does not implement the `==` operator (but does implement the `is` operator), the last program will return `False`, while the other programs will return `True`. 
+
+Here's an example of such a class and input:
+
+```
+class Node:
+    def __init__(self, val):
+        self.val = val
+        self.successors = []
+
+    def add_successor(self, node):
+        self.successors.append(node)
+
+startnode = Node(1)
+node2 = Node(2)
+node3 = Node(3)
+goalnode = Node(4)
+
+startnode.add_successor(node2)
+node2.add_successor(node3)
+node3.add_successor(goalnode)
+```
+
+If we call `breadth_first_search(startnode, goalnode)` with this input, the last program will return `False`, while the other programs will return `True`.

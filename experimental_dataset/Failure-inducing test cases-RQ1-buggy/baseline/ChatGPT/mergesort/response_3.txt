@@ -1,0 +1,25 @@
+Sure, here's a test case that could trigger a bug and result in test failure:
+
+arr = [3, 2, 1]
+result = mergesort(arr)
+assert result == [1, 2, 3]
+
+This test case consists of an array of three integers in reverse order, which should be sorted in ascending order by the mergesort algorithm. However, the current implementation of mergesort may fail to sort this particular input properly, which could cause the test case to fail.
+
+The bug in the current implementation occurs because the merge function is not handling the case where left[i] and right[j] are equal, which can occur if there are duplicate values in the input array. To fix this, the merge function should use the less-than-or-equal-to operator (<=) instead of the less-than operator (<) to compare the values in left and right. Here's the corrected merge function:
+
+def merge(left, right):
+    result = []
+    i = 0
+    j = 0
+    while i < len(left) and j < len(right):
+        if left[i] <= right[j]:
+            result.append(left[i])
+            i += 1
+        else:
+            result.append(right[j])
+            j += 1
+    result.extend(left[i:] or right[j:])
+    return result
+
+With this fix, the test case should pass as expected.

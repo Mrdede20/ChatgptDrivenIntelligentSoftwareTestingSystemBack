@@ -1,0 +1,29 @@
+The program above seems to have some issues with its implementation, particularly with the insert_or_update function. A possible test case to trigger a bug and result in a test failure could be:
+
+# Test Case
+length_by_edge = {
+    'A': {'B': 2},
+    'B': {'A': 1, 'C': 3},
+    'C': {'A': 4}
+}
+startnode = 'A'
+goalnode = 'C'
+
+# create nodes
+A = Node(value='A', successors=['B'])
+B = Node(value='B', successors=['C'], predecessors=['A'], incoming_nodes=['A'], outgoing_nodes=['C'])
+C = Node(value='C', predecessors=['B'], incoming_nodes=['B'])
+
+# insert nodes in a graph
+graph = {
+    'A': A,
+    'B': B,
+    'C': C
+}
+
+# check if shortest path length is correct
+assert shortest_path_length(length_by_edge, startnode, goalnode) == 5
+
+This test case creates a graph with three nodes A, B, and C, where A has a connection to B with a length of 2, B has connections to A and C with lengths of 1 and 3, respectively, and C has a connection to A with a length of 4. The starting node is A, and the goal node is C.
+
+The test case will check whether the shortest_path_length function correctly returns the shortest path length from node A to node C, which is 5 in this case. However, since the insert_or_update function is not working correctly, it may fail to update the distance for a node in the priority queue, causing the algorithm to return an incorrect result.

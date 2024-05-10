@@ -1,0 +1,17 @@
+Yes, there is an input that could make the two programs have different output. 
+
+Test case: [4.0, 5.0, '+', 2.0, 3.0, '-', '*']
+
+Program 1 (original):
+```
+rpn_eval([4.0, 5.0, '+', 2.0, 3.0, '-', '*'])
+# Output: 9.0
+```
+
+Program 2 (modified):
+```
+rpn_eval([4.0, 5.0, '+', 2.0, 3.0, '-', '*'])
+# Output: -9.0
+```
+
+As you can see, the two programs return different results for the same input.

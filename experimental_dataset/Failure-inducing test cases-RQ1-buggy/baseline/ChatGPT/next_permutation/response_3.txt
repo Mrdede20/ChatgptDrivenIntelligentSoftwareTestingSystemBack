@@ -1,0 +1,12 @@
+One potential test case that could trigger a bug and result in test failure for the above program is when the input permutation is already the largest possible permutation.
+
+Test case:
+
+perm = [3, 2, 1]
+assert next_permutation(perm) == None
+
+Explanation:
+
+The next_permutation function is expected to return the next lexicographically greater permutation of the input perm. However, in this test case, perm is already the largest possible permutation, as no other permutation can be formed using the given elements. Therefore, the function should return None.
+
+If the implementation fails to return None in this case and instead returns some unexpected value, the test case will fail, indicating a bug in the program.

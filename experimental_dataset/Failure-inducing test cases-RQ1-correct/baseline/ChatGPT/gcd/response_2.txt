@@ -1,0 +1,17 @@
+response@ChatGPT:
+
+
+Yes, if we call the function with gcd(0,0), it will result in a division by zero error as a % b operation in line 4 will cause a ZeroDivisionError.
+
+request@user:
+Give us such test case. Use assert.
+
+response@ChatGPT:
+
+
+Here is a sample test case for the gcd function:
+
+assert gcd(10, 25) == 5
+
+This test case checks if the GCD of 10 and 25 is equal to 5. The assert statement will pass if the function returns 5, and will fail otherwise.
+

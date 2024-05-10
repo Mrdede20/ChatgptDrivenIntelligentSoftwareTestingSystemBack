@@ -1,0 +1,6 @@
+The intention of this code is to determine whether a given string of parentheses is properly nested or not. 
+
+The function "is_valid_parenthesization" takes a string of parentheses as input and returns True if the parentheses are properly nested, otherwise it returns False. 
+The function loops through each character in the input string and maintains a depth counter by incrementing for each opening parenthesis '(' and decrementing for each closing parenthesis ')'. If the depth counter goes negative at any point during the loop, the function returns False because the parentheses are not properly nested. If the loop completes without the depth counter going negative, the function returns True because the parentheses are properly nested. 
+
+The provided examples demonstrate the use of the function to check for valid and invalid string of parentheses.

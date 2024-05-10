@@ -1,0 +1,1 @@
+No, both programs have the same output. The output of the TextWrapper class is not affected by the changes made in the WRAP class as their functionalities are different.

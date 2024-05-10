@@ -1,0 +1,1 @@
+No, both programs implement Kruskal's algorithm to find the minimum spanning tree and should produce the same output for any given input.

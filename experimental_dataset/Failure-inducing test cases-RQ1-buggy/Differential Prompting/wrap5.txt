@@ -1,0 +1,22 @@
+Yes, there is an input that can make the two programs produce different output. 
+
+Test case:
+
+```
+text = "hello world python coding tutor bot"
+cols = 10
+```
+
+Using the first implementation, the output will be:
+
+```
+['hello', 'world', 'python', 'coding', 'tutor bot']
+```
+
+Using the second implementation, the output will be:
+
+```
+['hello', 'world', 'python', 'coding', 'tutor', 'bot']
+```
+
+As you can see, the second implementation correctly handles the case where the last word in the text is exactly of length `cols`, whereas the first implementation splits the last word into two lines.

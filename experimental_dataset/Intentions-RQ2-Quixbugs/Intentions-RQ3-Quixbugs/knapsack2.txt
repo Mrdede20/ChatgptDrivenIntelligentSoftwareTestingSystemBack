@@ -1,0 +1,5 @@
+The `knapsack` function is an implementation of the dynamic programming approach to solve the Knapsack problem. The Knapsack problem is a common problem in computer science and optimization, where we have to fill a knapsack of a certain capacity with a selection of items having defined values and weights. The goal is to maximize the total value of the items in the knapsack without exceeding its maximum capacity.
+
+The implementation uses a 2D memoization table to keep track of the maximum value of items that can be stored up to a given capacity. It iterates over each item and capacity to update the values in the memo table using the maximum value between the previous value and the value of the current item plus the maximum value of the remaining capacity.
+
+The function returns the maximum total value of the items that can be stored in the knapsack without exceeding its capacity.

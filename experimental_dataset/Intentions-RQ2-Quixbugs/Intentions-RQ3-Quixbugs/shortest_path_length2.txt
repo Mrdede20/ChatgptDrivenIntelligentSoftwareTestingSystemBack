@@ -1,0 +1,7 @@
+The code implements Dijkstra's algorithm for finding the shortest path between two nodes in a directed graph. The algorithm starts from a start node and examines all neighboring nodes to find the one with the shortest path. It then continues to examine the neighboring nodes of that node, and so on until it reaches the goal node. 
+
+The input to the function is a dictionary `length_by_edge` that contains the length of each directed edge in the graph. The start node and goal node are also given as inputs. The output of this function is the length of the shortest path from the start node to the goal node. 
+
+The algorithm uses a FibHeap to store the unvisited nodes and their distances from the start node. The `heappush` and `heappop` functions from the `heapq` library are used to maintain the heap. The algorithm also keeps track of the visited nodes in a set.
+
+The `insert_or_update` function is used to insert new nodes into the heap or update the distance of an existing node in the heap. The `get` function is used to get the distance of a node from the heap.

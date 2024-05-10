@@ -1,0 +1,1 @@
+No, the two programs produce the same output for any input. However, there is a minor difference in the way they represent the given graph - MINIMUM_SPANNING_TREE program uses Node objects while KruskalsAlgorithm program uses integer values to represent vertices.

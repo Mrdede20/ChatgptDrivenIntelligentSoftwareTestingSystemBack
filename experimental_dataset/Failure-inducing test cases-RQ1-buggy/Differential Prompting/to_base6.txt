@@ -1,0 +1,5 @@
+Yes, there is an input which can make the two programs have different output.
+
+Test case: `num = 16`, `b = 2`
+
+The first two functions return '10000', whereas the third function returns '10000' with leading zeros '0001'.

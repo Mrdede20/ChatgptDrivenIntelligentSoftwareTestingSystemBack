@@ -1,0 +1,17 @@
+Yes, there is a possible input which makes the two programs have different output. Here is an example:
+
+Input:
+```
+10
+1 3 4 4 4 4 4 2 1 1
+```
+
+Output of the first program:
+```
+YES
+```
+
+Output of the second program:
+```
+NO
+```

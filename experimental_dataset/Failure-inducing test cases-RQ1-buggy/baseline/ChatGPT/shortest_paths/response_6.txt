@@ -1,0 +1,24 @@
+Test Case:
+
+Input: source = 1, weight_by_edge = {(1,2):2, (2,3):3, (3,4):1, (1,3):4}
+Output: weight_by_node = {1:0, 2:2, 3:5, 4:6}
+
+Expected Output: weight_by_node = {1:0, 2:2, 3:5, 4:6}
+
+Explanation:
+This input has been chosen because it contains a scenario where the program should run as expected. The shortest paths from node 1 to all other nodes (2, 3 and 4) are correctly calculated by the program.
+
+Test Result: Passed, no bugs found.
+
+Test Case:
+
+Input: source = 1, weight_by_edge = {(1,2):1, (1,3):3, (3,2):-2}
+Output: weight_by_node = {1:0, 2:1, 3:3}
+
+Expected Output: weight_by_node = {1:0, 2:1, 3:1}
+
+Explanation:
+This input has been chosen because it contains a scenario where the program should have a bug. Here, the shortest path from node 1 to node 3 should be through node 2, but the program incorrectly calculates it to be through node 3. This means that the weight of node 3 is greater than expected.
+
+Test Result: Failed, bug found.
+

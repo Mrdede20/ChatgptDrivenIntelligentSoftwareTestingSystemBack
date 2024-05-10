@@ -1,0 +1,18 @@
+Yes, there are input values that make the two programs have different output.
+
+Here is a test case in Python:
+
+```
+n = 30
+print(get_factors(n))
+```
+
+The output of the three functions for this test case would be:
+
+```
+[2, 3, 5]
+[2, 3, 5]
+[2, 3, 5]
+``` 
+
+As you can see, all three functions return the same output for this input.

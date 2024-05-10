@@ -1,0 +1,31 @@
+#PT
+assert max_sublist_sum([]) == 0
+
+#PT
+assert max_sublist_sum([1, 2, 3, 4, 5]) == 15
+
+#PT
+arr1 = [1, -2, 3, 4, -5, 8]
+assert max_sublist_sum(arr1) == 10
+
+#PT
+assert max_sublist_sum([]) == 0
+
+#PT
+arr1 = [1, -2, 3, 4, -5, 8]
+assert max_sublist_sum(arr1) == 10
+
+#PT
+assert max_sublist_sum([]) == 0
+
+#PT
+assert max_sublist_sum([1, 2, 3, 4, 5]) == 15
+
+#PT
+assert max_sublist_sum([]) == 0
+
+#FF
+assert max_sublist_sum([1, -2, 3, 4, -5, 8]) == 15
+
+#PT
+assert max_sublist_sum([1, -2, 3, 4, -5]) == 7

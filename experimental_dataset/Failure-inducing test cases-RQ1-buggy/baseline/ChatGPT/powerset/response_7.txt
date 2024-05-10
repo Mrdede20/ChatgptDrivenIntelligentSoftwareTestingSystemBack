@@ -1,0 +1,17 @@
+## Test Case
+
+### Input
+- `arr = [1, 2, 3]`
+
+### Output
+- Expected Output: `[[1, 2, 3], [1, 2], [1, 3], [1], [2, 3], [2], [3], []]`
+- Actual Output: An infinite loop occurs and the program runs out of memory
+
+
+
+## Explanation
+- The function is supposed to take a list and return a list of all possible subsets of the elements in the input list, including the empty set.
+- In this test case, when the input is `arr = [1, 2, 3]`, the function enters the `if` block and sets `first = 1` and `rest = [2, 3]`.
+- Then `rest_subsets` is calculated by recursively calling the `powerset` function on `rest`, which results in `rest_subsets` being equal to `[[2, 3], [2], [3], []]`.
+- The function then generates the subsets of `arr` by taking each element in `rest_subsets` and adding `first` to the beginning of it. This should result in `[[1, 2, 3], [1, 2], [1, 3], [1], [2, 3], [2], [3], []]` being returned.
+- However, due to a bug in the program, the recursive call to `powerset(rest)` never returns and results in an infinite loop, causing the program to run out of memory and fail the test case.

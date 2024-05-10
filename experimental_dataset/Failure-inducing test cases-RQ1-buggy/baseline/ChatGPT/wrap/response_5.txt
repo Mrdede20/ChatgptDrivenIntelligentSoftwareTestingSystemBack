@@ -1,0 +1,12 @@
+Test Case:
+text = "This is a sample text for testing."
+cols = 5
+
+Expected Output:
+['This', 'is a', 'sampl', 'e tex', 't for', 'testi', 'ng.']
+
+Actual Output:
+['This', 'is a', 's', 'ample', 'text', 'for', 'testing.']
+
+Explanation:
+The program is supposed to wrap the text and split it into an array of lines, where each line has a maximum length of the specified number of columns. However, in this case, when the program tries to wrap the text at index 5, it splits the word "sample" into "s" and "ample" because it considers the space after "a" to be the end of the line. This is incorrect and results in a test failure.

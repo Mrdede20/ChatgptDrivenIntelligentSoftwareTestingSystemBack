@@ -1,0 +1,7 @@
+Yes, there are inputs that make the two programs have different output. Here's a test case:
+
+```
+perm = [1, 2, 3]
+```
+
+The first program will return `[1, 3, 2]` as the next permutation, while the second program will return `[2, 1, 3]`.

@@ -1,0 +1,7 @@
+The above code implements the Breadth-First Search algorithm for searching if the `goalnode` is reachable from the `startnode` in a directed graph.
+
+The Breadth-First Search algorithm starts at the `startnode` and explores all the nodes at the current depth before moving to the next depth. It uses a queue data structure to maintain the nodes to be explored. If the `goalnode` is found, the algorithm returns True, else False. 
+
+The algorithm uses a set to keep track of nodes already seen, to avoid revisiting nodes and getting stuck in an infinite loop. If a node has not been seen before, it is added to the set, and its successors are added to the queue to be explored later. 
+
+Overall, this code can be used to find if there is a path from `startnode` to `goalnode` in a directed graph and it returns True if a path exists and False otherwise.

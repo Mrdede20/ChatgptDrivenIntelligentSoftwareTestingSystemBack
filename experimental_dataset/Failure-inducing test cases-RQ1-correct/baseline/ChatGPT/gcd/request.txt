@@ -1,0 +1,7 @@
+Is there a test case which can triggers a bug in the program below?
+
+def gcd(a, b):
+    if b == 0:
+        return a
+    else:
+        return gcd(b, a % b)

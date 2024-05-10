@@ -1,0 +1,1 @@
+No, both programs implement the same solution for the 0/1 Knapsack problem using Dynamic Programming. Therefore, for any given input, they should provide the same output.

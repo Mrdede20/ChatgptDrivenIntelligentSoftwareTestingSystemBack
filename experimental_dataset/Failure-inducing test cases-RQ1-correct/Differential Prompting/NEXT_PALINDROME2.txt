@@ -1,0 +1,5 @@
+Yes, there is an input which makes the two programs have different output. 
+
+For example, if the input is: int[] digit_list = {9, 9, 9}, then the first program will return "[1, 0, 0, 1]", while the second program will return "1001". 
+
+This happens because the two programs use different algorithms to find the next palindrome. The first program iteratively checks digits around the center and increments them if necessary, while the second program checks the left and right halves simultaneously and copies the left half to the right half while incrementing if necessary. This leads to different behavior when dealing with certain inputs, such as the one above.

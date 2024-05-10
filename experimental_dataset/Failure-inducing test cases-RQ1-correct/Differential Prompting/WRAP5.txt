@@ -1,0 +1,1 @@
+No, the two programs produce the same output for any input. The second program is a different implementation of the wrap function that breaks a text into lines of a given maximum width. The first program is just a test to ensure that the lastIndexOf method works as expected.

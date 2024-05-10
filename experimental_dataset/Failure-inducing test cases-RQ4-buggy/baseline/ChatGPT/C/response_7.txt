@@ -1,0 +1,15 @@
+response@ChatGPT:
+Test Case:
+t = 1
+n = 4
+s = [4, 3, 2, 1]
+
+Expected Output:
+3 2 1 0
+
+Actual Output:
+IndexError: list index out of range
+
+Explanation:
+The bug in the program is that it assumes that there will always be two elements in the 'mx' list. However, in the above test case, all elements in the 's' list are in descending order, which means there is no second maximum (mx[1]) value. Therefore, the program tries to access an index that does not exist, resulting in an IndexError and test failure.
+

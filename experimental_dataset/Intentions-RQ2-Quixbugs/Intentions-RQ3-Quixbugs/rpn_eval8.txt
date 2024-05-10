@@ -1,0 +1,7 @@
+The intention of this code is to create a function called `rpn_eval` that evaluates a mathematical expression given in Reverse Polish Notation. Reverse Polish Notation is a way of representing mathematical expressions where operands come first, followed by the operator. For example, the expression "3 + 5 / 2" would be written in RPN as "3 5 2 / +".
+
+The `rpn_eval` function takes in a list of values and operators encoded as floats and strings. It then evaluates the expression using a stack data structure and returns the result.
+
+The `op` function is a helper function that takes in a mathematical operator symbol and two operands, and returns the result of applying the operator to the operands. It uses a dictionary to map operator symbols to lambda functions that perform the corresponding mathematical operation.
+
+The `stack` variable is an empty list that is used as a stack. The function then iterates over the input tokens and performs the operation for each token. If the token is a float, it is added to the top of the stack. If it is an operator, the two topmost operands are popped from the stack, the operation is performed, and the result is pushed back onto the stack. Finally, the function returns the single value remaining on the stack, which is the result of the expression.

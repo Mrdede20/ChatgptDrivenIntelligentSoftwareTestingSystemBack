@@ -1,0 +1,5 @@
+The intention of this code is to take integer input 't' representing the number of test cases, then for each test case, take three integer inputs, sort them in ascending order, and print the second (middle) number of the sorted sequence. This process is repeated for all the test cases.
+
+The while loop with the condition t > 1 ensures that the code runs for the number of test cases specified by the input 't'. The for loop with the range (0,3) takes three integer inputs, sorts them using the sorted() function, and stores them in the list 'a'.
+
+Then, the middle element of the sorted list 'a' (i.e., the second element) is printed using the index notation a[1]. Finally, the variable 't' is decremented by 1 in each iteration of the loop until it reaches 1.

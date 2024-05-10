@@ -1,0 +1,29 @@
+#IT
+assert get_factors(-10) == []
+
+#PT
+assert get_factors(3.14) == [] #error [3.14]
+
+#IT
+assert get_factors("abc") == []
+
+#PT
+assert get_factors(7) == [] #error [7]
+
+#PT
+assert get_factors(1) == []
+
+#FT
+assert get_factors(123456789) == [3, 3, 3607, 3803]
+
+#FT
+assert get_factors(16) == [2, 2, 2, 2]
+
+#PT
+assert get_factors(999999937) == [] #error[999999937]
+
+#FC
+assert get_factors(646469) == [17, 38027] #error [433, 1493]
+
+#FC
+assert get_factors(1092727) == [3, 3, 121303] #error [103, 103, 103]

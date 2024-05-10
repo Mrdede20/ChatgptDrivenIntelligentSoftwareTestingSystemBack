@@ -1,0 +1,9 @@
+Test case:
+n = 3
+length_by_edge = {(0, 1): 1, (1, 2): 2, (0, 2): 3}
+
+Expected output:
+{(0, 0): 0, (0, 1): 1, (0, 2): 3, (1, 0): inf, (1, 1): 0, (1, 2): 2, (2, 0): inf, (2, 1): inf, (2, 2): 0}
+
+Explanation:
+This program is supposed to find the shortest path lengths between all pairs of nodes in a given graph, using the Floyd-Warshall algorithm. However, if there is a negative cycle in the graph, the algorithm may fail to find the correct shortest path lengths. In this test case, the graph has a negative cycle: if you go from node 0 to node 2 to node 1 and back to node 0, you end up with a negative total length. Therefore, the expected output should have inf for any path that includes this cycle. However, the current implementation of the program does not account for negative cycles and will give incorrect results.

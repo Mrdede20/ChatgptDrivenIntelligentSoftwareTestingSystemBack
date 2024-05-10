@@ -1,0 +1,5 @@
+The intention of the code is to find the prime factors of a given input integer using the trial division method. The function `get_factors` takes an integer `n` as input and returns a list of prime factors of `n` in sorted order with repetition allowed. 
+
+If `n` equals `1`, it returns an empty list. Otherwise, the function loops through integers from `2` to the square root of `n`. If `n` is divisible by the current integer `i`, the function returns a list containing `i` concatenated with the result of recursively calling `get_factors` on the quotient `n//i`. 
+
+If there are no factors of `n` found in the loop, an empty list is returned.

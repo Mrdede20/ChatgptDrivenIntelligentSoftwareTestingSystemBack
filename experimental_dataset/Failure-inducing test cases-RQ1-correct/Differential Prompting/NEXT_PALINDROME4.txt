@@ -1,0 +1,8 @@
+Yes, there is a test case that will make the two programs output different results. 
+
+Test case: [9, 9, 9, 9, 9, 9]
+
+- The first program (NEXT_PALINDROME) will output "[0, 0, 0, 0, 0, 0, 0]"
+- The second program (Palindrome) will output "1000001"
+
+This happens because the two programs approach finding the next palindrome number differently. The first program adds 1 to the first half of the digits while also changing the second half of the digits to match the first half. The second program instead changes the digits in the first half of the number to mirror the digits in the second half of the number, taking care of any necessary carry-overs.

@@ -1,0 +1,7 @@
+```
+# Test case for incorrect input
+assert powerset("abc") == None
+``` 
+
+Bug (test failure):
+The program doesn't handle input type other than a list. When you try to pass a string to the function, it will raise the TypeError exception instead of returning None.

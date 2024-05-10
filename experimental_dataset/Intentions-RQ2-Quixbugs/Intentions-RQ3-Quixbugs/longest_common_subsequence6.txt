@@ -1,0 +1,11 @@
+The intention of the code is to find the longest common subsequence (LCS) of characters between any two given input strings. The code uses the recursion technique to solve this problem. 
+
+For two input strings 'a' and 'b', the function first checks if either of them is an empty string. If yes, then the function returns an empty string as there is no common subsequence between an empty string and any other string. 
+
+If the first characters of both strings are the same, then that character is added to the LCS string and the function is recursively called for the remaining characters of both strings. 
+
+If the first characters of both strings are not the same, then the function is called recursively for two options:
+1. The first string, but skipping the first character of the second string. 
+2. The second string, but skipping the first character of the first string. 
+
+Finally, the function returns the maximum of the two recursive calls based on the length of the LCS string.

@@ -1,0 +1,8 @@
+input：
+2
+2 5 7
+4 9 1
+
+expected output：
+5
+4

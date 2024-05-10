@@ -1,0 +1,8 @@
+Yes, there is an input which makes the two programs have different output. 
+
+Here's an example input that causes the programs to have different outputs:
+```
+int[] arr = {1, 2, 2, 3};
+int x = 2;
+```
+For the first program `find_first_in_sorted(arr, x)` would return 1 and for the second program `find_first_in_sorted(arr, x)` would return 2.

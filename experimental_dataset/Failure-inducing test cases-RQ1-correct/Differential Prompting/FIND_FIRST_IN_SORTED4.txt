@@ -1,0 +1,1 @@
+No, the two programs are actually the same. The second program just uses a slightly different implementation of binary search (using left and right indices instead of low and high indices), but the logic and algorithm are the same.

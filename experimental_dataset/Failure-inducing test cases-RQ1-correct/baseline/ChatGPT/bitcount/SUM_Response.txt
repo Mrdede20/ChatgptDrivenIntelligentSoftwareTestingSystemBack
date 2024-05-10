@@ -1,0 +1,29 @@
+#PT
+assert bitcount(0) == 0
+
+#PT
+assert bitcount(6) == 2
+
+#IT
+assert bitcount(-10) == 0
+
+#PT
+assert bitcount(0) == 0
+
+#PT
+assert bitcount(7) == 3
+
+#PT
+assert bitcount(0) == 0, "Test Case 1 Failed"
+
+#PT
+assert bitcount(0b1000) == 1
+
+#PT
+assert bitcount(0) == 0 # zero bits
+
+#PT
+assert bitcount(0) == 0
+
+#PT
+assert bitcount(0) == 0

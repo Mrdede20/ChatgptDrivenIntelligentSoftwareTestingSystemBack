@@ -1,0 +1,7 @@
+Yes, there is an input which can make the programs have different output.
+
+Here is a test case:
+```
+sieve(2)
+```
+The first two implementations will return `[2]`, while the other implementations will return `[]`. The reason is that the first two implementations consider 2 to be a prime number, while the other implementations do not. The last implementation correctly handles this case by using a list to track whether a number is prime rather than relying solely on the list of primes.

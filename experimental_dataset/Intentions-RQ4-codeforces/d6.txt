@@ -1,0 +1,7 @@
+The code reads a list of positive integers `L`, and determines whether one single element can be removed such that the remaining sequence of integers is strictly decreasing, meaning that each element in the sequence is strictly less than its predecessor.
+
+The `solve` function iterates through the input list `L`, and finds all the contiguous valleys, which are sets of two indices `(a,b)` such that `L[a] > L[a+1] > ... > L[b-1] > L[b]`. If there are more than one valleys, then the function returns `NO` since removing any element will result in a non-decreasing subsequence.
+
+If there is exactly one valley, this means removing any element in this valley will produce a strictly decreasing subsequence; hence the function returns `YES`.
+
+If the input list `L` is decreasing already, the output is `NO`.

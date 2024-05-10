@@ -1,0 +1,1 @@
+No, both programs above are identical copies of each other, except for the first line, which imports heapq module twice in the first implementation. This doesn't affect the output of the program in any way. Therefore, there is no input that can make their outputs different.

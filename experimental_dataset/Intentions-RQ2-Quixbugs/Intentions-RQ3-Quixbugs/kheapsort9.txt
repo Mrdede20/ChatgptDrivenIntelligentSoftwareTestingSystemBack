@@ -1,0 +1,5 @@
+The intention of the code is to implement the k-heapsort algorithm to sort an almost-sorted array. An almost-sorted array is an array in which every element is no more than k units from its sorted position. The k-heapsort algorithm has a time complexity of O(n log k), which makes it very efficient for sorting almost-sorted arrays. 
+
+The code uses the heapq module to create a heap of the first k elements of the array. It then iterates over the remaining elements of the array, pushing them onto the heap and popping the smallest element from the heap, which maintains the heap property. This causes the smallest k elements to be sorted in the heap. Finally, the remaining elements are popped from the heap in order to output the sorted elements. 
+
+The output of the function is a generator that yields the elements of the array in sorted order.

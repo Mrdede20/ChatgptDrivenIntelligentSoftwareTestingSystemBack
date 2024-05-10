@@ -1,0 +1,1 @@
+No, there is no such specific input that would make the two programs return different outputs. Both programs use recursion to get factors of the input integer n. Both programs work in a similar manner to find the factors of the input number n.

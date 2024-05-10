@@ -1,0 +1,1 @@
+No, both programs are identical and will produce the same output for all test cases. The only difference is in the import statement for ArrayList. The first program imports java.util.ArrayList while the second program imports a class with a missing package name and is assumed to be java.util.ArrayList.

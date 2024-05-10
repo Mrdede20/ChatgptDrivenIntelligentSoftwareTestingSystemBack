@@ -1,0 +1,28 @@
+Yes, there exists an input which makes the two programs output different results. Here is an example input to demonstrate:
+
+```
+class Node:
+    def __init__(self):
+        self.incoming_nodes = set()
+        self.outgoing_nodes = set()
+
+# Create nodes
+a = Node()
+b = Node()
+c = Node()
+d = Node()
+
+# Set up graph with edges: a->b, a->c, b->d, c->d
+a.outgoing_nodes = {b, c}
+b.incoming_nodes = {a}
+b.outgoing_nodes = {d}
+c.incoming_nodes = {a}
+c.outgoing_nodes = {d}
+d.incoming_nodes = {b, c}
+
+# Run the two functions on the graph
+print(topological_ordering([a, b, c, d]))
+print(topological_ordering([d, c, b, a]))
+```
+
+The first call to `topological_ordering` outputs `['a', 'b', 'c', 'd']` while the second call outputs `['d', 'b', 'c', 'a']`. Therefore, the order of the input nodes affects the output of both functions.

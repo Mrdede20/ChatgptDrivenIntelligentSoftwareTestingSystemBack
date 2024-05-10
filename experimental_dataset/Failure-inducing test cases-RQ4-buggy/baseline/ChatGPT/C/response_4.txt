@@ -1,0 +1,14 @@
+response@ChatGPT:
+Test case:
+- Input: 
+    - t = 1
+    - n = 2
+    - s = [1, 1]
+- Expected output: 
+    - 0 0
+- Actual output: 
+    - 0
+
+Explanation:
+The program fails to handle the case when there are multiple numbers with the same value in the input list. In this test case, both numbers in the input list are the same, and the program incorrectly assumes that the first number is the maximum, resulting in the wrong output. The expected output should be two zeros, but the program outputs only one zero. As a result, the test case fails.
+

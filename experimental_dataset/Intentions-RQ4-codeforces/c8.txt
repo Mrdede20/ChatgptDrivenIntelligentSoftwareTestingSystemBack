@@ -1,0 +1,7 @@
+The intention of the code is to find the maximum difference between any two elements in a given array and then print the absolute difference between each element in the array and the element that produced the maximum difference. 
+
+The code first takes an integer input 't' denoting the number of test cases to be run. Then, the code runs 't' iterations, each iteration inputting an integer 'n' and an array 's' of size 'n'. 
+
+The code then initializes a list 'mx' with two elements, both set to -1. It then iterates through the array 's' and assigns the indices of the two largest elements in 'mx', such that mx[0] represents the index of the largest element in the array, and mx[1] represents the index of the second largest element in the array.
+
+Finally, the code iterates through the array 's' again and prints the absolute difference between each element and the element that produced the largest difference. The output for each test case is printed on a new line.

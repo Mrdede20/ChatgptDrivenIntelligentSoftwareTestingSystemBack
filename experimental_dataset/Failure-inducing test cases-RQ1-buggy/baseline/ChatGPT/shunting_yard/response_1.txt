@@ -1,0 +1,11 @@
+Test case:
+
+shunting_yard(['*',2,3,4,'+',5,'*',6,'-',7])
+
+Expected output:
+
+[2, 3, 4, '*', 5, 6, '*', '+', 7, '-']
+
+Explanation:
+
+This test case involves arithmetic operations with multiple operators and operands. The test case includes multiplication, addition, and subtraction operations. The expected output is generated using the Shunting Yard algorithm. However, due to a bug in the program, the output might be incorrect, resulting in test failure.

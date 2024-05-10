@@ -1,0 +1,1 @@
+No, both programs implement the same logic to generate the next permutation of the given list. Although the implementation might be different, the output generated is always the same.

@@ -1,0 +1,5 @@
+The intention of the code is to flatten a nested list data structure into a single list using recursion. The function `flatten(arr)` takes a list `arr` as an input and iterates over it. If an element is a list, it calls itself again with that element and yields the values returned by the recursive call. If an element is not a list, it yields the element itself. 
+
+The output of the function is a generator object which generates the non-list objects in the flattened list. 
+
+The code comes with a precondition that the input should have no list containment cycles, which means that there should be no circular reference in the input list.

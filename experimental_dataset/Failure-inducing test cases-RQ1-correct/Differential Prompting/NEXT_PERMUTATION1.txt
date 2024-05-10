@@ -1,0 +1,11 @@
+Yes, there are test cases that produce different output for these two programs. 
+
+Here is one such test case: 
+
+Input: [1, 2, 3, 4, 5]
+
+Output for the first program: [1, 2, 3, 5, 4]
+
+Output for the second program: [1, 2, 4, 3, 5]
+
+As you can see, the order of the last two elements is different in the two programs. This is because the algorithms they use to generate the next permutation are different.

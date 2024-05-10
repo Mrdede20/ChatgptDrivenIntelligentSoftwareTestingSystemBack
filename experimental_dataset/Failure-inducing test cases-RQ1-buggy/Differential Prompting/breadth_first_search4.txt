@@ -1,0 +1,18 @@
+Yes, there exists a test case that makes the programs have different outputs. Here's an example:
+
+```
+class Node:
+    def __init__(self, name, successors):
+        self.name = name
+        self.successors = successors
+
+# Create nodes A, B, and C
+A = Node("A", [])
+B = Node("B", [A])
+C = Node("C", [A, B])
+
+# Try searching for C starting from B
+print(breadth_first_search(B, C))
+```
+
+The original implementation and the implementation using `while len(queue)` will return `False`, while the other two implementations will return `True`. This is because the `is` operator is testing identity and not equality, and the `==` operator is testing equality, and the `node` object created for `C` in the search is not the same object that was passed in as `goalnode`.

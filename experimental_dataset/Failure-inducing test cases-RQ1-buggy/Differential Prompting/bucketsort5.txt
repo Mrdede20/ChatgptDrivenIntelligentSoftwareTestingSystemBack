@@ -1,0 +1,9 @@
+Yes, there is an input that can make the two programs have different output. Here's an example:
+
+```python
+arr = [1, 4, 1, 4]
+k = 5
+print(bucketsort(arr, k))
+```
+
+With the first implementation, the output will be `[1, 1, 4, 4]`, while with the second implementation the output will be `[0, 2, 0, 2, 0]`. This is because the second implementation iterates over `arr` instead of `counts` in the second for loop, causing `i` to take on the values in `arr` instead of the values in `counts`.

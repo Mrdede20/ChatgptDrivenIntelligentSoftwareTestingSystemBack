@@ -1,0 +1,21 @@
+Yes, there could be a difference in the output for certain inputs because the order of assignment statements affects which value is assigned to which variable. 
+
+Here is an example input that would produce different output for the three functions:
+
+```
+class Node:
+    def __init__(self, val, successor=None):
+        self.val = val
+        self.successor = successor
+
+n1 = Node(1)
+n2 = Node(2)
+n3 = Node(3)
+
+n1.successor = n2
+n2.successor = n3
+
+print(reverse_linked_list(n1).val)
+```
+
+The expected output for the first two versions of `reverse_linked_list` is `3` because `n1.successor` is reversed to point to `None`, while `n2.successor` points to `n1`. However, the expected output for the third version is `1` because `prev` and `curr` are assigned before `curr.successor` is reassigned, resulting in a different order of operations.

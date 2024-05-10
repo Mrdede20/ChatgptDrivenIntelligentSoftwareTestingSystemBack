@@ -1,0 +1,7 @@
+Yes, there are inputs that can make the different versions of the `possible_change` function have different outputs. This is because the order of the conditions in the `if` statements affects the order in which the function evaluates them. For example, if `total` is negative and `coins` is empty, the function will return `0` for most of the versions, but for the version that checks if `not coins` first, it will return `1` because it will first evaluate the `elif total == 0:` condition before the `if not coins:` condition. Here's a test case that demonstrates this:
+
+```
+print(possible_change([], -1))
+```
+
+The output will be `1` for the version that checks `if not coins:` first, and `0` for the other versions.

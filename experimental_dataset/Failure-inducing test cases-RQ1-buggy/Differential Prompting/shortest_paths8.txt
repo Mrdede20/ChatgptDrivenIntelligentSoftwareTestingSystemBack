@@ -1,0 +1,17 @@
+Yes, there is a possible input which can make the two programs above produce different output. One example could be a graph with a negative cycle. 
+
+Here is an example input for testing:
+
+```
+source = 'A'
+weight_by_edge = {
+    ('A', 'B'): 1,
+    ('B', 'C'): 1,
+    ('C', 'D'): 1,
+    ('D', 'B'): -4
+}
+```
+
+In the first implementation of the `shortest_paths()` function, the algorithm will keep updating the shortest path weights infinitely since there is a negative cycle in the graph. This will result in the function never returning.
+
+In the second implementation, the algorithm is a modification of the Bellman-Ford algorithm which can detect negative cycles and will return an empty dictionary when a negative cycle is detected. Therefore, the function will return `{}` for the above input.

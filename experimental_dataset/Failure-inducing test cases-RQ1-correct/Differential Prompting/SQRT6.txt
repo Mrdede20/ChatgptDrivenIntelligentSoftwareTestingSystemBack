@@ -1,0 +1,1 @@
+No, the two programs are identical in terms of functionality and output. They both use the Newton-Raphson method to approximate the square root of a given number. The only difference is in the variable names and arrangement of the code, but this does not affect the output.

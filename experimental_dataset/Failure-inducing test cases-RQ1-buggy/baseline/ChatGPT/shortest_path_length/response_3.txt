@@ -1,0 +1,20 @@
+One possible test case that can trigger a bug and result in test failure is:
+
+length_by_edge = {
+    (0, 1): 1,
+    (1, 2): 2,
+    (2, 3): 3,
+    (3, 4): 4,
+    (4, 0): 5
+}
+
+startnode = Node(0, successors=[Node(1)])
+goalnode = Node(4, predecessors=[Node(3)])
+
+result = shortest_path_length(length_by_edge, startnode, goalnode)
+
+assert result == 5
+
+In this test case, the length_by_edge dictionary defines the length of edges between nodes. The startnode is set to Node 0 with a successor Node 1, and the goalnode is set to Node 4 with a predecessor Node 3. The expected shortest path length between the startnode and the goalnode is 5, which can be achieved by visiting nodes 0, 1, 2, 3, and 4 in that order.
+
+However, the program may fail to find the shortest path in this test case because it does not properly handle cycles in the graph. Specifically, the graph in this test case contains a cycle of length 5 (0 -> 1 -> 2 -> 3 -> 4 -> 0), which can cause the program to get stuck in an infinite loop.

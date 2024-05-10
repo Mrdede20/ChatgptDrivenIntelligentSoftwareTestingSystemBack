@@ -1,0 +1,16 @@
+Test Case:
+
+Input:
+- num = 16
+- b = 0
+
+Expected Output:
+- A ValueError exception should be raised with the message "Invalid base value. Must be greater than zero."
+
+Actual Output:
+- The program runs without errors.
+
+Explanation:
+The function should raise a ValueError when the base value is zero or negative. However, the function doesn't have any validation to check for this case, so it will return an incorrect result without any errors. 
+
+To fix this bug, the function should have a check for the input base value and raise the ValueError exception when the value is invalid.

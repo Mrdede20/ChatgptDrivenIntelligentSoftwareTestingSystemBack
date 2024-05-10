@@ -1,0 +1,1 @@
+No, both programs implement the same problem (Tower of Hanoi) and output the same answer for the same input, regardless of the implementation of the same. This is because both programs use the same recursive algorithm to solve the problem.

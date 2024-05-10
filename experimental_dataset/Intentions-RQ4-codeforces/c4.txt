@@ -1,0 +1,1 @@
+This code is taking input t, the number of test cases. For each test case, it takes input n followed by a list s of n integers. It then finds the two maximum values in the list and their indices. Finally, it calculates the differences between each element and the maximum values and prints them.

@@ -1,0 +1,18 @@
+Yes, the two programs implement two different algorithms for finding the shortest paths in a graph which may result in different outputs for certain inputs. 
+
+The first program implements the Bellman-Ford algorithm which can handle negative edge weights and returns the shortest path distances from the source node to every other node. In contrast, the second program implements Dijkstra's algorithm which requires non-negative edge weights and returns the shortest path distances from the source node to only the directly reachable nodes.
+
+Here's an example input that will produce different outputs for the two programs:
+
+```
+String source = "A";
+Map<List<String>,Integer> weight_by_edge = new HashMap<>();
+weight_by_edge.put(Arrays.asList("A", "B"), 1);
+weight_by_edge.put(Arrays.asList("A", "C"), -1);
+weight_by_edge.put(Arrays.asList("B", "C"), 2);
+
+SHORTEST_PATHS.shortest_paths(source, weight_by_edge);
+
+```
+
+In this input, the edge weight from node A to node C is negative. The first program using the Bellman-Ford algorithm can handle the negative weight and will return the shortest path distances for all nodes, while the second program using Dijkstra's algorithm, which requires non-negative edge weights, may not return the correct result as it cannot handle negative edge weights.

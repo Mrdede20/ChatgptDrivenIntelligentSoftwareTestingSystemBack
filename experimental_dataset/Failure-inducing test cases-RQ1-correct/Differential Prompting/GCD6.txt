@@ -1,0 +1,17 @@
+The two programs will produce the same output for all inputs. 
+
+Here's the test case you requested:
+
+```
+package correct_java_programs;
+
+public class Main {
+    public static void main(String[] args) {
+        int a = 12345;
+        int b = 67890;
+        System.out.println("GCD of " + a + " and " + b + " is: " + GCD.gcd(a, b));
+    }
+}
+```
+
+Both versions of the `GCD` class will return the same result of `15`.

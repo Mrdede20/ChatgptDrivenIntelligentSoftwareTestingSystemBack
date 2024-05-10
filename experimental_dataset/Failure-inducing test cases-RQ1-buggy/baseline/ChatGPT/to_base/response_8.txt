@@ -1,0 +1,13 @@
+Test Case:
+Input:
+- num = 15
+- base = 0
+
+Expected Output:
+- The program should raise a ValueError since base cannot be zero.
+
+Actual Output:
+- The program executes normally and returns an empty string.
+
+Test Result:
+- Test case failed. The program did not raise the expected ValueError when base was set to zero.

@@ -1,0 +1,16 @@
+Yes, there is an input that makes the two programs have different output. Here is a test case:
+
+Input:
+1
+5
+5 10 15 20 25
+
+Expected Output (for the first program):
+10 5 0 5 10 
+
+Expected Output (for the second program):
+20 15 10 5 0 
+
+Explanation:
+The first program calculates the maximum and second maximum element of the array and then for each element in the array, it subtracts the element from the second maximum if it's the maximum element, otherwise it subtracts from the maximum element.
+The second program calculates the maximum and second maximum element of the array and then for each element in the array, it prints the absolute difference between the element and the maximum if it's not the maximum element, otherwise it prints the absolute difference between the element and the second maximum. In this case, the two programs give different output for the given input.

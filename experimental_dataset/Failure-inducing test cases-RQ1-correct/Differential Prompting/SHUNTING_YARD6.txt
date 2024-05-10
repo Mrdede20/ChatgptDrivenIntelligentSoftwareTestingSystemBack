@@ -1,0 +1,1 @@
+The two programs are essentially the same and should produce the same output for any input. The only differences are in the style of coding, such as the use of generics and stack implementation. Therefore, there should not be any difference in output for any input.

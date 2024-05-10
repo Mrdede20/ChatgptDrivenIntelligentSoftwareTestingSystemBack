@@ -1,0 +1,1 @@
+No, both programs implement the recursive algorithm for solving the Tower of Hanoi in Java, and they both use the same input parameters `height/discs=3`, `start/from=1`, `end/to=3`. Therefore, they will output the same sequence of moves needed to solve the puzzle.

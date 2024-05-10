@@ -1,0 +1,20 @@
+Yes, there is an input that can make the two programs have different output.
+
+Test input:
+
+3
+25 abc
+97 def
+65 ghi
+
+Expected output for first program:
+
+2
+4
+9
+
+Expected output for second program:
+
+1
+4
+9

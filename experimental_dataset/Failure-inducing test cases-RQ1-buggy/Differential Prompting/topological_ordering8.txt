@@ -1,0 +1,25 @@
+Yes, there are inputs that could make the two programs have different output. Here's an example test case in Python:
+
+```
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.incoming_nodes = []
+        self.outgoing_nodes = []
+
+node1 = Node(1)
+node2 = Node(2)
+node3 = Node(3)
+
+node3.incoming_nodes = [node1]
+node1.outgoing_nodes = [node3]
+node1.incoming_nodes = [node2]
+node2.outgoing_nodes = [node1]
+
+# expected output of first program: [node2, node1, node3]
+# expected output of second program: [node3, node1, node2]
+
+print(topological_ordering([node1, node2, node3]))
+``` 
+
+In this example, both programs implement a topological sorting algorithm that should return a list of nodes in topological order. However, the order in which the nodes are added to the ordered_nodes list could differ between the two implementations, leading to different output.

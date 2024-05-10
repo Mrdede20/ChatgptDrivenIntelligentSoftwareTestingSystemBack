@@ -1,0 +1,5 @@
+The intention of the code is to create a function called `longest_common_subsequence` that takes two strings `a` and `b` as input and returns the longest subsequence common to the two input strings. A subsequence is any sequence of letters that appear in the same order they appear in the string, possibly skipping letters in between. 
+
+The function first checks to see if either string is empty, in which case the function returns an empty string. Otherwise, it recursively compares the first letters of each string. If they match, it adds the letter to the return string and continues with the rest of the strings. If they do not match, it returns the longest common subsequence between the two strings with either the first letter of string `a` removed or the first letter of string `b` removed, whichever has the longest common subsequence. 
+
+The function is optimized to find the longest common subsequence between two input strings using recursion and avoiding unnecessary iterations, rather than using brute force iteration.

@@ -1,0 +1,36 @@
+Yes, the two programs have different input formats and they operate on different types of data structures. The first program `SHORTEST_PATH_LENGTH` takes a `Map<List<Node>, Integer>` as input and returns an `int`, while the second program `ShortestPath` takes a `Map<String, Map<String, Integer>>` as input and returns an `int`.
+
+Here's an example input that would produce different output for the two programs:
+
+```java
+// input for SHORTEST_PATH_LENGTH
+Map<List<Node>, Integer> length_by_edge = new HashMap<>();
+Node node1 = new Node(1);
+Node node2 = new Node(2);
+Node node3 = new Node(3);
+length_by_edge.put(Arrays.asList(node1, node2), 1);
+length_by_edge.put(Arrays.asList(node1, node3), 3);
+length_by_edge.put(Arrays.asList(node2, node3), 2);
+
+Node start = node1;
+Node end = node3;
+
+SHORTEST_PATH_LENGTH.shortest_path_length(length_by_edge, start, end);
+
+// input for ShortestPath
+Map<String, Map<String, Integer>> graph = new HashMap<>();
+graph.put("A", new HashMap<>());
+graph.put("B", new HashMap<>());
+graph.put("C", new HashMap<>());
+graph.put("D", new HashMap<>());
+graph.get("A").put("B", 1);
+graph.get("A").put("C", 3);
+graph.get("B").put("C", 2);
+
+String start = "A";
+String end = "C";
+
+ShortestPath.shortest_path_length(graph, start, end);
+```
+
+The first input creates a graph with nodes of type `Node` and the second input creates a graph with nodes of type `String`. Therefore, the two programs cannot operate on the same input, although they are solving the same problem of finding the shortest path between two nodes in a graph.

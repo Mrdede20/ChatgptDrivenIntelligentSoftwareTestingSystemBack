@@ -1,0 +1,1 @@
+No, there is no input that makes these two programs produce different output. Both programs implement the same algorithm for quicksort and have the same base cases. They differ only in the style of coding using different data structures and loops, but the overall behavior and output of the programs should be identical for the same input.

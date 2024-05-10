@@ -1,0 +1,21 @@
+Yes, there could be an input that makes the two programs output differently. Here is a test input for which the two programs would have different outputs:
+
+```
+2
+98 bbc
+100 abc
+```
+
+The first program would output:
+
+```
+-1
+4
+```
+
+while the second program would output:
+
+```
+2
+4
+```

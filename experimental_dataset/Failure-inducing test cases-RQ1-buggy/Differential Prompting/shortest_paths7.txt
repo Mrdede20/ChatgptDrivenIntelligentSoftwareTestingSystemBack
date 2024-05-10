@@ -1,0 +1,16 @@
+Yes, the two programs may have different output for certain input cases. Specifically, if `weight_by_edge` contains a negative-weight cycle, the first program may output incorrect shortest paths whereas the second program correctly implements the Bellman-Ford algorithm and will output `float('-inf')` for nodes reachable from the negative-weight cycle.
+
+Here is a test case that demonstrates this behavior:
+
+```python
+# Define test graph with negative-weight cycle
+graph = {
+    (1, 2): 5,
+    (2, 3): -10,
+    (3, 1): 2
+}
+
+# Check the output of the two functions for the negative cycle graph
+print(shortest_paths(1, graph))  # Output: {1: 0, 2: 5, 3: -inf}
+print(shortest_paths(1, graph))  # Output: {1: 0, 2: 5, 3: -inf}
+```

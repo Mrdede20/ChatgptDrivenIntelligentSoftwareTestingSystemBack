@@ -1,0 +1,5 @@
+Yes, there could be an input that results in different outputs for the two programs. 
+
+The first program `TOPOLOGICAL_ORDERING` uses a depth-first search-like algorithm while the second program `TopologicalSort` uses a breadth-first search like algorithm. For most directed acyclic graphs, both methods should work and produce the same topological ordering. 
+
+However, for certain graphs, one algorithm might work better than the other, or even fail. Therefore, depending on the specific input directed graph, there is a possibility that the topological ordering output by both algorithms is different.

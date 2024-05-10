@@ -1,0 +1,27 @@
+Test case:
+
+coins = [1, 3, 5]
+total = 7
+
+Expected Output: 2
+
+Actual Output: StackOverflowError
+
+Explanation:
+
+The program uses a recursive approach to calculate the number of possible ways to make change for a given amount (total) using the available coins. However, the program does not have a stopping condition for when there are no more coins to consider.
+
+In the provided test case, the program enters an infinite recursive loop because it keeps trying to calculate the possible change for the same amount (7) without removing any coins. This eventually leads to a stack overflow error and a test failure.
+
+To fix this issue, the program should add a stopping condition to the recursive function that checks if there are any more coins to consider. Here's an updated version of the function:
+
+def possible_change(coins, total):
+    if total == 0:
+        return 1
+    if total < 0 or not coins:
+        return 0
+
+    first, *rest = coins
+    return possible_change(coins, total - first) + possible_change(rest, total)
+
+With this fix, the function will return 0 when there are no more coins to consider, preventing the infinite recursive loop and the stack overflow error.

@@ -1,0 +1,25 @@
+response@ChatGPT:
+Test case:
+Input:
+6
+5
+1 2 3 4 5
+5
+5 4 3 2 1
+5
+5 4 5 4 5
+5
+1 2 1 2 1
+5
+5 4 5 4 3
+5
+3 3 3 3 3
+
+Expected output:
+YES
+YES
+YES
+NO
+NO
+YES
+

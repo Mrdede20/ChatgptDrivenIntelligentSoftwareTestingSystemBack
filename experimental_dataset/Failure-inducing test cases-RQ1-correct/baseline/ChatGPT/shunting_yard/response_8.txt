@@ -1,0 +1,24 @@
+response@ChatGPT:
+
+
+Yes, here is a possible test case that could trigger a bug in the program:
+
+```
+tokens = [2, '+', 3, '+', '*']
+result = shunting_yard(tokens)
+```
+
+This test case contains two adjacent operators (`+` and `*`) with the same precedence, which could cause the shunting yard algorithm to fail to correctly prioritize the operations. Specifically, the algorithm might attempt to push the `*` operator onto the stack before the `+` operator has been processed, resulting in an invalid postfix expression. Depending on how the program handles such input, it may raise an error or produce an incorrect result.
+
+request@user:
+Give us such test case. Use assert.
+
+response@ChatGPT:
+Here is a test case that checks if the output of the shunting_yard function is correct when given a set of input tokens:
+
+def test_shunting_yard():
+    tokens = [2, '+', 3, '*', 4]
+    expected_output = [2, 3, 4, '*', '+']
+    
+    assert(shunting_yard(tokens) == expected_output)
+

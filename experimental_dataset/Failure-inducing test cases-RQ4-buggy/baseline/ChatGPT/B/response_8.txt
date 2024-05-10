@@ -1,0 +1,25 @@
+response@ChatGPT:
+Test case:
+
+Input:
+3
+97
+hello
+97
+world
+97
+!
+
+Expected Output:
+8
+15
+2
+
+Actual Output:
+8
+15
+0
+
+Explanation:
+The program is supposed to print the highest alphabetical value in each input string, subtracting 96 to get the corresponding value (e.g. "a" - "96" = 1). However, in the third input string "!", the program fails to recognize the value as an alphabetical character, resulting in it printing 0 instead of 2. This is because the conditional statement (`if ord(s[i])>a:`) only checks for values greater than `a`, but not equal to `a`. Fixing the conditional statement to `if ord(s[i])>=a:` would solve the issue.
+

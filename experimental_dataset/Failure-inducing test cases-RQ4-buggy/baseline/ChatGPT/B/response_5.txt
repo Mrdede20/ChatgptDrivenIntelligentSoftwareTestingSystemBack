@@ -1,0 +1,22 @@
+response@ChatGPT:
+Test Case:
+n = 3
+Input:
+5
+abc
+2
+aaabbbcc
+1
+abcdefghijklmnopqrstuvwxyz
+Expected Output:
+2
+3
+26
+Actual Output:
+2
+3
+1
+
+Explanation:
+The program should output the highest ASCII value in the given string minus 96. For the input "abcdefghijklmnopqrstuvwxyz", the letter 'a' has an ASCII value of 97 and the letter 'z' has an ASCII value of 122. Therefore, the expected output should be 26 (122-96). However, the actual output is 1, indicating a bug in the program.
+

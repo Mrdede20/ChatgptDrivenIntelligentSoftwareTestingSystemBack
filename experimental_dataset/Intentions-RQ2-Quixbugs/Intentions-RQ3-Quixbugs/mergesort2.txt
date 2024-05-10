@@ -1,0 +1,7 @@
+The above code is an implementation of the Merge Sort algorithm in Python. 
+
+The Merge Sort algorithm is a divide-and-conquer algorithm that divides an unsorted list into smaller sub-lists and then sorts those sub-lists. The merge sort algorithm uses recursion to achieve sorting.
+
+The function `mergesort()` takes an unsorted list as input and returns the sorted list using the `merge()` function. The `merge()` function combines two sorted lists into a larger sorted list. The `mergesort()` function recursively splits the input list into smaller sub-lists and calls `merge()` to combine them in sorted order. 
+
+The time complexity of Merge Sort is O(n log n), making it one of the most efficient sorting algorithms for most input sizes.

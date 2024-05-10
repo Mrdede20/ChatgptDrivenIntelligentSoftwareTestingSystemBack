@@ -1,0 +1,1 @@
+Yes, there is an input which makes the two programs have different output. Consider the case where `num = 10` and `b = 2`. The first implementation and the third implementation will return `'01010'` but the second implementation will return `'1010'`.

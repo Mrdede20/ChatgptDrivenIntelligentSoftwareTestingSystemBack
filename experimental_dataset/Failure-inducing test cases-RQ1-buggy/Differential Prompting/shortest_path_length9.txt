@@ -1,0 +1,18 @@
+Yes, there can be different outputs. The two programs use different implementations of Dijkstra's algorithm (one uses a FibHeap and the other uses a regular binary heap), and thus may have different behaviors in terms of the order they explore nodes and the order they update distances in the heap. A test case that could show this could be:
+
+```
+graph = {'A': {'B': 1},
+         'B': {'C': 2},
+         'C': {'D': 3},
+         'D': {}}
+length_by_edge = {('A', 'B'): 1, ('B', 'C'): 2, ('C', 'D'): 3}
+startnode = 'A'
+goalnode = 'D'
+
+result1 = shortest_path_length(length_by_edge, startnode, goalnode) # using FibHeap
+result2 = dijkstras_shortest_path(graph, startnode, goalnode) # using binary heap
+
+assert result1 == result2, f"FibHeap: {result1}, BinaryHeap: {result2}"
+``` 
+
+The output of one implementation could be the optimal solution, while the other implementation could have a suboptimal solution.

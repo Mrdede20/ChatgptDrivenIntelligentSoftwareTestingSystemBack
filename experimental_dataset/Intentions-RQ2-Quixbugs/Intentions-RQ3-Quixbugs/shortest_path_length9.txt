@@ -1,0 +1,6 @@
+This code defines a function called `shortest_path_length` which implements Dijkstra's algorithm for finding the shortest path between two nodes in a directed graph. The input arguments are:
+- `length_by_edge`: a dictionary containing the length of every directed edge in the graph, keyed by its corresponding ordered pair of nodes.
+- `startnode`: the starting node for the search.
+- `goalnode`: the end node to find the shortest path to.
+
+The function works by maintaining a priority queue of unvisited nodes using the `heapq` module. At each iteration, it dequeues the node with the smallest accumulated distance from the start node and updates the distances of its neighbors. The function returns the distance of the shortest path between `startnode` and `goalnode`.

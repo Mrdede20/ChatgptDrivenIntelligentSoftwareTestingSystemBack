@@ -1,0 +1,20 @@
+Yes, these four implementations of `find_first_in_sorted` behave differently for the input `[1, 2, 2, 3]` and looking for the first occurrence of `2`. 
+
+- The first implementation would return index 1.
+- The second implementation would return index 1.
+- The third implementation would return index 2.
+- The fourth implementation would return index 1, which is the correct answer.
+
+Here is the code to test these implementations:
+
+```python
+arr = [1, 2, 2, 3]
+x = 2
+
+print(find_first_in_sorted(arr, x))  # expected output: 1
+print(find_first_in_sorted(arr, x))  # expected output: 1
+print(find_first_in_sorted(arr, x))  # expected output: 2
+print(find_first_in_sorted(arr, x))  # expected output: 1
+```
+
+As you can see, the fourth implementation is the correct one.

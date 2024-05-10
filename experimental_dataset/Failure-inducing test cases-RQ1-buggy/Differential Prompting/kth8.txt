@@ -1,0 +1,5 @@
+Yes, there is an input which makes the two programs have different output. Consider the case where the input array is `[1, 1, 1, 1]` and `k` is `2`. 
+
+In `kth(arr, k)` function, the `below` and `above` lists will be empty, so the function will always return the first element of the array, which is `1`. Therefore, `kth([1, 1, 1, 1], 2)` will return `1`.
+
+On the other hand, in `kth_smallest_element(arr, k)` function, the function will split the array into `below` list containing `[1, 1]` and `above` list containing `[1, 1]`. Since `k` is `2` and `num_less` is `2`, the function will call itself recursively with `kth_smallest_element([1, 1], 2)`. This will split the array into `below` list containing `[1]` and `above` list containing `[]`. Since `k` is equal to `2` which is greater than or equal to `num_lessoreq` which is `2`, the function will call itself recursively with `kth_smallest_element([], 0)`. This empty array will return `None` as there is no kth smallest element in an empty array. Therefore, `kth_smallest_element([1, 1, 1, 1], 2)` will return `None`.

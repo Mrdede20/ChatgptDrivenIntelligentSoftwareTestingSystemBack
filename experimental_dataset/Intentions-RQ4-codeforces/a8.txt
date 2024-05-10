@@ -1,0 +1,1 @@
+The code intends to take input t, which represents the number of test cases. In each test case, the code takes inputs for three integers and sorts the integers in ascending order. Then, it prints the second (middle) integer. This process is repeated for t-1 times, as the outer while loop decrements the value of t every time a test case is executed.

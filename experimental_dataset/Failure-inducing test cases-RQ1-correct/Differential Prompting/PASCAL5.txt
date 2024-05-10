@@ -1,0 +1,1 @@
+No, both programs generate the same output for the same input. The first program uses a nested loop to calculate the values of each row in Pascal's triangle, while the second program uses two ArrayLists to keep track of the current and previous rows. However, the logic is essentially the same and both programs should return the same results.

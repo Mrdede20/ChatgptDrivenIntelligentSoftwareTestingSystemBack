@@ -1,0 +1,1 @@
+No, there is no input that makes the two programs output different results. Both programs solve the same problem of finding the length of the longest increasing subsequence in an array, and they use different algorithms to do so. However, their outputs should be identical for any given input array.

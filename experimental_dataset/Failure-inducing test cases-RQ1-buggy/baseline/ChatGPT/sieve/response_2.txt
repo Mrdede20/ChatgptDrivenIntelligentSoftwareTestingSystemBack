@@ -1,0 +1,7 @@
+Test case:
+Input: max=2
+Expected output: [2]
+Actual output: []
+
+Explanation: The program is supposed to generate a list of prime numbers up to a given maximum value. But when the maximum value is equal to 2, the program fails to include the number 2 in the list of primes even though it is a prime number. This bug is triggered by the condition "n % p > 0" in the "if" statement inside the loop. Since the loop starts at 2, the first value of "p" is equal to 2. When "n" is equal to 2, the condition "2 % 2 > 0" evaluates to False, causing the program to skip over the number 2 and append nothing to the list of primes. To fix this bug, the condition in the "if" statement should be "n % p == 0" instead of "n % p > 0".
+

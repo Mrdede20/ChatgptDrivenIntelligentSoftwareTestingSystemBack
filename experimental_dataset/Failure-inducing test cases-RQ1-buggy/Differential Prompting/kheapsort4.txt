@@ -1,0 +1,16 @@
+No, the two programs will have the same output for any given input as their functionality is exactly the same. The only difference is that in the first program, the `heapq` module is imported within the `kheapsort` function while in the second program, it is imported globally. However, this difference in importing does not affect the output of the function. 
+
+Here's a test case you can use to verify that both functions output the same result:
+
+```
+arr = [3, 1, 4, 2, 8, 5, 9, 7, 6]
+k = 3
+
+# Using function kheapsort version 1
+print(list(kheapsort(arr, k)))
+
+# Using function kheapsort version 2
+print(list(kheapsort(arr, k)))
+```
+
+Both should output `[1, 2, 3, 4, 5, 6, 7, 8, 9]`.

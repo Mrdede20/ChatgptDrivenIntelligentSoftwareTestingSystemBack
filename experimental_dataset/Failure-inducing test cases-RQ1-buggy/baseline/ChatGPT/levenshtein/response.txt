@@ -1,0 +1,29 @@
+#PT
+assert levenshtein('', '') == 0
+
+#PT
+assert levenshtein('', 'hello') == 5
+
+#FT
+assert levenshtein('hello', 'hello') == 0
+
+#FT
+assert levenshtein('hello', 'world') == 4
+
+#FT
+assert levenshtein('hello', 'hella') == 1
+
+#PT
+assert levenshtein('hello', 'goodbye') == 7
+
+#FT
+assert levenshtein('hello', 'loleh') == 4
+
+#FC
+assert levenshtein('παράδειγμα', 'παραδείγματα') == 2 #error 4
+
+#FC
+assert levenshtein('hello, world!', 'Hello; World?') == 8 #error 4
+
+#IT
+assert levenshtein('hello', 123) # TypeError: 'int' object is not subscriptable

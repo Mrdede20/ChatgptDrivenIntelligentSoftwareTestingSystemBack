@@ -1,0 +1,8 @@
+Test Case: 
+subsequences(4, 2, 2)
+
+Expected Output: 
+An error message stating that a is greater than b, and the program cannot find subsequences.
+
+Explanation: 
+The program starts by iterating through a range of values between 'a' and 'b+1-k'. In this case, 'a' is 4, and 'b+1-k' would be 3. Therefore, there would be no values within the range to iterate over. This would result in an empty list being returned, which is not the expected output.

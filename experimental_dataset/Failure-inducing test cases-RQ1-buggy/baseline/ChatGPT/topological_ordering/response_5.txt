@@ -1,0 +1,17 @@
+Test case:
+nodes = []
+node1 = Node(value=1)
+node2 = Node(value=2)
+node3 = Node(value=3)
+
+node1.successors = [node2]
+node2.predecessors = [node1]
+node2.successors = [node3]
+node3.predecessors = [node2]
+node3.successors = [node1]
+
+nodes = [node1, node2, node3]
+
+assert topological_ordering(nodes) == None
+
+This test case creates a circular dependency among the nodes (node3 depends on node1, node1 depends on node2, and node2 depends on node3). Therefore, the function should raise an exception or return None, indicating it's not possible to order the nodes in a topological order. If the function doesn't handle this situation correctly and returns an ordered list anyway, the test will fail.

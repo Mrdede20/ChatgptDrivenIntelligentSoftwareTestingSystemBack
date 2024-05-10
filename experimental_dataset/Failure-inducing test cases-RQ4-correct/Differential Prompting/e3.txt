@@ -1,0 +1,52 @@
+Yes, there is an input that makes the two programs have different output. 
+
+Test Input Reasoning:
+
+We can test with the smallest possible input, where n=1.
+
+Test Input Reasoning:
+    
+Test for n=1
+
+In this test case, we would test when we have only one element as input. This is interesting because the program would have to calculate inversions based on one element.
+
+Test Input:
+
+1
+1
+
+Expected Output:
+
+0
+
+
+Test Output Reasoning:
+
+There are no inversions to calculate because the input size is only one
+
+
+Test Input Reasoning:
+
+We would generate a test case where we have n=2, and bits= [1,0].
+
+Test Input:
+
+1
+2
+1 0
+
+Expected Output:
+
+0
+
+Test Output Reasoning:
+
+Original bits list = {1, 0}
+- Calculate the number of inversions in the original bits list = 1
+- Calculate the number of inversions when first 0 is inverted to 1. new_bits = [1,1], count1 = 0
+- Calculate the number of inversions when last 1 is inverted to 0. new_bits = [1,0], count2 = 1
+- return max(1,0,1) = 1. 
+
+Thus, according to the function defined in the second program, the function should output 1.
+
+Meanwhile, the first function defined would take the first bit (1) invert it, and the second bit (0), since its position is last, the inversion count would be 1. Thus the first function would return 1, which is not the expected output.

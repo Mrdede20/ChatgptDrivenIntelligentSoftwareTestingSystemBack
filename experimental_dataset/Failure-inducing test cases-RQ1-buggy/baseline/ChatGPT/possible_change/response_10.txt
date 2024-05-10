@@ -1,0 +1,26 @@
+Sure, here's a test case that can trigger a bug and result in test failure for the given program:
+
+coins = [1, 2, 5]
+total = 12
+expected_output = 13
+
+assert possible_change(coins, total) == expected_output
+
+Explanation:
+
+The program is trying to find the number of possible ways to make change for a given total using a set of coins. The function possible_change takes two arguments - a list of coins and the total amount. It uses recursion to solve the problem by trying to find the number of ways to make change using the first coin in the list and also the number of ways to make change without using the first coin.
+
+In the test case above, the program should return 13 as the expected output because there are 13 possible ways to make change for a total of 12 using the given set of coins (1, 2, 5). However, the program will fail to do so because of a bug in the recursion logic. The bug occurs because the function is called recursively with the original list of coins instead of the remaining list after the first coin is used.
+
+To fix the bug, we need to modify the last line of the function to pass the remaining list of coins instead of the original list. Here's the corrected code:
+
+def possible_change(coins, total):
+    if total == 0:
+        return 1
+    if total < 0:
+        return 0
+
+    first, *rest = coins
+    return possible_change(rest, total) + possible_change(coins, total - first)
+
+With this correction, the test case should pass without any issues.

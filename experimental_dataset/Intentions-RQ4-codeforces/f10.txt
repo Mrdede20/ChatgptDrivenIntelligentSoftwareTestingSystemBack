@@ -1,0 +1,7 @@
+This code calculates the maximum number of selections a user can make from a given list of elements A such that the total value of the selected elements is greater than or equal to c.
+
+The input consists of several test cases, and for each test case, the program takes three values n, c, and d. Here, n is the number of elements in the input list A, c is the target amount, and d is the maximum number of selections that can be made. The code then takes input the elements of the list A and sorts it in descending order.
+
+Next, it checks if the sum of the top d elements in A is greater than or equal to c and prints "Infinity". If the maximum value in A multiplied by d is less than c, it prints "Impossible". Otherwise, it uses binary search to find the largest possible mid value such that sum(A[:mid+1]) multiplied by the number of times d can be divided by '(mid+1)' plus the sum of the remaining values is greater than or equal to C.
+
+Finally, it prints the value of mid-1.

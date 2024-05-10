@@ -1,0 +1,5 @@
+This code defines a function `wrap` that takes two arguments: `text` and `cols`. `text` is a long string that needs to be divided into lines based on the `cols` value, which represents the maximum length of any single line after wrapping. 
+
+The function uses a while loop to break the string up into chunks of length `cols` or less, while preserving words and not breaking any words in two. It does this by finding the last space character within the chunk of text, and splitting the string there. This process repeats until the entire string `text` is broken up into smaller lines.
+
+The function returns a list of strings that contain each line of the original text, with each line in the list being no longer than the specified `cols` width.

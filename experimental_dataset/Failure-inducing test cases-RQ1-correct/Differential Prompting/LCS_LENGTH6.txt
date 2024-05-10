@@ -1,0 +1,1 @@
+No, both programs use the Longest Common Subsequence (LCS) algorithm and should have the same output for any input strings. The first program uses a Hashtable of Hashtables to implement the dynamic programming solution, while the second program uses a 2D array.

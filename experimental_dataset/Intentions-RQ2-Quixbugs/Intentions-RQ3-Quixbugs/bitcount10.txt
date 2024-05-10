@@ -1,0 +1,5 @@
+The intention of the given code is to define a function called bitcount, which takes a non-negative integer "n" as input and returns the count of number of 1-bits in the binary encoding of the given input. 
+
+The logic used to implement bitcount is to use Xor operation with n and n-1 inside a while loop to unset the rightmost set bit (i.e., 1-bit) of the number until it becomes zero. The count is incremented for each such operation. Finally, the count of 1-bits in the binary encoding of the given input is returned.
+
+The given code has a typo in the function name (bitcoutn instead of bitcount), which needs to be fixed for successful function calls.

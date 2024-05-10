@@ -1,0 +1,1 @@
+No, the two programs should have the same output for any input. The second program just has some improvements, such as using the generic type ArrayList<Integer> instead of the raw type ArrayList, and using diamond inference when defining new ArrayLists.

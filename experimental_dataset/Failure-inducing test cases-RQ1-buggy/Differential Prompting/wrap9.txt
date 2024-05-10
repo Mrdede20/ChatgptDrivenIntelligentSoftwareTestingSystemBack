@@ -1,0 +1,18 @@
+Yes, there are inputs that make the two programs have different outputs. Here's an example input:
+
+```
+text = "hello world\n"
+cols = 5
+```
+
+If you pass this input to the two functions, you'll get different outputs. Here's what each function would return:
+
+```
+# First function
+wrap("hello world\n", 5) -> ['hello', 'world\n']
+
+# Second function
+wrap("hello world\n", 5) -> ['hello', 'world']
+```
+
+As you can see, the first function includes the newline character in the last line, while the second function does not.

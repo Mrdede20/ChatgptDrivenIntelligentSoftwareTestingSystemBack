@@ -1,0 +1,5 @@
+The intention of this code is to implement the Newton-Raphson method to calculate the square-root of a given float value 'x' with a certain level of accuracy or tolerance ('epsilon'). 
+
+The algorithm first initializes the approximated value of the square root as half of the given value. Then, in a loop, it iteratively updates the approximated value based on the average of the current value and the given value divided by the current value. This continues until the absolute difference between the given value and the approximated value is less than the given level of tolerance.
+
+The function returns the approximated value of the square root.

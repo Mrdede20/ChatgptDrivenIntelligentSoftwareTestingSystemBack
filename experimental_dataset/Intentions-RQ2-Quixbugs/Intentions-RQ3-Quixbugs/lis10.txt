@@ -1,0 +1,7 @@
+The given code implements a function `lis` that takes a sequence of integers `arr` as input and returns an integer representing the length of the longest monotonically increasing subsequence of `arr`.
+
+The function essentially uses the dynamic programming approach to solve the problem. It maintains a dictionary `ends` which is initially empty but gets populated as we traverse through the elements of `arr`.
+
+For each element in `arr`, the function first computes the lengths of all possible prefixes of increasing subsequences that could end at this element. It then selects the longest such prefix and updates the dictionary `ends` with the new longest subsequence that ends at this element.
+
+Finally, the function returns the length of the longest increasing subsequence.

@@ -1,0 +1,6 @@
+The two programs have different import statements:
+
+1. The first program imports `java.util.*`, which imports all classes in the `java.util` package including `java.util.ArrayList`.
+2. The second program imports only `import .util.ArrayList`, which imports only the `ArrayList` class in the current or default package.
+
+Therefore, if the input lists used in the programs contain non-integer values or null values, the output of the two programs may differ. This is because the first program can handle any type of object in the `ArrayList`, while the second program is strictly typed.

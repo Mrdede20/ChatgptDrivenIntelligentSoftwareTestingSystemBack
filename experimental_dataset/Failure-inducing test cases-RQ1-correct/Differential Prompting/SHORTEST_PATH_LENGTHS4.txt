@@ -1,0 +1,30 @@
+Yes, these two programs can have different outputs for some inputs. The first program constructs a matrix of shortest path lengths between all pairs of nodes using the Floyd-Warshall algorithm, while the second program implements a simpler version of the algorithm which updates path lengths in a single loop. 
+
+The key difference between these two programs is their order of node indexing. The first program uses zero-based indexing, while the second program uses one-based indexing. This means that the nodes in the input map passed to these functions are indexed differently. In the first program, the nodes of an edge in the input map are represented as a list of two integers between 0 and numNodes-1, while in the second program, the nodes are represented as a list of two integers between 1 and numNodes. 
+
+Here's an input that would produce different outputs: 
+
+```
+int numNodes = 3;
+Map<List<Integer>, Integer> inputMap = new HashMap<>();
+inputMap.put(Arrays.asList(0,1), 1);
+inputMap.put(Arrays.asList(1,2), 2);
+```
+
+In the first program, this input would produce a matrix of shortest path lengths: 
+
+```
+{[0,0]=0, [0,1]=1, [0,2]=3,
+ [1,0]=INF, [1,1]=0, [1,2]=2,
+ [2,0]=INF, [2,1]=INF, [2,2]=0}
+```
+
+In the second program, this input would produce a map of path lengths: 
+
+```
+{[1,1]=0, [1,2]=1, [1,3]=3,
+ [2,1]=INF, [2,2]=0, [2,3]=2,
+ [3,1]=INF, [3,2]=INF, [3,3]=0}
+```
+
+As you can see, the node indexing difference causes the output to be different in both cases.

@@ -1,0 +1,7 @@
+Yes, there are some inputs that can cause the two programs to have different outputs. Here's an example input:
+
+```
+arr = [3, 4, 1, 5, 2]
+```
+
+The first `lis` function will return 3, while the second `lis` function will return 4 for this input.

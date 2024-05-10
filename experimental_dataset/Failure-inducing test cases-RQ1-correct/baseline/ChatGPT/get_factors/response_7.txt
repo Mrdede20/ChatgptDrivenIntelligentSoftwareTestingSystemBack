@@ -1,0 +1,25 @@
+response@ChatGPT:
+
+
+Yes, there is a test case that can trigger a bug in the program.
+
+If the input value of n is a negative integer, the program will enter an infinite recursion loop and crash. This is because the program does not handle negative integers as input and continues to call the function recursively with the input value of n being divided by a negative number in each call.
+
+For example, calling get_factors(-10) would trigger this bug. To fix this, the program should check if the input value of n is negative and handle it accordingly, such as by returning an error message.
+
+request@user:
+Give us such test case. Use assert.
+
+response@ChatGPT:
+# Test case 1: Testing for n = 1, which should return an empty list
+assert get_factors(1) == []
+
+# Test case 2: Testing for a prime number (17), which should return a list containing that number
+assert get_factors(17) == [17]
+
+# Test case 3: Testing for a number with multiple factors (60), which should return a list containing all the factors
+assert get_factors(60) == [2, 2, 3, 5]
+
+# Test case 4: Testing for a large number (987654321), which should return a list containing all the prime factors
+assert get_factors(987654321) == [3, 3, 17, 17, 379721]
+

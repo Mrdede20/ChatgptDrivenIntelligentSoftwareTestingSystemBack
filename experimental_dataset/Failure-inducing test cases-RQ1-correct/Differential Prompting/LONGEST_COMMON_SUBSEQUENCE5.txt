@@ -1,0 +1,3 @@
+Yes, there are inputs that can make the two programs have different outputs. 
+
+For example, if the input strings are "AGCAT" and "GAC", the first program will return "AC" as the longest common subsequence, while the second program will return "GA" as the longest common subsequence.

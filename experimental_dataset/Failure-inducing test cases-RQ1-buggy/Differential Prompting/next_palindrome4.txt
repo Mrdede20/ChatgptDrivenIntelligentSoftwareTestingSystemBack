@@ -1,0 +1,7 @@
+Yes, there is an input that can produce different outputs for the two versions of `next_palindrome` function.
+
+Consider the case where `digit_list` is initially equal to `[9, 1, 1]`. 
+
+The first version of `next_palindrome` will return `[0, 2, 0]`, while the second version will return `[9, 2, 9]`.
+
+This happens because the first version of the function returns `[0, 2, 0]` as soon it finds the first digit that can be incremented to make a palindrome that is greater than the original number. However, the second version of the function checks if the original list is the maximum possible palindrome before returning the next highest palindrome. Since `[9, 1, 1]` is not the maximum possible palindrome, it computes the next one, which is `[9, 2, 9]`.

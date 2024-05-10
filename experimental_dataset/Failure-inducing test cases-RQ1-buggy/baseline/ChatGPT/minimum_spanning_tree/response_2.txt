@@ -1,0 +1,36 @@
+Test case:
+
+weight_by_edge = {
+    (1, 2): 5,
+    (1, 3): 7,
+    (2, 3): 3,
+    (2, 4): 2,
+    (3, 4): 8,
+    (4, 5): 4,
+    (5, 6): 6,
+    (6, 4): 9
+}
+
+expected_output = {(2, 4), (1, 2), (4, 5), (5, 6), (3, 4)}
+
+assert minimum_spanning_tree(weight_by_edge) == expected_output
+
+This test case triggers a bug in the program when sorting the edges by weight. The issue is that the weight_by_edge dictionary is not sortable because it maps edges to weights, and dictionaries are not ordered in Python. Therefore, the sorting order of the edges is not guaranteed, which can lead to different minimum spanning trees being returned for the same input.
+
+To fix this issue, the program should use a list of edges instead of a dictionary to represent the graph, where each edge is a tuple of two nodes and a weight. This way, the edges can be sorted by weight using a lambda function. Here is an updated version of the program:
+
+def minimum_spanning_tree(edges):
+    group_by_node = {}
+    mst_edges = set()
+
+    for edge in sorted(edges, key=lambda e: e[2]):
+        u, v, w = edge
+        if group_by_node.setdefault(u, {u}) != group_by_node.setdefault(v, {v}):
+            mst_edges.add((u, v))
+            group_by_node[u].update(group_by_node[v])
+            for node in group_by_node[v]:
+                group_by_node[node].update(group_by_node[u])
+
+    return mst_edges
+
+With this fix, the test case should pass successfully.

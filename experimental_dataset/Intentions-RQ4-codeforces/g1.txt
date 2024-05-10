@@ -1,0 +1,1 @@
+The intention of the given code is to solve a problem related to finding whether there exist two different paths from node A to node B in an undirected graph, which have the same XOR sum for all edges present in the path. The graph is given as an input in the form of adjacency list which needs to be converted to an undirected graph.

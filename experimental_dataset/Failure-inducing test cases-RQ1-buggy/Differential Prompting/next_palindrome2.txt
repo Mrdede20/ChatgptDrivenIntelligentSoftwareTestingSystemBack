@@ -1,0 +1,7 @@
+Yes, there are inputs which make the two programs have different output. Specifically, if the input list has all 9's, the first program will return a list of 0's of the same length with a 1 added to the beginning and end, while the second program will return a list of 0's of length one greater than the input list with a 1 added to the beginning and end. Here is a test case:
+
+```
+digit_list = [9, 9, 9, 9]
+print(next_palindrome(digit_list))  # Output: [0, 0, 0, 0, 1]
+print(next_palindrome(digit_list))  # Output: [1, 0, 0, 0, 0, 1]
+```

@@ -1,0 +1,6 @@
+Here's a test case that may trigger a bug in the mergesort function:
+
+arr = [3, 2, 1]
+assert mergesort(arr) == [1, 2, 3]
+
+This test case contains an array with three integers in descending order. The expected output is an array with the same integers in ascending order. The bug may occur if the implementation doesn't properly sort the array in ascending order. For example, if the merge function mistakenly appends the larger value first instead of the smaller value during the merging process.

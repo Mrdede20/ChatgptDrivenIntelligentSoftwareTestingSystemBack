@@ -1,0 +1,3 @@
+The intention of this code is to find the length of the longest common substring between two strings 's' and 't'. 
+
+The code uses a dynamic programming approach by initializing a Counter object 'dp' which will store the length of the common substring seen so far for every (i,j) pair where i represents the index of elements of string 's' and j represents the index of elements of string 't'. The code then iterates through each element of s and t and updates the value of 'dp' if the characters match. Finally, the function returns the maximum value in 'dp' if the Counter is not empty, else it returns 0.

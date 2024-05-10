@@ -1,0 +1,18 @@
+response@ChatGPT:
+
+
+One possible test case to trigger a bug in the program would be to pass in a negative value for the parameter n, such as pascal(-1). This would cause the program to enter an infinite loop, as the range function in the for loop would never be satisfied and the program would keep appending empty rows to the list "rows". To prevent this, the program should include a check for a non-positive value of n before entering the for loop.
+
+request@user:
+Give us such test case. Use assert.
+
+response@ChatGPT:
+# Test Case 1: Test whether output is list
+assert type(pascal(3)) == list, "Test Case 1 Failed"
+
+# Test Case 2: Test whether output list contains lists of integers
+assert all(isinstance(lst, list) and all(isinstance(i, int) for i in lst) for lst in pascal(3)), "Test Case 2 Failed"
+
+# Test Case 3: Test whether output list contains correct values
+assert pascal(3) == [[1], [1, 1], [1, 2, 1]], "Test Case 3 Failed"
+

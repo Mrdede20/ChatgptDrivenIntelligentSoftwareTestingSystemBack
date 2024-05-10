@@ -1,0 +1,10 @@
+Yes, there are inputs that could make the two programs have different output as they handle the 0-th row of the memo table differently. In the first program, the 0-th row is initialized to 0s in the outer loop, while in the second program, the 0-th row is left as it is and the inner loop starts from 1. To create an input that makes the two programs have different output, you can use an item with weight 0 and value greater than 0, as the first program will consider it in the 0-th row while the second program will not. 
+
+Here is an example of an input that would cause the programs to have different output:
+
+```
+int capacity = 5;
+int[][] items = {{0, 6}, {2, 4}, {3, 5}};
+```
+
+The expected output of the first program is 6, while the expected output of the second program is 5.

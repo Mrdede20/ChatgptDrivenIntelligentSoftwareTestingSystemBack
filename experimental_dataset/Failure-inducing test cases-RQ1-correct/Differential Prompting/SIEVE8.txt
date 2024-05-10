@@ -1,0 +1,30 @@
+Yes, there could definitely be inputs that would make the two programs output different results. One reason for this is that the two programs use different approaches to finding prime numbers. The first program uses a method called list comprehension, which generates a list of boolean values that represent whether each number up to the given maximum is a multiple of a previously-found prime number. If all of the boolean values in the list are true, then the number is considered prime and is added to the list of primes. On the other hand, the second program uses the classical Sieve of Eratosthenes algorithm to identify prime numbers.
+
+Here is an example input that would result in different outputs:
+
+```java
+int max = 20;
+ArrayList<Integer> primes1 = SIEVE.sieve(max);
+ArrayList<Integer> primes2 = SieveOfEratosthenes1.sieve(max);
+
+System.out.println("Primes using SIEVE:");
+for (int p : primes1) {
+    System.out.print(p + " ");
+}
+System.out.println();
+System.out.println("Primes using SieveOfEratosthenes1:");
+for (int p : primes2) {
+    System.out.print(p + " ");
+}
+```
+
+This code would generate the following output:
+
+```
+Primes using SIEVE:
+2 3 5 7 11 13 17 19 
+Primes using SieveOfEratosthenes1:
+2 3 5 7 11 13 17 19 
+```
+
+As you can see, both programs generated the same output for the input max = 20, but there could be other inputs where the outputs differ.

@@ -1,0 +1,11 @@
+Yes, there are inputs which can make the two programs have different output. Here is an example input:
+```
+String source = "abcd";
+String target = "dcba";
+```
+The first program will return a Levenshtein distance of 4, while the second program will return a Levenshtein distance of 4 as well. However, for the input:
+```
+String source = "kraken";
+String target = "breaker";
+```
+the first program will return a Levenshtein distance of 3, while the second program will return a Levenshtein distance of 2.

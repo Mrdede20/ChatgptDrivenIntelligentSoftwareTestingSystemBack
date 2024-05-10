@@ -1,0 +1,5 @@
+The intention of this code is to take an integer `n` as input, then take `n` pairs of input `a` and `s`. `a` is an integer and `s` is a string.
+
+The code then iterates over each character in `s` and finds the ASCII value of the largest character in the string. If this ASCII value minus 96 is greater than the previous maximum value of `a`, `a` is updated to this new value.
+
+Finally, the program prints the value of `a-96` for each input pair. This will be the corresponding integer value for the largest character in the string, with a being ASCII code of 'a'.

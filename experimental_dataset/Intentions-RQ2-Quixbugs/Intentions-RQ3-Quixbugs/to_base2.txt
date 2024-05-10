@@ -1,0 +1,3 @@
+The intention of the code is to convert a positive integer in base-10 to a string representation of that integer in the specified target base. The function takes two arguments, `num` and `b`, where `num` is the number to convert and `b` is the target base. The function converts `num` to the specified base using a while loop that repeatedly computes the remainder of `num` divided by `b` and adds the corresponding digit to the result string. Finally, the function returns the result string. 
+
+The code also imports the `string` module to get access to string constants, `string.digits` and `string.ascii_uppercase`, which are concatenated together to form the alphabet for the target base.

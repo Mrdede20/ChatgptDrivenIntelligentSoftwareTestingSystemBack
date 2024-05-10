@@ -1,0 +1,6 @@
+Yes, there is an input that makes these programs give different output. Here's a test case:
+
+num = 25
+b = 5
+
+The first two implementations should return "100" while the third implementation will return "10".

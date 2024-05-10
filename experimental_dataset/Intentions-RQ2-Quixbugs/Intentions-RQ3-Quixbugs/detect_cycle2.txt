@@ -1,0 +1,3 @@
+The intention of the code is to detect whether a linked list is cyclic or not using the Tortoise-Hare algorithm. This algorithm uses two pointers, a slow pointer (tortoise) and a fast pointer (hare), to traverse the linked list. The hare pointer moves two steps at a time while the tortoise pointer moves one step at a time. 
+
+If there is a cycle in the linked list, the hare pointer will eventually catch up to the tortoise pointer, indicating that the linked list is cyclic. If there is no cycle, the hare pointer will reach the end of the linked list and the function will return False.

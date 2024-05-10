@@ -1,0 +1,9 @@
+Yes, there can be different outputs if the input contains parentheses. The given code does not handle parentheses, and the behavior is not specified in the problem statement. Here is an example input where the outputs are different:
+
+Input: [4, '-', '(', 2, '+', 3, ')', '*', 5]
+
+The first function would output: [4, 2, 3, '+', '-', 5, '*']
+
+The second function would output: [4, 2, 3, '+', '-', '*', 5]
+
+As you can see, the order of the second-last two tokens is different. This is because the first function pops the '-' operator before the '*' operator when encountering the closing parenthesis, while the second function pops the '*' operator first.

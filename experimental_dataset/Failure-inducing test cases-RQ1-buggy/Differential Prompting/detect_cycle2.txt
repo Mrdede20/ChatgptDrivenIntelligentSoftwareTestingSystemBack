@@ -1,0 +1,13 @@
+Yes, there is a test case where the two programs will output different results. Consider the scenario where we have a linked list with only one element, and that element points to itself. In this case, the first program will correctly detect the cycle, while the second program will not. You can test it with the following code:
+
+```
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.successor = None
+
+node = Node(1)
+node.successor = node
+
+print(detect_cycle(node))  # Output: True for the first program and False for the second program
+```

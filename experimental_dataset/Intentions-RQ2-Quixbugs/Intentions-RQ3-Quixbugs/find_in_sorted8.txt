@@ -1,0 +1,5 @@
+This function performs a binary search algorithm to find a given value `x` in a sorted list `arr`. The binary search algorithm has a time complexity of O(log n), which makes it more efficient compared to a linear search algorithm. 
+
+The function `find_in_sorted` first defines a helper function `binsearch`, which takes a start index and an end index as arguments. The function recursively splits the list in half and moves the start and end indices accordingly until it finds the value `x` or determines it's not in the list. 
+
+Then, `find_in_sorted` uses the helper function `binsearch` to search for the value `x` in the entire list `arr` by passing in the start index as 0 and the end index as the length of the list `arr`. If `x` is found in the list, the function returns its index. If `x` is not in the list, it returns -1.

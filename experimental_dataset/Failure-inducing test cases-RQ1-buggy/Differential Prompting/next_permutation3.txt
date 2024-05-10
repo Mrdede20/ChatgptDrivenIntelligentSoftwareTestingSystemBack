@@ -1,0 +1,7 @@
+Yes, there may be inputs that make the two programs have different output because the second program has a different condition in the second for loop within the if statement that checks if a digit in the permutation is greater than some other digit. This may result in a different index and permutation being swapped and returned. 
+
+Here's an example input that gives different output:
+
+`perm = [1, 2, 3]`
+
+The first program returns `[1, 3, 2]` while the second program returns `[2, 1, 3]`.

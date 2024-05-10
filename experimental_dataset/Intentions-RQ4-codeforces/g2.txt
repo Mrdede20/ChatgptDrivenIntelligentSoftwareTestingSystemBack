@@ -1,0 +1,7 @@
+This code appears to solve a graph theory problem. The problem involves determining whether there exists two distinct paths between nodes 'a' and 'b', where each path has the same XOR sum of edge weights.
+
+The input consists of a series of test cases. The first line of each test case contains an integer 't', representing the number of test cases. Each test case starts with a line containing three integers, 'n', 'a' and 'b'. 'n' is the number of nodes in the graph, and 'a' and 'b' are the source and destination nodes respectively. The following 'n-1' lines contain three integers 'u', 'v', and 'w', representing an undirected edge between nodes 'u' and 'v' with weight 'w'. 
+
+The code then proceeds to iterate through each node, using Breadth-First Search to determine all the paths from node 'a' and node 'b', respectively, to each of the nodes. It calculates the XOR sum of each path, and then compares the results.
+
+Finally, the code outputs 'YES' if there exists two distinct paths between 'a' and 'b' with the same XOR sum of edge weights, and 'NO' otherwise.

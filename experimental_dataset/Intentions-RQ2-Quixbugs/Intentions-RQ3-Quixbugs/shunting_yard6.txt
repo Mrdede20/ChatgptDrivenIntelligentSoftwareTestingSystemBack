@@ -1,0 +1,9 @@
+The code defines a function called `shunting_yard` that uses Dijkstra's shunting-yard algorithm to convert infix notation to equivalent Reverse Polish Notation (RPN). 
+
+The function takes a list of tokens in infix notation as input and assumes that all of these tokens are either integers or one of the four basic arithmetic operators ('+', '-', '*', '/'). 
+
+The function then uses a dictionary to assign precedence values to the operators and proceeds to loop through the tokens. If the token is an integer, it is added to the output list `rpntokens`. If it is an operator, the function pops all operators off the `opstack` that have higher or equal precedence and appends them to `rpntokens`, before finally appending the current token to `opstack`.
+
+Once all tokens have been processed, any remaining operators on the stack are popped and added to `rpntokens`.
+
+The final output of the function is the list `rpntokens`, which contains the original tokens reordered into RPN. The examples provided in the code show how the function can be used to convert infix expressions to RPN.

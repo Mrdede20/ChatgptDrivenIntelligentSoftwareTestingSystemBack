@@ -1,0 +1,9 @@
+Yes, there is an input which makes the two programs output different results. This is because the first program calculates the square of approx as `approx ** 2` while the second program calculates as `approx * approx`. Here is the test case:
+
+```
+x = 0.5
+epsilon = 0.01
+sqrt(x, epsilon)
+```
+
+When this test case is run, the first program `sqrt(x, epsilon)` will return `0.7071067811865476` while the second program `sqrt(x, epsilon)` will return `0.75`.

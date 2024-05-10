@@ -1,0 +1,1 @@
+The intention of this code is to perform a binary search on a given sorted list and find the lowest index where a particular target value exists in the list. It returns that index, or -1 if the target value is not found in the array. This implementation of binary search is optimized to be both time and memory-efficient.

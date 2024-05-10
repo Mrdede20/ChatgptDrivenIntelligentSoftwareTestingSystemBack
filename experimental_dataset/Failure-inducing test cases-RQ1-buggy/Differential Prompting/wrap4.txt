@@ -1,0 +1,16 @@
+Yes, there is an input which makes the two programs have different output. Here is a test case in Python:
+
+```
+text = "hello world this is a test"
+cols = 8
+
+# Output of the first program:
+# ['hello', 'world', 'this is', 'a test']
+print(wrap(text, cols))
+
+# Output of the second program:
+# ['hello', 'world', 'this is', 'a', 'test']
+print(wrap(text, cols))
+```
+
+The first program uses `end = text.rfind(' ', 0, cols + 1)` to find the last space in the first `cols` characters of `text`. This ensures that words are not split in the middle. However, the second program uses `idx = text.rfind(" ", 0, cols + 1)` to find the last space in the first `cols` characters of `text`, but if it doesn't find a space, it will just split the word at position `cols`. In the test case above, the word "test" is split in the second program, but not in the first program.

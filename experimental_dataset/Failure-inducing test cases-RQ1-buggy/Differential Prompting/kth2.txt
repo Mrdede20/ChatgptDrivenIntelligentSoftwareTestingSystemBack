@@ -1,0 +1,10 @@
+Yes, there is an input that could make the two programs output different results. 
+
+Here's a test case that would cause the two programs to produce different results:
+
+```
+arr = [3, 7, 1, 5, 10, 2]
+k = 3
+```
+
+In the first program `kth(arr, k)` would return `3`, while `kth_smallest_element(arr, k)` would return `2`.

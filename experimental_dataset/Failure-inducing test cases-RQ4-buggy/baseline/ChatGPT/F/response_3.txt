@@ -1,0 +1,19 @@
+response@ChatGPT:
+Test case:
+
+Input:
+2
+5 10 3
+3 4 5 2 1
+4 10 3
+3 4 5 2
+
+Expected output:
+3
+Impossible
+
+Test case explanation:
+In the first test case, the program should output 3 since we can select the 3 highest values (5, 4, 3) and buy them in sets of size 3. This requires 9 coins, which is less than the total budget of 10 coins. However, if we input "5 9 3" instead, the program will fail as it will output 3 instead of "Impossible". This is because the highest single value (5) times the number of required items (3) is less than the total budget (9), but we cannot buy any smaller sets of items in order to reach the required number of items.
+ 
+In the second test case, the program should output "Impossible" since we cannot buy any set of 3 items that is worth more than the total budget of 10 coins. However, if we input "4 11 3" instead, the program will fail as it will output 2 instead of "Impossible". This is because the program does not handle the case where we cannot buy any sets of items, but instead rounds down and outputs the largest number of sets that can be bought.
+

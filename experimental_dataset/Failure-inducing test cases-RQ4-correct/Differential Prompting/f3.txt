@@ -1,0 +1,15 @@
+Yes, there is a possibility that the two programs may produce different outputs for some inputs.
+
+Test input:
+2
+5 24 2
+10 7 6 2 5
+5 4 3
+10 8 7 6 5
+
+Expected output:
+2
+1
+
+Explanation:
+For the first query, the max_integer_k function will return 2. But the first program will return the answer as Infinity because the sum of the first two elements in the sorted order is greater than or equal to the value of 'c'. Whereas, for the second query, the first program will return 1 whereas the max_integer_k function will return 0. This is because of the different binary search implementations in the two functions.

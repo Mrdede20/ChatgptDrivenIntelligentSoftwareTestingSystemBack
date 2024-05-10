@@ -1,0 +1,5 @@
+The code defines a recursive function called hanoi that implements the classic Towers of Hanoi puzzle. The function takes three arguments - the height of the initial stack of disks, the numbered peg where the initial stack resides, and the numbered peg which the stack must be moved onto. The function returns a list of pairs that represent the shortest series of steps (each step moving the top disk from peg a to peg b) to solve the puzzle.
+
+The function uses a recursive approach by breaking down the problem into smaller subproblems. The base case is when the height of the initial stack is zero, in which case an empty list is returned. Otherwise, the function solves the problem recursively by moving the top sub-stack of height N-1 from the starting peg to the intermediate peg, then moving the largest disk from the starting peg to the target peg, and finally moving the sub-stack from the intermediate peg to the target peg.
+
+The algorithm for solving the Towers of Hanoi puzzle is a classic example of a recursive algorithm, and this code is a good illustration of how to implement it in Python.

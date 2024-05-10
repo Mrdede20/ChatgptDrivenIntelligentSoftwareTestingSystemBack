@@ -1,0 +1,11 @@
+Test case: 
+
+Input: 
+- num = 17 
+- b = 0
+
+Expected Output:
+- Error message: "Invalid input: base (b) cannot be zero!"
+
+Reasoning:
+The program does not have a validation check for the value of 'b'. If the value of 'b' is zero, the program will result in a division by zero error since the program is trying to divide 'num' by 'b' in order to determine the quotient. This will result in a test failure since the program will not be able to handle this situation and will not produce the correct output.

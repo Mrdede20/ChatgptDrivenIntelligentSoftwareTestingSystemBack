@@ -1,0 +1,12 @@
+Test case:
+
+digit_list = [9, 9, 9, 9, 9]
+expected_output = [1, 0, 0, 0, 0, 1]
+
+Explanation:
+
+The input digit_list has all 9's, and the expected output is the next palindrome after this number. However, the while loop in the function is not able to handle this case correctly and gets stuck in an infinite loop.
+
+The issue is that the while loop condition is checking for both high_mid < len(digit_list) and low_mid >= 0, but when all digits in the input are 9's, the loop will never exit because high_mid will keep incrementing while low_mid stays at 0. This will cause the function to keep resetting the digits at high_mid and low_mid to 0, but the loop will never reach a point where it can exit.
+
+To fix this bug, we can add an extra check at the beginning of the function to see if digit_list contains only 9's. If it does, we can return [1] followed by len(digit_list) - 1 zeros, and then another 1. This will give us the correct output for this test case.

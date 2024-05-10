@@ -1,0 +1,7 @@
+The `subsequences` function takes in three parameters `a`, `b`, and `k`, and returns a list of all length-k ascending sequences of integers in the range `a` to `b`. 
+
+The function first checks if `k` is equal to 0, in which case it returns an empty list. Otherwise, it initializes an empty list `ret`. 
+
+It then uses a for loop to iterate through values in the range `a` to `b + 1 - k`. For each value `i` in the loop, it extends the list `ret` with a new list containing the value `i` followed by each of the possible subsequences in the range `i+1` to `b` with length `k-1`. It does this by recursively calling the `subsequences` function with `i+1`, `b`, and `k-1`.
+
+Finally, the function returns the list `ret`, which contains all possible length-k ascending sequences of integers in the range `a` to `b`.

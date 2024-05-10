@@ -1,0 +1,5 @@
+The intention of the code is to implement a binary search algorithm to find the lowest index i such that arr[i] is equal to a given value x in a sorted list of integers. 
+
+This is known as a "Fancy Binary Search" because it is optimized to find the first occurrence of the target value in the list. It uses the binary search technique to narrow down the search space to the range where the target value is likely to be found. Then, it checks if the current mid-point value is equal to the target value and if its index is the lowest occurrence. If not, it updates the search space to either the lower or upper half depending on the value relation between the current mid-point and the target value. 
+
+The algorithm is repeated until the target value is found or until the search space is exhausted. If the target value is not found, the function returns -1.

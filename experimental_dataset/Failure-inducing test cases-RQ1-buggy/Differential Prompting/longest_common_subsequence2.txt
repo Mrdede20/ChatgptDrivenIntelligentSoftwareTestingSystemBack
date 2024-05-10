@@ -1,0 +1,14 @@
+Yes, there is an input which makes the two programs have different output. Here's an example test case in Python:
+
+```
+a = "ABCDGH"
+b = "AEDFHR"
+
+result1 = longest_common_subsequence(a, b)
+result2 = longest_common_subsequence(a, b, {})
+
+print(result1)  # returns "ADH"
+print(result2)  # returns "ADGHR"
+```
+
+The first program `longest_common_subsequence(a, b)` returns "ADH" as the longest common subsequence between `a` and `b`. However, the second program `longest_common_subsequence(a, b, {})` returns "ADGHR" as the longest common subsequence. This is because the second program uses memoization to store previously computed values and avoid redundant computations. Therefore, the memoized version might return a different result than the non-memoized version when given the same inputs, depending on the order of subproblems that are solved.

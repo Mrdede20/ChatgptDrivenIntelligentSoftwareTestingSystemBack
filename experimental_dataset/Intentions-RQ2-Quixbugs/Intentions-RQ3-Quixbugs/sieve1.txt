@@ -1,0 +1,1 @@
+The intention of this code is to implement the Sieve of Eratosthenes algorithm to find all the prime numbers from 2 up to and including a given positive integer 'max'. This algorithm works by iteratively crossing out all multiples of previously discovered primes, leaving only the primes at the end. The resulting list of primes is then returned.

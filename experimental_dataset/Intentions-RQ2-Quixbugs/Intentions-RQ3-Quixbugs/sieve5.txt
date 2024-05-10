@@ -1,0 +1,7 @@
+The intention of this code is to generate a list of all prime numbers up to a given limit `max` using the Sieve of Eratosthenes algorithm. 
+
+The algorithm works by starting with a list of all integers from 2 to `max`, and iteratively removing all multiples of each previously discovered prime number from the list. The numbers remaining in the list at the end are all prime numbers.
+
+The code initializes an empty list `primes`, and iterates through all integers from 2 to `max`. For each integer `n`, it checks if any previously discovered prime number `p` is a factor of `n` (i.e. `n % p == 0`). If `n` is not divisible by any prime numbers in `primes`, then `n` must be prime, and it is added to the list.
+
+Finally, the list of prime numbers is returned by the function.

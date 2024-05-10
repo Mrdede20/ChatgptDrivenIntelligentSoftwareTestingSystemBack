@@ -1,0 +1,8 @@
+No, there is no input which makes the two programs above have different outputs as both algorithms compute the length of the longest common subsequence between two given strings s and t. 
+
+Here is a test case you can use to verify the correctness of the algorithms:
+```
+s = "abcde"
+t = "ace"
+print(lcs_length(s, t)) # expected output: 3
+```

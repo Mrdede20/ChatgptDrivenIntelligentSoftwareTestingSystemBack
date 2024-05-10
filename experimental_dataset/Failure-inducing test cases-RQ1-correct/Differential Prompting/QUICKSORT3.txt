@@ -1,0 +1,1 @@
+Both programs perform the same QuickSort operation on an ArrayList of integers, so their output should be the same for all inputs. The given input [3, 1, 4, 2, 5] will produce the same sorted output for both programs: [1, 2, 3, 4, 5].

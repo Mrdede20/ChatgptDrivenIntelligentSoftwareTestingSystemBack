@@ -1,0 +1,16 @@
+response@ChatGPT:
+Test case:
+Input:
+2
+5
+1 2 3 4 5
+4
+4 3 2 1
+
+Output:
+Expected: 4 3 2 1 0
+Actual: 4 3 2 3 4
+
+Explanation:
+The program is supposed to find the two maximum values in the given list of integers and print the difference between each element and the maximum value among the two. However, in the case where all the elements are in decreasing order, the program fails to find the second maximum value correctly. In the given test case, the second input has values in descending order, leading to the failure of the program to find the second maximum value. As a result, the output is not as expected.
+

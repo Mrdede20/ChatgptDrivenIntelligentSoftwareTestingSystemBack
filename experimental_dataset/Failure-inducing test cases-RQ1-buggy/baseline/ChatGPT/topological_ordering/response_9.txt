@@ -1,0 +1,20 @@
+nodes = [
+    Node('A', successor='B'),
+    Node('B', successor='C'),
+    Node('C', successors=['D', 'E']),
+    Node('F', successors=['G', 'H']),
+    Node('D', predecessors=['C', 'F']),
+    Node('E', predecessor='C'),
+    Node('G', predecessor='F'),
+    Node('H', predecessor='F')
+]
+
+expected_output = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
+output = topological_ordering(nodes)
+
+# Assertion
+assert output == expected_output, f"Expected {expected_output}, but got {output}"
+
+Bug Description:
+
+The bug in the program is that it fails to identify a cycle in the graph, which causes the program to enter an infinite loop. In the given test case, nodes 'C' and 'F' are connected in a cycle, which causes the program to keep appending 'D' and 'F' to the output list and never terminates. This results in a test failure as the actual output does not match the expected output.

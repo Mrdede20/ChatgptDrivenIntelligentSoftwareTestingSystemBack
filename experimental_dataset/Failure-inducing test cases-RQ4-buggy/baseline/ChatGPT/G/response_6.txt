@@ -1,0 +1,11 @@
+response@ChatGPT:
+Test Case:
+t=1
+n=3
+a=1
+b=3
+1 2 1
+2 3 2
+
+This test case creates a tree with 3 nodes and the shortest path between nodes 1 and 3 has a length of 3, which is greater than 2, violating this condition: "v2=fromB.count(0)>2". The program should output "YES", but it will fail for this input.
+

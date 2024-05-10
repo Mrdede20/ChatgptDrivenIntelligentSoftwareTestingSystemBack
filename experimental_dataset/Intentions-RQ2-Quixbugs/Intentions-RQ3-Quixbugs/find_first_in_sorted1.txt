@@ -1,0 +1,7 @@
+The intention of the code is to implement a binary search algorithm to find the lowest index `i` in a sorted list `arr` where the element `x` is located.
+
+The algorithm works by starting with two pointers, one at the beginning of the list (`lo`) and one at the end of the list (`hi`). The middle element of the list is then found using integer division to get the index `mid`. If `x` is found at `arr[mid]` and it's the first occurrence of `x` in the list, then the algorithm returns the index `mid`. If `x` is less than or equal to `arr[mid]`, then `hi` is set to `mid` to search the left half of the list, otherwise `lo` is set to `mid + 1` to search the right half of the list. This process is repeated until `x` is found or until the search space is exhausted.
+
+If `x` is not found, the function returns -1.
+
+Overall, the function `find_first_in_sorted` implements a fancy binary search algorithm to efficiently find the lowest index in the sorted list `arr` where the element `x` can be found.

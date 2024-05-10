@@ -1,0 +1,1 @@
+No, both programs produce the same output for any input. They both check if a given string of parentheses is properly balanced or not.

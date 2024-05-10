@@ -1,0 +1,1 @@
+No, both of the programs produce the same output for any input because they are effectively the same program, just formatted differently. The first program is missing a main method, which would cause a compilation error if it were executed as written, but it contains an identical implementation of the gcd method as the second program.

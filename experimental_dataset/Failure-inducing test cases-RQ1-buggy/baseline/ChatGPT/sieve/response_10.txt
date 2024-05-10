@@ -1,0 +1,9 @@
+Test case:
+Input: sieve(1) 
+
+Expected output: []
+
+Actual output: Error: IndexError: list index out of range
+
+Explanation: 
+The input max value is 1 which should return an empty list as there are no primes between 2 and 1. However, the program tries to execute the for-loop with n=2 which results in an empty primes list leading to an index out of range error. This bug is triggered for input values less than 2 and will result in test failure as the expected and actual output do not match.

@@ -1,0 +1,3 @@
+The two programs have different package declarations and the second one is missing the `import java.util.*;` statement. This means that the `ArrayList` used in the second program may refer to a different implementation than the one used in the first program. The implementation used by the second program may behave differently on certain inputs, leading to different output.
+
+However, for a concrete example of an input that would make the two programs have different output, we would need to know the implementation of `ArrayList` being used in the second program.

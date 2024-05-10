@@ -1,0 +1,44 @@
+response@ChatGPT:
+
+
+Yes, there are multiple test cases that can trigger a bug in this program. 
+
+One possible test case is when the input parameter `n` is negative or zero, which would result in a runtime error due to a range error in the for-loop. 
+
+Another possible test case is when there is a negative cycle in the graph, which would result in the `min` function failing to find the shortest path and the algorithm running into an infinite loop. 
+
+Finally, there could be input data inconsistencies or invalid input data, such as missing or duplicate edges or vertices, which would lead to incorrect shortest path lengths being calculated by the algorithm.
+
+request@user:
+Give us such test case. Use assert.
+
+response@ChatGPT:
+# Test Case
+# Suppose we have the following matrix of edge weights
+# 0 -> 1: 5
+# 0 -> 2: 3
+# 1 -> 2: 1
+# 2 -> 3: 2
+
+def test_shortest_path_lengths():
+    n = 4
+    length_by_edge = {
+        (0, 1): 5,
+        (0, 2): 3,
+        (1, 2): 1,
+        (2, 3): 2,
+    }
+
+    shortest_paths = shortest_path_lengths(n, length_by_edge)
+
+    # Test shortest path from node 0 to 3
+    assert shortest_paths[0, 3] == 6, 'Test Case 1 Failed'
+    # Test shortest path from node 1 to 3
+    assert shortest_paths[1, 3] == 3, 'Test Case 2 Failed'
+    # Test shortest path from node 0 to 2
+    assert shortest_paths[0, 2] == 3, 'Test Case 3 Failed'
+    # Test shortest path from node 2 to 0
+    assert shortest_paths[2, 0] == float('inf'), 'Test Case 4 Failed'
+
+test_shortest_path_lengths()
+

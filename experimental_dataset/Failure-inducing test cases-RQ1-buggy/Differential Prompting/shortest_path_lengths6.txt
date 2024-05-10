@@ -1,0 +1,1 @@
+The two programs are exactly the same. There is no difference between them. Therefore, there is no input that makes them have different outputs.

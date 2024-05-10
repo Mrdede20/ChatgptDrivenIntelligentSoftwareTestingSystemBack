@@ -1,0 +1,14 @@
+Yes, there is an input that makes the two programs have different output. 
+
+Here's an input that would make them give different output:
+
+```java
+int[] arr = {1, 2, 2, 3, 4};
+int x = 2;
+```
+
+The first program (FIND_FIRST_IN_SORTED) would return index 1, while the second program would return index 2. 
+
+This is because the first program checks if mid == 0 before checking if x != arr[mid-1]. So in this case, it would return index 1 because mid is 1 and arr[mid-1] is not equal to x. 
+
+However, the second program always updates the index when it finds a match, so it would continue searching even if it finds the first match. Thus, it would return index 2 instead.

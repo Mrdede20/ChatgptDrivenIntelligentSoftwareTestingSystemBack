@@ -1,0 +1,5 @@
+The intention of this code is to generate all possible subsequences (of length `k`) of ascending integers from a given range `{a, a+1, ..., b}`. For example, if `a=1`, `b=5`, and `k=3`, the output would be `[[1, 2, 3], [1, 2, 4], [1, 3, 4], [2, 3, 4]]`. 
+
+The function `subsequences` takes three inputs `a`, `b`, and `k` and returns a list of lists `[[],[],...]`. 
+
+To achieve this result, the function uses recursive logic where you start with a base case, `k=0`, returns an empty list `[]`. In the case where `k>0`, the function calls itself recursively for each integer `i` in the range of `(a, b+1-k)` and combines its output with `[i]` to make ascending subsequence of length `k`. This is done using a list comprehension and `extend()` to combine the lists of subsequences obtained by the recursive calls.

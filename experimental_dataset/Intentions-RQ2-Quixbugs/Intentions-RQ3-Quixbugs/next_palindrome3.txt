@@ -1,0 +1,6 @@
+The intention of the given code is to find the next palindromic integer by taking a list of base 10 digits in reverse order. If the given integer is not palindrome then the function may return inappropriate results.
+
+The algorithm works as follows:
+Firstly, it finds the mid point of the given digit list.
+It then iterates through the list and checks if the digit at the high_mid index is 9, if it is so, the value at the position high_mid and low_mid is set to 0 and high_mid and low_mid index are shifted forward and backward respectively. If the digit at the high_mid index is not equal to 9, it is incremented by 1, if and only if the high_mid and low_mid index are different, the digit at the low_mid index is also incremented by 1.
+Finally, if the while loop above has been completely executed, which means that there is no such digit which needs to be incremented, the code returns a new number which has one more digit than the previous number and all digits except the first and last is 0, first and last digits are 1.

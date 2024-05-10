@@ -1,0 +1,11 @@
+Yes, the two programs have different outputs for certain inputs. 
+
+The first program returns a list of all the nodes in topological order, while the second program modifies the input graph (by reducing inDegree of nodes) and returns an empty list when the input graph has a cycle.
+
+For example, consider the following input graph:
+
+A -> B
+B -> C
+C -> A
+
+The first program would return a list containing all the nodes (A, B, C), while the second program would return an empty list as the input graph has a cycle.

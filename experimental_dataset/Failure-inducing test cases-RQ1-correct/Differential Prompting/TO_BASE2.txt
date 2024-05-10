@@ -1,0 +1,1 @@
+No, the output of both programs should be the same for any valid input of `num` and `b`. The only difference is that `BaseConversion` uses a `StringBuilder` to construct the result string, which can be more efficient than concatenating strings using the `+` operator in `TO_BASE`.

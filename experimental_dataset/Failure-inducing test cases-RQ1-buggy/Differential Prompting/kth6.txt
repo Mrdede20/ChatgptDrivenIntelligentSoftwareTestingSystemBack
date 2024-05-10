@@ -1,0 +1,13 @@
+Yes, there is an input which makes the two programs have different output. 
+
+For example, consider the input array `arr = [5, 3, 2, 4, 1]` and `k = 1`. The function `kth(arr, k)` will return 2 as the output, which is the 1st smallest element in the array. However, the function `kth_smallest_element(arr, k)` will return 1 as the output, which is the 1st element in the array. 
+
+Here's the code to test this input:
+
+```
+arr = [5, 3, 2, 4, 1]
+k = 1
+
+print(kth(arr, k))  # Output: 2
+print(kth_smallest_element(arr, k))  # Output: 1
+```

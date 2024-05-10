@@ -1,0 +1,1 @@
+No, the two programs are identical and will output the same result. The only difference is that the second program includes a main method for testing the gcd function.

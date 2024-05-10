@@ -1,0 +1,44 @@
+#PT
+assert knapsack(50, [(10, 60), (20, 100), (30, 120)]) == 220
+
+#PT
+assert knapsack(10, []) == 0
+
+#PT
+capacity = 10
+items = [(5, 10), (4, 40), (6, 30), (3, 50)]
+expected_output = 90
+assert knapsack(capacity, items) == expected_output
+
+#FF
+assert knapsack(5, [(6, 20), (3, 10), (4, 12)]) == 0
+
+#PT
+items = [(2, 3), (3, 4), (4, 5), (5, 6)]
+capacity = 5
+assert knapsack(capacity, items) == 7
+
+#PT
+items = [(3, 4), (2, 3), (4, 2), (1, 1)]
+capacity = 6
+assert knapsack(capacity, items) == 8
+
+#PT
+assert knapsack(50, [(10, 60), (20, 100), (30, 120)]) == 220
+
+#FF
+items = [(2, 3), (3, 4), (4, 5), (5, 6)]
+assert knapsack(8, items) == 11
+
+#FF
+items = [(1, 2), (2, 4), (3, 7)]
+capacity = 5
+expected = 9 # expected maximum value
+result = knapsack(capacity, items)
+assert result == expected, f"Expected {expected}, but got {result}"
+
+#PT
+items = [(10, 60), (20, 100), (30, 120)]
+capacity = 50
+expected_result = 220
+assert knapsack(capacity, items) == expected_result

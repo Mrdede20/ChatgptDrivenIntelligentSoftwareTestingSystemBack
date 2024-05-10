@@ -1,0 +1,6 @@
+Yes, there is an input which makes the programs have different output. Here is a test case: 
+
+coins = [1, 2, 3]
+total = 4
+
+The first six implementations will run into infinite recursion with this input, while the last implementation will give the correct output of 4.

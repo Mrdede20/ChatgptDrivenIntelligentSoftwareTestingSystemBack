@@ -1,0 +1,12 @@
+Sure, here is a test case that can trigger a bug and result in test failure for the program:
+
+# Test Case
+perm = [1, 2, 3, 4]
+expected_output = [1, 2, 4, 3]
+next_permutation(perm)
+
+Expected output: [1, 2, 4, 3]
+
+Actual output: None
+
+Explanation: The next_permutation function is expected to return the next permutation of the input list, but in this case, it returns None instead of [1, 2, 4, 3]. This is because the implementation of the function does not handle the case where the input list is already in descending order, as is the case with the input list [4, 3, 2, 1]. In this case, the function should return the first permutation, which is [1, 2, 3, 4], but the current implementation does not handle this case correctly and returns None.

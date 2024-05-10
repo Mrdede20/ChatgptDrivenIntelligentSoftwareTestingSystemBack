@@ -1,0 +1,3 @@
+The intention of the given code is to take an integer 'n' as input, followed by 'n' pairs of inputs - an integer 'a' and a string 's'. For each pair of inputs, the code loops through each character in the string 's', finds the ASCII value of the character using the ord() function, and checks if it is greater than the integer 'a'. If it is greater, then the integer 'a' is updated to the ASCII value of that character. Finally, the code prints the difference between the updated value of 'a' and 96.
+
+The purpose of subtracting 96 is to convert the ASCII value of the character (which is an integer between 97 and 122, inclusive) to a value between 1 and 26, which corresponds to the alphabetical position of the character (a=1, b=2, c=3, etc.) in the English alphabet.

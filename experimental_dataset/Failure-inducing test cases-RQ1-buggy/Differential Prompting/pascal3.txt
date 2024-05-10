@@ -1,0 +1,19 @@
+Yes, there is an input which makes the two programs have different output. Here's the test case you requested:
+
+```
+n = 3
+```
+
+The first program will return:
+
+```
+[[1], [1, 1], [1, 2, 1]]
+```
+
+while the second program will return:
+
+```
+[[1], [1, 1], [1, 2, 1], [1, 3, 3, 1]]
+```
+
+Therefore, the two programs give different output for n=3.

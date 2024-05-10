@@ -1,0 +1,29 @@
+Test case:
+
+arr = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3]
+
+Expected output:
+
+[1, 1, 2, 3, 3, 4, 5, 5, 6, 9]
+
+Actual output:
+
+[1, 1, 2, 3, 3, 4, 9, 5, 6, 5]
+
+Explanation:
+
+The code is expected to sort the list of numbers arr in ascending order using the quicksort algorithm. However, the actual output is incorrect, showing that the element "9" is not at its correct position.
+
+The bug in the code is most likely due to the fact that the quicksort function is not handling the case where there are duplicate pivot elements, which causes the function to incorrectly sort the list.
+
+To fix this issue, we can modify the code to ensure that duplicate pivot elements are handled correctly in the recursive calls. For example:
+
+def quicksort(arr):    
+    if not arr:    
+          return []    
+    pivot = arr[0]    
+    lesser = quicksort([x for x in arr[1:] if x <= pivot])    
+    greater = quicksort([x for x in arr[1:] if x > pivot])    
+    return lesser + [pivot] + greater
+
+With this modification, the test case should pass successfully and the output should be as expected.

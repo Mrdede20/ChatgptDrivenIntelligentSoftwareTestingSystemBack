@@ -1,0 +1,9 @@
+This code takes inputs from the user in the following order:
+
+- t: number of test cases
+- n: length of the array s
+- s: an array of n integers
+
+After taking input, the code iterates for each test case and finds the two maximum values in the array s. It then iterates over the array s again and for each element, it prints the difference between the element and the second highest value if the element is the highest or the difference between the element and the highest value if it is not the highest.
+
+In summary, the code finds the difference between each element in the array s and the highest and second highest values in the array.

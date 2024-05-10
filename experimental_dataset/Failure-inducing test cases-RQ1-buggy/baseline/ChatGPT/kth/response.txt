@@ -1,0 +1,49 @@
+#IT
+arr = []
+k = 2
+assert kth(arr, k) == None
+
+#IT
+arr = [1]
+k = 1
+assert kth(arr, k) == 1
+
+#FF
+arr = [3, 2, 1]
+k = 2
+assert kth(arr, k) == 2 #error 3
+
+#IT
+arr = [5, 4, 3, 2, 1]
+k = -1
+assert kth(arr, k) == None
+
+#FF
+arr = [1, 2, 3, 4, 5]
+k = 0
+assert kth(arr, k) == None #error 1
+
+#IT
+arr = [1, 2, 3, 4, 5]
+k = "a"
+assert kth(arr, k) == None
+
+#FC
+arr = [5, 3, 1, 2, 4]
+k = 3
+assert kth(arr, k) == 3 #error 4
+
+#FT
+arr = [1, 2, 3, 4, 5]
+k = 4
+assert kth(arr, k) == 5
+
+#FF
+arr = [5, 4, 3, 2, 1]
+k = 0
+assert kth(arr, k) == None #error 1
+
+#IT
+arr = [1, 2, 3, 4, 5]
+k = 5
+assert kth(arr, k) == 5

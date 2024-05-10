@@ -1,0 +1,7 @@
+The code is implementing the topological sorting algorithm that takes a list of directed graph nodes as an input and returns an ordered list of the nodes. The topological sorting algorithm sorts nodes in a directed acyclic graph (DAG), which is a graph with directed edges and no directed cycles.
+
+The function starts by creating an empty list called ordered_nodes. It then adds all the nodes that have no incoming nodes to the ordered_nodes list using a list comprehension. These nodes can be considered the start of the graph since they have no incoming edges.
+
+Next, the function iterates through the ordered_nodes list and for each node, it checks all the outgoing nodes. If the set of ordered nodes contains all the outgoing nodes of the current node, the next node is added to the ordered_nodes list. This ensures that nodes that are dependent on other nodes further up in the order are added after their dependencies.
+
+Finally, the function returns the ordered_nodes list, which is the output of the topological sorting algorithm, where each node appears before all the nodes that have edges pointing to it.

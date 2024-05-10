@@ -1,0 +1,29 @@
+#FT
+assert sieve(10) == [2, 3, 5, 7]
+
+#FT
+assert sieve(2) == [2]
+
+#PT
+assert sieve(1) == []
+
+#PT
+assert sieve(1) == []
+
+#PT
+assert sieve(0) == []
+
+#PT
+assert sieve(0) == []
+
+#FT
+assert sieve(15) == [2, 3, 5, 7, 11, 13]
+
+#PT
+assert sieve(0) == []
+
+#PT
+assert sieve(1) == []
+
+#PT
+assert sieve(1) == []

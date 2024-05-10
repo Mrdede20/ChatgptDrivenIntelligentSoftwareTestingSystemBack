@@ -1,0 +1,9 @@
+Sure, here's a test case that could trigger a bug and result in test failure for the program:
+
+arr = [3, 2, 1]
+sorted_arr = mergesort(arr)
+assert sorted_arr == [1, 2, 3]
+
+This test case is trying to sort an array of integers in descending order, which is the opposite of the expected ascending order. If the implementation of mergesort doesn't handle this case correctly, the test will fail. Specifically, the merge function will append elements from the left array until left[i] is greater than right[j], which won't happen in this case because left is already in descending order. The while loop will never terminate, resulting in an infinite loop.
+
+If the implementation of mergesort doesn't handle this case correctly, the test case will hang indefinitely and eventually fail due to a timeout.

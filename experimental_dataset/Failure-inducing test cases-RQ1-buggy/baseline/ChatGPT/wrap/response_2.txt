@@ -1,0 +1,12 @@
+Test Case:
+
+Input:
+text = "This is a very long text that exceeds the maximum number of columns allowed by the wrap function" 
+cols = 20
+
+Expected Output:
+['This is a very long', 'text that exceeds the', 'maximum number of', 'columns allowed by the', 'wrap function']
+
+Actual Output:
+['This is a very long', 'text that exceeds the', 'maximum number of', 'columns allowed by the', 'wrap function', '']
+(the last element in the list contains an extra space due to an issue in the conditional statement. The program is not handling the case where the second parameter is greater than the length of the input string)

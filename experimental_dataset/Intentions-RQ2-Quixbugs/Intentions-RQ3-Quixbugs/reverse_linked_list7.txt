@@ -1,0 +1,7 @@
+The given code is intended to reverse a singly linked-list. The function takes in the head node of the linked list and then iterates through each node of the list, swapping the direction of the successor pointers. This effectively reverses the linked list.
+
+In more detail, the function first sets `prevnode` to `None`, indicating the head of the reversed list. Then, it enters a while loop that continues as long as there are nodes left in the original list. Inside the loop, the `nextnode` variable is used to temporarily store a reference to the current node's successor (the node that comes after it in the original list). 
+
+The current node's `successor` pointer is then set to `prevnode`, effectively reversing its direction to point to the previous node in the reversed list. Then, both `node` and `prevnode` are updated to move forward by one node in the original and reversed list respectively (i.e., `node` is set to `nextnode` and `prevnode` is set to the previous `node`).
+
+Finally, once the while loop has processed all nodes, the function returns the new head of the reversed list, which is the `prevnode` variable that now points to the last node in the original list (which is now the first node in the reversed list).

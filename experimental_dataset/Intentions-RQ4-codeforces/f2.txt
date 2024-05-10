@@ -1,0 +1,14 @@
+This code seems to solve an optimization problem and finds the maximum number of coins that can be earned given a list of values and some constraints.
+
+Here is a brief breakdown of what the code does:
+1. Takes an integer input
+2. For each input value, takes an input containing integers n, c, and d. Followed by a list of n integers (A).
+3. Sorts the list A in descending order.
+4. Checks conditions against the list A, and prints "Infinity", "Impossible", or continues.
+5. Initializes variables l, r and mid, and then performs a binary search.
+6. In each iteration of the binary search, calculates the sum of the first mid + 1 values in the list, and distributes them among the first d people.
+7. Calculates the total number of coins earned given this distribution.
+8. If the coins earned are greater than or equal to c, updates l to mid. Otherwise, updates r to mid - 1.
+9. Prints the value of mid - 1, which is the maximum number of coins that can be earned given the constraints.
+
+Overall, this code is written efficiently and uses various built-in functions of Python to optimize the process.

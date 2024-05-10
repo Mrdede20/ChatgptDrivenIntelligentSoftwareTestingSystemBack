@@ -1,0 +1,5 @@
+The intention of this code is to implement the QuickSort algorithm for sorting the elements of an input list of integers in ascending order. 
+
+The QuickSort algorithm is a divide-and-conquer sorting algorithm that works by selecting a "pivot" element from the array and partitioning the other elements into two sub-arrays, according to whether they are less than or greater than the pivot. The sub-arrays are then recursively sorted using the same process until the entire list is sorted. 
+
+The implementation of QuickSort in this code uses a recursive approach, where the input array is partitioned into two sub-arrays (one for elements less than the pivot and one for elements greater than the pivot) and the process is repeated on these sub-arrays until the base case of an empty list is reached. The lists are then concatenated back together using the pivot element to obtain the final sorted list.

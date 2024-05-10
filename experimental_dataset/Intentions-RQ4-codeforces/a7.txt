@@ -1,0 +1,3 @@
+This code takes integer input `t` representing the number of test cases. For each test case, it takes three integers as input, sorts them and prints the second largest integer out of the three. This process continues until all the test cases have been covered.
+
+In other words, this code finds the second largest value amongst 3 given integers for multiple test cases.

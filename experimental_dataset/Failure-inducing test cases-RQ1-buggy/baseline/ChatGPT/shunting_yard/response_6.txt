@@ -1,0 +1,6 @@
+Test case: 
+Input: ['+', '-', '*', '/', 5]
+Expected Output: TypeError: '<=' not supported between instances of 'int' and 'NoneType'
+
+Explanation: 
+In the code, the `precedence` dictionary is defined to evaluate the precedence of operators. If the input list contains any token other than an integer, it checks for its precedence in the `precedence` dictionary. However, if the input list contains any unknown token that is not defined in the `precedence` dictionary, the program will throw a `TypeError` stating that `'<=' not supported between instances of 'int' and 'NoneType'` which means the program is trying to compare an integer with a `NoneType` object. Hence, the above test case containing an unknown token, which is not defined in the `precedence` dictionary, will trigger the bug and result in a test failure.

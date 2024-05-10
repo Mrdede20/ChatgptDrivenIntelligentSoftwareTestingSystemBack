@@ -1,0 +1,1 @@
+No, the two programs you provided are identical. They are both recursive generator functions that flatten a nested list. The code for both is the same, so they will always produce the same output regardless of the input.

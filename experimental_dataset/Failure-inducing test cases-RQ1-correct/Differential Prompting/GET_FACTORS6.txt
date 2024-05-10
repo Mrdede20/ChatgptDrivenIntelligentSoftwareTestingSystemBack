@@ -1,0 +1,1 @@
+No, the two programs should give the same output for any integer input. Both programs find the prime factors of a given integer by recursively finding the factors of smaller integers. The only differences are in the implementation details, such as how the factors are stored and how the recursive calls are made, but the overall algorithm is the same.

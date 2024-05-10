@@ -1,0 +1,5 @@
+Yes, there could be an input that makes the different implementations of the sieve function output different results. 
+
+For example, consider the input `max = 25`. The first implementation of the sieve function using `all` will correctly return the primes `[2, 3, 5, 7, 11, 13, 17, 19, 23]` whereas the implementation using `not any` will incorrectly include the composite number 9 and return `[2, 3, 5, 7, 9, 11, 13, 17, 19, 23]`. 
+
+The last implementation of the sieve function using an is_prime list will give the same output as the implementation using `all` and return the primes `[2, 3, 5, 7, 11, 13, 17, 19, 23]`.

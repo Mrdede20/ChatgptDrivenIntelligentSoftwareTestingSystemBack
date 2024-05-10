@@ -1,0 +1,3 @@
+The intention of the provided code is to calculate the greatest common divisor (GCD) of two non-negative integers `a` and `b` using the Euclidean algorithm. The GCD is the largest positive integer that divides both `a` and `b` without leaving a remainder. 
+
+The code uses recursion to repeatedly calculate the remainder of `a` divided by `b`, until `b` becomes zero, at which point the GCD is `a`. This is accomplished by passing `b` and `a % b` (the remainder of `a` divided by `b`) as arguments to the `gcd()` function until `b` is equal to zero.

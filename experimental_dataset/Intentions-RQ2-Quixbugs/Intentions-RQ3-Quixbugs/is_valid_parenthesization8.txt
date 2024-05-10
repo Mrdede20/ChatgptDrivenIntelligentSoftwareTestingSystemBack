@@ -1,0 +1,7 @@
+The intention of the code is to check whether the given string of parentheses is properly nested or not. It does this using a simple algorithm that keeps track of the depth of the nested parentheses.
+
+The function takes a string of parentheses as input and returns True if the parentheses are properly nested, and False otherwise. The precondition for the input is that it should contain only the parentheses characters '(' and ')' and nothing else. 
+
+The algorithm works by iterating through the input string and keeping track of the depth of the parentheses. Whenever an opening parenthesis '(' is encountered, the depth is incremented by 1. Whenever a closing parenthesis ')' is encountered, the depth is decremented by 1. If the depth ever becomes negative, it means that there is a closing parenthesis before any opening parenthesis, and hence the parentheses are not properly nested. This condition is caught and False is returned immediately.
+
+If the entire input string is traversed without encountering any invalid nesting of parentheses, the function returns True.

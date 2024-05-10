@@ -1,0 +1,29 @@
+Yes, there is an input that makes the two programs have different output. Here is an example:
+
+```
+tokens = [5, 6, 2, '+', '*', 8, 4, '/', '-']
+```
+
+The first program (without the Stack class) evaluates this expression as follows:
+
+```
+5 6 2 + * 8 4 / -
+
+= 5 (6 + 2) * 8 / -  # Replace '+' with '6 + 2'
+= 5 8 * 8 / -        # Evaluate '6 + 2'
+= 40 8 / -           # Evaluate '5 8 *'
+= 5.0                # Evaluate '40 8 / -'
+```
+
+The second program (with the Stack class) evaluates this expression as follows:
+
+```
+5 6 2 + * 8 4 / -
+
+= 5 (6 + 2) * 8 / -  # Replace '+' with '6 + 2'
+= 5 8 * 8 / -        # Evaluate '6 + 2'
+= 40 8 / -           # Evaluate '5 8 *'
+= -35.0              # Evaluate '40 8 / -'
+```
+
+As you can see, the two programs evaluate the same expression differently due to the order of the operands passed to the lambda function in the `op` function. In the first program, the lambda function is defined as `lambda a, b: a + b`, while in the second program, it is defined as `lambda a, b: a - b`. This difference is due to the order in which the operands are popped from the stack in the two programs.

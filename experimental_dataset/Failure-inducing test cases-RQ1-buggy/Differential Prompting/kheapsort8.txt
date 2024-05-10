@@ -1,0 +1,1 @@
+No, the two programs are identical. The second version of `kheapsort` just imports `heapq` redundantly.

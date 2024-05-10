@@ -1,0 +1,1 @@
+No, both programs should produce the same output for all inputs. They both use the same algorithm (Newton's method) for computing the square root and only differ in the variable names used. They both take in two parameters: the number to find the square root of (x) and the tolerance for error (epsilon).

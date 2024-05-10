@@ -1,0 +1,24 @@
+response@ChatGPT:
+Test case:
+
+Input:
+3
+3 9 2
+5 2 2
+5 12 2
+5 5 5 5 5
+5 15 2
+5 5 5 5 5
+
+Expected output:
+1
+Infinity
+Impossible
+
+Explanation:
+For the first query, we have coins with values [5, 2, 2] and we need to select 2 coins with the highest values that sum up to a total of at least 9 coins. The coins that we select are [5, 2], and their sum equals 7 coins. Therefore, we cannot get the desired number of coins, and the program outputs 1 as the maximum number of coins we can obtain.
+
+For the second query, the sum of all coins exceeds the number of coins we require, and thus the program outputs Infinity.
+
+For the third query, the highest value coin is worth 5 coins and we need to select 2 coins with a total value of at least 15 coins. Since the highest value coin cannot be used any further, we cannot obtain the required number of coins and the program outputs Impossible.
+

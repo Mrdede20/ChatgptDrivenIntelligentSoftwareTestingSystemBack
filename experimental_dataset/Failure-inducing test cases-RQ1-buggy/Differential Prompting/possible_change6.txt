@@ -1,0 +1,9 @@
+Yes, the order of the conditional statements affect the behavior of the function when `total` is less than 0. 
+
+For example, if `coins = [1, 2, 5]` and `total = -1`, the first six implementations will return `None` or raise a `TypeError`, while the last implementation will return `0`.
+
+You can test this by running the following code:
+```
+print(possible_change([1, 2, 5], -1))
+```
+You should expect the last implementation to return 0 and the first six implementations to either raise a TypeError or return None.

@@ -1,0 +1,9 @@
+This code is taking input from user in the following format:
+- First input is the number of test cases to be executed
+- For each test case, the following inputs are taken:
+  - An integer n, indicating the number of elements in a list
+  - A list s of n integers
+
+After taking the input, the code is finding the two maximum values from the list s and printing their difference with all the other elements of the list. The output will be printed for each test case in a new line. 
+
+In short, the code is finding the maximum two values of the list and calculating the differences between each item and the two maximum values.

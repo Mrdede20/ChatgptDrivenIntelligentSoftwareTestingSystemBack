@@ -1,0 +1,7 @@
+The code implements the Merge Sort algorithm which is a divide-and-conquer sorting algorithm. It works by dividing the input array into two halves, recursively sorting the two halves, and then merging the sorted halves. 
+
+The mergesort function takes an input array 'arr' as its argument, and then calls a helper function named 'merge' that takes two arrays as inputs and merges them in a sorted way. This merge function is defined inside mergesort function using the concept of inner functions. To merge the two halves of the array, the algorithm uses two pointers to compare the elements in the two halves, and then appends them to the result array by comparing the values. The remaining elements, if any, are appended at the end of the result array.
+
+The function first checks if the input array is empty, and then recursively divides it into subarrays until the subarrays have only one element each. Then it merges these subarrays using the helper function and returns the sorted array.
+
+The time complexity of Merge Sort algorithm is O(nlogn) in the average case and in the worst case, which is better than most other sorting algorithms.

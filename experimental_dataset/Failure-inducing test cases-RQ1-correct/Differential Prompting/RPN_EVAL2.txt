@@ -1,0 +1,30 @@
+Yes, there is a potential input that could make the two programs output different results. This would happen if the input list contained a token that is not an operator or a double value. In the first program, it would try to cast this token to a Double, resulting in a runtime error if it cannot be cast. In the second program, it would try to parse this token as a Double using `Double.parseDouble(token)`, resulting in a runtime error if it cannot be parsed as a Double. To test this, you could create an input list that contains a non-operator, non-double value such as "hello". Here's an example Java code to test it:
+
+```
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        // This input list contains a non-operator, non-double value
+        ArrayList<Object> tokens = new ArrayList<Object>();
+        tokens.add(1.0);
+        tokens.add(2.0);
+        tokens.add("hello");
+        tokens.add("+");
+
+        // Test using the first program
+        double result1 = RPN_EVAL.rpn_eval(tokens);
+        System.out.println(result1);
+
+        // Test using the second program
+        ArrayList<String> tokens2 = new ArrayList<String>();
+        for(Object token : tokens) {
+            tokens2.add(token.toString());
+        }
+        double result2 = RPN_EVAL.rpn_eval(tokens2);
+        System.out.println(result2);
+    }
+}
+``` 
+
+Running this code may produce different runtime errors depending on how the input is handled, but it should demonstrate the potential for different output due to different handling of input types.

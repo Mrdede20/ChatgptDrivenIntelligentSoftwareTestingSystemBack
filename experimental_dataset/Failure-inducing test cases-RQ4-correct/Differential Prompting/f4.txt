@@ -1,0 +1,35 @@
+Yes, there is an input which makes the two programs have different output. Here is an example input:
+
+Input:
+2
+5 10 2
+1 2 3 4 5
+5 10 2
+3 4 5 6 7
+
+Expected Output:
+2
+1
+
+To generate test input in Java, you can use the following code:
+
+import java.util.Scanner;
+
+public class TestInputGenerator {
+   public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+      System.out.print("Enter number of test cases: ");
+      int t = sc.nextInt();
+      System.out.println(t);
+      
+      // First test case
+      System.out.println("5 10 2");
+      System.out.println("1 2 3 4 5");
+      
+      // Second test case
+      System.out.println("5 10 2");
+      System.out.println("3 4 5 6 7");
+   }
+} 
+
+This generates the same input as above.

@@ -1,0 +1,18 @@
+The given code implements a recursive algorithm to solve the well-known Towers of Hanoi puzzle. 
+
+The puzzle consists of three pegs and a number of disks of different sizes which can be slid onto any peg. The puzzle starts with the disks in a neat stack in ascending order of size on one peg, the smallest at the top, thus making a conical shape.
+
+The objective of the puzzle is to move the entire stack to another peg, obeying the following rules:
+
+- Only one disk may be moved at a time.
+- Each move consists of taking the uppermost disk from one of the stacks and placing it on top of another stack or on an empty rod.
+- No disk may be placed on top of a smaller disk.
+
+The `hanoi` function takes in three arguments:
+- `height` - the height of the initial stack of disks
+- `start` - the numbered peg where the initial stack resides
+- `end` - the numbered peg which the stack must be moved onto
+
+The function recursively calls itself on subproblems of smaller sizes by moving discs of sizes in descending order from the starting peg to the destination peg via a spare peg.
+
+The function returns an ordered list of pairs (a, b) representing the shortest series of steps (each step moving the top disk from peg a to peg b) that solves the puzzle.

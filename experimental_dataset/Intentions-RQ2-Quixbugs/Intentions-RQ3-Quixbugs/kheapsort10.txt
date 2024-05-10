@@ -1,0 +1,5 @@
+The intention of the code is to implement k-heapsort algorithm which sorts an almost sorted array in O(n log k) time where k is the maximum displacement of an element in the array from its final sorted position. 
+
+The algorithm works by creating a heap of the first k elements of the array and then iteratively adding each element to the heap and removing the smallest element. After all elements have been added to the heap, the remaining elements in the heap are popped to yield the sorted array.
+
+The function takes an input array and maximum displacement k, and returns a generator that yields the sorted elements of the array. The function assumes that the input array has unique elements and each element is at most k places from its sorted position.

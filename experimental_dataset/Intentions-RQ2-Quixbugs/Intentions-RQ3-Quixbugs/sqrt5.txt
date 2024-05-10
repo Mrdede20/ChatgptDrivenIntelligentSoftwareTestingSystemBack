@@ -1,0 +1,7 @@
+The following code calculates the square root of a positive float number using the Newton-Raphson method. The function takes two arguments, x and epsilon, where x is the number for which the square root needs to be computed, and epsilon is the precision required for the result.
+
+The function first initializes the approx variable to x/2 as an initial approximation. It then enters into a loop and updates the approximate value iteratively by computing the next estimate from the previous one until the difference between the current approximation and the actual square root is less than the given epsilon. 
+
+Finally, the function returns the computed approximation as the estimated square root value of x. The precondition of the input is that x should be greater than or equal to 1 and epsilon should be greater than 0. 
+
+The output of the function is a float value in the interval [sqrt(x)-epsilon, sqrt(x)+epsilon] that approximates the square root of the given input number x. The example in the docstring demonstrates how to use this function to calculate the square root of 2 with a precision of 0.01.

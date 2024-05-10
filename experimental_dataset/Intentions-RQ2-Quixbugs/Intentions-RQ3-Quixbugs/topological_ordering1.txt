@@ -1,0 +1,7 @@
+The intention of the code is to perform a topological sort on a directed acyclic graph represented by a list of nodes. A topological sort is a linear ordering of the nodes in a directed acyclic graph such that for every directed edge (u, v), node u comes before node v in the ordering. 
+
+The `topological_ordering` function takes in a list of nodes, and first identifies all the nodes that do not have incoming edges (i.e., no other node has an edge pointing to it). These nodes can be added to the ordered_nodes list first.
+
+Then, the function iteratively checks for nodes that can be added to the ordered list by checking their outgoing edges. If all nodes in their outgoing_edges are already present in the ordered list, then that node can be added as well.
+
+Finally, the function returns the ordered_nodes list, which is the desired topological ordering of the provided graph.

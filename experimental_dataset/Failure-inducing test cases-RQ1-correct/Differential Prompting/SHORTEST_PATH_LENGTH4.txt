@@ -1,0 +1,1 @@
+Yes, the two programs have different input signature, as one takes input as Map object with List<Node> as key, while the other takes input as Map object with String as key. Therefore, the two programs have different output for any input data.

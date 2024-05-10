@@ -1,0 +1,7 @@
+The intention of the code is to implement a function `rpn_eval` that evaluates a mathematical expression given in reverse polish notation.
+
+The function takes in a list of tokens, where the tokens can be either floating point numbers or mathematical operators (+,-,*,/). The function iterates over the tokens, and if it encounters a number, it stores it in a stack. If it encounters an operator, it pops two numbers from the stack, applies the operator to them, and pushes the result back to the stack. 
+
+Finally, when it has processed all tokens, it returns the final value left on top of the stack. 
+
+The function defines a helper function called `op` that returns a lambda function corresponding to each mathematical operator. This helper function is used to apply the operator to the two operands popped from the stack.

@@ -1,0 +1,1 @@
+No, both programs use the same algorithm to count the number of set bits in an integer (`n & (n-1)`), they only differ in the condition to terminate the loop (`n != 0` vs `n > 0`). Since the two conditions are logically equivalent, the programs will produce the same output for any input value.

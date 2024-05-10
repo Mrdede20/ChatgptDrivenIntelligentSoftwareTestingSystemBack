@@ -1,0 +1,23 @@
+Yes, there is a test case that can make the two programs have different output. Here's an example:
+
+```
+class Node:
+    def __init__(self, name, incoming_nodes=None, outgoing_nodes=None):
+        self.name = name
+        self.incoming_nodes = incoming_nodes or []
+        self.outgoing_nodes = outgoing_nodes or []
+
+a = Node('A')
+b = Node('B', [a])
+c = Node('C', [a])
+d = Node('D', [b, c])
+e = Node('E', [d])
+
+# Test case
+nodes = [e, b, c, a, d]
+
+print(topological_ordering(nodes)) # Output from first function: [A, B, C, D, E]
+print(topological_ordering(nodes)) # Output from second function: [A, C, B, D, E]
+```
+
+In this example, the two functions will give different output because they traverse the graph in different orders. The first function uses a nested loop approach that iterates over the incoming and outgoing nodes of each node. The second function uses a recursive approach with a depth-first search traversal. The order in which the nodes are added to the final ordered list can vary depending on the order in which they are visited.

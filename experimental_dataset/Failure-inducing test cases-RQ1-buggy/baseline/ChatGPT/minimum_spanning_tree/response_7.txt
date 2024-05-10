@@ -1,0 +1,14 @@
+Test Case:
+
+weight_by_edge = {(0, 1): 4, (1, 2): 2, (0, 2): 3, (2, 3): 1}
+expected_output = {(1, 2), (0, 2), (2, 3)}
+
+actual_output = minimum_spanning_tree(weight_by_edge)
+
+assert actual_output == expected_output, f"Test case failed: expected {expected_output}, but got {actual_output}"
+
+Explanation:
+
+This test case consists of a graph with four nodes and four edges, and each edge is assigned a weight. The expected minimum spanning tree of this graph includes three edges: (1,2), (0,2), and (2,3).
+
+However, the program may fail to return the expected output due to a bug. The bug occurs when two different nodes have the same weight assigned to their edges. In this test case, both edges (0,2) and (2,3) have a weight of 3. When the program processes these edges, it may choose them in the wrong order, leading to a different minimum spanning tree. This could result in a test failure.

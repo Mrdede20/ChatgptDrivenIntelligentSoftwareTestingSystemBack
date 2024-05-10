@@ -1,0 +1,1 @@
+No, both programs have the same functionality and output. They implement the Shunting Yard algorithm, which converts infix expressions into postfix notation. They both use the same operator precedence rules and follow the same logic to convert the tokens. The only difference is in the naming of some variables.

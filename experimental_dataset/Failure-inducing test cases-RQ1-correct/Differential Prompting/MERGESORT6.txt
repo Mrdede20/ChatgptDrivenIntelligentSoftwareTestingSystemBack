@@ -1,0 +1,1 @@
+No, these two programs are equivalent and should produce the same output for any input. The only difference is the package name and some minor syntactical differences (e.g. use of ".util.ArrayList" instead of "java.util.ArrayList").

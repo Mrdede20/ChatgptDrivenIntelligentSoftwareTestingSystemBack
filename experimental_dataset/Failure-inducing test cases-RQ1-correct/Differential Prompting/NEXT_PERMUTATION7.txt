@@ -1,0 +1,7 @@
+Yes, there exists an input that makes the two programs have different outputs. 
+
+The input to use is `[3, 2, 1]`.
+
+The first program will return the input unchanged, i.e., `[3, 2, 1]`.
+
+The second program will return `[1, 2, 3]`, which is the correct next permutation of `[3, 2, 1]`.

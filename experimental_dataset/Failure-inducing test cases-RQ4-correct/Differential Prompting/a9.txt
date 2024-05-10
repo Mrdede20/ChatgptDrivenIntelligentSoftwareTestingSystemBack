@@ -1,0 +1,26 @@
+Yes, there is an inputs which makes the two programs have different output. 
+Here is a test input that will cause the two programs to produce different output:
+
+Input:
+```
+2
+2 5 3
+0 4 -2
+1 2 3
+1 2 3
+```
+
+Expected output of Program A:
+```
+3
+0
+2
+2
+```
+
+Expected output of Program B:
+```
+3
+0
+2
+```

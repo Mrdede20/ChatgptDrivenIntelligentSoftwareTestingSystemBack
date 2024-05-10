@@ -1,0 +1,9 @@
+The above code defines a function `shunting_yard` that converts infix notation to Reverse Polish Notation (RPN) using Dijkstra's shunting-yard algorithm. 
+
+The `precedence` dictionary defines the precedence level of the four arithmetic operators. The list `rpntokens` will store the output RPN tokens, while `opstack` is used as a temporary stack to hold operators while calculating the RPN.
+
+The function iterates through each token in the input list `tokens`. If the token is an integer, it is added to the `rpntokens` list. If the token is an operator, the function pops all operators from the top of the `opstack` whose precedence is greater than or equal to the current operator's precedence level. Then it appends those popped operators into `rpntokens` list.
+
+Finally, if `opstack` still has any operators remaining on it, they all are appended to `rpntokens` list. Ultimately, `rpntokens` contain the RPN token list, which is returned.
+
+The function provides several examples of input and expected outcomes that can provide a better understanding of RPN notation.

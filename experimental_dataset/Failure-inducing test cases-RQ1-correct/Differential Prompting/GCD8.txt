@@ -1,0 +1,1 @@
+No, both programs have the same implementation of the Euclidean algorithm to compute the greatest common divisor of two integers. They also have the same test case where a = 24 and b = 36. Therefore, they should output the same result, which is "GCD of 24 and 36 is: 12".

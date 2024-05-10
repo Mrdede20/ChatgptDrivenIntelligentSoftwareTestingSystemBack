@@ -1,0 +1,10 @@
+input：
+2
+99
+abcd
+120
+efgh
+
+expected output：
+4
+8

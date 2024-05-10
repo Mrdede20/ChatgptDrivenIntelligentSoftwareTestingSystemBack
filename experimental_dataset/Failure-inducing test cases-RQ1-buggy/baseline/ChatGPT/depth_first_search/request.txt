@@ -1,0 +1,34 @@
+Generate test cases that trigger a bug and result in test failure for the program below.
+
+def depth_first_search(startnode, goalnode):
+    nodesvisited = set()
+
+    def search_from(node):
+        if node in nodesvisited:
+            return False
+        elif node is goalnode:
+            return True
+        else:
+            return any(
+                search_from(nextnode) for nextnode in node.successors
+            )
+
+    return search_from(startnode)
+
+class Node:
+    def __init__(self, value=None, successor=None, successors=[], predecessors=[], incoming_nodes=[], outgoing_nodes=[]):
+        self.value = value
+        self.successor = successor
+        self.successors = successors
+        self.predecessors = predecessors
+        self.incoming_nodes = incoming_nodes
+        self.outgoing_nodes = outgoing_nodes
+
+    def successor(self):
+        return self.successor
+
+    def successors(self):
+        return self.successors
+
+    def predecessors(self):
+        return self.predecessors

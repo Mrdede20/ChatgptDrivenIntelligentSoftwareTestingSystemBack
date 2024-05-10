@@ -1,0 +1,47 @@
+#PT
+input_arr = [1, [2, [3]], [], 4]
+expected_output = [1, 2, 3, 4]
+test_output = list(flatten(input_arr))
+assert test_output == expected_output, f"Expected {expected_output}, but got {test_output}"
+
+#PT
+arr = [1, [2, 3], [4, [5, 6], 7], [8, [9, [10]]]]
+expected = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+result = list(flatten(arr))
+assert result == expected, f"Expected {expected}, but got {result}"
+
+#PT
+arr_1 = [[1, 2, [3, 4]], 5, [6]]
+result_1 = [1, 2, 3, 4, 5, 6]
+assert list(flatten(arr_1)) == result_1
+
+#PT
+input_list = [1, 2, 3, 4, 5]
+expected_output = [1, 2, 3, 4, 5]
+assert list(flatten(input_list)) == expected_output
+
+#PT
+arr = [[1, 2, [3]], 4]
+assert list(flatten(arr)) == [1, 2, 3, 4]
+
+#PT
+arr = [1, 2, [3, 4, [5, 6]]]
+output = list(flatten(arr))
+assert output == [1, 2, 3, 4, 5, 6]
+
+#PT
+assert list(flatten([])) == []
+
+#PT
+assert list(flatten([1, 2, [3, 4], 5])) == [1, 2, 3, 4, 5]
+
+#PT
+nested_list = [1, 2, [3, 4, [5, 6], 7], 8, [[9], [10, 11]], 12]
+flat_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+assert list(flatten(nested_list)) == flat_list
+
+#PT
+arr = [1, 2, [3, 4, [5, 6]], 7]
+res = list(flatten(arr))
+expected_res = [1, 2, 3, 4, 5, 6, 7]
+assert res == expected_res, f"Expected: {expected_res} but got: {res}"

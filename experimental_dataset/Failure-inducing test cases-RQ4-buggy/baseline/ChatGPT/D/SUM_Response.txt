@@ -1,0 +1,29 @@
+#FC
+response_1 #YES NO YES YES YES
+
+#FC
+response_2 #NO YES YES YES NO
+
+#FC
+response_3 #YES YES NO NO NO YES
+
+#FF
+response_4 #YES NO NO NO YES
+
+#FC
+response_5 #NO NO NO NO NO
+
+#IT
+response_6
+
+#FC
+response_7 #NO NO NO NO NO
+
+#IT
+response_8
+
+#FF
+response_9 #NO NO NO YES
+
+#FC
+response_10 #YES YES NO NO YES

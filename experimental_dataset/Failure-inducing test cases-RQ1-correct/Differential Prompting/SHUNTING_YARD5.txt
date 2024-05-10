@@ -1,0 +1,31 @@
+Yes, the two programs have different imports:
+
+- SHUNTING_YARD uses java.util.*;
+- ShuntingYard uses .util.ArrayList and .util.Stack
+
+So the input needs to use the appropriate imports for each program to generate the same output. Here is an example input that illustrates the difference:
+
+```java
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<String> input = new ArrayList<String>();
+        input.add("(");
+        input.add("2");
+        input.add("+");
+        input.add("3");
+        input.add(")");
+        
+        // First program
+        System.out.println(SHUNTING_YARD.shunting_yard(input));
+        
+        // Second program
+        System.out.println(ShuntingYard.shunting_yard(input));
+    }
+}
+``` 
+
+The output for the first program would be: `[2, 3, +]`
+
+The output for the second program would be: `[[, 2, 3, +, ]]`

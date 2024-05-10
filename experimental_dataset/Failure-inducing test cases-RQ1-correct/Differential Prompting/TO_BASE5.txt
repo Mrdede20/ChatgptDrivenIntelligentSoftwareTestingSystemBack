@@ -1,0 +1,1 @@
+No, there is no input that would make the two programs produce different output, as they both implement the same algorithm for converting a decimal number to a number in a different base. They just use different variable names and different methods for concatenating strings.

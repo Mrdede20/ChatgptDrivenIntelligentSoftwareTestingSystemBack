@@ -1,0 +1,1 @@
+No, there is no input which makes the two programs produce different output. Both programs implement the same basic algorithm. The differences in implementation are minor and would only affect performance, not correctness.

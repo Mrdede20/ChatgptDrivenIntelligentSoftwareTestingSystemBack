@@ -1,0 +1,7 @@
+The above code is an implementation of a recursive function in Python that returns the number of distinct ways to make change adding up to total using only coins of the given values.
+ 
+The algorithm tries different combinations of coins to make up the total value. It does this by recursively reducing the total value by each coin value and then adding the returned values for each denomination together until it reaches a total of 0 or less, at which point it stops searching that branch of the recursion. 
+
+The base cases check for when the total value has been reached (return 1), or when the total value is negative (return 0). 
+
+Knowing the number of distinct ways to make change for a given total can be useful in many applications, such as computing financial transactions, generating combinations of items, and implementing search algorithms.

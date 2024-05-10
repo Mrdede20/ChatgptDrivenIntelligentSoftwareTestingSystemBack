@@ -1,0 +1,1 @@
+This code is a solution to a problem. It takes input as integers and determines whether there exists a non-empty subsequence which is non-decreasing. If it exists, it prints "YES", otherwise it prints "NO". It uses the bisect_left module to perform binary search to optimize the solution.

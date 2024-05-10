@@ -1,0 +1,1 @@
+No, both programs are identical and will output the same result for any input. They both implement the Floyd-Warshall algorithm to find the shortest path lengths between pairs of nodes in a weighted graph with n nodes.

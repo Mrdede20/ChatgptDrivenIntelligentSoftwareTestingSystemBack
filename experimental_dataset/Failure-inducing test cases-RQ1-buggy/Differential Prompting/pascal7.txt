@@ -1,0 +1,7 @@
+Yes, there is an input that makes the two programs have different output. One such input is `n = 2`. 
+
+For the first program, `pascal(2)` will return `[[1], [1, 1]]`. For the second program, `pascal(2)` will return `[[1], [1, 1]]`. 
+
+However, for a larger input value such as `n = 5`, the two programs will yield different outputs. 
+
+For the first program, `pascal(5)` will return `[[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]`. For the second program, `pascal(5)` will return `[[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1], [1, 5, 10, 10, 5, 1]]`.

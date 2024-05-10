@@ -1,0 +1,12 @@
+Yes, there can be an input that makes the two programs have different output. The first program adds the length of the non-empty string while checking for the base case, whereas the second program calculates the minimum edit distance by performing insertions, deletions, and substitutions. 
+
+Here is a test case:
+
+```
+source = "abcd"
+target = "dcba"
+```
+
+The first program will return 4 as the length of source string is 4 and the target string is empty, so it will return the length of source which is 4. 
+
+The second program will return 4 as the minimum edit distance between source and target strings is 4; two substitutions needed to make source string equal to target string. Therefore insert = 1, delete = 1, substitute = 2, which results in a minimum edit distance of 4.

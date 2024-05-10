@@ -1,0 +1,12 @@
+response@ChatGPT:
+Test case:
+
+n = 5
+bits = [0, 0, 1, 0, 1]
+
+Expected output: 3
+
+Explanation: The original array has three inversions: (2, 4), (1, 4), and (0, 3). The first array created has only one inversion: (1, 4), and the second array created has two inversions: (2, 4), and (1, 4). The program should return the maximum number of inversions, which is 3. However, due to a bug in the code, the program returns 4. 
+
+To change the test case, simply modify the values of n and bits to create a different input array. Note that the bug is triggered when the input array has a 1 at the last position and the output is expected to be the number of inversions in the original array.
+

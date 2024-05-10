@@ -1,0 +1,13 @@
+Here's a test case that triggers a bug in the next_permutation function and results in a test failure:
+
+# Test Case
+perm = [3, 2, 1]
+expected_output = None # The function is expected to return None if it cannot find the next permutation
+
+# Execute the function
+output = next_permutation(perm)
+
+# Check if the output matches the expected output
+assert output == expected_output, f"Expected {expected_output}, but got {output}"
+
+The test case is testing the scenario where the input permutation is already in descending order, i.e., there is no next permutation. The next_permutation function is expected to return None in this case. However, the current implementation of the function doesn't handle this scenario correctly and will result in a IndexError: list index out of range error.

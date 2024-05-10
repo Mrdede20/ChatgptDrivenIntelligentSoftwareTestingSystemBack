@@ -1,0 +1,15 @@
+Assuming that your test environment contains required libraries and a compiler installed:
+
+```
+def test_shortest_paths():
+    # Testcase that triggers the bug and causes test failure
+    # Define a graph with a negative weight cycle 
+    graph = [(1, 2, 3), (2, 3, -5), (3, 1, -1)]
+    source = 1
+    weight_by_edge = {(u, v): weight for u, v, weight in graph}
+    result = shortest_paths(source, weight_by_edge)
+    expected_output = {1: 0, 2: 3, 3: float('-inf')}
+    assert result == expected_output, f"Expected {expected_output}, but got {result}"
+```
+
+This testcase defines a graph with three vertices: 1, 2, and 3. There are three edges in this graph with weights 3, -5, and -1 respectively. The second edge introduces a negative weight cycle in the graph, which is not handled by the current implementation of the `shortest_paths` function. When executed, this test case is expected to fail and produce an assertion error because the expected output contains `-inf` while the returned output contains `inf`. This would indicate a bug in the implementation of the function.

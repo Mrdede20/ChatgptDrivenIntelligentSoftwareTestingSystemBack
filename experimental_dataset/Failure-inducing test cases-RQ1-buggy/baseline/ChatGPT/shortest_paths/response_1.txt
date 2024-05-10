@@ -1,0 +1,5 @@
+Test case:
+- Input: source=1, weight_by_edge={(1,2):3, (1,3):5, (2,3):2}
+- Expected output: weight_by_node={1:0, 2:3, 3:5}
+
+This test case should result in a test failure because there is a bug in the program that causes it to not update the weight_by_node values correctly. Specifically, when calculating the minimum weight from a node u to a node v, the program is not updating the value of weight_by_node[v] with the minimum weight, but is instead updating the value of weight_by_edge[u,v]. In the above test case, the correct weight_by_node values should be {1:0, 2:3, 3:5}, but the program will return {1:0, 2:3, 3:inf} due to this bug.

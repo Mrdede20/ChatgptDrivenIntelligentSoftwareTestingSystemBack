@@ -1,0 +1,17 @@
+The intention of the given code is to implement a function named `get_factors(n)` which takes an integer as input and returns the prime factors of that integer as a list in the sorted order. 
+
+The function uses a naive trial division method to find the prime factors of the given number. It first checks if the number is 1, in which case it returns an empty list as 1 is not a prime number. For all other numbers, it loops through all the numbers from 2 to square root of n and checks if n is divisible by i. If n is divisible, then it recursively calls the same function for n//i and returns the list concatenating value of i with the returned list. If n is not divisible by any number i, then it returns an empty list.
+
+The function has the following characteristics:
+
+Input:
+  - An integer n where n >= 1
+  
+Output:
+  - A list of prime factors of n in sorted order, with repetition
+  
+Pre-Conditions:
+  - `n` is an integer where n >= 1 
+  
+Post-Conditions:
+- The returned list contains prime factors of n and is sorted in ascending order.

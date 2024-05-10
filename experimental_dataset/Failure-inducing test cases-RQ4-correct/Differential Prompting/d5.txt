@@ -1,0 +1,27 @@
+Yes, there are input cases that could make the two programs have different output. Here's a test input that could generate different output:
+
+```
+3
+6
+1 2 3 2 1 2
+9
+1 2 3 2 1 2 3 2 1
+7
+1 2 3 4 3 2 1
+```
+
+The output of the first program would be:
+
+```
+YES
+NO
+NO
+```
+
+While the output of the second program would be:
+
+```
+YES
+NO
+YES
+```

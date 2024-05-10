@@ -1,0 +1,10 @@
+One possible test case that could trigger a bug in the next_permutation() function is when the input permutation is already sorted in descending order.
+
+# Test case
+perm = [3, 2, 1]
+expected_output = None  # The function should return None for a sorted descending list
+
+# Test
+assert next_permutation(perm) == expected_output
+
+In this test case, the perm list is already sorted in descending order, which means there is no valid next permutation. However, the next_permutation() function does not handle this case correctly and returns a list that is not a valid permutation. This will cause the test to fail since the expected output is None.

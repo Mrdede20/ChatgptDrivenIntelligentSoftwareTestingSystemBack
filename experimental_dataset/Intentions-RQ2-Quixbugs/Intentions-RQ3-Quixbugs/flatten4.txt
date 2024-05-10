@@ -1,0 +1,7 @@
+The intention of the code is to define a function called `flatten` that takes a nested list as an argument and returns a generator for its non-list objects. 
+
+The function uses recursion to iterate through the nested list and checks whether each element is a list or not. If an element is a list, the function recursively calls itself on that sublist. Otherwise, the function uses the `yield` keyword to return the non-list object.
+
+By using a generator, the function can be memory efficient and work well for large nested lists, as it only generates each element as needed instead of storing them all in memory at once. 
+
+The code includes a docstring that explains the input, output, and examples of how to use the function.

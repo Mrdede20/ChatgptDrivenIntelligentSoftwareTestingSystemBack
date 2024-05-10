@@ -1,0 +1,61 @@
+Yes, there is an input that makes the two programs have different outputs. For example, when `n=2` and input values are as follows:
+```
+4 abcd
+3 wxyz
+```
+The first program will output:
+```
+4
+24
+```
+The second program will output:
+```
+1
+23
+```
+Here's the corresponding test case in Java:
+```java
+import java.util.Scanner;
+
+public class Test {
+    public static void main(String[] args) {
+        // Test input
+        String input = "2\n4 abcd\n3 wxyz\n";
+
+        Scanner scanner = new Scanner(input);
+        int n = scanner.nextInt();
+        int a = 0;
+        for (int i = 0; i < n; i++) {
+            a = scanner.nextInt();
+            String s = scanner.next();
+            for (int j = 0; j < s.length(); j++) {
+                if ((int)s.charAt(j) > a) {
+                    a = (int)s.charAt(j);
+                }
+            }
+            System.out.println(a-96);
+        }
+        scanner.close();
+        
+        // Second program output for the same input
+        find_max_unicode(2);
+    }
+
+    public static void find_max_unicode(int n) {
+        Scanner scanner = new Scanner(System.in);
+        for (int i = 0; i < n; i++) {
+            int a = scanner.nextInt();
+            String s = scanner.next();
+
+            int max_unicode = 0;
+            for (int j = 0; j < s.length(); j++) {
+                if ((int)s.charAt(j) > max_unicode) {
+                    max_unicode = (int)s.charAt(j);
+                }
+            }
+            System.out.println(max_unicode-96);
+        }
+        scanner.close();
+    }
+}
+```

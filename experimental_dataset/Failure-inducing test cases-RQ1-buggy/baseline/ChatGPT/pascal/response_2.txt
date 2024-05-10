@@ -1,0 +1,6 @@
+Test case to trigger a bug in the program:
+
+assert pascal(0) == [[1]]
+
+Explanation:
+The above program generates the Pascal's triangle of height n. It starts with a single row [1] and then generates each subsequent row by summing up the numbers in the row above it. However, there is a bug in the program when the input n is 0, which should return [[1]], but the program will generate an empty list [] instead. Therefore, the above test case checks whether the program correctly handles the edge case when n is 0 and returns the expected result of [[1]].

@@ -1,0 +1,1 @@
+Yes, there are certain cases where the two programs will produce different output. An example input is [1,2,3], which will produce the output [1,3,2] using the first program and the output [2,1,3] using the second program.

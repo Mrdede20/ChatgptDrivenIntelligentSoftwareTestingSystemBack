@@ -1,0 +1,12 @@
+The code defines a function called `mergesort` that implements the merge sort algorithm on a given list `arr`. 
+
+Here's how the merge sort algorithm works:
+
+1. If the list has one or zero elements, it is already sorted, and the function returns the list.
+2. Otherwise, the list is divided into two halves.
+3. Each half is recursively sorted using the `mergesort` function.
+4. The two sorted halves are then merged back together using `merge` function defined within `mergesort`.
+
+The `merge` function takes two sorted lists and merges them into a single sorted list. This is the key operation in merge sort.
+
+Finally, the sorted list is returned by the function.

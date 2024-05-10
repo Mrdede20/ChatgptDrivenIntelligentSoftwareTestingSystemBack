@@ -1,0 +1,13 @@
+Test case:
+
+perm = [1, 3, 2, 4, 5]
+expected_output = [1, 3, 4, 2, 5]
+
+Explanation:
+The next_permutation function is designed to return the next permutation of a given sequence of numbers. The function will find the first occurrence of two adjacent numbers where the left number is smaller than the right number. It then swaps the left number with the smallest number on the right side that is greater than the left number, and finally reverses the sequence on the right side of the swapped element.
+
+In the test case, the input sequence [1, 3, 2, 4, 5] has the adjacent numbers 3 and 2 where 3 is smaller than 2. According to the function, the next permutation should be [1, 3, 4, 2, 5]. However, the function does not return the expected output because of a bug in the code.
+
+The bug occurs in the inner loop where the function tries to find the smallest number on the right side that is greater than the left number. In this case, the loop will return j as the index of the number 5 because it is the smallest number on the right side that is greater than 2. However, the swapping operation next_perm[i], next_perm[j] = perm[j], perm[i] will actually swap 2 with 5 instead of 3 with 4. As a result, the final output [1, 3, 5, 4, 2] is not the expected output.
+
+Thus, the test case will fail and indicate the presence of a bug in the next_permutation function.

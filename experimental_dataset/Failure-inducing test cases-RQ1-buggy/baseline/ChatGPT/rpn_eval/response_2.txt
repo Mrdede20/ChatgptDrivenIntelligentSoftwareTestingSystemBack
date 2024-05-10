@@ -1,0 +1,10 @@
+One potential test case that could trigger a bug and result in a test failure is:
+
+tokens = [1, 2, '+', 3, '*']
+assert rpn_eval(tokens) == 9
+
+This test case is attempting to evaluate the expression (1 + 2) * 3 using the reverse Polish notation (RPN) of the expression. The RPN for this expression is 1 2 + 3 *, which is represented by the tokens list.
+
+The expected result of this test case is 9, since (1 + 2) * 3 equals 9. However, the actual result of running rpn_eval(tokens) is 5, which is incorrect.
+
+The bug in the program is that the op function is subtracting b from a instead of a from b when the symbol parameter is '-'. To fix the bug, the lambda function for '-' should be lambda a, b: b - a instead of lambda a, b: a - b.

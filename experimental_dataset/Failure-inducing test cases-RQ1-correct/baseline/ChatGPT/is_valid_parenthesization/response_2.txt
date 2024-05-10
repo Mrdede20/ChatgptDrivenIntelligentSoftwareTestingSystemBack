@@ -1,0 +1,46 @@
+response@ChatGPT:
+
+
+Test case:
+is_valid_parenthesization(")(")
+
+Expected output:
+False
+
+Explanation:
+This test case includes an invalid parenthesization where the closing ")" comes before the opening "(". This should trigger the bug in the program because it does not check for this case and will return True instead of False.
+
+request@user:
+Give us such test case. Use assert.
+
+response@ChatGPT:
+# Test case 1: A valid parenthesization
+assert is_valid_parenthesization('((()))') == True
+
+# Test case 2: An invalid parenthesization with extra closing parenthesis
+assert is_valid_parenthesization('((())))') == False
+
+# Test case 3: An invalid parenthesization with extra opening parenthesis
+assert is_valid_parenthesization('((())') == False
+
+# Test case 4: An invalid parenthesization with no closing parenthesis
+assert is_valid_parenthesization('((()') == False
+
+# Test case 5: An empty string
+assert is_valid_parenthesization('') == True
+
+# Test case 6: A string with only opening parenthesis
+assert is_valid_parenthesization('(((') == False
+
+# Test case 7: A string with only closing parenthesis
+assert is_valid_parenthesization(')))') == False
+
+# Test case 8: A string with alternating parenthesis
+assert is_valid_parenthesization('()()()') == True
+
+# Test case 9: A string with nested parenthesis
+assert is_valid_parenthesization('(()(()))') == True
+
+# Test case 10: A string with same number of opening and closing parenthesis but in wrong order
+assert is_valid_parenthesization('))((') == False
+

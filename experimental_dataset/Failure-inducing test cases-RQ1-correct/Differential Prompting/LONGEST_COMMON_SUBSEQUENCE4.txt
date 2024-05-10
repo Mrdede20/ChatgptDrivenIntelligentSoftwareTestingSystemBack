@@ -1,0 +1,10 @@
+Both programs implement the same recursive algorithm to find the Longest Common Subsequence (LCS) of two given strings. Therefore, their outputs should be the same for all inputs. To verify this, you can use the following test case:
+
+```
+String s1 = "ABCDGH";
+String s2 = "AEDFHR";
+String lcs = LONGEST_COMMON_SUBSEQUENCE.longest_common_subsequence(s1, s2);
+System.out.println(lcs);
+```
+
+This test case will print "ADH" as the LCS of the two strings. You can run it with both implementations to verify that they produce the same output.

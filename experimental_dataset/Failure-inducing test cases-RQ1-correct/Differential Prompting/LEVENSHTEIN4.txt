@@ -1,0 +1,13 @@
+Yes, there is an input that makes the two programs have different output. The first program implements the recursive version of the Levenshtein distance algorithm while the second program implements the dynamic programming version. The recursive version has an exponential time complexity, making it inefficient for long strings, while the dynamic programming version has a time complexity of O(mn), which is much faster.
+
+To see the difference in output, you can try running the following test case:
+
+```java
+public static void main(String[] args) {
+    String s1 = "kitten";
+    String s2 = "sitting";
+    System.out.println(levenshtein(s1, s2)); // Expected output: 3
+}
+```
+
+The expected output is 3, which is the minimum number of operations required to transform "kitten" into "sitting". The dynamic programming version will produce this output correctly. However, the recursive version may encounter a stack overflow error or take a long time to finish, especially for longer strings.

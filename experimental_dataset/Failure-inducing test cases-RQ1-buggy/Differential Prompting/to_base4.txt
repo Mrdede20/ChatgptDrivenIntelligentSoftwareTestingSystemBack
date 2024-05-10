@@ -1,0 +1,5 @@
+Yes, there are inputs that would result in different output between the two programs. 
+
+For example, if we call `to_base(30, 3)`, the first two programs would return `'1010'`, while the third program would return `'101'`. 
+
+This is because the two `while` loop programs in the first code snippets do not iterate on every possible value of `num`. The `while` loop stops as soon as `num` is no longer greater than 0, while the `for` loop in the third code snippet loops exactly `num` times.

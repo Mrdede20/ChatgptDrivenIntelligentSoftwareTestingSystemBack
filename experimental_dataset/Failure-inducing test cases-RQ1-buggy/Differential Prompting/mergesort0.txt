@@ -1,0 +1,1 @@
+No, there is no input that makes the two programs have different output. All the programs implement the merge-sort algorithm, and the only differences are in the conditions used to check if the input list has been completely divided, which logically are equivalent.

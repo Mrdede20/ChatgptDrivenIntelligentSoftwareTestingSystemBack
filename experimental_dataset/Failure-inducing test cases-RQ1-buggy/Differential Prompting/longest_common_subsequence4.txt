@@ -1,0 +1,14 @@
+Yes, there exists an input which makes the two programs have different output. 
+
+Here's the test case:
+
+```
+a = 'ABCD'
+b = 'DCBA'
+print(longest_common_subsequence(a, b))  # Output: 'A'
+print(longest_common_subsequence(a, b, {}))  # Output: 'ABCD'
+```
+
+The first implementation does not use memoization and will recursively compare each possible combination of substrings. In this case, it will eventually compare 'A' with 'A' and return it as the longest common subsequence.
+
+The second implementation uses memoization to store the result of already computed subproblems. Therefore, it will store the result of comparing 'ABCD' with 'DCBA' as an empty string, and compare 'BCD' with 'CBA' and 'ABCD' with 'BA' before reaching 'A' as the longest common subsequence.

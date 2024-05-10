@@ -1,0 +1,3 @@
+The intention of the given code is to implement a depth-first search algorithm to determine if a goal node is reachable from a start node in a directed graph. 
+
+The algorithm maintains a set of visited nodes, and recursively explores each unexplored successor node of the current node until either the goal node is found or all possible paths have been explored. If the goal node is found, the algorithm returns True, otherwise it returns False.

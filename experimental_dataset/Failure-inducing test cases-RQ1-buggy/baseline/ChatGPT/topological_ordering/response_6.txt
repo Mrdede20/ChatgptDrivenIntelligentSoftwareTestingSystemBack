@@ -1,0 +1,17 @@
+Possible test case:
+
+```
+# Create three interconnected nodes
+a = Node(value=1)
+b = Node(value=2, successor=a)
+c = Node(value=3, successors=[a, b])
+a.successors = [b, c]
+
+# Try to get a topological ordering of the nodes
+order = topological_ordering([a, b, c])
+
+# Check that the ordering is incorrect
+assert order != [a, b, c], "Expected a different ordering"
+```
+
+This test case creates a directed cycle between the nodes `a`, `b`, and `c`, which violates the assumption of a valid topological ordering (i.e., that for any directed edge `a -> b`, the node `a` should appear before `b` in the ordering). Therefore, the `topological_ordering` function should detect this error and return a different ordering than the original list of nodes. The test case checks that this is indeed the case by asserting that the computed `order` is not equal to the expected `[a, b, c]` list. If the function is working correctly, the test should fail with the error message "Expected a different ordering".

@@ -1,0 +1,1 @@
+It is not possible to find an input which makes these two programs have different output as they are identical. The second implementation is exactly the same as the first implementation.

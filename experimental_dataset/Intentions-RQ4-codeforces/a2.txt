@@ -1,0 +1,3 @@
+The intention of the following code is to take input in the form of test cases where each test case consists of three integers and then print the middle (second smallest) integer among the three for each test case. 
+
+The input is taken in a loop for 't' test cases and then for each test case, the three integers are input in a sorted manner using the sorted() method. Then, the second element of the sorted list is printed which is the middle integer. The loop continues until all 't' test cases have been processed.

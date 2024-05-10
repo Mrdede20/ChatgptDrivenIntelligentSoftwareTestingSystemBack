@@ -1,0 +1,5 @@
+The only difference between the two programs is that the second one specifies that the ArrayList is of type ArrayList<Integer>, whereas the first one does not include this specification. This means that the first program allows any type of ArrayList, whereas the second program explicitly restricts the ArrayList to only contain integers. 
+
+However, this difference does not affect the functionality of the program and the output should be the same for any input. 
+
+Therefore, there is no input that would cause the two programs to have different output.

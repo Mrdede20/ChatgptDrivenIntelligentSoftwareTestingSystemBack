@@ -1,0 +1,29 @@
+#PT
+assert is_valid_parenthesization("()") == True
+
+#PT
+assert is_valid_parenthesization('((()))') == True
+
+#PT
+assert is_valid_parenthesization("(())()") == True
+
+#PT
+assert is_valid_parenthesization('()') == True
+
+#PT
+assert is_valid_parenthesization('()()()') == True
+
+#PT
+assert is_valid_parenthesization("()") == True
+
+#PT
+assert is_valid_parenthesization("()()()") == True
+
+#PT
+assert is_valid_parenthesization("()") == True
+
+#PT
+assert is_valid_parenthesization("()")
+
+#PT
+assert is_valid_parenthesization("((()))") == True

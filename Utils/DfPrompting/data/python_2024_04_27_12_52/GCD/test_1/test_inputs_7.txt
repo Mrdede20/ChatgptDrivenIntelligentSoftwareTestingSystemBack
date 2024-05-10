@@ -1,6 +1,0 @@
-Test input:12
-0
-Test input:1
-5
-Test input:5
-5

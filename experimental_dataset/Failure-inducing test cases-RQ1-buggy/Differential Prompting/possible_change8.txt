@@ -1,0 +1,8 @@
+Yes, there is an input which can make the different outputs for these programs. One example input which can produce different outputs is:
+
+`coins = [1, 2, 3]`
+`total = 4`
+
+The first three programs may produce a wrong output because of the order of the condition checking in the second if statement. However, the last implementation will give the correct output since it checks for an empty list of coins before checking for a negative `total`. 
+
+You can test this input by running the programs with the test input provided above.

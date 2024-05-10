@@ -1,0 +1,1 @@
+No, both programs implement the same algorithm to generate the Pascal's Triangle, so they will always return the same output for the same input. However, there is a syntax error in the second program where the import statement should be "import java.util.ArrayList;" instead of ".util.ArrayList;".

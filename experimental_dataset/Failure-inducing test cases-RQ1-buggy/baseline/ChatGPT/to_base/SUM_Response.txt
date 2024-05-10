@@ -1,0 +1,29 @@
+#IT
+assert to_base(10, 0) == ValueError
+
+#IT
+assert to_base(16, 0) == ValueError
+
+#FF
+assert to_base(0, 2) == '0' #error ' '
+
+#IT
+assert to_base(10, 0) == ValueError
+
+#IT
+assert to_base(10, 0) == ValueError
+
+#IT
+assert to_base(15, 0) == ValueError
+
+#IT
+assert to_base(10, 0) == TypeError
+
+#IT
+assert to_base(15, 0) == ValueError
+
+#FF
+assert to_base(10, -1) == ValueError #error 0
+
+#IT
+assert to_base(17, 0) == ValueError

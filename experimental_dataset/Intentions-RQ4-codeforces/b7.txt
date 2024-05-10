@@ -1,0 +1,3 @@
+The code intends to take an integer n as input, where n represents the number of test cases. For each test case, the code takes an integer a as input, and then takes a string s as input. The code then finds the maximum ASCII value of the characters in the string s and subtracts 96 from it, and prints the result. 
+
+In essence, the code is finding the position of the highest letter in the alphabet (ignoring case), where a=1 corresponds to "a".

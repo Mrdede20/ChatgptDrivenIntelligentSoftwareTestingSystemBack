@@ -1,0 +1,1 @@
+No, there is no input that makes the two programs have different output. Both programs implement the Kadane's algorithm to find the maximum sum subarray of a given array, and this algorithm guarantees that there is only one correct answer for any given input array.

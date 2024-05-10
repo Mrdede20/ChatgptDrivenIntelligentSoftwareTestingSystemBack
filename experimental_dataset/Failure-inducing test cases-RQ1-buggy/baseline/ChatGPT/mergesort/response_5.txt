@@ -1,0 +1,25 @@
+Here's a test case that can trigger a bug in the mergesort function:
+
+arr = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]
+
+sorted_arr = mergesort(arr)
+
+assert sorted_arr == [1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 9]
+
+This test case contains repeated elements, and the bug in the mergesort function is that it doesn't preserve the relative order of equal elements in the input array. As a result, the expected sorted array contains two occurrences of the number 1 in the wrong order, which causes the test to fail.
+
+To fix the bug, the merge function should compare elements from the left and right subarrays using the less-than operator instead of the less-than-or-equal-to operator. This will ensure that the relative order of equal elements is preserved. Here's the corrected code for the merge function:
+
+def merge(left, right):
+    result = []
+    i = 0
+    j = 0
+    while i < len(left) and j < len(right):
+        if left[i] < right[j]:
+            result.append(left[i])
+            i += 1
+        else:
+            result.append(right[j])
+            j += 1
+    result.extend(left[i:] or right[j:])
+    return result

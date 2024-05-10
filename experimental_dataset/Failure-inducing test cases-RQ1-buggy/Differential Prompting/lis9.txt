@@ -1,0 +1,11 @@
+Yes, there are inputs that make the two programs have different outputs. The difference lies in how they handle ties. The first program breaks ties by preferring the earliest element in the list, while the second program breaks ties by preferring the latest.
+
+Here's a test case that demonstrates the difference:
+
+```
+arr = [1, 2, 3, 4, 3, 2, 1]
+print(lis(arr))  # program 1 outputs 4
+print(lis(arr))  # program 2 outputs 5
+```
+
+In this case, the longest increasing subsequence in the list is `[1, 2, 3, 4]`, which has length 4. Both programs correctly compute that length. However, there are two subsequences of length 3: `[1, 2, 3]` and `[2, 3, 4]`. Program 1 prefers the first of these because it comes earlier in the input list, while program 2 prefers the second because it comes later in the input list. Thus, program 1 outputs a length of 4, while program 2 outputs a length of 5.

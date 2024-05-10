@@ -1,0 +1,1 @@
+No, there is no input which makes the two programs have different output because both programs implement the same functionality of flattening a nested object/array hierarchy. However, the two programs use different implementations to achieve this result. The first program uses recursion while the second program uses iteration with an ArrayList.

@@ -1,0 +1,15 @@
+Test Case:
+
+# Test case to trigger IndexError for rows[-1] in line 9
+assert pascal(0) == [[1]]
+
+Explanation:
+
+The program is generating a Pascal triangle of n rows where each row contains the coefficients of the binomial expansion of (a+b)^n.
+
+The bug in the program occurs in line 9 when trying to access upright = rows[r - 1][c] where c is equal to r. This will result in an IndexError since rows[r-1] only has r-1 elements, and accessing the r-th element will result in an out-of-bounds access.
+
+To trigger the bug, we can call the function with n = 0 since the loop in line 3 will not execute, and the program will try to access rows[-1] in line 9, resulting in an IndexError.
+
+Therefore, the assertion assert pascal(0) == [[1]] should fail with an IndexError
+

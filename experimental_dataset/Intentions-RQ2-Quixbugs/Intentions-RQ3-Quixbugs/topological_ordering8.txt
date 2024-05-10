@@ -1,0 +1,5 @@
+The code is implementing a topological sorting algorithm which is used to produce a linear ordering of nodes in a directed acyclic graph. The algorithm takes a list of nodes representing the input graph as its argument and returns an ordered list of nodes as output.
+
+The main idea behind the algorithm is to first identify all nodes that have no incoming edges and add them to a list in any order. Then, for each node in the list, we traverse its outgoing edges and check whether all succeeding nodes are already processed or not. If all succeeding nodes are already processed, then we add the current node to our list of ordered nodes. We repeat this process until all nodes are ordered.
+
+The function returns the ordered list of nodes if the input graph is acyclic. In case the graph contains cycles, the algorithm will not terminate and will raise an exception.

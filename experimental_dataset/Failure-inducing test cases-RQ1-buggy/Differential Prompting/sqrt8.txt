@@ -1,0 +1,3 @@
+Yes, there is an input that makes the two programs have different output. One such example input is x = 0.25 and epsilon = 0.001.
+
+Using these input values, the first program will output 0.5, while the second program will output 0.49999999999999994. This is because the first program uses `approx ** 2` which is equivalent to `approx * approx` and thus more accurate in floating point arithmetic. The second program uses `approx * approx`, which can have slight inaccuracies due to floating point rounding errors.

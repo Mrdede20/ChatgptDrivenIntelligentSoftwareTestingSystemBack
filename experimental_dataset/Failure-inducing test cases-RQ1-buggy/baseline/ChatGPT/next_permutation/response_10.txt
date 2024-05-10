@@ -1,0 +1,13 @@
+Test case:
+
+perm = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+This test case triggers a bug in the program when perm is the largest possible permutation of length 9 (i.e., [9, 8, 7, 6, 5, 4, 3, 2, 1]). The program should return None in this case because there is no larger permutation of perm. However, the program returns an incorrect permutation [9, 8, 7, 6, 5, 4, 1, 2, 3].
+
+Expected output:
+
+None
+
+Actual output:
+
+[9, 8, 7, 6, 5, 4, 1, 2, 3]

@@ -1,0 +1,17 @@
+Yes, there is an input that will make the two programs output different results. One example could be:
+
+Input:
+3
+98 abcdefghijklmnopqrstuvwxyz
+99 abcdefghijklmnopqrstuvwxyz
+97 bcdefghijklmnopqrstuvwxyz
+
+In the first program, the output would be:
+26
+27
+2
+
+In the second program, the output would be:
+2
+3
+2

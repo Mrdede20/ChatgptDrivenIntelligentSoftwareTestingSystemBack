@@ -1,0 +1,30 @@
+#PT
+assert pascal(0) == [[1]] # base case
+
+#PT
+assert pascal(0) == [[1]]
+
+#PT
+expected = [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
+assert pascal(5) == expected
+
+#PT
+assert pascal(1) == [[1]]
+
+#PT
+assert pascal(0) == [[1]]
+
+#PT
+assert pascal(0) == [[1]]
+
+#PT
+assert pascal(0) == [[1]]
+
+#FF
+assert pascal(0) == [[]]
+
+#PT
+assert pascal(0) == [[1]]
+
+#PT
+assert type(pascal(3)) == list, "Test Case 1 Failed"

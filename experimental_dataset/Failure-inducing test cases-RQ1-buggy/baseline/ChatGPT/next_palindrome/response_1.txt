@@ -1,0 +1,9 @@
+Test case:
+
+digit_list = [9, 9, 1, 2, 3]
+expected_output = [9, 9, 2, 0, 0]
+
+Explanation:
+The input digit_list is not a palindrome. The expected output is the next palindrome number from the input list. However, the program returns an incorrect result. The problem is that the while loop in the next_palindrome function does not handle the case where the first half of the list needs to be incremented multiple times to reach the next palindrome. In this test case, the first half of the list needs to be incremented twice to reach the expected output. However, the while loop in the function only increments it once, leading to an incorrect output.
+
+Therefore, the test case will fail with the actual output being [9, 9, 2, 1, 3].

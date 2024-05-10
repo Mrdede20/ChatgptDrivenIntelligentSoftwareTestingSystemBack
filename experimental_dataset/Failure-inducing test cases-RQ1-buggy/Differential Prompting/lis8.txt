@@ -1,0 +1,11 @@
+Yes, there are inputs that can make these two programs produce different outputs. This can happen when all the elements in the input array are distinct but negative.
+
+For example, consider the input array `[-3, -2, -1, -4, -5]`. The first program will output 3, which is the length of the longest increasing subsequence (`[-3, -2, -1]`). However, the second program will output 2, which is the length of the longest increasing subsequence (`[-3, -1]` or `[-2, -1]`). 
+
+To see why this happens, note that in the first program, the condition `val < arr[ends[length + 1]]` is only checked if `length == longest`, whereas in the second program, the `longest` variable is updated after the condition is checked. So in the first program, the element `-4` is added to the longest increasing subsequence (of length 3), whereas in the second program, it is not.
+
+You can test this with the following code:
+
+```
+print(lis([-3, -2, -1, -4, -5]))  # Output: 3
+```

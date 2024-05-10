@@ -1,0 +1,21 @@
+response@ChatGPT:
+
+
+Yes, a potential test case to trigger a bug in this program is inputting a negative value for n. For example, pascal(-1) could cause issues with the for loop trying to iterate from 1 to -1, or the program may not handle negative indices properly when accessing elements of the rows list.
+
+request@user:
+Give us such test case. Use assert.
+
+response@ChatGPT:
+Here's a test case for the pascal function:
+
+def test_pascal():
+\    assert pascal(0) == [[1]]
+\    assert pascal(1) == [[1], [1, 1]]
+\    assert pascal(2) == [[1], [1, 1], [1, 2, 1]]
+\    assert pascal(3) == [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1]]
+
+test_pascal()
+
+This test case checks if the function returns the correct results for different input values of n. It uses the assert statement to test the output values against expected values. If any of the tests fail, it will raise an AssertionError.
+

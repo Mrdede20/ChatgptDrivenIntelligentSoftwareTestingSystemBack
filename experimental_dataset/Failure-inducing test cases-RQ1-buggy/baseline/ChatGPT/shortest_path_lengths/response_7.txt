@@ -1,0 +1,18 @@
+Test case:
+
+n = 4
+length_by_edge = {(0, 1): 1, (1, 2): 2, (2, 3): 3, (3, 0): 4}
+result = shortest_path_lengths(n, length_by_edge)
+assert result[(0, 2)] == 6
+
+Explanation:
+The program above implements the Floyd-Warshall algorithm to find the shortest path lengths between all pairs of nodes in a weighted graph. The test case creates a graph with four nodes and four edges, such that there is no direct edge between nodes 0 and 2. However, the expected result is 6, which is the length of the path that goes through nodes 1 and 3.
+
+The bug in the program is that it is not handling disconnected graphs correctly. In the case where there is no path between two nodes, the program should return infinity as the length of the path. However, since the initial value of all path lengths is infinity, the update statement in line 5 is overriding the correct value for disconnected nodes. This results in the program returning 0 as the length of the path between disconnected nodes, which causes the test to fail.
+
+To fix the bug, line 5 should be modified to only update the path length if it is smaller than the current value. Here is the corrected line:
+
+length_by_path[i, j] = min(
+    length_by_path[i, j],
+    length_by_path[i, k] + length_by_path[k, j]
+)

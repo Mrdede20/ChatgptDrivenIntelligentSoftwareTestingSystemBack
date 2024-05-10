@@ -1,0 +1,11 @@
+The code defines a function called `knapsack` to solve the Knapsack problem.
+
+The Knapsack problem is a famous algorithmic problem in computer science, where given a set of items, each with a weight and a value, the goal is to pack a knapsack of limited capacity with the items in such a way that maximizes the total value of the items packed, without exceeding the maximum weight capacity of the knapsack.
+
+The `knapsack` function takes two inputs: 
+1. `capacity`: an integer that represents the maximum weight the knapsack can hold 
+2. `items`: a list of tuples where each tuple contains 2 integers: the first integer represents the weight of an item and the second integer represents the value of an item.
+
+The function returns the maximum total value of any combination of items that the knapsack can hold without exceeding its maximum weight capacity.
+
+The function implements dynamic programming by initializing a defaultdict to store the maximum total value that can be obtained given a specific weight threshold and a subset of the items list. It then iterates through the items and capacity to find the maximum value that can be obtained given the current item and the capacity of the knapsack. The final maximum value is returned.

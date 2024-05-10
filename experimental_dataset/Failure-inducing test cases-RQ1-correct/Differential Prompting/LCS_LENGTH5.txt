@@ -1,0 +1,1 @@
+No, there is no input that can make the two programs have different output. They both implement the standard dynamic programming approach to finding the longest common subsequence of two strings.

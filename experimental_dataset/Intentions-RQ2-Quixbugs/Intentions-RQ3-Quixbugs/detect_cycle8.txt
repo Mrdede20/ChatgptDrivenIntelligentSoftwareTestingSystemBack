@@ -1,0 +1,5 @@
+This code aims to implement the "tortoise-and-hare" method of detecting if a given singly linked list contains a cycle or not. 
+
+In the algorithm, two pointers are used, one moving at twice the rate (hare), and the other moving at half the rate (tortoise). If there is no cycle present in the linked list, then the hare pointer will reach the end of the list, and the function will return False. However, if there is a cycle in the linked list, the hare and tortoise pointers will eventually meet, and the function will return True, indicating the presence of a cycle.
+
+This method has a time complexity of O(n), where n is the number of nodes in the linked list.

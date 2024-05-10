@@ -1,0 +1,34 @@
+#PT
+s = "ABCD"
+t = "ACDF"
+expected_output = 2
+assert lcs_length(s, t) == expected_output
+
+#FF
+assert lcs_length("abcde", "ace") == 3
+
+#PT
+assert lcs_length("ABCDEF", "DEF") == 3
+
+#FF
+assert lcs_length("ABCDGH", "AEDFHR") == 3
+
+#PT
+assert lcs_length("abcd", "bcd") == 3
+
+#FF
+assert lcs_length("ABCDGH", "AEDFHR") == 3
+
+#FF
+assert lcs_length('ABCD', 'AEBD') == 3
+
+#FF
+assert lcs_length('ABCD', 'ABED') == 3
+
+#FF
+assert lcs_length('abcdef', 'abdefg') == 4
+
+#PT
+s = ''
+t = ''
+assert lcs_length(s, t) == 0

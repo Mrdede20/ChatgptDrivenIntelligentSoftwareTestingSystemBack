@@ -1,0 +1,1 @@
+No, both programs have the same functionality and the same output for any input. They just implement the Floyd's cycle-finding algorithm in different ways.

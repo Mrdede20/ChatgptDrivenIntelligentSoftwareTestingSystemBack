@@ -1,0 +1,1 @@
+No, there is no input that makes the two programs output different results. The `main` method in both programs ends up calling `lastIndexOf` with the same arguments, so it will always return the same value. The `wrap` methods in each program also perform similar line wrapping logic, so they should produce the same output given the same inputs.

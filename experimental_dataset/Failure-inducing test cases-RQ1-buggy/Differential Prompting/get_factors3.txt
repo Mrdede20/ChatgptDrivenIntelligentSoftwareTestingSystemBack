@@ -1,0 +1,1 @@
+Yes, there are cases for which the two programs will give different output. One such case is when the input value is a prime number. For instance, the input value of 7 will cause the first program to return [7] while the second and third programs return [ ].

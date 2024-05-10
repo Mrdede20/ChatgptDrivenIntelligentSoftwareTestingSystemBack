@@ -1,0 +1,1 @@
+No, both programs implement binary search algorithm to search for an element x in a sorted integer array arr. The first program uses a recursive approach while the second one uses an iterative approach. However, both will produce the same output for any input array and element x.

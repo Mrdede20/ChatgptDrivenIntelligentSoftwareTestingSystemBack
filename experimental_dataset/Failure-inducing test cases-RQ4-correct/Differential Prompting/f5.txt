@@ -1,0 +1,23 @@
+Yes, the two programs can have different output for some input.
+
+Test input:
+
+3
+4 20 2
+4 5 7 10
+5 20 3
+5 4 3 7 9
+5 30 3
+5 4 3 7 9
+
+Expected output for program 1:
+
+1
+Impossible
+2
+
+Expected output for program 2:
+
+1
+Impossible
+1

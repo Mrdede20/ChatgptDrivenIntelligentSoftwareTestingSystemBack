@@ -1,0 +1,23 @@
+Yes, there are input values that can make the two programs have different output. Here's an example test case:
+
+Input:
+```
+1
+4 1 3
+1 2 1
+2 3 1
+3 4 1
+```
+
+Expected output for the first program:
+```
+NO
+```
+
+Expected output for the second program:
+```
+YES
+```
+
+Explanation:
+In this input graph, there is only one path from node 1 to node 3: `[1, 2, 3]`. The XOR sum of the edges on this path is `1 ^ 1 = 0`. However, there is another path from node 1 to node 3: `[1, 2, 3, 4]`. The XOR sum of the edges on this path is also `1 ^ 1 ^ 1 = 1`. Therefore, there exist two XOR sums that are the same, and the second program should return "YES". The first program considers only paths of length 2, so it will return "NO".

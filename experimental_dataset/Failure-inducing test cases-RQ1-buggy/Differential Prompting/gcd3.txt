@@ -1,0 +1,16 @@
+No, both programs implement the same logic for finding the greatest common divisor (GCD), using the Euclidean algorithm. The first program uses recursion while the second one uses a while loop, but they should produce the same output for any given inputs.
+
+Here's a test case using Python to check that they produce the same output for a sample input:
+
+```
+a = 60
+b = 48
+
+# using first gcd function
+print(gcd(a, b))
+
+# using second gcd function
+print(gcd(a, b))
+```
+
+Both functions should output 12 for these values of a and b.

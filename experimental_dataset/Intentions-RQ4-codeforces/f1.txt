@@ -1,0 +1,5 @@
+This is a code for a problem where given a list of integer values A and two integers c and d, we need to find the maximum value of integer k such that there exists some integers a1,a2,...,ak where we can choose d integers from them and sum of those d integers greater than or equal to c.
+
+The code takes an integer input n from the user, we have to read n test cases. Then, the code takes an integer n and two integers c and d as input values for each test case and reads the list A of n integers.
+
+Then, it sorts the list A in descending order and there are three possible outcomes. If the sum of the first d integers in the sorted A list is greater than or equal to c, then it prints "Infinity". If the product of the first integer in the sorted A list and integer d is less than c, then it prints "Impossible". Otherwise, it implements a binary search algorithm to find the maximum integer k such that there exists some integers a1,a2,...,ak where we can choose d integers from them and sum of those d integers greater than or equal to c and prints k-1.

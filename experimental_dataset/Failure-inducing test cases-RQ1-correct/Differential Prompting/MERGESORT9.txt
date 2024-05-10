@@ -1,0 +1,1 @@
+No, there is no input that can make the two programs have different output because both programs implement the merge sort algorithm which guarantees the same output for any input. The only difference between the two programs is in small implementation details such as naming conventions and the use of built-in ArrayList vs. manually resizing ArrayList.

@@ -1,0 +1,1 @@
+No, these two programs compute the square root of x using the same algorithm, and will return the same output for any input x and epsilon. The only differences are the variable names and minor implementation details.

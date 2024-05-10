@@ -1,0 +1,18 @@
+Yes, there might be inputs for which the two programs have different outputs. 
+
+Here's one such example input:
+
+Input:
+2
+3
+0 1 0
+4
+1 0 0 1
+
+Output of first program:
+2
+4
+
+Output of second program:
+1
+3

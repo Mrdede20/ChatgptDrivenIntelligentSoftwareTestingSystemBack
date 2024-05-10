@@ -1,0 +1,7 @@
+The intention of this code is to calculate the Levenshtein distance between two strings. The Levenshtein distance is defined as the minimum number of single-character edits (insertions, deletions or substitutions) needed to change one string into the other. 
+
+The function takes in two arguments, source and target, which are the two strings to calculate the distance between. 
+
+The function recursively works its way through the characters of both strings, comparing them at each step. If the characters are the same, the function calls itself with the next character of each string. If the characters are different, the function recursively calls itself with the target string with one character removed, the source string with one character removed, and with both strings with one character removed. The minimum of the three resulting distances is returned plus one (to account for the single edit made). 
+
+Finally, if either the source or target string is an empty string, the function returns the length of the other string as the distance.

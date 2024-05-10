@@ -1,0 +1,15 @@
+Test Case:
+
+subsequences(5, 3, 2)
+
+Expected Output:
+
+An error or exception should be thrown, as the range given is invalid for this function. The function expects the value of 'a' to be less than or equal to 'b', but in this case, 'a' is 5 and 'b' is 3. 
+
+Actual Output:
+
+The function runs without error and returns an empty list, which is incorrect. 
+
+Reason:
+
+The code should handle such an invalid input range by throwing an exception or returning an error message, but it does not do so. As a result, a test failure occurs.

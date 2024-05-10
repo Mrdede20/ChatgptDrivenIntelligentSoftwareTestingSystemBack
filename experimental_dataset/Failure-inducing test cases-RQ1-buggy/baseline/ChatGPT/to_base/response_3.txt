@@ -1,0 +1,14 @@
+Test case:
+
+Input:
+num = 0
+b = 2
+
+Expected output:
+'0'
+
+Actual output:
+''
+
+Explanation:
+The program is designed to convert a decimal number to a string representation of a number in a specified base. In this test case, the input number is 0 and the base is binary (base 2). According to the formula used in the program, the remainder of 0 divided by 2 is 0 and the quotient is also 0. Therefore, the loop of the program should only run once and the result should be '0'. However, the program returns an empty string instead. This is a bug and the program fails to compute the correct result for this input.

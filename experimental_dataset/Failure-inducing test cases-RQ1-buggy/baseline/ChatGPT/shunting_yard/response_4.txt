@@ -1,0 +1,14 @@
+Test case:
+- Input: shunting_yard(['+', 3, '-', 2, '*', 5])
+- Expected output: [3, 2, 5, '*', '-', '+']
+- Actual output: [3, 2, 5, '*', '-', '+']
+
+Test case:
+- Input: shunting_yard(['/', 4, 0])
+- Expected output: Exception: Division by zero error
+- Actual output: rpntokens = [4, 0], opstack = ['/'] -> Exception: Division by zero error is not handled in the code
+
+Test case:
+- Input: shunting_yard(['+', 2, '*', 3, 'x'])
+- Expected output: Exception: Invalid input error
+- Actual output: rpntokens = [2, 3], opstack = ['*', '+'] -> Exception: Invalid input error is not handled in the code

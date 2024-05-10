@@ -1,0 +1,9 @@
+Yes, there is an input which makes the two programs have different output. One such input could be: 
+```
+shunting_yard([2, '*', 3, '/', 4])
+```
+The first program would give the output `[2, '*', 3, '/', 4]`, while the second program would give the output `[2, 3, '*', 4, '/']`. 
+
+This is because the `while` loop in the first program's `if` block only checks if the current operator has lower precedence than the topmost operator in the stack, while the `while` loop in the second program's `elif` block checks if the current operator has lower *or equal* precedence than the topmost operator in the stack. 
+
+In the input `[2, '*', 3, '/', 4]`, the `*` operator has higher precedence than `/`, so in the first program it will be added to the stack, but in the second program it will be immediately added to the output queue since it has equal precedence to the topmost operator, which is empty at that point.

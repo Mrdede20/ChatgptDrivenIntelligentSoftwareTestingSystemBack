@@ -1,0 +1,7 @@
+The intention of this code is to detect whether a given linked list contains a cycle or not using the "tortoise-and-hare" method of cycle detection. 
+
+The way it works is by setting two pointers, a tortoise and a hare, at the beginning of the linked list. The hare moves twice as fast as the tortoise, and if there is a cycle in the linked list, the hare will eventually catch up to the tortoise at some point during its traversal. 
+
+If there is no cycle in the linked list, the hare will eventually reach the end of the list and the loop will terminate. 
+
+The function returns `True` if a cycle is detected, and `False` otherwise.

@@ -1,0 +1,5 @@
+The intention of this code is to implement a function called "to_base" that takes in two parameters: "num" - a base-10 integer to be converted and "b" - the target base to convert the number to. The function then converts the given number into the target base and returns the resulting string.
+
+The function first initializes an empty string called "result" and creates an alphabet string that has digits 0-9 and characters A-Z. Then, through a while loop, the function uses the modulo and floor division operators to convert each digit of the given number into the target base, adding the corresponding character from the "alphabet" string to the "result" variable. Finally, the function returns the "result" string.
+
+This code can be used to help users perform integer base conversion from base-10 to another base from 2 to 36.

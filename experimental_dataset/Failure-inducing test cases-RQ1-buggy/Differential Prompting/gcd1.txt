@@ -1,0 +1,16 @@
+No, the two `gcd` functions will always produce the same output for any given input. 
+
+Here's a test case to confirm that:
+
+```python
+a = 54
+b = 24
+
+# First implementation
+assert gcd(a, b) == 6
+
+# Second implementation
+assert gcd(a, b) == 6
+```
+
+Both implementations return `6` for `gcd(54, 24)`.

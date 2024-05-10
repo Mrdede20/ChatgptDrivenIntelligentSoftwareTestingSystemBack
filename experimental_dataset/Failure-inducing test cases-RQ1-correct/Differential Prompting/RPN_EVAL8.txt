@@ -1,0 +1,1 @@
+There is no input that would make the two programs have different output. The second one is just a refactored version of the first one, which uses generics and the apply() method of the BinaryOperator interface instead of casting and using the call() method of the same interface.

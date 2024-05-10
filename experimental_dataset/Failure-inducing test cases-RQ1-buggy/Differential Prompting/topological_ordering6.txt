@@ -1,0 +1,25 @@
+Yes, there are inputs that can make these two programs have different output. Consider the following example:
+
+```
+node_a = Node("A")
+node_b = Node("B")
+node_c = Node("C")
+node_d = Node("D")
+
+node_a.add_outgoing(node_b)
+node_a.add_outgoing(node_c)
+node_b.add_outgoing(node_d)
+node_c.add_outgoing(node_d)
+node_d.add_incoming(node_b)
+node_d.add_incoming(node_c)
+
+# Running the first version of the function
+ordered_nodes_1 = topological_ordering([node_a, node_b, node_c, node_d])
+print(ordered_nodes_1)
+
+# Running the second version of the function
+ordered_nodes_2 = topological_ordering([node_a, node_b, node_c, node_d])
+print(ordered_nodes_2)
+```
+
+The first version of the function will output `['A', 'B', 'C', 'D']`, while the second version will output `['A', 'C', 'B', 'D']`.

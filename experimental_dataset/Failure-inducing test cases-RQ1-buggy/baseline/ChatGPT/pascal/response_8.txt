@@ -1,0 +1,9 @@
+Test Case:
+
+assert pascal(0) == [[]]
+
+Explanation:
+
+The program is expected to return a nested list containing the rows of Pascal's Triangle up to the nth row. However, if the input n is 0, the function will return [[1]], which is incorrect. The expected output for n = 0 should be [[]], an empty nested list.
+
+By running the above test case, the function will fail to return the expected output, thus indicating the presence of a bug in the function for handling the input case of 0.

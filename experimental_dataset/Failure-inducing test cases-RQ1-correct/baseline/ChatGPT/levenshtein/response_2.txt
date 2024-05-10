@@ -1,0 +1,30 @@
+response@ChatGPT:
+
+
+Yes, there are several potential test cases that could trigger a bug in this program. For example:
+
+1. If the input strings are very long (e.g. thousands of characters), the program may run out of stack space and crash with a "maximum recursion depth exceeded" error.
+2. If the input strings contain non-ASCII characters (e.g. accented letters or symbols), the program may not handle them correctly and produce incorrect results.
+3. If the input strings are very similar to each other except for a single character, the program may not produce the correct edit distance. For example, if the input strings are "cat" and "bat", the correct output should be 1 (since only one letter needs to be changed), but the program may return a higher value because it is exploring all possible edit paths.
+
+To trigger these bugs, you could create test cases that consist of very long strings, strings with unusual characters, and pairs of strings that are very similar except for a single character difference.
+
+request@user:
+Give us such test case. Use assert.
+
+response@ChatGPT:
+# Test Case 1 - Words are same
+assert levenshtein("hello", "hello") == 0
+
+# Test Case 2 - Words differ by one character
+assert levenshtein("hello", "hillo") == 1
+
+# Test Case 3 - Words differ by multiple characters
+assert levenshtein("kitten", "sitting") == 3
+
+# Test Case 4 - One of the words is an empty string
+assert levenshtein("", "hello") == 5
+
+# Test Case 5 - Both words are empty strings
+assert levenshtein("", "") == 0
+

@@ -1,0 +1,7 @@
+The given piece of code is solving the Knapsack problem in Python. The Knapsack problem is a problem in combinatorial optimization. The goal is to fill the knapsack with the most valuable items, without exceeding the weight capacity of the knapsack.
+
+The function `knapsack` takes two parameters: `capacity` (which is the maximum weight the knapsack can hold) and `items` (which is a list of tuples, each representing an item with its weight and value). 
+
+The function first initializes a dictionary called `memo` to store the maximum value that can be obtained for a given combination of items and capacity. The dictionary is initialized with a `defaultdict` so that it returns 0 when a new key is accessed.
+
+Next, the function loops through the items and the capacity to fill up `memo` dictionary with the maximum values that can be obtained for each combination of items and capacity up to the maximum given capacity. Finally, the function returns the maximum value that can be obtained for the given capacity of the knapsack.

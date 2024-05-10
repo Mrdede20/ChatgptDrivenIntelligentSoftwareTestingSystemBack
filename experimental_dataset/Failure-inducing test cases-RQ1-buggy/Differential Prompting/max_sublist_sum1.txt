@@ -1,0 +1,7 @@
+Yes, there is an input that can give different output for the provided program and the three different implementations below it. Here is the test case with python:
+
+```
+arr = [-1, 2, -3, 4, -5, 6] 
+# The output for the provided program and first implementation is 7, 
+# whereas the output for the other two implementations is 6.
+```

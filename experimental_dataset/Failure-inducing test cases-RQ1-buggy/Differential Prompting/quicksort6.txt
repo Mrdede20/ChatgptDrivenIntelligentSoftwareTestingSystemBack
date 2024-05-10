@@ -1,0 +1,7 @@
+Yes, there is an input for which the two programs will produce different outputs. For example, consider the array `[2, 2, 2, 2]`. 
+
+The first program will divide the array into `[]`, `[2, 2, 2]`, and `[]` (pivot is `2`). Then, it will recursively sort `[]` and `[]`, which both return `[]`, and concatenate with `[2,2,2]`, resulting in `[2,2,2]`. 
+
+The second program will also divide the array into `[]`, `[2, 2, 2, 2]`, and `[]` (pivot is `2`). Then, it will recursively sort `[]` and `[2,2,2]`, which both return `[]`, and concatenate with `[2,2,2,2]`, resulting in `[2,2,2,2]`. 
+
+Thus, the two programs will return different outputs for the input array `[2,2,2,2]`.

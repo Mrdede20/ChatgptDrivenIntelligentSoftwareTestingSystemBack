@@ -1,0 +1,10 @@
+Yes, there can be input that makes the two programs have different output. 
+
+For example, consider the following input:
+```
+a = "AGGTAB"
+b = "GXTXAYB"
+```
+The first program will return "GTAB" as the longest common subsequence, while the second program will return "GAB". 
+
+You can test this by running both programs with the above input and comparing the output.

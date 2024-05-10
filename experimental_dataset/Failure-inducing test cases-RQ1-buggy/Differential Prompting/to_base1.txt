@@ -1,0 +1,8 @@
+Yes, there is an input that can make the two programs output different results. Here's a test case to demonstrate it:
+
+```
+num = 31
+base = 2
+```
+
+The expected output from the first two programs is `11111`, while the expected output from the third program is `11111`. The difference is caused by the for loop in the third program, which iterates `num` times instead of until `num == 0`. This causes the loop to run 31 times and produce an extra digit in the result. To fix the third program, you can change the for loop condition to `while num > 0`.

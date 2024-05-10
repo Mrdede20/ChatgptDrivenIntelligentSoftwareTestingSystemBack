@@ -1,0 +1,7 @@
+The two programs have different imports:
+
+First program: `import java.util.*;`
+
+Second program: `import .util.ArrayList;`
+
+If the user tries to input an ArrayList from a different package than `java.util`, the second program will not compile since it is trying to import an ArrayList from the current package (denoted by the leading period). Therefore, the two programs will have different outputs for such inputs.

@@ -1,0 +1,3 @@
+This code defines a class named `Solution`. The class has a method named `BinaryInversions` that takes two arguments `n` and `bits`. `n` is an integer, while `bits` is a list of integers consisting of 0's and 1's. The method returns the maximum inversions count.
+
+The program runs a loop `t` times, gets the input integer `n` and a list `bits`, and calls the `BinaryInversions` method of the `Solution` class while passing these inputs. The outputs from the `BinaryInversions` method are then printed. The inputs for this program should come from the standard input, and the outputs are displayed on the standard output. The `stdin` and `stdout` methods have been imported from the `sys` module.

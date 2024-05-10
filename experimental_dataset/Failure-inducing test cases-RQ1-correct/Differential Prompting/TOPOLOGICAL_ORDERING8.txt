@@ -1,0 +1,7 @@
+Yes, the two programs have different implementations for calculating the topological order of a directed acyclic graph.
+
+The first program iterates over the nodes of the directed graph and identifies nodes that do not have any predecessors. These nodes are added to a list of orderedNodes. Then, for each node in orderedNodes, we add its successors to the list if all of its predecessors are already in the list. This continues until all nodes are present in orderedNodes.
+
+The second program creates an orderedNodes list in a similar manner, but instead of iterating through the nodes, it iterates through the nodes with zero in-degree, and keeps a count of in-degree for each node. It removes nodes with in-degree 0 from the orderedNodes list and subtracts one from the in-degree of every node adjacent to the removed node in the directed graph. This process continues until no more nodes with 0 in-degree are left.
+
+Although both methods should deliver the same result for a directed acyclic graph, the two methods use different algorithms that can produce different results for graphs containing cycles or other complexities.

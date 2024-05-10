@@ -1,0 +1,9 @@
+Test case:
+text = "the quick brown fox jumps over the lazy dog"
+cols = 10
+expected output = ['the quick', 'brown fox', 'jumps over', 'the lazy', 'dog']
+
+However, when this test case is executed, the function returns the following output:
+['the quick', 'brown fox', 'jumps over', 'the lazy dog']
+
+This indicates that when the function encounters the last word in the text and there are no more spaces to split the text into lines of the desired column width, it fails to add the last line to the list of lines. This is a bug as the last line should still be included in the output.

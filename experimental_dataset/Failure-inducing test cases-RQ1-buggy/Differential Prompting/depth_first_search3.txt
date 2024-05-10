@@ -1,0 +1,1 @@
+Unfortunately, both programs are identical, so there cannot be a test case where they produce different outputs.

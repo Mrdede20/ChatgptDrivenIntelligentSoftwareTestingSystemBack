@@ -1,0 +1,49 @@
+#FT
+arr = [1, 2, 3, 4, 5]
+target = 6
+assert find_in_sorted(arr, target) == -1
+
+#PT
+arr = [1, 2, 3, 4, 5]
+target = 1
+assert find_in_sorted(arr, target) == 0
+
+#PT
+arr = [1, 2, 3, 4, 5]
+target = 5
+assert find_in_sorted(arr, target) == 4
+
+#PT
+arr = [1]
+target = 1
+assert find_in_sorted(arr, target) == 0
+
+#PT
+arr = [1, 2, 3, 4]
+target = 3
+assert find_in_sorted(arr, target) == 2
+
+#PT
+arr = [1, 2, 3, 4, 5]
+target = 3
+assert find_in_sorted(arr, target) == 2
+
+#PT
+arr = [1, 2, 2, 3, 4]
+target = 2
+assert find_in_sorted(arr, target) == 1 or find_in_sorted(arr, target) == 2
+
+#FT
+arr = [1, 2, 2, 3, 4]
+target = 5
+assert find_in_sorted(arr, target) == -1
+
+#PT
+arr = []
+target = 1
+assert find_in_sorted(arr, target) == -1
+
+#PT
+arr = [-4, -3, -2, -1]
+target = -2
+assert find_in_sorted(arr, target) == 2

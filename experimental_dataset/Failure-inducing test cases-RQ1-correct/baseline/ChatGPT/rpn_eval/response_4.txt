@@ -1,0 +1,24 @@
+response@ChatGPT:
+
+
+One possible test case that could trigger a bug in this program is:
+
+rpn_eval([5, 6, '+', 7, '*'])
+
+This test case evaluates the expression "5 + 6 * 7" in reverse Polish notation, which should result in the value 47. However, if there is a bug in the program, it may produce an incorrect result or raise an exception. Specifically, the bug may occur if the program does not correctly handle the order of operations (multiplication before addition), or if there is a mistake in the implementation of the stack operations (e.g. pushing and popping values in the wrong order).
+
+request@user:
+Give us such test case. Use assert.
+
+response@ChatGPT:
+
+
+# Test cases for rpn_eval function
+
+def test_rpn_eval():
+    assert rpn_eval([1.0, 2.0, '+']) == 3.0
+    assert rpn_eval([3.0, 4.0, '-', 5.0, '*']) == -5.0
+    assert rpn_eval([7.0, 2.0, '/', 6.0, '*']) == 21.0
+    assert rpn_eval([1.0, 2.0, '*', 3.0, 4.0, '+', '+']) == 11.0
+    assert rpn_eval([2.0, 3.0, '/', 4.0, '*', 5.0, '-', 6.0, '+']) == -1.0
+

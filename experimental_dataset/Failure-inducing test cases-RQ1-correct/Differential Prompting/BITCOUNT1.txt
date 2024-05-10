@@ -1,0 +1,1 @@
+No, both programs are using the same logic to count the number of set bits (or 1s) in an integer. The only difference is the condition in the while loop - `n != 0` versus `n > 0` - but that does not affect the output in any way for all possible inputs. So, the output of both programs will always be the same for any input.

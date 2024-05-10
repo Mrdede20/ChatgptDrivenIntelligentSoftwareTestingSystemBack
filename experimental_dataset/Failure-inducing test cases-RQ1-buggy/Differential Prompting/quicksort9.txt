@@ -1,0 +1,11 @@
+Yes, there is an input that can make the two programs have different output. 
+
+Test case:
+
+quicksort([1, 5, 2, 4, 3]) 
+
+In the first version of the code, the pivot is the first element in the array (i.e. 1), and the lesser list is created by selecting all elements in the array that are less than the pivot (i.e. [5, 2, 4, 3]). Similarly, the greater list is created by selecting all elements in the array that are greater than or equal to the pivot (i.e. []). Finally, the function recursively sorts the lesser and greater lists and combines them with the pivot to return the sorted list: [1, 2, 3, 4, 5].
+
+In the second version of the code, the pivot is again the first element in the array (i.e. 1), but this time the lesser list is created by selecting all elements in the array that are less than or equal to the pivot (i.e. [1, 2, 4, 3]). Similarly, the greater list is created by selecting all elements in the array that are greater than the pivot (i.e. [5]). Finally, the function recursively sorts the lesser and greater lists and combines them with the pivot to return the sorted list: [1, 2, 3, 4, 5]. 
+
+Thus, the output of the two programs is the same for this input: [1, 2, 3, 4, 5].

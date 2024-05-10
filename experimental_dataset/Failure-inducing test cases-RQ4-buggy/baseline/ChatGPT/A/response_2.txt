@@ -1,0 +1,14 @@
+response@ChatGPT:
+Test case:
+Input:
+2
+2 5 7
+4 9 1
+Expected Output:
+5
+4
+
+Actual Output:
+5
+9
+

@@ -1,0 +1,1 @@
+No, both programs use the same algorithm to solve the Tower of Hanoi problem, and they will produce the same output given the same input. However, the implementation in the second program is simpler and more readable.

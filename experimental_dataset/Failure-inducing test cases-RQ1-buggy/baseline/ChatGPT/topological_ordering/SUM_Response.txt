@@ -1,0 +1,106 @@
+#IT
+nodes = [Node(value=1, outgoing_nodes=[2]), Node(value=2, outgoing_nodes=[3]), Node(value=3, outgoing_nodes=[1])] 
+assert topological_ordering(nodes) == []
+
+#IT
+nodes = [
+    Node("A", successors=[Node("C"), Node("B")]), 
+    Node("B", predecessors=[Node("A"), Node("C")]), 
+    Node("C", predecessor=Node("A"), successors=[Node("B"), Node("D")]),
+    Node("D", predecessor=Node("C"))
+]
+assert topological_ordering(nodes) == ["A", "C", "B", "D"]
+
+#PT
+nodes = [Node(value="A", successors=[Node(value="B")]), Node(value="B", predecessors=[Node(value="A")])]
+assert topological_ordering(nodes) == [Node(value="A"), Node(value="B")] #A B
+for x in topological_ordering(nodes):
+    print(x.value, end=" ")
+
+#FF
+nodes = [Node(1), Node(2), Node(3)]
+nodes[0].outgoing_nodes.append(nodes[1])
+nodes[1].outgoing_nodes.append(nodes[2])
+nodes[2].outgoing_nodes.append(nodes[0])
+assert topological_ordering(nodes) == Exception #error 1 2 3
+for x in topological_ordering(nodes):
+    print(x.value, end=" ")
+
+#FF
+nodes = []
+node1 = Node(value=1)
+node2 = Node(value=2)
+node3 = Node(value=3)
+node1.successors = [node2]
+node2.predecessors = [node1]
+node2.successors = [node3]
+node3.predecessors = [node2]
+node3.successors = [node1]
+nodes = [node1, node2, node3]
+assert topological_ordering(nodes) == None #error 1 2 3
+for x in topological_ordering(nodes):
+    print(x.value, end=" ")
+
+#FF
+a = Node(value=1)
+b = Node(value=2, successor=a)
+c = Node(value=3, successors=[a, b])
+a.successors = [b, c]
+order = topological_ordering([a, b, c])
+assert order != [a, b, c], "Expected a different ordering" #error 1 2 3
+for x in topological_ordering([a, b, c]):
+    print(x.value, end=" ")
+
+#FF
+nodes = []
+node1 = Node(value=1)
+node2 = Node(value=2)
+node3 = Node(value=3)
+node4 = Node(value=4)
+node1.successors = [node2]
+node2.successors = [node3]
+node3.successors = [node4]
+node4.successors = [node2]
+nodes.append(node1)
+nodes.append(node2)
+nodes.append(node3)
+nodes.append(node4)
+assert topological_ordering(nodes) == [node1, node2, node3, node4] #1 2 3 4
+print("\n")
+for x in topological_ordering(nodes):
+    print(x.value, end=" ")
+
+#FF
+nodes = [Node(value=1, successors=[Node(value=2), Node(value=3)]), Node(value=2, successors=[Node(value=3)], predecessors=[Node(value=1)])]
+assert topological_ordering(nodes) == [Node(value=1), Node(value=2), Node(value=3)] #error 1 2
+print("\n")
+for x in topological_ordering(nodes):
+    print(x.value, end=" ")
+
+#IT
+nodes = [
+    Node('A', successor='B'),
+    Node('B', successor='C'),
+    Node('C', successors=['D', 'E']),
+    Node('F', successors=['G', 'H']),
+    Node('D', predecessors=['C', 'F']),
+    Node('E', predecessor='C'),
+    Node('G', predecessor='F'),
+    Node('H', predecessor='F')
+]
+expected_output = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
+output = topological_ordering(nodes)
+assert output == expected_output, f"Expected {expected_output}, but got {output}"
+
+
+#FF
+node1 = Node("A")
+node2 = Node("B", node1)
+node3 = Node("C", node2)
+node1.successors = [node2, node3]
+node2.predecessors = [node1]
+result = topological_ordering([node1, node2, node3])
+assert result == [node1, node2, node3] #A B C
+print("\n")
+for x in topological_ordering([node1, node2, node3]):
+    print(x.value, end=" ")

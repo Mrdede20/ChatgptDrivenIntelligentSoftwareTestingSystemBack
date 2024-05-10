@@ -1,0 +1,1 @@
+Yes, the two programs have different inputs, so they will produce different outputs. The first program takes a map of edges and lengths, while the second program takes a map of vertices and their neighbors with corresponding edge lengths. Therefore, the structure of the input data is different for the two functions, and they will not produce the same output for every input.

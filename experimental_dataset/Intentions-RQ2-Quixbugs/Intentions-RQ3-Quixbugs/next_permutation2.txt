@@ -1,0 +1,9 @@
+The code implements the function `next_permutation` that receives a list of unique integers `perm` and returns the lexicographically next permutation of the elements of `perm`. 
+
+To do so, the function iterates from the end of `perm` to the beginning, looking for the largest index `i` such that `perm[i] < perm[i+1]`. This guarantees that `perm[i+1:]` is sorted in reverse order, i.e., it represents the largest value it can take. 
+
+Then, it looks for the largest index `j` such that `perm[j] < perm[i]`, which is the smallest element in `perm[i+1:]` greater than `perm[i]`. It swaps `perm[i]` with `perm[j]`, which ensures that `perm[i+1:]` is still sorted in reverse order.
+
+Finally, it sorts `perm[i+1:]` in increasing order (by reversing it), which guarantees that it represents the smallest value it can take, and returns the resulting list. 
+
+The function assumes that the input `perm` is not sorted in reverse order.

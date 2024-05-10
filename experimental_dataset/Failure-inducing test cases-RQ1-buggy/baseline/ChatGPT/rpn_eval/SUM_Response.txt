@@ -1,0 +1,40 @@
+#IT
+tokens = [5, 1, '+', 3, '*', 4, '-']
+assert rpn_eval(tokens) == 8
+
+#IT
+tokens = [1, 2, '+', 3, '*']
+assert rpn_eval(tokens) == 9
+
+#IT
+tokens = [2, 3, 4, '+', '*']
+assert rpn_eval(tokens) == 14
+
+#IT
+tokens = [5, 1, 2, '+', 4, '*', '+', 3, '-']
+assert rpn_eval(tokens) == 14
+
+#IT
+tokens = [2, 3, '+', 4, '*']
+expected_output = 20
+assert rpn_eval(tokens) == expected_output
+
+#IT
+tokens = [1, 2, 3, '+', '*', 4, '/']
+assert rpn_eval(tokens) == 2.5
+
+#IT
+tokens = [1, 0, '/', 3, '*']
+assert rpn_eval(tokens) == 0
+
+#IT
+tokens = [2, 3, '+', 4, '*']
+assert rpn_eval(tokens) == 20
+
+#IT
+tokens = [2, 3, '+', 4, '*']
+assert rpn_eval(tokens) == 20
+
+#IT
+tokens = [1, 2, 3, '*', '+', 4, '/']
+assert rpn_eval(tokens) == 0.75

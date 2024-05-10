@@ -1,0 +1,3 @@
+Yes, there is an input that could make the two programs output different results. The main difference between the two implementations is that the `topological_ordering` method in the first program uses a breadth-first search algorithm to order the nodes, while the `topologicalSort` method in the second program uses a depth-first search algorithm. 
+
+Breadth-first search and depth-first search may produce different results if there are multiple valid orderings for the nodes. Breadth-first search may produce a different ordering of the nodes than depth-first search. Therefore, if there are multiple valid orderings for the nodes in the input graph, the two programs may output different results.

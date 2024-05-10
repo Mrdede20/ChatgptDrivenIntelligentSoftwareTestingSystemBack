@@ -1,0 +1,30 @@
+Yes, the two programs have different input types, so there are inputs that have different outputs for the two programs. 
+
+The first program takes a map where the keys are lists of `Node` objects, and the values are integers. It calculates the shortest path length between two `Node` objects using Dijkstra's algorithm. 
+
+The second program takes a map where the keys are strings representing vertices, and the values are maps from string vertices to integers representing the edge weights between them. It also calculates the shortest path length between two vertices using Dijkstra's algorithm.
+
+Here's an example input that would produce different results for the two programs:
+
+```
+Map<List<Node>, Integer> length_by_edge = new HashMap<>();
+Node nodeA = new Node("A");
+Node nodeB = new Node("B");
+Node nodeC = new Node("C");
+length_by_edge.put(Arrays.asList(nodeA, nodeB), 5);
+length_by_edge.put(Arrays.asList(nodeA, nodeC), 3);
+length_by_edge.put(Arrays.asList(nodeB, nodeC), 1);
+Node startNode = nodeA;
+Node goalNode = nodeB;
+
+Map<String, Map<String, Integer>> graph = new HashMap<>();
+graph.put("A", new HashMap<>());
+graph.get("A").put("B", 5);
+graph.get("A").put("C", 3);
+graph.put("B", new HashMap<>());
+graph.get("B").put("C", 1);
+String start = "A";
+String goal = "B";
+```
+
+Running the `shortest_path_length` method from the first program with these inputs would produce a result of 5, while running the `shortest_path_length` method from the second program with these inputs would produce a result of 4.

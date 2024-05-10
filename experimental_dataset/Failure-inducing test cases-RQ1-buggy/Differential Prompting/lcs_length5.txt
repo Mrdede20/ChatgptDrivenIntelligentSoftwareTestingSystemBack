@@ -1,0 +1,10 @@
+Yes, there are inputs that can make the two programs output different results. This can happen if the two implementations return different longest common subsequence strings.
+
+Here's an example input:
+
+```
+s = "ABCDABD"
+t = "ADCAABD"
+```
+
+The first implementation will return a value of 4, while the second implementation will return a value of 3. This is because the longest common subsequence for this input is "ABD", which has a length of 3, and the two implementations use different dynamic programming approaches to compute the length of the LCS.

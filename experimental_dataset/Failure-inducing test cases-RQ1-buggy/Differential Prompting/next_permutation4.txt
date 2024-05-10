@@ -1,0 +1,9 @@
+Yes, there are inputs that can make these two programs have different outputs. Here is a test case that demonstrates the difference:
+
+`perm = [1, 3, 2]`
+
+With the original implementation of `next_permutation`, this input would give the result `[2, 1, 3]`, while with the modified implementation, it would give the result `[2, 3, 1]`.
+
+The difference arises because the modified implementation uses a different condition in the second loop. In the original implementation, the loop compares `perm[i]` to `perm[j]`, while in the modified implementation, it compares `perm[j]` to `perm[i]`.
+
+This difference in condition determines which element gets swapped with `perm[i]` and can lead to different permutations being generated.

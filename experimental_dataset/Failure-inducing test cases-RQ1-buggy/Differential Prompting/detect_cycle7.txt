@@ -1,0 +1,20 @@
+Yes, there is an input which makes the two programs have different output. Here's the test case:
+
+```
+class Node:
+    def __init__(self, value, successor=None):
+        self.value = value
+        self.successor = successor
+
+# create a linked list with a cycle
+node1 = Node(1)
+node2 = Node(2)
+node3 = Node(3)
+node1.successor = node2
+node2.successor = node3
+node3.successor = node2
+
+print(detect_cycle(node1))  # True
+```
+
+In the first implementation, the condition check for `hare.successor` is done twice in the loop, which means that the loop may terminate earlier than the second implementation. This can cause the first implementation to return False for a cyclic linked list while the second implementation would correctly return True.

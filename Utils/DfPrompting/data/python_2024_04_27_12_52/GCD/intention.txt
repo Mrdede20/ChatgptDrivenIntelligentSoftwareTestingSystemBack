@@ -1,3 +1,0 @@
-The program computes the greatest common divisor between two numbers.
-It takes two integers, a and b, as input and calls the function gcd1.
-The function gcd1 takes a and b as input and calculates the greatest common divisor between them using the Euclidean algorithm.

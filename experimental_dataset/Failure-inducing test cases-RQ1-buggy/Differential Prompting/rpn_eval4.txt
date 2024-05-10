@@ -1,0 +1,9 @@
+Yes, there is an input which would make the two programs have different output. 
+
+Test case:
+```
+input = ['*', '/', 5.5, '+', 2.0, 1.5]
+print(rpn_eval(input))
+```
+
+The expected output for the first implementation of `rpn_eval` is `11.0`, while the expected output for the second implementation is `3.0`.

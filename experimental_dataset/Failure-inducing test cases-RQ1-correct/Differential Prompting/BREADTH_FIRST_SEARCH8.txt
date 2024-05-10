@@ -1,0 +1,11 @@
+I see two different implementations of Breadth First Search algorithm in Java. Both programs look correct, but there are some differences.
+
+The first implementation uses a Deque (double-ended queue) and adds the start node to the back of the queue with addLast() method. It also adds nodes to the front of the queue with addFirst() method when exploring. 
+
+The second implementation uses a simple Queue, specifically a LinkedList. It adds the start node with offer() method to the end of the queue when starting the search. It also computes the neighbors of the current node with getNeighbors() method instead of getSuccessors() method.
+
+Since the two implementations use different methods to add nodes to the queue and use different methods to get neighbors, there is a chance that they produce different results for some inputs.
+
+For example, if the input graph has a node with two neighbors and one of them is already visited and removed from the queue, both algorithms behave differently on which neighbor node gets added to the queue first.
+
+To see if there is an input where these two programs have different outputs, we need to provide a test graph and a start/goal node pair.

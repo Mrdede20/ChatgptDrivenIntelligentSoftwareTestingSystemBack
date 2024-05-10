@@ -1,0 +1,10 @@
+Yes, there is an input that can make the two programs have different output. Here's an example input:
+
+```
+5
+4 3 2 1 5
+5
+1 2 3 4 5
+```
+
+The first program will output `YES` for both cases, whereas the second program will output `NO` for the first case and `YES` for the second case.

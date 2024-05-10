@@ -1,0 +1,5 @@
+Test case:
+arr = [3, 2, 1]
+Expected output: [1, 2, 3]
+
+This test case should trigger a bug because the program only considers one pivot value, and in this case the pivot is 3. When comparing the remaining elements of the array to the pivot, both 2 and 1 are smaller than 3, so they should be part of the 'lesser' array, which is then sorted and added to the greater array along with the pivot. However, due to an error in the program, it fails to consider elements smaller than the pivot when constructing the 'lesser' array, causing it to sort the pivot and the greater elements (2 and 3) and leaving 1 out. This results in a test failure as the expected output [1, 2, 3] does not match the actual output [2, 3].

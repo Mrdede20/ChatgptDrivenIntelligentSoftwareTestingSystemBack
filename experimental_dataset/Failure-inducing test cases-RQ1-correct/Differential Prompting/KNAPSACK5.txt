@@ -1,0 +1,6 @@
+Yes, there are inputs that could make the two programs to have different output, particularly when there is no item that can fit in the knapsack. In this case, the first program assigns `memo[i][j]` to `0` while the second one assigns it to `memo[i - 1][j]`. This would lead to the first program returning `0` while the second one returns `-1`. To test this, you can use the following input:
+
+`int[][] items = {{5, 10}, {8, 6}, {3, 3}};`
+`int capacity = 1;`
+
+When running the first program with this input, it would return 0 while the second would return -1.

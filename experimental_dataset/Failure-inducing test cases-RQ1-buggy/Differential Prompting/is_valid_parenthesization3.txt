@@ -1,0 +1,1 @@
+No, all of these programs should have the same output for any given input. They all use the same logic and approach to check whether a string of parentheses is valid or not.

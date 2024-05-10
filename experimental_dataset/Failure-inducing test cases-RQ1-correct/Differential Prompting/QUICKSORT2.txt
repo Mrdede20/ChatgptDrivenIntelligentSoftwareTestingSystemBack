@@ -1,0 +1,1 @@
+No, there is no input that would make the two programs have different output. Both programs implement the quicksort algorithm and should produce the same output for any input ArrayList. The only differences in the two programs are minor syntax differences and the style they are written in.

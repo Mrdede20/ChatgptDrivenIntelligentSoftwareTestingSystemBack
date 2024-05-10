@@ -1,0 +1,20 @@
+response@ChatGPT:
+
+
+Test case:
+
+arr = [3, 2, 1]
+
+This test case can trigger a bug in the program as it tests the scenario where the input array is not in ascending order. The merge function assumes that both the left and right lists are sorted in ascending order, so if the input array is not sorted, it could lead to unexpected behavior or errors.
+
+request@user:
+Give us such test case. Use assert.
+
+response@ChatGPT:
+Here's a test case for the above code using assert:
+
+arr = [4, 2, 1, 5, 3]
+assert mergesort(arr) == [1, 2, 3, 4, 5]
+
+This test case ensures that the function returns a sorted list, given an unsorted list as input. The assert statement checks if the function output matches the expected output (a sorted version of the input list). If the test fails (i.e., the function output doesn't match the expected output), an AssertionError is raised.
+

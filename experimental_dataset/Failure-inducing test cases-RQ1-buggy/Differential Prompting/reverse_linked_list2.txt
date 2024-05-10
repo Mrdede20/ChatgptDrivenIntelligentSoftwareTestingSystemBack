@@ -1,0 +1,25 @@
+Yes, there can be inputs that produce different output for these 4 implementations of `reverse_linked_list` function. 
+
+Here is an example input with output for which these implementations produce different answers:
+
+```
+class Node():
+    def __init__(self, val, successor=None):
+        self.val = val
+        self.successor = successor
+
+n1 = Node(1)
+n2 = Node(2)
+n3 = Node(3)
+
+n1.successor = n2
+n2.successor = n3
+
+# Expected output: 3 -> 2 -> 1 -> None
+
+print(reverse_linked_list(n1).val)
+```
+
+The expected output is `3`, but the first implementation returns `1`, while the remaining three implementations return the expected output.
+
+Note that this input has a linked list with 3 nodes, but any linked list with at least 2 nodes can be used to produce different output among these implementations.

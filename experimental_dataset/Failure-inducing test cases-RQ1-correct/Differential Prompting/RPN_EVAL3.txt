@@ -1,0 +1,22 @@
+Yes, there are test cases that can make the two programs output different results. Specifically, the first program assumes that all objects in the `ArrayList` `tokens` are instances of the `Double` class. If there is an object in the list that is not a `Double`, the program will throw a `ClassCastException`. On the other hand, the second program explicitly specifies that the `ArrayList` contains `String` objects, and will not try to cast them to `Double`s. Therefore, if there is a non-numeric string in the list, the first program will throw an exception, while the second program will treat it as an invalid operator and return an error.
+
+Here's an example test case that would cause the two programs to produce different outputs: 
+
+```java
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<Object> tokens = new ArrayList<Object>();
+        tokens.add(2.0);
+        tokens.add(3.0);
+        tokens.add("invalid_operator");
+        tokens.add("*");
+
+        System.out.println(RPN_EVAL.rpn_eval(tokens));
+    }
+}
+
+```
+
+Assuming the programs are in the same package, running this test case will cause the first program to throw a `ClassCastException`, while the second program will return an error for an invalid operator.

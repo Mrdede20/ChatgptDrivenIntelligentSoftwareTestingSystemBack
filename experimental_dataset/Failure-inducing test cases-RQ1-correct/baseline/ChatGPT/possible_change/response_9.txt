@@ -1,0 +1,27 @@
+response@ChatGPT:
+
+
+Yes, there are many test cases that could trigger a potential bug in this program.
+
+One example could be:
+
+coins = [1, 2, 5]
+total = 10
+expected_output = 10
+
+This test case checks if the function correctly calculates the number of possible combinations of coins to make a total of 10. The expected output is 10 because there are 10 possible combinations: [1,1,1,1,1,1,1,1,1,1], [1,1,1,1,1,1,1,1,2], [1,1,1,1,1,1,1,3], [1,1,1,1,1,1,2,2], [1,1,1,1,1,2,2], [1,1,1,2,2,2], [1,1,1,1,5], [1,1,2,5], [1,2,2,5], and [5,5]. 
+
+If the function does not correctly calculate the number of possible combinations, then the output would not be 10 and there could be a bug in the program.
+
+request@user:
+Give us such test case. Use assert.
+
+response@ChatGPT:
+
+
+Here is a possible test case using assert:
+
+assert possible_change([1,2,5], 10) == 10
+
+This test case checks if there are 10 possible ways to make change for 10 units using coins of 1, 2, and 5 units.
+

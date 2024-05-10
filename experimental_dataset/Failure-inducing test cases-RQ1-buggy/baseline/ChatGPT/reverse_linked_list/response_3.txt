@@ -1,0 +1,32 @@
+Here's a test case that can trigger a bug in the reverse_linked_list() function:
+
+# Create a linked list with three nodes: 1 -> 2 -> 3 -> None
+node1 = Node(value=1)
+node2 = Node(value=2)
+node3 = Node(value=3)
+node1.successor = node2
+node2.successor = node3
+
+# Reverse the linked list
+new_head = reverse_linked_list(node1)
+
+# Verify that the linked list is now 3 -> 2 -> 1 -> None
+assert new_head == node3
+assert new_head.successor == node2
+assert new_head.successor.successor == node1
+assert new_head.successor.successor.successor == None
+
+# Add a new node to the original linked list
+node4 = Node(value=4)
+node3.successor = node4
+
+# Reverse the linked list again
+new_head = reverse_linked_list(node1)
+
+# Verify that the linked list is now 4 -> 3 -> 2 -> 1 -> None
+assert new_head == node4
+assert new_head.successor == node3
+assert new_head.successor.successor == node2
+assert new_head.successor.successor.successor == node1
+
+The bug in the reverse_linked_list() function is that it only reverses the pointers between the nodes, but it doesn't update the successor attribute of the last node in the list. In the test case above, when we add a new node to the original linked list and then try to reverse it again, the successor attribute of the last node (node1) still points to the previous node (node2), instead of being set to None. This causes the reversed list to be incorrect, and the second set of assertions will fail.

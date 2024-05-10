@@ -1,0 +1,22 @@
+Yes, the programs may have different outputs based on the input. For example, if the input includes negative weight cycles, the first implementation will still return the result, while the second implementation will break due to an infinite loop. Here's an example input to demonstrate this:
+
+```
+# Example with negative weight cycle
+source = 'A'
+weight_by_edge = {
+    ('A', 'B'): 2,
+    ('B', 'C'): 2,
+    ('C', 'D'): 2,
+    ('D', 'B'): -3    # Negative weight cycle: D -> B -> C -> D
+}
+
+# Output of the first implementation will include negative weight cycle
+print(shortest_paths(source, weight_by_edge))  
+
+# Output of the second implementation will raise an infinite loop exception
+print(shortest_paths(source, weight_by_edge))
+``` 
+
+The first implementation will return: `{'A': 0, 'B': 2, 'C': 4, 'D': 1}` which includes negative weight cycle.
+
+The second implementation will cause an infinite loop since it won't be able to converge to the shortest path in the presence of the negative weight cycle.

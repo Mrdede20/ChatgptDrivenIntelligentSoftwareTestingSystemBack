@@ -1,0 +1,5 @@
+This code defines a function `wrap` that takes in two parameters: `text` (a long string) and `cols` (a number representing column width). The function then breaks the string on spaces into a list of lines such that each line is no longer than the column width. 
+
+The function uses a while loop and the `rfind` string method to find the last available space character in the given text up to the column width limit. It then breaks the text into lines by slicing the text string up to the position of the last space character found, andstoring the remaining text into a new variable `text`. The function continues this process until the end of the string is reached, and each line of text no longer exceeds the given column width.
+
+Finally, the function returns a list of strings, where each string represents a line of text that has been wrapped at the specified column width. The original amount of spaces in the text are preserved, which includes spaces at the start or end of each line that are not trimmed.

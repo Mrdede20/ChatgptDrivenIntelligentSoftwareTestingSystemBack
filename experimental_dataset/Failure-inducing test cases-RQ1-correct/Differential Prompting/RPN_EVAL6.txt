@@ -1,0 +1,3 @@
+Yes, the two programs can have different output for certain input. The difference could arise when the input contains an operator which is not present in the operators map defined in the program. In the first program, if the token is not present in the map, it will not perform any operation and continue to the next token while in the second program, it will throw a NullPointerException as it tries to access a null value from the map. 
+
+For example, if the input tokens are {"2", "3", "5", "log"} (log is not present in the map), the first program will simply return the result of evaluating "2 3 5" which is 5.0 while the second program will throw a NullPointerException since it tries to access a null value from the map.

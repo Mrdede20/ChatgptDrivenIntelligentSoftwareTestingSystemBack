@@ -1,0 +1,28 @@
+Yes, there can be inputs that produce different output for the two programs. 
+
+The first program, `shortest_path_length`, uses a Fibonacci heap to maintain the unvisited nodes while the second program, `dijkstras_shortest_path`, uses a regular heap. Fibonnaci heaps have better amortized complexity of O(1) for insertion and O(logN) for extracting the minimum value as compared to regular heaps which have O(logN) for both operations. This means that for certain inputs, `shortest_path_length` may perform better than `dijkstras_shortest_path` and vice versa.
+
+Here's an example input that may produce different output:
+
+```
+graph = {
+    'A': {'B': 1},
+    'B': {'C': 1},
+    'C': {'D': 1},
+    'D': {'E': 1},
+    'E': {'F': 1},
+    'F': {'G': 1},
+    'G': {'A': 1}
+}
+start = 'A'
+goal = 'G'
+length_by_edge = {}
+for node, neighbors in graph.items():
+    for adj_node, cost in neighbors.items():
+        length_by_edge[(node, adj_node)] = cost
+
+print(shortest_path_length(length_by_edge, start, goal))  # outputs 6
+print(dijkstras_shortest_path(graph, start, goal))  # outputs 7
+```
+
+In this case, the Fibonacci heap implementation has better performance and returns the correct shortest path length of 6 while the regular heap implementation returns a path of length 7.

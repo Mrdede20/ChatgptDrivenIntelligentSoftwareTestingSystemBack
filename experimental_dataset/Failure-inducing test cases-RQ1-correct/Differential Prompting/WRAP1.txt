@@ -1,0 +1,1 @@
+No, they have the same output. Both programs print the index of the last occurrence of character 'c' in the string "abc". Since the string "abc" is only three characters long, and there are no appearances of 'c' after the last character, both programs will output 2.

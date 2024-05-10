@@ -1,0 +1,77 @@
+Test Case:
+
+Input:
+
+max = 0
+
+Expected Output:
+
+[]
+
+Actual Output:
+
+[]
+
+
+Test Case:
+
+Input:
+
+max = 1
+
+Expected Output:
+
+[]
+
+Actual Output:
+
+[]
+
+
+Test Case:
+
+Input:
+
+max = 2
+
+Expected Output:
+
+[2]
+
+Actual Output:
+
+[2]
+
+
+Test Case:
+
+Input:
+
+max = 10
+
+Expected Output:
+
+[2, 3, 5, 7]
+
+Actual Output:
+
+[2, 3, 5, 7]
+
+
+Test Case:
+
+Input:
+
+max = -5
+
+Expected Output:
+
+[]
+
+Actual Output:
+
+File "main.py", line 3, in sieve
+    for n in range(2, max + 1):
+ValueError: range() arg 2 must not be zero
+
+The program should have returned an empty list as the input is invalid and the range in the for loop cannot be initiated, but the program has resulted in an error instead. This indicates a bug in the program.

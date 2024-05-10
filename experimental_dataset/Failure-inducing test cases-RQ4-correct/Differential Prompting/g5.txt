@@ -1,0 +1,16 @@
+Yes, there may be inputs that make the two programs output differently. Here's a potential test case:
+
+```
+t=1
+n=4
+a=0
+b=3
+edges=[
+  {1: 1},
+  {0: 1, 2: 1},
+  {1: 1, 3: 1},
+  {2: 1}
+]
+```
+
+In this testcase, the first program would output "YES" and the second program would output "NO". You can use this input to test the programs.

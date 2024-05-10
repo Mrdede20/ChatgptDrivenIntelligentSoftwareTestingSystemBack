@@ -1,0 +1,5 @@
+The given Python code implements the "Longest Common Subsequence" algorithm which calculates the longest subsequence that is common to two input strings. A subsequence in a string is any sequence of letters in the same order they appear in the string, possibly skipping letters in between. 
+
+The algorithm works by recursively considering two cases. If either of the two input strings is empty, then the longest common subsequence is an empty string. If the first characters of the two strings are the same, then that character (as a string) is added to the result and the algorithm is recursively called again with the remaining strings. If the first characters are different, then the algorithm is recursively called with each string having its first character removed and the maximum result is returned.
+
+The code's time complexity is O(3^n) for worst-case where n is the length of the longer string, but it can be improved using dynamic programming which reduces the time complexity to O(n^2).

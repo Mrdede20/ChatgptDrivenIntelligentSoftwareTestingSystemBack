@@ -1,0 +1,21 @@
+response@ChatGPT:
+
+
+Yes, the program assumes that the input number is greater than or equal to 2. If the input is less than 2, the range in the for loop becomes (2, 2), which is an empty range and will cause an error. 
+
+A test case that could trigger this bug is:
+
+```
+assert(get_factors(1) == [])
+```
+
+request@user:
+Give us such test case. Use assert.
+
+response@ChatGPT:
+# Test case
+
+assert get_factors(12) == [2, 2, 3]
+assert get_factors(17) == [17]
+assert get_factors(36) == [2, 2, 3, 3]
+

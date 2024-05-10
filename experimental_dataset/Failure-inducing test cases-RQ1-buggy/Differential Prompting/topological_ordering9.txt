@@ -1,0 +1,34 @@
+Yes, there are test cases where the two implementations may have different results. One such example is when there is a cycle in the directed graph represented by the nodes. Here's the test case in Python:
+
+```
+# Nodes: A -> B -> C -> D -> E -> F -> B
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.incoming_nodes = []
+        self.outgoing_nodes = []
+
+a = Node('A')
+b = Node('B')
+c = Node('C')
+d = Node('D')
+e = Node('E')
+f = Node('F')
+
+a.outgoing_nodes.append(b)
+b.incoming_nodes.append(a)
+b.outgoing_nodes.append(c)
+c.incoming_nodes.append(b)
+c.outgoing_nodes.append(d)
+d.incoming_nodes.append(c)
+d.outgoing_nodes.append(e)
+e.incoming_nodes.append(d)
+e.outgoing_nodes.append(f)
+f.incoming_nodes.append(e)
+f.outgoing_nodes.append(b)
+
+print(topological_ordering([a, b, c, d, e, f]))
+print(topological_ordering([a, b, c, d, e, f]))
+```
+
+The first implementation will result in an infinite loop, since it doesn't handle cycles. The second implementation will correctly detect the cycle and raise a `RecursionError`.

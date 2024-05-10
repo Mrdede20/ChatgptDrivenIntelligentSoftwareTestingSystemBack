@@ -1,0 +1,18 @@
+Test Case:
+
+Input: A list of tokens containing a combination of integers and operators (+, -, *, /) in an order that violates the operator precedence rule.
+
+Expected Output: A list of tokens in Reverse Polish Notation (RPN) that follows the operator precedence rule.
+
+def test_shunting_yard():
+    # Input test case
+    tokens = [3, '*', 4, '+', 1, '/', 2]
+
+    # Expected output test case
+    expected_output = [3, 4, '*', 1, 2, '/', '+']
+
+    # Call the function with the input test case
+    output = shunting_yard(tokens)
+
+    # Check if the output matches the expected output
+    assert output == expected_output, "Test case failed: shunting_yard() returned unexpected output."

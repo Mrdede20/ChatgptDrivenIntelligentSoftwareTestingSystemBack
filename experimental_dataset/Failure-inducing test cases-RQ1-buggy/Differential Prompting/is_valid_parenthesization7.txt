@@ -1,0 +1,9 @@
+Yes, the input that would make the programs above have different output is ")(".
+
+The first program will return `False` for all programs. However, the last program using stack implementation will return `False` if the input is a non-balanced string like ")(". This is because the implementation will first check if there is an open bracket at index 0, in this case it's not. Therefore, it will return `False` without even checking the second bracket. 
+
+You can test this using the following code:
+
+```
+print(is_valid_parenthesization(")("))
+```

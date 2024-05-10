@@ -1,0 +1,28 @@
+Sure! Here's a test case that can trigger a bug in the above program:
+
+weight_by_edge = {
+    (1, 2): 1,
+    (1, 3): 2,
+    (2, 3): 3,
+    (2, 4): 4,
+    (3, 4): 5,
+    (3, 5): 6,
+    (4, 5): 7,
+    (4, 6): 8,
+    (5, 6): 9,
+    (5, 7): 10,
+    (6, 7): 11
+}
+
+expected_result = {
+    (1, 2),
+    (1, 3),
+    (2, 4),
+    (3, 5),
+    (4, 6),
+    (5, 7)
+}
+
+assert minimum_spanning_tree(weight_by_edge) == expected_result
+
+In this test case, the input graph forms a complete graph of 7 nodes with edge weights ranging from 1 to 11. The expected minimum spanning tree contains 6 edges with a total weight of 33. However, the current implementation of the minimum_spanning_tree function returns only 5 edges with a total weight of 31, which is incorrect. The bug in the program can be triggered by the edge (4,5) which has a weight of 7. In this case, the program chooses edge (3,5) instead of edge (4,5), which results in an incorrect minimum spanning tree.

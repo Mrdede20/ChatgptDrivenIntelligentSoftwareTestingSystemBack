@@ -1,0 +1,20 @@
+Yes, there are inputs that could make the two programs output different results.
+
+Here is an example input that could produce different outputs:
+
+```
+a = Node('A')
+b = Node('B')
+c = Node('C')
+d = Node('D')
+
+a.outgoing_nodes = [b, c]
+b.incoming_nodes = [a]
+b.outgoing_nodes = [d]
+c.incoming_nodes = [a]
+c.outgoing_nodes = [d]
+
+nodes = [a, b, c, d]
+```
+
+In the first function, the output would be `[A, B, C, D]`, while in the second function, the output would be `[D, C, B, A]`. This is because the first function does a breadth-first search starting from nodes with no incoming edges and adds each node to the ordered list as it is visited, while the second function does a depth-first search starting from the first node and adds each node to the ordered list after all its outgoing edges have been visited.

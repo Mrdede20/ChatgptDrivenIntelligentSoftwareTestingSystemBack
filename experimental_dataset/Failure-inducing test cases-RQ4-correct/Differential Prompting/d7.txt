@@ -1,0 +1,35 @@
+Yes, there is an input that makes the two programs have different output. Here's a sample test input:
+
+```
+5
+5
+1 2 3 2 1
+5
+5 4 3 4 5
+5
+1 2 3 4 5
+5
+5 4 3 2 1
+5
+1 3 5 4 2
+```
+
+The expected outputs of the two programs would be:
+
+```
+solve():
+NO
+NO
+NO
+NO
+YES
+
+find_peak():
+NO
+NO
+YES
+NO
+YES
+```
+
+Both programs are checking if a mountain range contains a single peak with higher elevation than any other points in the mountain besides its two adjacent points. The test input is designed so that both functions return `NO` on the first three test cases and `YES` on the last two test cases. However, the test case with mountain range `[1, 2, 3, 2, 1]` has a peak in the middle, but the mountain range is not strictly increasing or decreasing on the left and right sides of the peak. Therefore, `solve()` returns `NO`, but `find_peak()` returns `YES`.

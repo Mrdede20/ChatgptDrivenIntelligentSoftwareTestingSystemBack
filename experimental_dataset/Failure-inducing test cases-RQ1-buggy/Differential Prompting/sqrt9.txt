@@ -1,0 +1,9 @@
+Yes, there is an input which makes the two programs have different output. Here is a test case:
+
+```
+x = 2
+epsilon = 0.001
+print(sqrt(x, epsilon))
+```
+
+The first implementation calculates the square root using the expression `approx ** 2`, while the second implementation calculates it using the expression `approx * approx`. These two expressions are mathematically equivalent. However, due to rounding errors in floating-point arithmetic, the two expressions can yield slightly different results for some inputs. In this test case, the expected output is approximately 1.414, but the actual output might differ slightly between the two implementations.

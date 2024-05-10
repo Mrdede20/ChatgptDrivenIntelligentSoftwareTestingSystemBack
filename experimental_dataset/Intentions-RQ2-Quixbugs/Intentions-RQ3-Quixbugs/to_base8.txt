@@ -1,0 +1,7 @@
+The intention of the code is to define a function called `to_base()` that takes in an integer `num` and a base number `b`, converts the integer from base 10 to the target base `b`, and returns the result as a string. 
+
+The function does this using the method of repeatedly dividing the input integer `num` by the target base `b`, and appending the remainder (in the form of the corresponding digit or letter from the `alphabet` string) to a string variable `result`. 
+
+The function also includes preconditions for the input integer `num` and the target base `b`, to ensure that they are valid inputs for the function. 
+
+Finally, an example is provided demonstrating the use of the `to_base()` function to convert the integer 31 to base 16.

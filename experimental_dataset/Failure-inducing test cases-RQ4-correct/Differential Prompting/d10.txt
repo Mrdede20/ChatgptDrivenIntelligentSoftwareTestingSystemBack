@@ -1,0 +1,39 @@
+Yes, there is input that can make the two programs have different outputs. Here's an example test case:
+
+Input:
+```
+5
+5
+1 2 3 2 1
+5
+1 2 3 4 3
+5
+3 2 1 2 3
+4
+1 2 1 2
+4
+1 2 2 1
+```
+
+Output for the first program:
+```
+NO
+YES
+NO
+NO
+NO
+```
+
+Output for the second program:
+```
+NO
+YES
+NO
+YES
+NO
+```
+
+Explanation:
+- The first and the third test case are mountain ranges with a peak, but they don't satisfy the condition of trivial win, where the mountain to the left and right of the peak should be lower than the peak.
+- The fourth and fifth test case don't have a peak.
+- The second test case is a mountain range with a peak and satisfies the trivial win condition.

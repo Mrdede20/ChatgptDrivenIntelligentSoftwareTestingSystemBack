@@ -1,0 +1,37 @@
+response@ChatGPT:
+
+
+Yes, there are several test cases that could potentially trigger a bug in the program above. Some examples include:
+
+1. Test case where there is a negative weight cycle in the graph. This could cause the algorithm to enter an infinite loop or produce incorrect results.
+
+2. Test case where there is a disconnected node in the graph. This could cause the algorithm to produce incorrect results, as it assumes that all nodes are reachable from the source node.
+
+3. Test case where there are duplicate edges in the graph. This could cause the algorithm to produce incorrect results, as it assumes that each edge weight is unique.
+
+4. Test case where the input graph is very large. This could cause the algorithm to run out of memory or take an extremely long time to complete.
+
+request@user:
+Give us such test case. Use assert.
+
+response@ChatGPT:
+# Test Case
+def test_shortest_paths():
+    weight_by_edge = {
+        (1, 2): 5,
+        (1, 3): 2,
+        (2, 3): 1,
+        (2, 4): 1,
+        (3, 4): 4,
+    }
+    source = 1
+    expected_output = {
+        1: 0,
+        2: 5,
+        3: 2,
+        4: 6,
+    }
+    assert shortest_paths(source, weight_by_edge) == expected_output
+    
+test_shortest_paths()
+

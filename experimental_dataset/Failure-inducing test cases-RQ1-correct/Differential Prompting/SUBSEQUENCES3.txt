@@ -1,0 +1,1 @@
+No, the two programs will have the same output for all inputs. The second version of the program just uses generic type syntax to declare the type of ArrayList as ArrayList<Integer> instead of raw ArrayList.

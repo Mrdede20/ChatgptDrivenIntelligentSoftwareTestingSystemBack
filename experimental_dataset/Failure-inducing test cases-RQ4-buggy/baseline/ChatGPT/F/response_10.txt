@@ -1,0 +1,14 @@
+response@ChatGPT:
+Test case:
+
+Input:
+1
+5 15 3
+4 3 2 1 1
+
+Expected output:
+3
+
+Explanation:
+The total number of coins needed is 15 and the maximum number of selected numbers is 3. Sorting the numbers in descending order, we get [4, 3, 2, 1, 1]. If we select the first 3 numbers, the sum of the coins is 9 which is less than 15. If we select the first 2 numbers, the sum of the coins is 7 which is also less than 15. If we select the first number only, the sum of the coins is 4 which is still less than 15. Therefore, it is impossible to select d numbers such that their sum is greater than or equal to c. The program should output "Impossible". However, the program outputs 3 which is incorrect. This is a bug and results in test failure.
+

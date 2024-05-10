@@ -1,0 +1,5 @@
+The function `sieve` implements the Sieve of Eratosthenes algorithm to find all the prime numbers in a range from 2 to a given positive integer `max`. The algorithm works by initially assuming all numbers from 2 to `max` are prime, then iteratively crossing out all multiples of each prime number found, leaving only the prime numbers. The primes are then appended to a list `primes` and returned. 
+
+This function takes one argument `max` which represents the upper bound of the range of numbers to check for primes. 
+
+The output of the function is a list containing all the prime numbers up to and including `max`.

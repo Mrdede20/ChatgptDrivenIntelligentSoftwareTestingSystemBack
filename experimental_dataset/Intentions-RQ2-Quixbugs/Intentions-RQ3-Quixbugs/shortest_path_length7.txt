@@ -1,0 +1,7 @@
+This code implements Dijkstra's algorithm for finding the shortest path between two nodes in a directed graph. The function `shortest_path_length` takes three arguments: `length_by_edge`, a dictionary containing the lengths of each edge in the graph; `startnode` and `goalnode`, the nodes to find the shortest path between. 
+
+The function uses a priority queue `unvisited_nodes` that contains pairs of (node, distance) to keep track of nodes that have not yet been visited. Initially, the queue contains only the start node and a distance of 0. The function then iteratively pops the minimum value of the queue (the node with the shortest distance) and checks whether it is the goal node. If not, the function adds the popped node to the set of visited nodes and examines its successors. 
+
+For each successor node that has not yet been visited, the function calculates the distance to reach that node via the popped node and updates the priority queue accordingly. This continues until either the goal node is found or there are no unvisited nodes left.
+
+The helper function `insert_or_update` inserts or updates the priority queue with a given distance-node pair. The helper function `get` retrieves the distance for a given node in the priority queue.

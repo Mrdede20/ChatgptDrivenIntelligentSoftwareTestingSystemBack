@@ -1,0 +1,62 @@
+#IT
+text = "This is a long text that needs to be wrapped"
+cols = -5
+try:
+    wrap(text, cols)
+    assert False, "Test case failed, no exception was raised"
+except ValueError:
+    assert True
+
+#FC
+text = "This is a very long text that exceeds the maximum number of columns allowed by the wrap function" 
+cols = 20
+expected_output = ['This is a very long', 'text that exceeds the', 'maximum number of', 'columns allowed by the', 'wrap function']
+assert wrap(text, cols) == expected_output #error ['This is a very long', ' text that exceeds', ' the maximum number', ' of columns allowed', ' by the wrap', ' function']
+
+#FC
+text = "This is a test for line wrapping functionality. This test case is designed to have a word that is longer than the column width to test boundary conditions of the algorithm."
+cols = 20
+expected_output = ['This is a test for', 'line wrapping', 'functionality. This', 'test case is', 'designed to have a', 'word that is longer', 'than the column width', 'to test boundary', 'conditions of the', 'algorithm.']
+assert wrap(text, cols) == expected_output #error ['This is a test for', ' line wrapping', ' functionality. This', ' test case is', ' designed to have a', ' word that is longer', ' than the column', ' width to test', ' boundary conditions', ' of the algorithm.']
+
+#FC
+text = "the quick brown fox jumps over the lazy dog"
+cols = 10
+expected_output = ['the quick', 'brown fox', 'jumps over', 'the lazy', 'dog']
+assert wrap(text, cols) == expected_output #error ['the quick', ' brown fox', ' jumps', ' over the', ' lazy dog']
+
+#IT
+text = "This is a sample text for testing."
+cols = 5
+expected_output = ['This', 'is a', 'sampl', 'e tex', 't for', 'testi', 'ng.']
+assert wrap(text, cols) == expected_output
+
+#FC
+text = "This is a sentence which is longer than the specified column width"
+cols = 10
+expected_output = ['This is a', ' sentence', ' which is', ' longer th', 'an the sp', 'ecified c', 'olumn wid', 'th']
+assert wrap(text, cols) == expected_output #error ['This is a', ' sentence', ' which is', ' longer', ' than the', ' specified', ' column', ' width']
+
+#FC
+text = "Hello world! This is a long text and should be wrapped into multiple lines when passed to the wrap function."
+cols = 10
+expected_output = ["Hello", "world! This", "is a long", "text and", "should be", "wrapped", "into", "multiple", "lines when", "passed to", "the wrap", "function."]
+assert wrap(text, cols) == expected_output #error ['Hello', ' world!', ' This is a', ' long text', ' and', ' should be', ' wrapped', ' into', ' multiple', ' lines', ' when', ' passed to', ' the wrap', ' function.']
+
+#IT
+text = "This is a sample text"
+cols = 5 
+expected_output = ['This', 'is a', 'sampl', 'e', 'text']
+assert wrap(text, cols) == expected_output
+
+#IT
+text = "hello world"
+cols = 4
+expected_output = ["hell", "o", "worl", "d"]
+assert wrap(text, cols) == expected_output
+
+#FC
+text = "Hello World! This is a very long text that needs to be wrapped into multiple lines to fit within the specified column size."
+cols = 10
+expected_output = ['Hello', 'World! Th', 'is is a ve', 'ry long te', 'xt that ne', 'eds to be ', 'wrapped in', 'to multipl', 'e lines to', ' fit within', ' the specif', 'ied column', ' size.']
+assert wrap(text, cols) == expected_output #error ['Hello', ' World!', ' This is a', ' very long', ' text that', ' needs to', ' be', ' wrapped', ' into', ' multiple', ' lines to', ' fit', ' within', ' the', ' specified', ' column', ' size.']

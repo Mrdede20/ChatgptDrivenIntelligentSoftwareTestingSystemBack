@@ -1,0 +1,17 @@
+response@ChatGPT:
+Yes, there is a test case that can trigger a bug in the program. If the input given contains duplicate integers, the program will output the second smallest integer as expected. However, if all integers in the input are the same, the program will throw an "IndexError: list index out of range" error since there will be no second smallest integer. 
+
+For example, the input "3\n1 1 1\n2 2 2\n3 3 3\n" will trigger the bug.
+
+request@user:
+Give us such test case. 
+
+response@ChatGPT:
+A test case that can trigger the bug in this program is:
+\
+\2
+\4 4 4
+\1 1 1
+\
+This input contains duplicate integers, which the program can handle correctly. However, when it comes to the second input set where all integers are the same, the program will throw an "IndexError: list index out of range" error.
+

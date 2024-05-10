@@ -1,0 +1,1 @@
+No, both programs should generate the same Pascal's Triangle for the same input n. The only difference is in the implementation of the algorithm used to generate the triangle.

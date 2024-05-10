@@ -1,0 +1,1 @@
+No, there isn't any input that would make the two programs output different results as they both implement the Longest Common Subsequence (LCS) algorithm and return the length of the LCS of the two input strings. The first implementation is using a hashmap, while the second is using a two-dimensional array to store subproblem solutions.

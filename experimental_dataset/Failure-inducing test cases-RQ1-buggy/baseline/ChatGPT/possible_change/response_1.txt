@@ -1,0 +1,22 @@
+Test Case:
+
+coins = [1, 5, 10, 25]
+total = 30
+expected_output = 8
+
+Explanation:
+
+The expected output of possible_change(coins, total) with the input coins = [1, 5, 10, 25] and total = 30 should be 8. This is because there are 8 possible ways to make change for 30 cents using the given coins:
+
+-1 x 25 + 1 x 5
+-1 x 25 + 5 x 1
+-2 x 10 + 1 x 5
+-2 x 10 + 5 x 1
+-1 x 10 + 2 x 5
+-1 x 10 + 1 x 5 + 5 x 1
+-1 x 10 + 5 x 2
+-3 x 5 + 1 x 5
+
+However, the current implementation of possible_change() will return 16 instead of 8. This is because the function is calling itself recursively with the same input coins every time, instead of removing the first coin from coins for each recursive call. This leads to double-counting of the possible ways to make change.
+
+Thus, the test case above will trigger a bug in the program and result in test failure.

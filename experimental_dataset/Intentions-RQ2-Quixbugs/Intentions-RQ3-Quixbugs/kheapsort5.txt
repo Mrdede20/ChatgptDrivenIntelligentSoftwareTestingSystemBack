@@ -1,0 +1,9 @@
+The code above implements a K-Heapsort, an almost-sorted array, wherein every element is no more than k units from its sorted position, sorted in O(n log k) time.
+
+The input of the function is an array of ints and k, indicating the maximum displacement of an element in arr from its final sorted position.
+
+The function takes the first k elements of the array and heapify them, then iterates through the array, pushing each element onto the heap and yielding the smallest one, ensuring that only k elements are in the heap at any given time. Finally, it yields the remaining elements of the heap in their proper order.
+
+The output of the function is a generator that yields the elements of arr in sorted order.
+
+Some examples are given in the code above. If the array is already sorted, the value of k can be set to 0, and the function will yield the original array, sorted.

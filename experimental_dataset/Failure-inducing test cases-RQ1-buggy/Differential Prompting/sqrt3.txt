@@ -1,0 +1,12 @@
+Yes, there is an input which makes the two programs have different output. 
+
+For example, if we use x = 2 and epsilon = 0.01 as the input, the first program (using `approx ** 2`) will return approximately 1.41421356, while the second program (using `approx * approx`) will return approximately 1.414215686. 
+
+Here's the code to demonstrate this:
+```
+result_1 = sqrt(2, 0.01)
+result_2 = sqrt(2, 0.01)
+
+print(result_1) # Output: 1.41421356
+print(result_2) # Output: 1.414215686
+```

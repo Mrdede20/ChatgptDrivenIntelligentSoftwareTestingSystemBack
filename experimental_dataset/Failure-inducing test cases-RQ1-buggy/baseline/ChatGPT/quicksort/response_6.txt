@@ -1,0 +1,19 @@
+Test case:
+
+arr = [3, 5, 2, 7, 1, 4]
+expected_result = [1, 2, 3, 4, 5, 7]
+
+# Shuffle the array to trigger the bug
+import random
+random.shuffle(arr)
+
+# Call the function with shuffled array
+result = quicksort(arr)
+
+# Check if result is equal to the expected result
+assert result == expected_result, f"Result: {result}. Expected: {expected_result}"
+
+
+Bug description: 
+
+The current implementation does not handle duplicate elements in the input array. If there are duplicate elements, the function may fail to sort them correctly and result in test failure.

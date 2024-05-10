@@ -1,0 +1,11 @@
+Yes, there are inputs that will make the two programs have different output.
+
+Here's a test case that demonstrates the difference:
+
+```
+n = 6
+```
+
+The first program will return `[2, 3]` while the second program will return `[2, 3]`. However, the third program will return `[2, 3]` because it is factoring the input number into prime factors, whereas the first two programs are factoring the input number into factors.
+
+In this specific test case, the difference is not noticeable, but for larger input numbers, the difference can be significant.

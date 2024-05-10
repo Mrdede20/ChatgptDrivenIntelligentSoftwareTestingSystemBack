@@ -1,0 +1,5 @@
+The intention of the given code is to implement the Bucket Sort algorithm, which is an efficient sorting algorithm that works by partitioning an array of elements into a number of buckets. In this implementation, the count of each element in the input array 'arr' is calculated using a counting array 'counts'. Then, the sorted array 'sorted_arr' is constructed by iterating over the counts array, and adding the same number of occurrences of each element to the sorted array.
+
+The 'k' parameter specifies the upper bound of the size of the elements in the input array 'arr'. The implementation assumes that all elements in 'arr' are small integers between 0 and k-1.
+
+The function returns the sorted array in ascending order.

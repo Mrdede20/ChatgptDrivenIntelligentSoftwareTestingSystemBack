@@ -1,0 +1,29 @@
+#IT
+response_1
+
+#FC
+response_2 #4 4 4 2
+
+#FF
+response_3 #5 3 2
+
+#IT
+response_4
+
+#FF
+response_5 #5 5 2 7
+
+#FF
+response_6 #2 4
+
+#FF
+response_7 #2 6 7
+
+#IT
+response_8
+
+#FF
+response_9 #5 2 3
+
+#IT
+response_10

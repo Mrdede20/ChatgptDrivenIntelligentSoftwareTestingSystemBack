@@ -1,0 +1,8 @@
+Is there a test case which can triggers a bug in the program below?
+
+def bitcount(n):
+    count = 0
+    while n:
+        n &= n - 1
+        count += 1
+    return count

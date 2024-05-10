@@ -1,0 +1,9 @@
+The intention of the code is to evaluate a mathematical expression in Reverse Polish Notation (RPN). 
+
+Reverse Polish Notation is a way to represent expressions without using parentheses to indicate precedence of operations. In this notation, the operator is placed after its operands.
+
+The `rpn_eval` function takes a list of tokens as input and evaluates the expression using a stack data structure. It defines a nested function `op` that takes an operator symbol (+, -, *, /) and two numbers as input and returns the result of the operation. 
+
+The function then iterates over the input tokens and performs the operation based on the type of the token. If it is a number, it is added to the stack. If it is an operator, the two most recent numbers are popped from the stack and the operator is applied to them. The result is then appended to the stack.
+
+The final result is obtained by popping the last element from the stack.

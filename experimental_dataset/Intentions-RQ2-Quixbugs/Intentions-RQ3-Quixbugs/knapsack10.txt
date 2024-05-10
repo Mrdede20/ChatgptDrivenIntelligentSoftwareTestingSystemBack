@@ -1,0 +1,9 @@
+The `knapsack` function is an implementation of solving the classic knapsack problem using dynamic programming. The goal of the problem is to determine the maximum value of products that can be placed inside a knapsack with limited weight capacity. 
+
+The function takes in a `capacity` representing the maximum weight the knapsack can hold, and `items` list containing tuples of `(weight, value)`. 
+
+The function employs a method of dynamic programming to solve the knapsack problem. It creates a default dictionary named `memo` which will store the optimal value of the knapsack after examining each combination of items to select. 
+
+Next, the function goes through each item in the `items` list and tries to add it to the knapsack by iterating over all the possible weights the knapsack may have. It then calculates the optimal value between taking the current item or leaving it behind. 
+
+Finally, the function returns the optimal value of the combination of items selected that maximize the total value, such that the total weight of items selected does not exceed the maximum weight capacity of the knapsack.

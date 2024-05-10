@@ -1,0 +1,5 @@
+Yes, there is an input that can make the two programs have different output. One such input is n=6. 
+
+For the first program (using square root), get_factors(6) will return [2, 3], as expected. 
+
+However, for the other two programs, get_factors(6) will return [2, 3, 1]. This is because the while loop in the third program will continue even after n has been reduced to 1. In this case, divisor will be incremented to 2, but since 1 is not greater than 1, the loop will exit and the 1 will be added to the list of factors.

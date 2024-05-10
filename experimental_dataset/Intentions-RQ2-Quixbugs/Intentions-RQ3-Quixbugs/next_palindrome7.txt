@@ -1,0 +1,10 @@
+The intention of the given code is to find the next palindrome number after the number represented by the input list `digit_list`. The approach is to modify the input list in-place until the next palindrome is found. 
+
+The algorithm works as follows:
+1. First, the middle position(s) of the current palindrome are found.
+2. Then, starting from the middle, the digits are checked from left to right, incrementing the digits next to the middle by 1 where possible.
+3. If a digit becomes 9, it is changed to 0 and the digit on the other side of the middle is also changed to 0.
+4. This process continues until a suitable next palindrome is found.
+5. If the input list is already the largest palindrome, then a new list with one more digit than the previous list and all digits as 0, except the first and last which are 1, is returned.
+
+Finally, the new list representing the next palindrome is returned as the output of the function.

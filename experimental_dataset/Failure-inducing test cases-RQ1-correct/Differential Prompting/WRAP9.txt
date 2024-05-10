@@ -1,0 +1,1 @@
+No, there is not because the main method of both programs is the same and will output the same thing.

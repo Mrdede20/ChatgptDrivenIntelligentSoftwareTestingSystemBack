@@ -1,0 +1,18 @@
+Yes, there is an input which makes the two programs have different output.
+
+Here is a test case:
+
+```java
+ArrayList<Object> arr = new ArrayList<Object>();
+ArrayList<Object> nestedArr = new ArrayList<Object>();
+
+nestedArr.add(1);
+nestedArr.add("hi");
+arr.add(nestedArr);
+arr.add("hello");
+
+System.out.println(FLATTEN.flatten(arr)); // Output: [1, "hi", "hello"]
+System.out.println(FlattenObjectArray.flatten(arr)); // Output: [[1, "hi"], "hello"]
+```
+
+In this case, the input `arr` has a nested `ArrayList` containing an integer and a string, followed by a string. When `FLATTEN.flatten(arr)` is called, the result is a flattened `ArrayList` containing the integer, the string, and then the string again. However, when `FlattenObjectArray.flatten(arr)` is called, the result is an `ArrayList` containing the nested `ArrayList` followed by the string.

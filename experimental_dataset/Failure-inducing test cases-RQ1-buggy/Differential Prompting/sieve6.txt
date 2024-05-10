@@ -1,0 +1,7 @@
+Yes, there is an input that can make the programs have different output.
+
+The first four implementations are equivalent in terms of logic and output. However, the last implementation is using the Sieve of Eratosthenes algorithm and is expected to be faster for large values of `max`. 
+
+For the input `max = 10`, all implementations would produce the same output `[2, 3, 5, 7]`.
+
+However, for larger inputs such as `max = 100`, the last implementation using Sieve of Eratosthenes would be faster and produce the same output as the others `[2, 3, 5, 7, 11, ..., 97]`.

@@ -1,0 +1,7 @@
+Test case:
+
+assert pascal(2) == [[1], [1, 1]]
+
+Bug description:
+
+The function pascal does not handle the case when n is less than or equal to zero. If n is less than or equal to zero, the function should return an empty list []. However, the current implementation of the function generates an error because it tries to access an invalid index in the rows list. The bug can be triggered by running the test case with n = -1.

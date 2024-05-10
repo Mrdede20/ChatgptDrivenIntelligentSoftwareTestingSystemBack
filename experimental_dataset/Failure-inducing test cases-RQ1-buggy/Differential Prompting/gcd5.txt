@@ -1,0 +1,26 @@
+No, both implementations should return the same output for any input `(a, b)`. You can test this by running the following code snippet in Python:
+
+```
+# Test case
+a = 123456
+b = 7890
+
+# First implementation
+def gcd(a, b):
+    if b == 0:
+        return a
+    else:
+        return gcd(b, a % b)
+
+print(gcd(a, b)) # Output: 6
+
+# Second implementation
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+print(gcd(a, b)) # Output: 6
+```
+
+As you can see, both implementations return the same result for the input `(123456, 7890)`.

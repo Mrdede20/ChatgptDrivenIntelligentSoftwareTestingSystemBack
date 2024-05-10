@@ -1,0 +1,17 @@
+Test Case:
+
+arr = [2, 1, 4, 3, 5]
+
+Expected Output:
+
+[1, 2, 3, 4, 5]
+
+Bug Description:
+
+The program is expected to sort the input array using the mergesort algorithm. However, if the input array has duplicate elements, the program may fail to sort the array correctly.
+
+In the above test case, the input array arr has duplicate elements 2 and 1. When the mergesort function is called on this input array, the left and right halves of the array are recursively sorted using mergesort. In the second recursive call, the left half of the array [2, 1] is sorted by dividing it into [2] and [1]. Since these sub-arrays have only one element each, they are considered sorted.
+
+However, when the merge function is called to merge these two sorted sub-arrays, the result is [2, 1] instead of the expected [1, 2]. This is because the merge function only checks if the left element is less than or equal to the right element. In this case, 2 is not less than or equal to 1, so 1 is appended to the result before 2.
+
+As a result, the program fails to sort the input array correctly and the test case fails.

@@ -1,0 +1,46 @@
+#PT
+coins = [1, 5, 10, 25]
+total = 10
+assert possible_change(coins, total) == 4
+
+#PT
+coins = [1, 5, 10, 25]
+total = 15
+assert possible_change(coins, total) == 6
+
+#PT
+assert possible_change([1, 2, 3], 0) == 1
+
+#PT
+coins = [1, 2, 5]
+total = 5
+expected_output = 4
+assert possible_change(coins, total) == expected_output
+
+#FF
+coins = [1, 2, 5]
+total = 10
+assert possible_change(coins, total) == 11
+
+#PT
+coins = []
+total = 10
+assert possible_change(coins, total) == 0
+
+#PT
+coins = [1, 5, 10, 25]
+result1 = possible_change(coins, 0)
+assert result1 == 1, f"Error: expected 1, but got {result1}"
+
+#PT
+coins = [1, 5, 10, 25]
+total = 63
+assert possible_change(coins, total) == 73
+
+#PT
+assert possible_change([1,2,5], 10) == 10
+
+#FF
+coins = [1, 5, 10, 25]
+total = 40
+assert possible_change(coins, total) == 7

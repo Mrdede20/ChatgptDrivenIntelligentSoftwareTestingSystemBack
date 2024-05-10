@@ -1,0 +1,3 @@
+The intention of the code is to implement the Newton-Raphson method to approximate the square root of a given input value 'x' with a certain level of accuracy determined by 'epsilon'. The function repeatedly updates the approximation by calculating the average of it and the original value divided by the current approximation until the difference between the approximation and the true square root calculated is below the specified level of accuracy. The function returns the final approximation as the estimated square root of the original value.
+
+The docstring explains the input and output of the function and provides an example of using the function to calculate the estimated square root of 2 with an error tolerance of 0.01.

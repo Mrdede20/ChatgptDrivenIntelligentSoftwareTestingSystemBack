@@ -1,0 +1,16 @@
+Test case:
+
+# create a linked list with 3 nodes
+node3 = Node(3)
+node2 = Node(2, node3)
+node1 = Node(1, node2)
+
+# reverse the linked list
+reversed_list = reverse_linked_list(node1)
+
+# check if the reversed list is correct
+assert reversed_list == node3
+
+This test case triggers a bug in the reverse_linked_list() function. The bug is that the function is not setting the prevnode variable to the last node in the original linked list. Therefore, when the function returns prevnode, it returns None instead of the last node.
+
+The test will fail because the assert statement will check if reversed_list is equal to node3, which is the last node in the original linked list. However, since reverse_linked_list() returns None, the test will fail because None is not equal to node3.

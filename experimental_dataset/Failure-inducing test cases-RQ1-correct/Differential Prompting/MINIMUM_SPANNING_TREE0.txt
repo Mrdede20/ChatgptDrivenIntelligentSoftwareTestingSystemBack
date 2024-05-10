@@ -1,0 +1,3 @@
+The two programs are using different algorithms to find the Minimum Spanning Tree of a weighted graph. The first program uses Kruskal's algorithm with Union-Find data structure, while the second program also uses Kruskal's algorithm but with a different implementation.
+
+Given that both programs implement Kruskal's algorithm, they should output the same result for the same input. Therefore, there should not exist an input that makes the two programs have different output.

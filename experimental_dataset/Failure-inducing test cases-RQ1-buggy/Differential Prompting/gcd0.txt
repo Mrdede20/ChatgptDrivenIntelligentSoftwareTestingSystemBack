@@ -1,0 +1,5 @@
+No, the two programs above are different implementations of the same function `gcd(a, b)` which computes the greatest common divisor of `a` and `b`. 
+
+The first program uses recursion, where the function calls itself until `b` becomes 0, and then returns `a`. The second program uses a while loop to repeatedly calculate the remainder of `a` divided by `b` until `b` becomes 0, and then returns `a`.
+
+Both implementations are correct, and will produce the same result for any input values of `a` and `b`.

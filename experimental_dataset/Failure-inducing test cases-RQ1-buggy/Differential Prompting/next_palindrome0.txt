@@ -1,0 +1,1 @@
+No, both programs will have the same output given the same input. The only difference between the two programs is the additional comment in the second one.

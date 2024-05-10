@@ -1,0 +1,7 @@
+Yes, there can be different outputs for the two programs because they are using different input data types and structure.
+
+The `shortest_paths` method in the `SHORTEST_PATHS` class takes the source node as a `String`, and the weights of each edge as a `Map` with a `List` of two `String` nodes as keys and an `Integer` weight as value.
+
+On the other hand, the `shortest_paths` method in `DijkstraAlgorithm` takes the source node as an `int`, and the weights of each edge as a `Map` with the starting node as the key and another `Map` with ending nodes and corresponding weights as values.
+
+Therefore, the same input data may produce different results in these two programs.

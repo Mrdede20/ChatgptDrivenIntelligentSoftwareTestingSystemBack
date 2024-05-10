@@ -1,0 +1,33 @@
+Sure, here's a test case that might trigger a bug and result in a test failure for the program:
+
+# Test case
+def test_minimum_spanning_tree():
+    weight_by_edge = {
+        (0, 1): 1,
+        (0, 2): 2,
+        (1, 2): 3,
+        (1, 3): 4,
+        (2, 3): 5,
+        (3, 4): 6,
+        (4, 5): 7,
+        (5, 6): 8,
+        (6, 7): 9,
+        (7, 8): 10,
+        (8, 9): 11,
+        (9, 0): 12,
+    }
+    expected_result = {
+        (0, 1),
+        (0, 2),
+        (1, 3),
+        (2, 3),
+        (3, 4),
+        (4, 5),
+        (5, 6),
+        (6, 7),
+        (7, 8),
+        (8, 9),
+    }
+    assert minimum_spanning_tree(weight_by_edge) == expected_result
+
+In this modified test case, there are now two edges with weight 5: (2, 3) and (2, 4). The correct minimum spanning tree should include edge (2, 4), which connects nodes 2 and 4, and has the same weight as edge (2, 3), which connects nodes 2 and 3. However, the implementation may choose edge (2, 3) instead, resulting in a different minimum spanning tree

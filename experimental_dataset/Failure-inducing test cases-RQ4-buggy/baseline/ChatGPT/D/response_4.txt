@@ -1,0 +1,33 @@
+response@ChatGPT:
+Test Case:
+Input:
+5
+5
+1 2 3 4 5
+7
+1 2 1 2 1 2 1
+6
+1 6 5 4 3 2
+4
+1 2 2 1
+2
+1 2
+
+Expected Output:
+YES
+YES
+NO
+YES
+YES
+
+Explanation: 
+1. In the first query, the input is sorted in increasing order, so there are no valleys and the function should return True. 
+
+2. In the second query, the input sequence contains valleys and peaks. The first peak is at index 1, and the closest valley to its left is at index 0. The closest valley to its right is at index 2. The second peak is at index 3 and the closest valley to its left is at index 2, while the closest valley to its right is at index 4. The third peak is at index 5 and the closest valley to its left is at index 4, while the closest valley to its right is at index 6. Hence, the function should return True.
+
+3. In the third query, there is a peak at index 1 and valleys at indices 2, 4, and 5. However, the closest valley to the right of the peak at index 1 is at index 5, and it is not lower than the peak. Hence, the function should return False.
+
+4. In the fourth query, there are two peaks at indices 2 and 3 and valleys at indices 1 and 4. The closest valley to the left of the peak at index 2 is at index 1, while the closest valley to its right is at index 4. The closest valley to the left of the peak at index 3 is at index 4, while the closest valley to its right is at index 3. Hence, the function should return True.
+
+5. In the fifth query, there are no valleys or peaks, so the function should return True.
+

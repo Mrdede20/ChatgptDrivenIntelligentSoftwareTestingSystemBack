@@ -1,0 +1,7 @@
+The intention of the code is to find the longest common subsequence between two given strings using a recursive approach. The function takes two input strings 'a' and 'b', and outputs the longest common subsequence of the two strings.
+
+The algorithm first checks if either of the input strings is empty, in which case an empty string is returned as there cannot be any common subsequence. Then, it checks if the first character of both strings is the same. If they are, the function recursively calls itself with the first character removed from both strings.
+
+If the first characters of the two input strings are not equal, the function calls itself three times, with each recurrence omitting the first character of one of the two input strings, and then returns the maximum length subsequence of the three.
+
+The function uses a dynamic programming approach to optimize the solution by only calculating unique subproblems.

@@ -1,0 +1,1 @@
+Yes, there is an input that makes the two programs have different output. Consider the input array `arr = [1, 1, 1]`. The first implementation will return `[1, 1, 1]`, whereas the second implementation will result in an infinite recursive loop.

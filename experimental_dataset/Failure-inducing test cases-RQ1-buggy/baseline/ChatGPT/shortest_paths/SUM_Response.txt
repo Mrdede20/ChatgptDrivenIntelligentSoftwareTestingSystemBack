@@ -1,0 +1,104 @@
+#FT
+input = [1, {(1,2):3, (1,3):5, (2,3):2}]
+expected_output = {1:0, 2:3, 3:5}
+assert shortest_paths(*input) == expected_output
+
+#FT
+source = 1
+weight_by_edge = {(1,2): 4, (2,3): 5, (3,4): 6, (4,1): 7}
+expected_output = {1: 0, 2: 4, 3: 9, 4: 15}
+assert shortest_paths(source, weight_by_edge) == expected_output
+
+#FT
+weight_by_edge = {('A', 'B'): 2, ('B', 'C'): 4, ('C', 'D'): 1, ('D', 'E'): 3, ('E', 'A'): 9}
+source = 'A'
+expected_output = {'A': 0, 'B': 2, 'C': 6, 'D': 7, 'E': 10}
+assert shortest_paths(source, weight_by_edge) == expected_output
+
+#FT
+source = 'A'
+weight_by_edge = {('A', 'B'): 2, ('A', 'C'): 4, ('B', 'D'): 1, ('C', 'D'): 3}
+expected_output = {'A': 0, 'B': 2, 'C': 4, 'D': 3}
+assert shortest_paths(source, weight_by_edge) == expected_output
+
+#FC
+graph = [(1, 2, 3), (2, 3, -5), (3, 1, -1)]
+source = 1
+weight_by_edge = {(u, v): weight for u, v, weight in graph}
+result = shortest_paths(source, weight_by_edge)
+expected_output = {1: 0, 2: 3, 3: float('-inf')}
+assert result == expected_output, f"Expected {expected_output}, but got {result}" #error {2: 0, 3: -5, 1: -6}
+
+#FC
+source = 1
+weight_by_edge = {(1,2):2, (2,3):3, (3,4):1, (1,3):4}
+expected_output = {1:0, 2:2, 3:5, 4:6}
+assert shortest_paths(source, weight_by_edge) == expected_output #error {2: 2, 3: 4, 4: 5, 1: 0}
+
+#FC
+source = 'A'
+weight_by_edge = {
+    ('A', 'B'): 2,
+    ('B', 'C'): 4,
+    ('C', 'D'): 5,
+    ('D', 'E'): 1,
+    ('E', 'F'): 3,
+    ('F', 'A'): 1
+}
+expected_output = {
+    'A': 0,
+    'B': 2,
+    'C': 6,
+    'D': 11,
+    'E': 12,
+    'F': 13
+}
+assert shortest_paths(source, weight_by_edge) == expected_output #error {'B': 2, 'C': 6, 'D': 11, 'E': 12, 'F': 15, 'A': 0}
+
+#FT
+weight_by_edge = { 
+    (0, 1): -1,
+    (0, 2): 4,
+    (1, 2): 3,
+    (1, 3): 2,
+    (1, 4): 2,
+    (3, 1): 1,
+    (4, 3): -3,
+}
+source = 0
+result = shortest_paths(source, weight_by_edge)
+assert result == {
+    0: 0,
+    1: -1,
+    2: 2,
+    3: -2,
+    4: 1,
+}
+
+#FT
+source = 'A'
+weight_by_edge = {
+    ('A', 'B'): 3,
+    ('B', 'C'): 4,
+    ('C', 'D'): -10,
+    ('D', 'E'): 2,
+    ('E', 'F'): 5,
+    ('F', 'A'): 1,
+    ('A', 'G'): 2
+}
+expected_output = {
+    'A': 0,
+    'B': 3,
+    'C': 7,
+    'D': -3,
+    'E': -1,
+    'F': 4,
+    'G': 2
+}
+assert shortest_paths(source, weight_by_edge) == expected_output
+
+#FT
+weight_by_edge = {(1,2): 5, (1,3): 3, (2,4): 10, (3,4): 1, (4,5): 2}
+source = 1
+expected_output = {1: 0, 2: 5, 3: 3, 4: 4, 5: 6}
+assert shortest_paths(source, weight_by_edge) == expected_output

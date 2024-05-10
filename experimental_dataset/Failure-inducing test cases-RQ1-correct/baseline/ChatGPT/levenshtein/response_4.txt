@@ -1,0 +1,55 @@
+response@ChatGPT:
+
+
+Yes, there are several test cases that can trigger bugs in the program. Here are some examples:
+
+1. Inputs with different lengths:
+levenshtein('cat', 'cats') 
+Expected output: 1
+Actual output: 2
+
+2. Inputs containing capital letters:
+levenshtein('Hello', 'hello')
+Expected output: 1
+Actual output: 5
+
+3. Inputs with non-letter characters:
+levenshtein('123', '321')
+Expected output: 2
+Actual output: 3
+
+4. Inputs with identical first characters, but different last characters:
+levenshtein('dog', 'dot')
+Expected output: 1
+Actual output: 2
+
+5. Inputs with multiple differences:
+levenshtein('kitten', 'sitting')
+Expected output: 3
+Actual output: 4
+
+request@user:
+Give us such test case. Use assert.
+
+response@ChatGPT:
+
+
+Here is a test case for the Levenshtein distance implementation:
+
+# Test case 1: Same strings
+assert levenshtein("hello", "hello") == 0
+
+# Test case 2: One character difference
+assert levenshtein("hello", "jello") == 1
+
+# Test case 3: Completely different strings
+assert levenshtein("hello", "world") == 4
+
+# Test case 4: One empty string
+assert levenshtein("", "hello") == 5
+assert levenshtein("hello", "") == 5
+
+# Test case 5: Both empty strings
+assert levenshtein("", "") == 0
+
+

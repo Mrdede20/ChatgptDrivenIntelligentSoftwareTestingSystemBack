@@ -1,0 +1,6 @@
+Test case:
+Input: num = 10, b = 0
+Expected output: Test failure
+
+Explanation:
+The above program is supposed to convert a given number 'num' to its corresponding string representation in the given base 'b'. However, if the value of 'b' is 0, it would result in a division by zero error, and the program would not be able to execute the while loop. Therefore, we can generate a test case with num = 10 and b = 0, which will trigger this error and cause the program to fail the test.

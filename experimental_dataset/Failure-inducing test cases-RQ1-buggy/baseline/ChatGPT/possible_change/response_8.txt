@@ -1,0 +1,32 @@
+Test Case:
+
+coins = [5, 10, 25]
+total = 30
+
+Expected Output: 2
+
+Explanation:
+
+The function possible_change takes two arguments, a list of coins denominations coins and a total amount total. It recursively calculates the number of possible combinations of coins that can add up to the total amount.
+
+For the above test case, the possible combinations of coins that can add up to 30 are:
+
+1.One 5-cent coin and one 25-cent coin
+2.Three 10-cent coins
+
+Thus, the expected output is 2.
+
+However, there is a bug in the program that causes it to return an incorrect output for this test case. The bug is that the function is not properly handling the case where the coins list is empty.
+
+To trigger this bug and result in a test failure, we can modify the above test case as follows:
+
+coins = []
+total = 30
+
+Expected Output: 0
+
+Explanation:
+
+In this test case, the coins list is empty, which means that there are no coins available to make change. Therefore, the expected output is 0.
+
+However, when we run the possible_change function with coins = [] and total = 30, it will result in a TypeError because the expression first, *rest = coins will try to unpack an empty list, which is not possible. This will cause the test case to fail, indicating that the function is not properly handling the case where the coins list is empty.

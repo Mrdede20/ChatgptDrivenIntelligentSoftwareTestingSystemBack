@@ -1,0 +1,3 @@
+There seems to be a mistake in the second program. The `kth` method is declared outside of any class, which is invalid syntax. Therefore, this program will not compile. 
+
+Assuming the second program is corrected by placing the declaration of `kth` inside a class, both implementations should give the same output for any input test case.

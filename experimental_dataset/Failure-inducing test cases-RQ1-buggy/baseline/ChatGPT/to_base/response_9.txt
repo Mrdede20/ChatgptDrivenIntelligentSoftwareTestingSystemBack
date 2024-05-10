@@ -1,0 +1,9 @@
+Test case:
+num = 10
+b = -1
+
+Expected result: 
+The program should return an error message stating that the base value (b) cannot be negative. 
+
+Actual result:
+The program fails to handle the negative base value and goes into an infinite loop, eventually crashing or returning a wrong value.

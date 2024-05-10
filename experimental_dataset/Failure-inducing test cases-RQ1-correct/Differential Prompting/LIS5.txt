@@ -1,0 +1,11 @@
+Yes, there exists an input which makes these two programs have different output. 
+
+Here's an example input array:
+
+```
+int[] arr = {3, 4, 2, 8, 10, 5, 1};
+```
+
+`LIS.lis(arr)` returns 4, which is correct. 
+
+However, `LongestIncreasingSubsequence.lis(arr)` returns 3, which is incorrect.

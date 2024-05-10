@@ -1,0 +1,1 @@
+No, both programs are implementing the same logic to find the first occurrence of a number in a sorted array using binary search. So, they should behave the same for all possible inputs.

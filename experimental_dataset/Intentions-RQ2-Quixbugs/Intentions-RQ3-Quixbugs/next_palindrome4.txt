@@ -1,0 +1,5 @@
+The intention of the code is to take a given integer that is represented as an array of digits and return the next integer that is a palindrome. It does this by iterating from the middle of the integer outwards and checking if the digits on both sides of the middle are the same. If they are not the same, the function increments the digit on one side and copies it to the other side to ensure that the new number is still a palindrome. 
+
+If all digits in the input integer are 9s, the function replaces all digits with 0s and adds 1 to the leftmost and rightmost digits to ensure that the new number is still a palindrome.
+
+The function returns an array representing the next palindrome built by the input array of digits.

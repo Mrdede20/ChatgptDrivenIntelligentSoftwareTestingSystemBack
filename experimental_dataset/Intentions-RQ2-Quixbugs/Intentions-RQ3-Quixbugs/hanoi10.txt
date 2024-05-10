@@ -1,0 +1,13 @@
+The code is implementing a recursive solution to solve the "Towers of Hanoi" problem which is a classical puzzle consisting of three rods and as many disks of different size. The objective is to move the entire stack of disks to another rod, obeying the following simple rules:
+ - Only one disk can be moved at a time.
+ - Each move consists of taking the upper disk from one of the stacks and placing it on top of another stack or on an empty rod.
+ - No larger disk may be placed on top of a smaller disk.
+
+The `hanoi` function takes three arguments:
+- `height`: the height of the pile of disks to be moved.
+- `start`: the initial peg on which the pile of disks is placed.
+- `end`: the peg on which the pile of disks needs to be moved.
+
+The helper function returns a list of tuples with each tuple containing the source and destination pegs representing consecutive moves in the solution. 
+
+The first conditions check if there actually are disks on the peg that need to be moved, and returns an empty list if there aren't. If there are, the algorithm selects one of the two remaining pegs as a 'helper' peg, and then the function calls itself recursively to solve the subproblem of moving all but the last disk to the helper peg. It then appends a tuple to the solution list to represent the move of the last remaining, largest disk from the start peg to the end peg. Finally, the function calls itself recursively to solve the subproblem of moving all the disks that were initially on the helper peg to the end peg.

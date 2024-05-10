@@ -1,0 +1,7 @@
+The given code implements the Merge Sort algorithm, which is a sorting algorithm that works on the principle of dividing the given list of elements into two halves, sorting them recursively, and then merging the sorted halves. 
+
+The merge() function in the code merges two sorted halves into one sorted list. 
+
+The mergesort() function itself takes an unsorted list, and recursively divides it into smaller halves until it reaches the base case of lists with 0 or 1 elements. Then it uses the merge() function to combine the sorted halves into a single sorted list. Finally, it returns the sorted list. 
+
+The intention of the code is to sort a given list of integers using the Merge Sort algorithm.

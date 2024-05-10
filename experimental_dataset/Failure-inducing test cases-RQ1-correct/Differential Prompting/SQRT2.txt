@@ -1,0 +1,1 @@
+No, both programs should produce the same result given the same input. They both implement the same algorithm, using different variable names and slight variations in the implementation.

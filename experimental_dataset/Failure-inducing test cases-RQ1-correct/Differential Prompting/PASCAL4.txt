@@ -1,0 +1,1 @@
+There is no input that makes the two programs have different output because they both generate Pascal's triangle correctly. The second program is just a more optimized version of the first program.

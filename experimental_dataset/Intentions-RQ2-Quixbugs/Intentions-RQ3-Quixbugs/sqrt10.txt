@@ -1,0 +1,5 @@
+The intention of this code is to define a function named `sqrt()` that implements the Newton-Raphson method to compute the square root of a given input `x` up to an accuracy of `epsilon`. 
+
+The implementation initializes the `approx` variable as `x/2` and then iteratively updates its value based on `approx = 0.5 * (approx + x / approx)` until the absolute difference between `x` and `approx` is less than `epsilon`, at which point the function returns the computed square root `approx`.
+
+The function has a docstring that provides more details, including the required input values and the output range. An example usage of this function is also included in the docstring.

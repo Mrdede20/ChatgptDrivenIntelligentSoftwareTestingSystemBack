@@ -1,0 +1,29 @@
+Yes, there is an input which can make the two programs to have different output. 
+
+Test Input:
+
+3
+2 7 4
+5 1 8
+6 3 9
+
+Expected Output for the first program:
+
+6
+2
+7
+5
+2
+6
+
+Expected output for the second program:
+
+4
+5
+6
+
+Explanation:
+
+The first program will output the second smallest number in each set of 3 numbers, while the second program removes the largest number from each set and then outputs the smallest number in the modified set.
+
+For the input above, the first program will output 6, 2, and 7. The second program will remove 7, 8, and 9 from the sets and output 4, 5, and 6. Therefore, the two programs will output different results for this input.

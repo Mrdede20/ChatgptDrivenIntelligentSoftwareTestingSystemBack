@@ -1,0 +1,1 @@
+Both programs are finding the powerset of a given set of elements. The first program is written in raw syntax while the second one is written using advanced syntax. However, both programs will give the same output if the input is the same set of elements.

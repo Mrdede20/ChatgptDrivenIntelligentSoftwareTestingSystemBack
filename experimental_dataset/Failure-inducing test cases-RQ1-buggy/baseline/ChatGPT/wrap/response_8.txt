@@ -1,0 +1,13 @@
+Test Case:
+Input: 
+text = "This is a sample text"
+cols = 5 
+
+Expected Output:
+['This', 'is a', 'sampl', 'e', 'text']
+
+Actual Output:
+['This', 'is', 'a', 'sample', 'text']
+
+Explanation:
+The actual output does not match the expected output. The bug is in the line where the text is sliced (line, text = text[:end], text[end:]). The slice is being taken from 0 to end, which includes the space character. Therefore, the slice should be taken from 0 to end-1.

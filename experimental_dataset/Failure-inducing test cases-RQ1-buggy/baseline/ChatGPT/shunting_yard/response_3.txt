@@ -1,0 +1,17 @@
+Test case:
+
+tokens = [5, '-', 3, '*', 2, '/', 4]
+
+Expected outcome:
+
+The shunting_yard function should convert the given infix expression into a reverse Polish notation expression, where the result should be [5, 3, 2, '*', 4, '/', '-'].
+
+Actual outcome:
+
+However, the function returns an empty list, indicating a failure in the conversion process.
+
+Bug:
+
+The bug is in the if statement at line 10. The isinstance function only checks if the token is an integer, but it doesn't handle other types of numerical values, such as float or double. Therefore, when it encounters 3 * 2, which evaluates to 6 as a float, it fails the isinstance check and does not append it to the rpntokens list. This causes the subsequent while loop to fail to operate correctly, resulting in an empty return list, causing the test to fail. 
+
+To fix the bug, the code should be revised to include other numerical types, such as float or double, so that the function can handle these types of numerical values in the input list.

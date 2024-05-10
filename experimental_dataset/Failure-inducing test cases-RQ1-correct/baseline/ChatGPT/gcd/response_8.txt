@@ -1,0 +1,24 @@
+response@ChatGPT:
+
+
+Yes, a test case that can trigger a bug in the program is if either of the input parameters, 'a' or 'b', is a negative number. The program does not handle negative numbers and will enter an infinite loop, ultimately crashing the program. 
+
+For example, gcd(-4, 2) or gcd(4, -2) will trigger the bug in the program.
+
+request@user:
+Give us such test case. Use assert.
+
+response@ChatGPT:
+# Test case for gcd function
+def test_gcd():
+    assert gcd(10, 25) == 5
+    assert gcd(14, 28) == 14
+    assert gcd(0, 5) == 5
+    assert gcd(5, 0) == 5
+    assert gcd(40, 60) == 20
+    assert gcd(11, 121) == 11
+    assert gcd(17, 34) == 17
+    assert gcd(100, 30) == 10
+
+test_gcd()
+

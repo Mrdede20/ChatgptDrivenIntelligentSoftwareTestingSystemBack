@@ -1,0 +1,9 @@
+Test case:
+
+tokens = [2, 3, '+', 4, '*']
+
+Expected output: 20
+
+This test case should result in a test failure because the output of the function will be incorrect due to an error in the implementation of the operator function. Specifically, the order of operands passed to the lambda functions in the dictionary is incorrect.
+
+When the operator '+' is encountered in the tokens list, the operator function will be called with operands 3 and 2. However, the lambda function associated with '+' in the dictionary expects the operands in the opposite order (i.e., lambda b, a: a + b instead of lambda a, b: a + b). This will result in an incorrect calculation and an incorrect result of 5 instead of 20.

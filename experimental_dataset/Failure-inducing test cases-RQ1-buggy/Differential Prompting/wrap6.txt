@@ -1,0 +1,14 @@
+Yes, there is an input that makes the two programs have different output. Here's a test case in Python:
+
+```
+text = "hello world my name is bot"
+cols = 10
+
+# First program's output:
+# ['hello', 'world my', 'name is', 'bot']
+
+# Second program's output:
+# ['hello', 'world my', 'name is bot']
+```
+
+In this example, the first program splits the text into lines based on the last occurrence of a space character within a range of 10 characters, while the second program splits the text into lines based on the last occurrence of a space character within exactly 10 characters. Therefore, the second program includes the word "bot" in the third line, while the first program splits it between the third and fourth lines.

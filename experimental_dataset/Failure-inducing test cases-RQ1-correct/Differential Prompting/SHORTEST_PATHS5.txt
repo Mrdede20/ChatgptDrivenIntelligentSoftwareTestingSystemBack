@@ -1,0 +1,25 @@
+Yes, the two programs have different inputs that produce different outputs. This is because the two programs use different input formats and define different data structures. To demonstrate this, let's say we have the following as input:
+
+```
+source = "A"
+weight_by_edge = {["A","B"]: 3, ["B","C"]: 1, ["C","D"]: 2, ["A","D"]: 7}
+```
+
+For the SHORTEST_PATHS program, the output would be:
+
+```
+{"A":0,"B":3,"C":4,"D":6}
+```
+
+However, for the DijkstraAlgorithm program, we would need to first convert the input to its appropriate format as follows:
+
+```
+source = 0
+weight_by_edge = {0: {1: 3}, 1: {2: 1}, 2: {3: 2}, 0: {3: 7}}
+```
+
+And the output would be:
+
+```
+{0: 0, 1: 3, 2: 4, 3: 6}
+```

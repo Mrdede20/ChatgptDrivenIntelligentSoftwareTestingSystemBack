@@ -1,0 +1,8 @@
+One possible test case that could trigger a bug in the above function is when the input permutation has repeated elements, and the resulting next permutation is not correctly generated.
+
+# Test case to trigger bug in next_permutation function
+perm = [1, 2, 2]
+next_perm = next_permutation(perm)
+assert next_perm == [2, 1, 2]
+
+In this test case, the input permutation [1, 2, 2] has repeated elements. The expected next permutation is [2, 1, 2], which is obtained by swapping the first 2 with the 1 and reversing the remaining elements. However, the current implementation of the next_permutation function may not handle repeated elements correctly and may produce an incorrect next permutation. This could result in the test failing because the returned next_perm is not equal to the expected next permutation.

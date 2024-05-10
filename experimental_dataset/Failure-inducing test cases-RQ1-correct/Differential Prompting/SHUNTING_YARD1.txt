@@ -1,0 +1,20 @@
+There are a few differences between the Java programs that may result in different program outputs for some inputs, including:
+
+1. Package declaration: The first Java program has a package declaration at the beginning, whereas the second program does not. If the first program is executed as part of a larger program that has other packages with the same class name, it may result in a different output.
+
+2. Data types: The first program assumes that all tokens provided are integers, whereas the second program accepts any strings. This difference may result in different outputs if the input contains values that cannot be parsed as integers.
+
+3. Operator precedence: The two programs have slightly different operator precedence for the operators `+`, `-`, `*`, `/`. In the first program, `+` and `-` have the same precedence, and the same for `*` and `/`. In the second program, `*` and `/` have higher precedence than `+` and `-`. This can result in different outputs for inputs that contain multiple operators with different precedence.
+
+An example input that may result in different outputs for the two programs is:
+
+```
+ArrayList<String> tokens = new ArrayList<String>();
+tokens.add("2"); 
+tokens.add("*"); 
+tokens.add("3"); 
+tokens.add("+"); 
+tokens.add("4");
+```
+
+The output for the first program would be `[2, 3, *, 4, +]`, whereas the output for the second program would be `[2, 3, *, 4, +]`. In this case, the two programs produce the same output.

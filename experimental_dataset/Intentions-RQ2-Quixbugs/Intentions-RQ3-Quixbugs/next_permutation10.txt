@@ -1,0 +1,3 @@
+The code is implementing the Next Permutation algorithm, which takes a list of unique integers and returns the lexicographically next permutation of the elements of the list. The algorithm works by finding the rightmost element that is smaller than the element to its right and swapping it with the smallest element that is greater than it to its right. Then, it reverses the elements to the right of the swap point. If no such pair of elements is found, the list is already in its greatest permutation and the function returns None. 
+
+This algorithm is useful in a variety of combinatorial problems, such as generating permutations in lexicographic order or finding the next lexicographically larger word given a set of characters.

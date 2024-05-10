@@ -1,0 +1,1 @@
+No, the two programs perform the same operation and use the same algorithm (k-heap sort) to sort the input array. They should produce the same output for any valid input.

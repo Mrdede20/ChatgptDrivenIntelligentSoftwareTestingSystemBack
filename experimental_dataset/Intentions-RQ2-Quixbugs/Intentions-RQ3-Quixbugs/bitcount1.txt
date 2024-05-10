@@ -1,0 +1,3 @@
+The intention of the given code is to count the number of set bits (bits with value 1) in the binary representation of a given non-negative integer `n`. The function `bitcount(n)` takes an integer `n` as input and returns the count of set bits in the binary representation of `n`. 
+
+The code uses a bitwise XOR operator to toggle the least significant 1-bit to a 0-bit in each iteration until all the bits are set to 0. The number of iterations equals the number of set bits in the binary representation of `n`.

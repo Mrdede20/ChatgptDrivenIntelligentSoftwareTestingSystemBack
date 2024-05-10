@@ -1,0 +1,59 @@
+Yes, there is an input that can make the two programs have different output. Here's an example:
+
+Input:
+```
+2
+5 testing
+10 abcd
+```
+
+Expected output for the first program:
+```
+22
+98
+```
+
+Expected output for the second program:
+```
+20
+100
+```
+
+You can use the following Java code to test the two programs and verify their outputs:
+
+```java
+import java.util.Scanner;
+
+public class Test {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input
+        int n = scanner.nextInt();
+        for (int i = 0; i < n; i++) {
+            int a = scanner.nextInt();
+            String s = scanner.next();
+
+            // Test Program 1
+            int maxChar1 = a;
+            for (int j = 0; j < s.length(); j++) {
+                int charVal = (int)s.charAt(j);
+                if (charVal > maxChar1) {
+                    maxChar1 = charVal;
+                }
+            }
+            System.out.println(maxChar1 - 96);
+
+            // Test Program 2
+            int maxChar2 = 0;
+            for (int j = 0; j < s.length(); j++) {
+                int charVal = (int)s.charAt(j);
+                if (charVal > maxChar2) {
+                    maxChar2 = charVal;
+                }
+            }
+            System.out.println(maxChar2 - 96);
+        }
+    }
+}
+```
